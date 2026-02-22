@@ -50,6 +50,20 @@ export function Navbar() {
                                     <div className="absolute right-0 top-full mt-2 w-64 bg-brand-dark-grey border border-gray-700 shadow-xl shadow-black/50 animate-in fade-in slide-in-from-top-2 duration-200 z-[110]">
                                         <div className="p-1">
                                             <Link
+                                                to="/introduccion"
+                                                onClick={() => setModulesOpen(false)}
+                                                className="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors group"
+                                            >
+                                                <AlertTriangle className="w-5 h-5 text-brand-yellow group-hover:scale-110 transition-transform" />
+                                                <div>
+                                                    <span className="text-white text-sm font-bold uppercase block">Introducción</span>
+                                                    <span className="text-gray-500 text-[10px] uppercase tracking-wider">Módulo 0</span>
+                                                </div>
+                                            </Link>
+
+                                            <div className="h-px bg-gray-700/50 mx-3"></div>
+
+                                            <Link
                                                 to="/modules"
                                                 onClick={() => setModulesOpen(false)}
                                                 className="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors group"

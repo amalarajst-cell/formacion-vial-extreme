@@ -3,6 +3,7 @@ import { Layout } from './components/layout/Layout';
 import { ToastProvider } from './components/ui/Toast';
 // Pages will be imported here as they are created
 import { Landing } from './pages/Landing';
+import { IntroduccionModule } from './pages/IntroduccionModule';
 import { SenalesModule } from './pages/SenalesModule';
 import { PrioridadesModule } from './pages/PrioridadesModule';
 import { Adventure } from './pages/Adventure';
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Landing />} />
+            <Route path="introduccion" element={<IntroduccionModule />} />
             <Route path="modules" element={<SenalesModule />} />
             <Route path="dia1" element={<Day1Welcome />} />
             <Route path="dia2" element={<Day2Welcome />} />
