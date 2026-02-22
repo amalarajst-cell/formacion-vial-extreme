@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa Mental - Formación Vial Extreme</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .mermaid {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formación Vial Extreme - Estructura de la Aplicación</h1>
+    <div class="mermaid">
+        mindmap
+        root((Formación Vial Extreme))
+        App
+        Routing (React Router)
+        Landing (/)
+        ::icon(fa fa-home)
+        SenalesModule (/modules)
+        ::icon(fa fa-road)
+        Adventure (/adventure)
+        ::icon(fa fa-gamepad)
+        Quiz (/quiz)
+        ::icon(fa fa-question-circle)
+        Results (/results)
+        ::icon(fa fa-trophy)
+        Layout
+        Navbar
+        Main Content
+        Gestión de Estado (useSurveyStore)
+        ::icon(fa fa-database)
+        Perfil de Usuario
+        Pre-Encuesta
+        Registro de Campo (FieldLog)
+        Post-Encuesta
+        Sincronización (Google Sheets)
+        Componentes Clave
+        Encuestas (Survey)
+        Diploma
+        UI
+        Datos Estáticos
+        signs.ts
+        quiz.ts
+    </div>
+</body>
+
+</html>

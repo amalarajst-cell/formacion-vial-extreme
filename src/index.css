@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-navy text-white font-brand-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-brand-heading font-bold italic uppercase tracking-tighter;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-red text-brand-navy py-3 px-8 uppercase font-bold tracking-wider hover:brightness-110 transition-all shadow-hard active:translate-y-1 active:shadow-none;
+  }
+
+  .card-extreme {
+    @apply bg-brand-dark-grey border border-gray-700 p-6;
+  }
+}
