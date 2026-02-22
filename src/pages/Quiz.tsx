@@ -10,7 +10,7 @@ import { useToast } from '../components/ui/Toast';
 export function Quiz() {
     const navigate = useNavigate();
     const { showToast } = useToast();
-    const { setQuizScore, completeSignalsModule } = useSurveyStore();
+    const { completeSignalsModule } = useSurveyStore();
 
     const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
     const [selectedOption, setSelectedOption] = useState<number | null>(null);
@@ -95,7 +95,6 @@ export function Quiz() {
             setIsAnswered(false);
             setTimeLeft(20);
         } else {
-            setQuizScore(score);
             completeSignalsModule(score);
             showToast('¡Desafío de Señales Completado!', 'success');
             navigate('/results', { state: { score, total: quizQuestions.length, streak, module: 'signals' } });

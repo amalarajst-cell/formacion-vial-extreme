@@ -65,9 +65,9 @@ export function Day1Welcome() {
                             ← VOLVER
                         </Button>
                     </Link>
-                    <Link to="/prioridades" className="flex-[2]">
+                    <Link to="/introduccion" className="flex-[2]">
                         <Button className="w-full text-lg py-4 bg-brand-yellow text-brand-navy hover:bg-white shadow-hard">
-                            CONTINUAR A PRIORIDADES <Play className="ml-2 w-5 h-5 fill-current" />
+                            CONTINUAR A INTRODUCCIÓN <Play className="ml-2 w-5 h-5 fill-current" />
                         </Button>
                     </Link>
                 </div>

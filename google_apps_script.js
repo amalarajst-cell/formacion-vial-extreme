@@ -26,6 +26,7 @@ function guardarDatos(data) {
         'Percepción_de_Seguridad',
         'Señal_Transitoria',
         'Conocimiento_RCP',
+        'Simulacion_Emergencia',
         'Auditoria_Celular',
         'Sin_Celular',
         'Fuera_de_Senda',

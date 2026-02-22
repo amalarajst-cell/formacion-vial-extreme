@@ -3,6 +3,7 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { emergentologiaQuestions } from '../data/emergentologiaQuiz';
 import { cn } from '../utils/cn';
+import { useSurveyStore } from '../hooks/useSurveyStore';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, XCircle, ArrowRight, RotateCcw, Home, Siren } from 'lucide-react';
 
@@ -12,6 +13,8 @@ export function QuizEmergentologia() {
     const [showResult, setShowResult] = useState(false);
     const [score, setScore] = useState(0);
     const [quizCompleted, setQuizCompleted] = useState(false);
+
+    const { setEmergentologiaScore } = useSurveyStore();
 
     const question = emergentologiaQuestions[currentQuestion];
 
@@ -30,6 +33,7 @@ export function QuizEmergentologia() {
         if (currentQuestion < emergentologiaQuestions.length - 1) {
             setCurrentQuestion(prev => prev + 1);
         } else {
+            setEmergentologiaScore(score);
             setQuizCompleted(true);
         }
     };

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
-import { AlertTriangle, Send, CheckCircle2, XCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { AlertTriangle, Send, CheckCircle2, XCircle, Globe, Play } from 'lucide-react';
 
 interface QuizAnswers {
     q1: string;
@@ -10,6 +11,10 @@ interface QuizAnswers {
 }
 
 export function IntroduccionModule() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const [answer, setAnswer] = useState('');
     const [isAnswered, setIsAnswered] = useState(false);
     const [quizAnswers, setQuizAnswers] = useState<QuizAnswers>({ q1: '', q2: '', q3: '', q4: '', q5: '' });
@@ -126,6 +131,39 @@ export function IntroduccionModule() {
                     </p>
                 </div>
 
+                {/* Global Statistics */}
+                <div className="bg-brand-navy/80 p-6 sm:p-8 rounded-xl mb-8 border-l-4 border-brand-red shadow-lg flex flex-col md:flex-row gap-6 items-center">
+                    <div className="flex-1">
+                        <h2 className="text-2xl font-bold uppercase text-brand-red mb-2">A nivel mundial</h2>
+                        <h3 className="text-lg font-medium text-white mb-4 italic">Las estadísticas por incidentes fatales nos arrojan datos alarmantes</h3>
+                        <p className="text-gray-300 leading-relaxed mb-4">
+                            Se estima que aproximadamente <span className="text-brand-yellow font-bold">1,35 millones de personas pierden la vida</span> y que otras <span className="text-brand-yellow font-bold">50 millones resultan lesionadas</span> cada año a causa de los traumatismos por siniestros de tránsito.
+                        </p>
+                        <p className="text-gray-300 leading-relaxed">
+                            Debido a que constituyen la décima causa de muerte en todo el mundo, la Organización Mundial de la Salud (OMS) categorizó a los siniestros viales como <span className="text-brand-red font-bold uppercase">"pandemia"</span> y alertó que si no se toman medidas al respecto, podrían llegar a ser la tercera causa de mortalidad mundial para el año 2020.
+                        </p>
+                    </div>
+                    <div className="w-full md:w-1/3 shrink-0 flex justify-center">
+                        <div className="relative w-48 h-48 sm:w-56 sm:h-56 bg-brand-dark-grey rounded-full border-4 border-brand-navy p-2 flex flex-col items-center justify-center shadow-xl overflow-hidden group">
+                            {/* Placeholder/Fallback para la imagen a subir */}
+                            <img
+                                src="/formacion-vial-extreme/assets/oms-mundo.PNG"
+                                alt="Estadísticas mundiales OMS"
+                                className="w-full h-full object-cover rounded-full z-10 relative"
+                                onError={(e) => {
+                                    (e.target as HTMLImageElement).style.display = 'none';
+                                    const fallbackMsg = (e.target as HTMLImageElement).parentElement?.querySelector('.fallback-msg');
+                                    if (fallbackMsg) fallbackMsg.classList.remove('hidden');
+                                }}
+                            />
+                            <div className="fallback-msg hidden absolute inset-0 flex flex-col items-center justify-center text-brand-yellow z-0 p-4 text-center">
+                                <Globe className="w-12 h-12 opacity-50 mb-2 group-hover:scale-110 transition-transform" />
+                                <span className="text-[10px] font-bold text-gray-400">Guardar imagen en:<br />public/assets/oms-mundo.png</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Question Section */}
                 <div className="bg-brand-navy/50 p-6 rounded-lg mb-8 border border-red-500/20">
                     <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -209,7 +247,7 @@ export function IntroduccionModule() {
                         {/* Final Reflection Text */}
                         <div className="mt-12 bg-brand-navy/60 p-6 sm:p-8 rounded-xl border-l-4 border-brand-yellow shadow-lg">
                             <p className="text-gray-200 text-lg leading-relaxed mb-4">
-                                Chicos, los invito a pensar en lo siguiente: cuando escuchamos que en un solo año mueren <span className="text-brand-yellow font-bold">381</span> personas en accidentes de tránsito, solemos verlo como una estadística lejana, aunque nos parezca un desastre. Si nos preguntaran a cuánto deberíamos bajar esa cifra, muchos pensaríamos que reducirla a la mitad, o incluso a solo 3 muertes al año, sería un avance "genial" o un escenario "ideal".
+                                Chicos, los invito a pensar en lo siguiente: cuando escuchamos que en Córdoba, en un solo año mueren <span className="text-brand-yellow font-bold">381</span> personas en incidentes de tránsito, solemos verlo como una estadística lejana, aunque nos parezca un desastre. Si nos preguntaran a cuánto deberíamos bajar esa cifra, muchos pensaríamos que reducirla a la mitad, o incluso a solo 3 muertes al año, sería un avance "genial" o un escenario "ideal".
                             </p>
                             <p className="text-white text-xl font-medium italic mb-4">
                                 Pero hagamos este ejercicio: ¿qué pensarían si les mostraran fotografías de esas únicas 3 víctimas y resultaran ser sus hijos, sus sobrinos o su propia familia?
@@ -275,11 +313,17 @@ export function IntroduccionModule() {
                             </div>
 
                             {showQuizResults ? (
-                                <div className="mt-8 p-4 bg-brand-navy/50 border border-brand-yellow/30 rounded-lg text-center animate-in fade-in duration-500">
-                                    <p className="text-white font-medium text-lg">
-                                        ¡Gracias por prestar atención al video!
+                                <div className="mt-8 p-6 bg-brand-navy/50 border border-brand-yellow/30 rounded-lg text-center animate-in fade-in duration-500">
+                                    <p className="text-white font-medium text-lg mb-8">
+                                        ¡Gracias por prestar atención al video!<br />
                                         La seguridad vial empieza por estar <span className="text-brand-yellow font-bold">100% conscientes</span> de lo que sucede a nuestro alrededor.
                                     </p>
+                                    <Link to="/modules" className="inline-block w-full sm:w-auto">
+                                        <button className="w-full bg-brand-yellow text-brand-navy font-bold uppercase tracking-wider px-8 py-4 rounded-lg hover:bg-yellow-400 transition-colors flex items-center justify-center gap-3">
+                                            CONTINUAR A SEÑALES DE TRÁNSITO
+                                            <Play className="w-5 h-5 fill-current" />
+                                        </button>
+                                    </Link>
                                 </div>
                             ) : (
                                 <div className="mt-8 flex justify-center">

@@ -15,6 +15,7 @@ export interface SurveyState {
     quizScore: number | null;
     signalsScore: number | null;
     prioridadesScore: number | null;
+    emergentologiaScore: number | null;
     completed: boolean;
 }
 
@@ -46,6 +47,7 @@ export function useSurveyStore() {
             quizScore: null,
             signalsScore: null,
             prioridadesScore: null,
+            emergentologiaScore: null,
             completed: false
         };
     });
@@ -228,6 +230,7 @@ export function useSurveyStore() {
             quizScore: null,
             signalsScore: null,
             prioridadesScore: null,
+            emergentologiaScore: null,
             completed: false
         });
         setPendingSyncCount(0);
@@ -247,7 +250,19 @@ export function useSurveyStore() {
         setDiplomaUnlocked(true);
         localStorage.setItem(DIPLOMA_UNLOCKED_KEY, 'true');
     };
-    const setQuizScore = (score: number) => setState(s => ({ ...s, quizScore: score }));
+    const setQuizScore = (score: number) => {
+        setState(s => ({ ...s, quizScore: score }));
+
+        // Sincronizar inmediatamente el puntaje de RCP
+        syncData({
+            'Fecha': new Date().toLocaleString('es-AR'),
+            'Nombre': state.profile?.nombre || '',
+            'Apellido': state.profile?.apellido || '',
+            'DNI': state.profile?.dni || '',
+            'Escuela': state.profile?.institucion || '',
+            'Conocimiento_RCP': `${score}/10`,
+        });
+    };
 
     const setPrioridadesScore = (score: number) => {
         setState(s => ({ ...s, prioridadesScore: score }));
@@ -260,6 +275,19 @@ export function useSurveyStore() {
             'DNI': state.profile?.dni || '',
             'Escuela': state.profile?.institucion || '',
             'Prioridades_Paso': score,
+        });
+    };
+
+    const setEmergentologiaScore = (score: number) => {
+        setState(s => ({ ...s, emergentologiaScore: score }));
+
+        syncData({
+            'Fecha': new Date().toLocaleString('es-AR'),
+            'Nombre': state.profile?.nombre || '',
+            'Apellido': state.profile?.apellido || '',
+            'DNI': state.profile?.dni || '',
+            'Escuela': state.profile?.institucion || '',
+            'Simulacion_Emergencia': score,
         });
     };
 
@@ -298,6 +326,7 @@ export function useSurveyStore() {
         quizScore: null,
         signalsScore: null,
         prioridadesScore: null,
+        emergentologiaScore: null,
         completed: false
     });
 
@@ -308,6 +337,8 @@ export function useSurveyStore() {
         // Puntajes
         const quizScoreStr = state.quizScore !== null ? `${state.quizScore}/10` : '';
         const signalsScoreStr = state.signalsScore !== null ? state.signalsScore : '';
+        const emergentologiaScoreStr = state.emergentologiaScore !== null ? state.emergentologiaScore : '';
+        const prioridadesScoreStr = state.prioridadesScore !== null ? state.prioridadesScore : '';
 
         // Conteos de auditoría individuales (para columnas separadas)
         const celular = state.fieldData?.counts?.celular ?? '';
@@ -323,6 +354,8 @@ export function useSurveyStore() {
             'Percepción_de_Seguridad': state.preSurvey?.percepcion || '',
             'Señal_Transitoria': signalsScoreStr,
             'Conocimiento_RCP': quizScoreStr,
+            'Simulacion_Emergencia': emergentologiaScoreStr,
+            'Prioridades_Paso': prioridadesScoreStr,
             'Auditoria_Celular': celular,
             'Sin_Celular': sinCelular,
             'Fuera_de_Senda': fueraDeSenda,
@@ -376,6 +409,7 @@ export function useSurveyStore() {
         setPostSurvey,
         setQuizScore,
         setPrioridadesScore,
+        setEmergentologiaScore,
         completeSignalsModule,
         syncData,
         forceSyncNow,
