@@ -4,6 +4,6 @@ import { viteSingleFile } from 'vite-plugin-singlefile'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/formacion-vial-extreme/',
   plugins: [react(), viteSingleFile()],
 })
