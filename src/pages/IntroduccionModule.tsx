@@ -337,6 +337,105 @@ export function IntroduccionModule() {
                                 </div>
                             )}
                         </div>
+
+                        {/* Accidente vs Incidente */}
+                        <div className="mt-16 bg-brand-navy p-6 sm:p-8 rounded-xl border-l-4 border-brand-yellow shadow-xl animate-in slide-in-from-bottom-8 fade-in flex flex-col items-center">
+                            <h3 className="text-3xl font-brand-heading text-white uppercase italic tracking-tighter mb-6 w-full">
+                                ¿Mala suerte o mala decisión? <span className="text-brand-yellow">Dejemos de llamar "accidente" a la negligencia.</span>
+                            </h3>
+
+                            <div className="space-y-6 text-gray-300 text-lg leading-relaxed mb-10 w-full">
+                                <p>
+                                    Hablemos claro. En la calle, usamos la palabra "accidente" para todo choque, despiste o atropello. Pero las palabras importan, y mucho.
+                                </p>
+                                <p>
+                                    Si vas conduciendo perfecto y un rayo parte un árbol que cae sobre tu auto, eso es un <span className="text-white font-bold uppercase tracking-wider">Accidente</span>. Es el azar, es impredecible, nadie tuvo la culpa. Es la excepción a la regla.
+                                </p>
+                                <p>
+                                    Pero si chocas porque ibas mirando el celular, porque no cambiaste los frenos o porque ibas a 140 km/h en una curva... por favor, no le llames accidente. Eso es un <span className="text-brand-red font-bold uppercase tracking-wider">Incidente</span>.
+                                </p>
+                                <div className="bg-brand-dark-grey/50 p-6 rounded-lg border border-gray-700 my-8">
+                                    <h4 className="text-xl font-bold text-white mb-2">¿La diferencia?</h4>
+                                    <p className="text-brand-yellow font-medium">
+                                        En el incidente siempre hay un "factor humano": una negligencia, un error o una omisión.
+                                    </p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h4 className="text-xl font-bold text-white">¿Por qué es urgente diferenciarlos?</h4>
+                                    <ul className="list-none space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <div className="mt-1 bg-gray-700 rounded-full p-1"><XCircle className="w-4 h-4 text-gray-400" /></div>
+                                            <p>Porque ante el <strong>accidente</strong> (el azar) solo podemos resignarnos.</p>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <div className="mt-1 bg-brand-red/20 rounded-full p-1"><CheckCircle2 className="w-4 h-4 text-brand-red" /></div>
+                                            <p>Porque ante el <strong>incidente</strong> (la negligencia) tenemos el poder absoluto de evitarlo.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p className="text-xl font-medium text-white italic border-l-4 border-brand-red pl-4 py-2 mt-6 bg-brand-red/10">
+                                    Dejemos de echarle la culpa al destino de lo que causamos nosotros mismos.
+                                </p>
+                            </div>
+
+                            {/* Cuadro Comparativo */}
+                            <div className="overflow-x-auto w-full mb-12">
+                                <table className="w-full text-left border-collapse bg-brand-dark-grey rounded-xl overflow-hidden">
+                                    <thead>
+                                        <tr>
+                                            <th className="p-4 bg-brand-dark-grey text-white font-bold border-b-2 border-brand-yellow w-1/4">Característica</th>
+                                            <th className="p-4 bg-brand-dark-grey/80 text-gray-300 font-bold border-b-2 border-brand-yellow w-3/8 text-center sm:text-left">
+                                                <span className="text-2xl mr-2">🌩️</span><br className="sm:hidden" />
+                                                El Accidente (El Azar)
+                                            </th>
+                                            <th className="p-4 bg-red-900/20 text-brand-red font-bold border-b-2 border-brand-red w-3/8 text-center sm:text-left">
+                                                <span className="text-2xl mr-2">📱</span><br className="sm:hidden" />
+                                                El Incidente (La Negligencia)
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="text-gray-300 divide-y divide-gray-700">
+                                        <tr className="hover:bg-brand-dark-grey/50 transition-colors">
+                                            <td className="p-4 font-medium text-white">¿Qué lo causa?</td>
+                                            <td className="p-4 px-4">Fuerzas de la naturaleza, fallas mecánicas súbitas e indetectables.</td>
+                                            <td className="p-4 bg-red-900/10">Error humano, imprudencia, violar normas, falta de mantenimiento.</td>
+                                        </tr>
+                                        <tr className="hover:bg-brand-dark-grey/50 transition-colors">
+                                            <td className="p-4 font-medium text-white">Factor Humano</td>
+                                            <td className="p-4">Nulo. El conductor no podía hacer nada distinto.</td>
+                                            <td className="p-4 bg-red-900/10"><strong className="text-brand-red">Total.</strong> El conductor tomó una mala decisión (activa u omisiva).</td>
+                                        </tr>
+                                        <tr className="hover:bg-brand-dark-grey/50 transition-colors">
+                                            <td className="p-4 font-medium text-white">¿Es predecible?</td>
+                                            <td className="p-4">No. Es un hecho sorpresivo.</td>
+                                            <td className="p-4 bg-red-900/10">Sí. Si actúas mal, el resultado es predecible.</td>
+                                        </tr>
+                                        <tr className="hover:bg-brand-dark-grey/50 transition-colors">
+                                            <td className="p-4 font-medium text-white">¿Se podía evitar?</td>
+                                            <td className="p-4">No directamente.</td>
+                                            <td className="p-4 bg-red-900/10 text-brand-red font-bold">Sí, al 100%.</td>
+                                        </tr>
+                                        <tr className="hover:bg-brand-dark-grey/50 transition-colors">
+                                            <td className="p-4 font-medium text-white border-b border-gray-700">El Ejemplo</td>
+                                            <td className="p-4 italic border-b border-gray-700 text-gray-400">Una rama sana cae por un viento huracanado sobre el parabrisas.</td>
+                                            <td className="p-4 bg-red-900/10 italic border-b border-red-900/30 text-red-200">Un conductor choca al de adelante por ir distraído enviando un audio.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            {/* Imagen Descriptiva */}
+                            <div className="w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl shadow-black/80 border-4 border-gray-800 bg-brand-dark-grey">
+                                <img
+                                    src="/formacion-vial-extreme/assets/accidente-incidente.png"
+                                    alt="Accidente vs Incidente: El Factor Humano"
+                                    className="w-full h-auto object-cover"
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).src = '/assets/accidente-incidente.png';
+                                    }}
+                                />
+                            </div>
+                        </div>
                     </div>
                 )}
             </main>
