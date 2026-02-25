@@ -446,118 +446,171 @@ export function IntroduccionModule() {
                                     <p>
                                         Para entender el origen de un siniestro, debemos alejarnos de la idea de la "mala suerte" o el "destino". Los incidentes viales no son eventos azarosos; son <span className="text-white font-bold uppercase tracking-wider">eventos multicausales</span>. Esto significa que son el resultado de la interacción de diferentes elementos que fallan al mismo tiempo.
                                     </p>
-                                    <p>
-                                        Para analizar y comprender estos fallos, los investigadores utilizamos una herramienta fundamental: <span className="text-brand-yellow font-bold text-xl">La Trilogía Vial</span>.
-                                    </p>
                                 </div>
 
-                                <h3 className="text-3xl font-brand-heading text-white uppercase italic tracking-tighter mb-6 mt-8 w-full">
-                                    2. La Trilogía Vial: <span className="text-brand-yellow">Los tres pilares de la seguridad</span>
-                                </h3>
-
-                                <div className="space-y-4 text-gray-300 text-lg leading-relaxed mb-8 w-full">
-                                    <p>
-                                        La seguridad en la vía pública depende del equilibrio entre tres factores. Si uno de estos falla, el riesgo de un incidente aumenta exponencialmente.
+                                {/* 1. El Disparador */}
+                                <div className="w-full bg-brand-dark-grey/80 p-6 rounded-xl border border-gray-600 mb-10 shadow-lg">
+                                    <h4 className="text-2xl font-bold text-white mb-4 italic flex items-center gap-3">
+                                        <div className="bg-brand-yellow p-2 rounded-lg"><Play className="w-5 h-5 text-brand-navy" /></div>
+                                        1. El Disparador: El Juego del 100%
+                                    </h4>
+                                    <p className="text-brand-yellow font-medium text-xl mb-6 pl-14">
+                                        "Imaginen que somos peritos e investigamos un choque. Tenemos 100 puntos de responsabilidad para repartir. ¿Cuántos puntos le darían a cada uno de estos tres sospechosos?"
                                     </p>
-
-                                    {/* Factor Humano */}
-                                    <div className="bg-brand-dark-grey/50 p-6 rounded-lg border border-gray-700 my-4 border-l-4 border-l-brand-yellow flex flex-col items-start w-full">
-                                        <h4 className="text-2xl font-bold text-white mb-3 uppercase">A. El Factor Humano <span className="text-brand-yellow text-xl lowercase italic">(El protagonista)</span></h4>
-                                        <p className="mb-4">Es el elemento más importante y complejo. Incluye a todos los usuarios de la vía: conductores, peatones, ciclistas y motociclistas.</p>
-                                        <ul className="list-none space-y-3">
-                                            <li className="flex items-start gap-3">
-                                                <div className="mt-1"><CheckCircle2 className="w-5 h-5 text-brand-yellow" /></div>
-                                                <p><strong className="text-white">La Responsabilidad:</strong> El 90% de los incidentes tienen como causa principal un fallo humano.</p>
-                                            </li>
-                                            <li className="flex items-start gap-3">
-                                                <div className="mt-1"><CheckCircle2 className="w-5 h-5 text-brand-yellow" /></div>
-                                                <p><strong className="text-white">En qué falla:</strong> No es solo la falta de habilidad, sino las decisiones (exceso de velocidad, consumo de sustancias, distracciones con el celular) y la percepción del riesgo.</p>
-                                            </li>
-                                        </ul>
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        <div className="bg-brand-navy p-4 rounded-lg border-t-4 border-brand-yellow flex flex-col items-center text-center">
+                                            <span className="text-4xl mb-2">👤</span>
+                                            <strong className="text-brand-yellow text-lg uppercase tracking-wide">El Conductor</strong>
+                                            <span className="text-sm text-gray-400 mt-2">Las personas, sus decisiones y errores.</span>
+                                        </div>
+                                        <div className="bg-brand-navy p-4 rounded-lg border-t-4 border-brand-red flex flex-col items-center text-center">
+                                            <span className="text-4xl mb-2">🏍️</span>
+                                            <strong className="text-brand-red text-lg uppercase tracking-wide">El Vehículo</strong>
+                                            <span className="text-sm text-gray-400 mt-2">La moto, la bici, fallos mecánicos.</span>
+                                        </div>
+                                        <div className="bg-brand-navy p-4 rounded-lg border-t-4 border-blue-400 flex flex-col items-center text-center">
+                                            <span className="text-4xl mb-2">🌧️</span>
+                                            <strong className="text-blue-400 text-lg uppercase tracking-wide">El Camino</strong>
+                                            <span className="text-sm text-gray-400 mt-2">Baches, lluvia, falta de semáforos, señales.</span>
+                                        </div>
                                     </div>
-
-                                    {/* Factor Vehicular */}
-                                    <div className="bg-brand-dark-grey/50 p-6 rounded-lg border border-gray-700 my-4 border-l-4 border-l-brand-red flex flex-col items-start w-full">
-                                        <h4 className="text-2xl font-bold text-white mb-3 uppercase">B. El Factor Vehicular <span className="text-brand-red text-xl lowercase italic">(La herramienta)</span></h4>
-                                        <p className="mb-4">Se refiere al estado técnico y de mantenimiento del vehículo (en este curso, especialmente motos y bicicletas).</p>
-                                        <ul className="list-none space-y-3">
-                                            <li className="flex items-start gap-3">
-                                                <div className="mt-1"><CheckCircle2 className="w-5 h-5 text-brand-red" /></div>
-                                                <p><strong className="text-white">La Responsabilidad:</strong> Mantener el vehículo en condiciones no es una opción, es una obligación de seguridad.</p>
-                                            </li>
-                                            <li className="flex items-start gap-3">
-                                                <div className="mt-1"><CheckCircle2 className="w-5 h-5 text-brand-red" /></div>
-                                                <p><strong className="text-white">Elementos clave:</strong> Estado de los frenos, profundidad del dibujo de los neumáticos, luces y sistemas de dirección. Un fallo aquí suele ser consecuencia de un descuido humano previo (falta de mantenimiento).</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    {/* Factor Ambiental y Vial */}
-                                    <div className="bg-brand-dark-grey/50 p-6 rounded-lg border border-gray-700 my-4 border-l-4 border-l-blue-400 flex flex-col items-start w-full">
-                                        <h4 className="text-2xl font-bold text-white mb-3 uppercase">C. El Factor Ambiental y Vial <span className="text-blue-400 text-xl lowercase italic">(El entorno)</span></h4>
-                                        <p className="mb-4">Comprende tanto el diseño de la infraestructura como las condiciones climáticas.</p>
-                                        <ul className="list-none space-y-3">
-                                            <li className="flex items-start gap-3">
-                                                <div className="mt-1"><CheckCircle2 className="w-5 h-5 text-blue-400" /></div>
-                                                <p><strong className="text-white">La vía:</strong> Estado del pavimento, señalización, iluminación y diseño de las cruces.</p>
-                                            </li>
-                                            <li className="flex items-start gap-3">
-                                                <div className="mt-1"><CheckCircle2 className="w-5 h-5 text-blue-400" /></div>
-                                                <p><strong className="text-white">El clima:</strong> Lluvia, niebla, granizo o viento fuerte.</p>
-                                            </li>
-                                            <li className="flex items-start gap-3">
-                                                <div className="mt-1"><CheckCircle2 className="w-5 h-5 text-blue-400" /></div>
-                                                <p><strong className="text-white">La Responsabilidad:</strong> Aunque no podemos controlar el clima, la responsabilidad humana radica en adaptar la conducción a estas condiciones (por ejemplo, reducir la velocidad si el suelo está mojado).</p>
-                                            </li>
-                                        </ul>
+                                    <div className="mt-6 bg-brand-navy/50 p-4 rounded-lg border-l-4 border-gray-500 italic text-gray-400 text-sm">
+                                        <strong className="text-gray-300">Tip para el instructor:</strong> Anotá en el pizarrón lo que digan los chicos. Normalmente, le dan mucha carga al "Camino" o al "Vehículo" para quitarle peso a las personas.
                                     </div>
                                 </div>
 
-                                <h3 className="text-3xl font-brand-heading text-white uppercase italic tracking-tighter mb-6 mt-8 w-full">
-                                    3. La Interacción y la <span className="text-brand-yellow">Multicausalidad</span>
+                                {/* 2. La Herramienta Técnica */}
+                                <h3 className="text-3xl font-brand-heading text-white uppercase italic tracking-tighter mb-6 mt-4 w-full">
+                                    2. La Herramienta Técnica: <span className="text-brand-yellow">La Trilogía Vial</span>
                                 </h3>
 
-                                <div className="space-y-6 text-gray-300 text-lg leading-relaxed mb-4 w-full">
-                                    <p>
-                                        El concepto clave que los estudiantes deben llevarse es que los incidentes rara vez tienen una sola causa. Generalmente, se producen cuando los factores se alinean:
+                                <div className="space-y-4 text-gray-300 text-lg leading-relaxed w-full">
+                                    <p className="mb-6">
+                                        Para entender el porqué de un incidente, presentamos el esquema que usamos los investigadores. Nada ocurre por una sola razón; es una combinación de tres factores:
                                     </p>
 
-                                    <div className="bg-brand-dark-grey/80 p-6 rounded-xl border border-gray-600 my-8 shadow-inner text-center mx-auto w-full">
-                                        <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-xl sm:text-2xl font-bold">
-                                            <div className="flex flex-col items-center">
-                                                <span className="text-blue-400">Fallo Ambiental</span>
-                                                <span className="text-gray-400 text-sm font-normal mt-1">(Lluvia)</span>
+                                    <div className="flex flex-col gap-6 w-full relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-700 before:to-transparent">
+                                        <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                            <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-dark-grey bg-brand-yellow text-brand-navy shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold text-lg">
+                                                90%
                                             </div>
-                                            <span className="text-white md:mx-4 hidden md:block">+</span>
-                                            <span className="text-white md:hidden block">+</span>
-                                            <div className="flex flex-col items-center">
-                                                <span className="text-brand-red">Fallo Vehicular</span>
-                                                <span className="text-gray-400 text-sm font-normal mt-1">(Frenos gastados)</span>
+                                            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-dark-grey/50 p-6 rounded-xl border border-gray-700 shadow-md">
+                                                <h4 className="text-xl font-bold text-brand-yellow mb-2 uppercase">Factor Humano</h4>
+                                                <p className="text-white">Decisiones, distracciones, pericia y estado físico.</p>
                                             </div>
-                                            <span className="text-white md:mx-4 hidden md:block">+</span>
-                                            <span className="text-white md:hidden block">+</span>
-                                            <div className="flex flex-col items-center">
-                                                <span className="text-brand-yellow">Fallo Humano</span>
-                                                <span className="text-gray-400 text-sm font-normal mt-1">(Distracción)</span>
+                                        </div>
+                                        <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                            <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-dark-grey bg-brand-red text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold text-lg">
+                                                5%
                                             </div>
-                                            <span className="text-white md:mx-4 hidden md:block">=</span>
-                                            <span className="text-white md:hidden block">=</span>
-                                            <div className="bg-brand-red/20 px-6 py-3 rounded-lg border border-brand-red/50 shadow-[0_0_15px_rgba(255,0,0,0.3)] w-full md:w-auto mt-4 md:mt-0">
-                                                <span className="text-brand-red uppercase tracking-wider text-2xl">Incidente Vial</span>
+                                            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-dark-grey/50 p-6 rounded-xl border border-gray-700 shadow-md">
+                                                <h4 className="text-xl font-bold text-brand-red mb-2 uppercase">Factor Vehicular</h4>
+                                                <p className="text-white">Estado de neumáticos, frenos, luces y mantenimiento general.</p>
+                                            </div>
+                                        </div>
+                                        <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active mb-8">
+                                            <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-dark-grey bg-blue-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-bold text-lg">
+                                                5%
+                                            </div>
+                                            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-dark-grey/50 p-6 rounded-xl border border-gray-700 shadow-md">
+                                                <h4 className="text-xl font-bold text-blue-400 mb-2 uppercase">Factor Ambiental</h4>
+                                                <p className="text-white">Clima (lluvia, niebla) y estado de la infraestructura (pavimento, señalización).</p>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div className="flex items-start gap-4 border-l-4 border-brand-yellow bg-brand-yellow/10 p-6 rounded-r-lg mt-8">
-                                        <div className="bg-brand-yellow/20 p-2 rounded-full shrink-0 flex items-center justify-center mt-1">
-                                            <AlertTriangle className="w-6 h-6 text-brand-yellow" />
-                                        </div>
-                                        <p className="text-xl font-medium text-white italic">
-                                            Sin embargo, el <span className="text-brand-yellow font-bold not-italic">Factor Humano</span> es el único con capacidad de prevención activa. Un conductor responsable que detecta un fallo ambiental (lluvia) o vehicular (frenos largos), compensa esos riesgos extremando los cuidados.
+                                {/* 3. El Momento de la Verdad */}
+                                <div className="w-full mt-10">
+                                    <h3 className="text-3xl font-brand-heading text-white uppercase italic tracking-tighter mb-6">
+                                        3. El Momento de la Verdad: <span className="text-brand-yellow">Percepción vs. Realidad</span>
+                                    </h3>
+
+                                    <div className="bg-brand-dark-grey p-6 sm:p-8 rounded-xl border border-gray-700 shadow-lg">
+                                        <p className="text-gray-300 text-lg mb-6">
+                                            Aquí es donde contrastamos lo que ellos votaron con las estadísticas reales de accidentología.
                                         </p>
+
+                                        <h4 className="text-2xl font-bold text-white mb-4">¿Por qué el Factor Humano es tan alto?</h4>
+                                        <p className="text-gray-300 mb-6">
+                                            Explicamos que, aunque la calle esté rota o la moto tenga un problema, es la <strong className="text-brand-yellow">persona</strong> quien decide cómo actuar frente a eso:
+                                        </p>
+
+                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                                            <div className="bg-brand-navy p-5 rounded-lg border border-gray-600 flex flex-col items-center text-center">
+                                                <span className="text-brand-yellow mb-2"><Globe className="w-8 h-8" /></span>
+                                                <p className="text-white font-medium">Si hay un bache y <strong className="text-brand-yellow">voy despacio</strong>, no hay incidente.</p>
+                                            </div>
+                                            <div className="bg-brand-navy p-5 rounded-lg border border-gray-600 flex flex-col items-center text-center">
+                                                <span className="text-brand-yellow mb-2"><AlertTriangle className="w-8 h-8" /></span>
+                                                <p className="text-white font-medium">Si sé que mi freno está largo y <strong className="text-brand-yellow">guardo distancia</strong>, no hay incidente.</p>
+                                            </div>
+                                            <div className="bg-brand-navy p-5 rounded-lg border border-gray-600 flex flex-col items-center text-center">
+                                                <span className="text-brand-yellow mb-2"><CheckCircle2 className="w-8 h-8" /></span>
+                                                <p className="text-white font-medium">Si llueve y <strong className="text-brand-yellow">adapto mi conducción</strong>, no hay incidente.</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="bg-brand-yellow/10 border-l-4 border-brand-yellow p-6 rounded-r-lg">
+                                            <p className="text-xl font-medium text-white italic">
+                                                <strong className="text-brand-yellow not-italic uppercase tracking-wide">La conclusión es clara:</strong> El Factor Humano es el único que puede compensar las fallas de los otros dos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* 4. Dinámica de Cierre */}
+                                <div className="w-full mt-10 mb-6">
+                                    <h3 className="text-3xl font-brand-heading text-brand-yellow uppercase italic tracking-tighter mb-6">
+                                        4. Dinámica de Cierre: "Las Excusas al Banquillo"
+                                    </h3>
+
+                                    <div className="bg-brand-dark-grey/80 p-6 rounded-xl border-l-4 border-brand-red shadow-lg">
+                                        <p className="text-gray-300 text-lg mb-8">
+                                            Para terminar, podés proponerles clasificar estas frases típicas de los conductores dentro de la Trilogía Vial. <strong className="text-white">¿Son fallas reales del entorno o es el Factor Humano disfrazado?</strong>
+                                        </p>
+
+                                        <div className="space-y-4">
+                                            <div className="flex flex-col sm:flex-row gap-4">
+                                                <div className="flex-1 bg-brand-navy p-4 rounded-lg border border-gray-700 flex items-center">
+                                                    <span className="text-lg text-white italic">"Me encandiló el sol"</span>
+                                                </div>
+                                                <div className="flex-1 bg-brand-dark-grey p-4 rounded-lg border border-gray-600 flex items-center justify-center px-4 py-3 text-center sm:text-left">
+                                                    <span className="text-gray-300"><strong className="text-blue-400">Ambiental</strong>, pero el <strong className="text-brand-yellow">humano</strong> debería haber usado visera o bajado la velocidad.</span>
+                                                </div>
+                                            </div>
+
+                                            <div className="flex flex-col sm:flex-row gap-4">
+                                                <div className="flex-1 bg-brand-navy p-4 rounded-lg border border-gray-700 flex items-center">
+                                                    <span className="text-lg text-white italic">"Se me cruzó de golpe"</span>
+                                                </div>
+                                                <div className="flex-1 bg-brand-dark-grey p-4 rounded-lg border border-gray-600 flex items-center justify-center px-4 py-3 text-center sm:text-left">
+                                                    <span className="text-gray-300"><strong className="text-brand-yellow">Humano</strong>: falta de percepción o velocidad inadecuada.</span>
+                                                </div>
+                                            </div>
+
+                                            <div className="flex flex-col sm:flex-row gap-4">
+                                                <div className="flex-1 bg-brand-navy p-4 rounded-lg border border-gray-700 flex items-center">
+                                                    <span className="text-lg text-white italic">"No me agarró el freno por la lluvia"</span>
+                                                </div>
+                                                <div className="flex-1 bg-brand-dark-grey p-4 rounded-lg border border-gray-600 flex items-center justify-center px-4 py-3 text-center sm:text-left">
+                                                    <span className="text-gray-300"><strong className="text-blue-400">Ambiental</strong> + <strong className="text-brand-yellow">Humano</strong> por no prever la distancia de frenado en mojado.</span>
+                                                </div>
+                                            </div>
+
+                                            <div className="flex flex-col sm:flex-row gap-4">
+                                                <div className="flex-1 bg-brand-navy p-4 rounded-lg border border-gray-700 flex items-center">
+                                                    <span className="text-lg text-white italic">"Había un pozo y se me descontroló la moto"</span>
+                                                </div>
+                                                <div className="flex-1 bg-brand-dark-grey p-4 rounded-lg border border-gray-600 flex items-center justify-center px-4 py-3 text-center sm:text-left">
+                                                    <span className="text-gray-300"><strong className="text-blue-400">Ambiental</strong> + <strong className="text-brand-yellow">Humano</strong> por falta de atención o velocidad.</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 )}
