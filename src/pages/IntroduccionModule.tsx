@@ -438,7 +438,7 @@ export function IntroduccionModule() {
 
                             {/* Nueva Sección: ¿Por qué se producen los incidentes viales? y Trilogía Vial */}
                             <div className="bg-brand-navy p-6 sm:p-8 rounded-xl border-l-4 border-brand-yellow shadow-xl flex flex-col items-center w-full mt-10">
-                                <h3 className="text-3xl font-brand-heading text-brand-yellow uppercase italic tracking-tighter mb-6 w-full">
+                                <h3 className="text-2xl sm:text-3xl font-brand-heading text-brand-yellow uppercase italic tracking-tighter mb-6 w-full">
                                     ¿Por qué se producen los incidentes viales?
                                 </h3>
 
@@ -450,11 +450,11 @@ export function IntroduccionModule() {
 
                                 {/* 1. El Disparador */}
                                 <div className="w-full bg-brand-dark-grey/80 p-6 rounded-xl border border-gray-600 mb-10 shadow-lg">
-                                    <h4 className="text-2xl font-bold text-white mb-4 italic flex items-center gap-3">
-                                        <div className="bg-brand-yellow p-2 rounded-lg"><Play className="w-5 h-5 text-brand-navy" /></div>
-                                        1. El Disparador: El Juego del 100%
+                                    <h4 className="text-xl sm:text-2xl font-bold text-white mb-4 italic flex items-center gap-3">
+                                        <div className="bg-brand-yellow p-2 rounded-lg shrink-0"><Play className="w-5 h-5 text-brand-navy" /></div>
+                                        <span>1. El Disparador: El Juego del 100%</span>
                                     </h4>
-                                    <p className="text-brand-yellow font-medium text-xl mb-6 pl-14">
+                                    <p className="text-brand-yellow font-medium text-lg sm:text-xl mb-6 pl-0 sm:pl-14">
                                         "Imaginen que somos peritos e investigamos un choque. Tenemos 100 puntos de responsabilidad para repartir. ¿Cuántos puntos le darían a cada uno de estos tres sospechosos?"
                                     </p>
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -480,7 +480,7 @@ export function IntroduccionModule() {
                                 </div>
 
                                 {/* 2. La Herramienta Técnica */}
-                                <h3 className="text-3xl font-brand-heading text-white uppercase italic tracking-tighter mb-6 mt-4 w-full">
+                                <h3 className="text-2xl sm:text-3xl font-brand-heading text-white uppercase italic tracking-tighter mb-6 mt-4 w-full">
                                     2. La Herramienta Técnica: <span className="text-brand-yellow">La Trilogía Vial</span>
                                 </h3>
 
@@ -522,7 +522,7 @@ export function IntroduccionModule() {
 
                                 {/* 3. El Momento de la Verdad */}
                                 <div className="w-full mt-10">
-                                    <h3 className="text-3xl font-brand-heading text-white uppercase italic tracking-tighter mb-6">
+                                    <h3 className="text-2xl sm:text-3xl font-brand-heading text-white uppercase italic tracking-tighter mb-6">
                                         3. El Momento de la Verdad: <span className="text-brand-yellow">Percepción vs. Realidad</span>
                                     </h3>
 
@@ -531,7 +531,7 @@ export function IntroduccionModule() {
                                             Aquí es donde contrastamos lo que ellos votaron con las estadísticas reales de accidentología.
                                         </p>
 
-                                        <h4 className="text-2xl font-bold text-white mb-4">¿Por qué el Factor Humano es tan alto?</h4>
+                                        <h4 className="text-xl sm:text-2xl font-bold text-white mb-4">¿Por qué el Factor Humano es tan alto?</h4>
                                         <p className="text-gray-300 mb-6">
                                             Explicamos que, aunque la calle esté rota o la moto tenga un problema, es la <strong className="text-brand-yellow">persona</strong> quien decide cómo actuar frente a eso:
                                         </p>
@@ -561,7 +561,7 @@ export function IntroduccionModule() {
 
                                 {/* 4. Dinámica de Cierre */}
                                 <div className="w-full mt-10 mb-6">
-                                    <h3 className="text-3xl font-brand-heading text-brand-yellow uppercase italic tracking-tighter mb-6">
+                                    <h3 className="text-2xl sm:text-3xl font-brand-heading text-brand-yellow uppercase italic tracking-tighter mb-6">
                                         4. Dinámica de Cierre: "Las Excusas al Banquillo"
                                     </h3>
 
