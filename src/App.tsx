@@ -1,4 +1,5 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Layout } from './components/layout/Layout';
 import { ToastProvider } from './components/ui/Toast';
 // Pages will be imported here as they are created
@@ -19,10 +20,21 @@ import { AuditoriaVialModule } from './pages/AuditoriaVialModule';
 import { EfectoMultiplicadorModule } from './pages/EfectoMultiplicadorModule';
 import { Results } from './pages/Results';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <ToastProvider>
       <HashRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Landing />} />
