@@ -9,7 +9,7 @@ export const quizQuestions = [
         sign: getSignById('reg_12'), // CONTRAMANO
         question: "¿Qué indica esta señal?",
         options: [
-            "Prohibición de circular en ese sentido.",
+            "Contramano.",
             "Dirección obligatoria.",
             "Calle sin salida.",
             "Inicio de zona de obras."
@@ -43,50 +43,14 @@ export const quizQuestions = [
     {
         id: 4,
         sign: getSignById('reg_2'), // PROHIBICION MOTOS
-        question: "Si ves esta señal circulando en moto, ¿qué debes hacer?",
+        question: "¿Qué significa esta señal?",
         options: [
             "Circular por la vereda.",
             "No ingresar a esa vía.",
             "Usar obligatoriamente el casco.",
-            "Pasar lo más rápido posible."
+            "Prohibido circular motos."
         ],
-        correctAnswer: 1
-    },
-    {
-        id: 5,
-        sign: getSignById('prev_1'), // BADEN
-        question: "¿Por qué es importante reducir la velocidad ante esta señal?",
-        options: [
-            "Porque hay obreros trabajando.",
-            "Porque la calzada tiene baches profundos.",
-            "Porque existe una depresión transversal que puede afectar la estabilidad.",
-            "Porque se termina el asfalto."
-        ],
-        correctAnswer: 2
-    },
-    {
-        id: 6,
-        sign: getSignById('tran_2'), // CONOS
-        question: "¿Qué indican estos elementos en la vía?",
-        options: [
-            "Zona de estacionamiento permitida.",
-            "Sector de juegos infantiles.",
-            "Canalización temporal por obras o peligro.",
-            "Inicio de ciclovía permanente."
-        ],
-        correctAnswer: 2
-    },
-    {
-        id: 7,
-        sign: getSignById('hor_3'), // SENDA CICLISTA
-        question: "¿Quién tiene prioridad en este sector marcado?",
-        options: [
-            "Los peatones.",
-            "Los vehículos de carga.",
-            "Los ciclistas en su cruce exclusivo.",
-            "Las motocicletas."
-        ],
-        correctAnswer: 2
+        correctAnswer: 3
     },
     {
         id: 8,
@@ -113,18 +77,6 @@ export const quizQuestions = [
         correctAnswer: 1
     },
     {
-        id: 10,
-        sign: getSignById('hor_10'), // REDUCCION VELOCIDAD
-        question: "¿Cuál es el objetivo principal de estas líneas en la calzada?",
-        options: [
-            "Indicar zona de estacionamiento.",
-            "Delimitar el carril del bus.",
-            "Generar un efecto visual que induce a reducir la velocidad.",
-            "Señalizar un cruce ferroviario."
-        ],
-        correctAnswer: 2
-    },
-    {
         id: 11,
         sign: getSignById('prev_3'), // CAMINO SINUOSO
         question: "¿Qué advierte esta señal?",
@@ -145,18 +97,6 @@ export const quizQuestions = [
             "Tener cuidado porque la calzada reduce su ancho.",
             "Frenar a cero y esperar paso.",
             "Encender las balizas."
-        ],
-        correctAnswer: 1
-    },
-    {
-        id: 13,
-        sign: getSignById('prev_2'), // CALZADA RESBALADIZA
-        question: "¿Cuándo es más peligrosa esta situación?",
-        options: [
-            "Cuando hay sol fuerte.",
-            "Ante presencia de lluvia, barro o humedad en la calzada.",
-            "Cuando hay mucho tránsito de camiones.",
-            "Durante las horas de la noche."
         ],
         correctAnswer: 1
     },
