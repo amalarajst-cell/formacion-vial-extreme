@@ -11,7 +11,7 @@ import { cn } from '../utils/cn';
 
 export function Results() {
     const location = useLocation();
-    const quizResult = location.state as { score: number, total: number } | null;
+    const quizResult = location.state as { score: number, total: number, streak?: number, module?: string } | null;
 
     const { state: surveyState, setPostSurvey, syncData, diplomaUnlocked } = useSurveyStore();
     const { showToast } = useToast();
@@ -41,15 +41,21 @@ export function Results() {
 
     if (step === 'quiz') {
         const percentage = Math.round((quizResult!.score / quizResult!.total) * 100);
+        const moduleName = quizResult?.module === 'prioridades' ? 'Prioridades de Paso' : 'Señales';
+        const nextLink = quizResult?.module === 'prioridades' ? '/emergentologia' : '/prioridades';
+        const nextButtonText = quizResult?.module === 'prioridades' ? 'INICIAR: EMERGENTOLOGÍA' : 'INICIAR TEST: PRIORIDADES DE PASO';
+        const repeatLink = quizResult?.module === 'prioridades' ? '/quiz-prioridades' : '/quiz';
+        const repeatButtonText = quizResult?.module === 'prioridades' ? 'REPETIR PRIORIDADES' : 'REPETIR SEÑALES';
+
         return (
             <div className="min-h-screen bg-brand-navy flex items-center justify-center p-4 text-center">
                 <div className="max-w-3xl w-full animate-in zoom-in duration-500">
                     <Trophy className="w-20 h-20 text-brand-yellow mx-auto mb-6 animate-bounce" />
                     <h1 className="text-6xl md:text-8xl font-brand-heading font-bold italic uppercase tracking-tighter text-white mb-2">Misión Cumplida</h1>
-                    <p className="text-brand-red text-2xl font-bold uppercase tracking-widest mb-4">Dominaste las Señales</p>
+                    <p className="text-brand-red text-2xl font-bold uppercase tracking-widest mb-4">Dominaste las {moduleName}</p>
 
                     <div className="bg-green-600/20 border border-green-500/50 p-4 rounded-lg mb-8 max-w-lg mx-auto animate-in fade-in slide-in-from-top-4 duration-1000">
-                        <h3 className="text-green-400 font-brand-heading font-bold italic uppercase text-xl">¡Módulo de Señales Completado!</h3>
+                        <h3 className="text-green-400 font-brand-heading font-bold italic uppercase text-xl">¡Módulo de {moduleName} Completado!</h3>
                         <p className="text-gray-300 text-sm mt-1">Has desbloqueado el siguiente nivel del trayecto.</p>
                     </div>
 
@@ -78,14 +84,14 @@ export function Results() {
                     </div>
 
                     <div className="flex flex-col gap-4 justify-center max-w-lg mx-auto">
-                        <Link to="/prioridades" className="w-full">
+                        <Link to={nextLink} className="w-full">
                             <Button fullWidth size="lg" className="shadow-hard bg-brand-yellow text-brand-navy hover:bg-white text-xl py-6">
-                                INICIAR TEST: PRIORIDADES DE PASO <ArrowRight className="ml-2 w-6 h-6" />
+                                {nextButtonText} <ArrowRight className="ml-2 w-6 h-6" />
                             </Button>
                         </Link>
                         <div className="flex gap-4">
                             <Link to="/adventure" className="w-full"><Button fullWidth variant="outline" className="text-gray-400 hover:text-white">VOLVER AL CAMINO</Button></Link>
-                            <Link to="/quiz" className="w-full"><Button variant="outline" fullWidth className="text-gray-400 hover:text-white">REPETIR SEÑALES</Button></Link>
+                            <Link to={repeatLink} className="w-full"><Button variant="outline" fullWidth className="text-gray-400 hover:text-white">{repeatButtonText}</Button></Link>
                         </div>
                     </div>
                 </div>
