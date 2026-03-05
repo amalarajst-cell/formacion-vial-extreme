@@ -151,7 +151,7 @@ export function IntroduccionModule() {
                         <div className="relative w-48 h-48 sm:w-56 sm:h-56 bg-brand-dark-grey rounded-full border-4 border-brand-navy p-2 flex flex-col items-center justify-center shadow-xl overflow-hidden group">
                             {/* Placeholder/Fallback para la imagen a subir */}
                             <img
-                                src="/formacion-vial-extreme/assets/oms-mundo.PNG"
+                                src="./assets/oms-mundo.PNG"
                                 alt="Estadísticas mundiales OMS"
                                 className="w-full h-full object-cover rounded-full z-10 relative"
                                 onError={(e) => {
