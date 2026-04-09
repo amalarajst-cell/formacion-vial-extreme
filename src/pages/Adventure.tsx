@@ -180,27 +180,12 @@ export function Adventure() {
                             Bienvenido al programa de transformación ciudadana. Prepárate para convertirte en un <span className="text-white font-bold">Multiplicador de Seguridad Vial</span> en la Ciudad.
                         </p>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                            <div className="p-6 border border-white/5 bg-white/5 backdrop-blur-sm group hover:border-brand-yellow/30 transition-all">
-                                <Zap className="w-10 h-10 text-brand-yellow mb-4 mx-auto group-hover:scale-110 transition-transform" />
-                                <h3 className="font-bold uppercase italic text-sm mb-2">Acción Rápida</h3>
-                                <p className="text-xs text-gray-500">Módulos dinámicos diseñados para el máximo aprendizaje en el mínimo tiempo.</p>
-                            </div>
-                            <div className="p-6 border border-white/5 bg-white/5 backdrop-blur-sm group hover:border-brand-yellow/30 transition-all">
-                                <Users className="w-10 h-10 text-brand-yellow mb-4 mx-auto group-hover:scale-110 transition-transform" />
-                                <h3 className="font-bold uppercase italic text-sm mb-2">Comunidad</h3>
-                                <p className="text-xs text-gray-500">Formamos redes de prevención en cada escuela y barrio de CABA.</p>
-                            </div>
-                            <div className="p-6 border border-white/5 bg-white/5 backdrop-blur-sm group hover:border-brand-yellow/30 transition-all">
-                                <Trophy className="w-10 h-10 text-brand-yellow mb-4 mx-auto group-hover:scale-110 transition-transform" />
-                                <h3 className="font-bold uppercase italic text-sm mb-2">Certificación</h3>
-                                <p className="text-xs text-gray-500">Recibe tu credencial oficial de Multiplicador Vial al finalizar el curso.</p>
-                            </div>
+                        <div className="w-full max-w-2xl mx-auto bg-brand-navy/90 backdrop-blur-md border border-brand-yellow/30 p-8 shadow-2xl mt-8 text-left rounded-xl">
+                            <h2 className="text-3xl font-brand-heading font-bold italic uppercase mb-8 text-brand-yellow text-center">
+                                Registro de <span className="text-white">Participante</span>
+                            </h2>
+                            <PreSurveyForm onComplete={handleSurveyComplete} />
                         </div>
-
-                        <Button size="lg" onClick={handleStartSurvey} className="bg-brand-yellow text-brand-navy hover:bg-white text-xl py-8 px-12 shadow-hard group">
-                            COMENZAR TRAYECTO <Target className="ml-3 w-8 h-8 group-hover:rotate-45 transition-transform" />
-                        </Button>
                     </div>
                 </div>
 
