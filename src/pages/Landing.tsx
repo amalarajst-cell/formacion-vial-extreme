@@ -2,8 +2,10 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { ArrowRight, Trophy, Zap, Shield, Heart, Wrench, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useSurveyStore } from '../hooks/useSurveyStore';
 
 export function Landing() {
+    const { state } = useSurveyStore();
 
     return (
         <div className="animate-in fade-in duration-500">
@@ -38,6 +40,7 @@ export function Landing() {
             </section>
 
             {/* Features Grid */}
+            {state.profile && (
             <section className="py-24 bg-brand-navy relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl md:text-5xl font-brand-heading font-bold italic uppercase tracking-tighter text-white mb-16 text-center">
@@ -133,6 +136,7 @@ export function Landing() {
                     </div>
                 </div>
             </section>
+            )}
         </div>
     );
 }
