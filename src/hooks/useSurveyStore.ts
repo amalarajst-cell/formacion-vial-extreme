@@ -4,6 +4,7 @@ export interface UserProfile {
     nombre: string;
     apellido: string;
     dni: string;
+    email: string;
     institucion: string;
 }
 
@@ -259,6 +260,7 @@ export function useSurveyStore() {
             'Nombre': state.profile?.nombre || '',
             'Apellido': state.profile?.apellido || '',
             'DNI': state.profile?.dni || '',
+            'Email': state.profile?.email || '',
             'Escuela': state.profile?.institucion || '',
             'Conocimiento_RCP': `${score}/10`,
         });
@@ -273,6 +275,7 @@ export function useSurveyStore() {
             'Nombre': state.profile?.nombre || '',
             'Apellido': state.profile?.apellido || '',
             'DNI': state.profile?.dni || '',
+            'Email': state.profile?.email || '',
             'Escuela': state.profile?.institucion || '',
             'Prioridades_Paso': score,
         });
@@ -286,6 +289,7 @@ export function useSurveyStore() {
             'Nombre': state.profile?.nombre || '',
             'Apellido': state.profile?.apellido || '',
             'DNI': state.profile?.dni || '',
+            'Email': state.profile?.email || '',
             'Escuela': state.profile?.institucion || '',
             'Simulacion_Emergencia': score,
         });
@@ -313,6 +317,7 @@ export function useSurveyStore() {
             'Nombre': state.profile?.nombre || '',
             'Apellido': state.profile?.apellido || '',
             'DNI': state.profile?.dni || '',
+            'Email': state.profile?.email || '',
             'Escuela': state.profile?.institucion || '',
             'Señal_Transitoria': score,
         });
@@ -332,7 +337,7 @@ export function useSurveyStore() {
 
     // Sincronización NO BLOQUEANTE - agrega a cola y retorna inmediatamente
     const syncData = (customData?: any) => {
-        const profile = state.profile || { nombre: '', apellido: '', dni: '', institucion: '' };
+        const profile = state.profile || { nombre: '', apellido: '', dni: '', email: '', institucion: '' };
 
         // Puntajes
         const quizScoreStr = state.quizScore !== null ? `${state.quizScore}/10` : '';
@@ -350,6 +355,7 @@ export function useSurveyStore() {
             'Nombre': profile.nombre || '',
             'Apellido': profile.apellido || '',
             'DNI': profile.dni || '',
+            'Email': profile.email || '',
             'Escuela': profile.institucion || '',
             'Percepción_de_Seguridad': state.preSurvey?.percepcion || '',
             'Señal_Transitoria': signalsScoreStr,

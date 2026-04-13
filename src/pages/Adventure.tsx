@@ -46,6 +46,7 @@ export function Adventure() {
             nombre: data.nombre,
             apellido: data.apellido,
             dni: data.dni,
+            email: data.email,
             institucion: data.institucion
         };
 
@@ -58,6 +59,7 @@ export function Adventure() {
             'Nombre': profile.nombre || '',
             'Apellido': profile.apellido || '',
             'DNI': profile.dni || '',
+            'Email': profile.email || '',
             'Escuela': profile.institucion || '',
             'Percepción_de_Seguridad': data.percepcion,
             'Conocimiento_RCP': '',

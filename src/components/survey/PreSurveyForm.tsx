@@ -14,6 +14,7 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
         nombre: '',
         apellido: '',
         dni: '',
+        email: '',
         institucion: '',
         percepcion: 5,
         conocimientoSemanas: '',
@@ -70,7 +71,18 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
                                     onChange={e => setFormData({ ...formData, dni: e.target.value })}
                                 />
                             </div>
-                            <div className="space-y-2">
+                            <div className="space-y-2 md:col-span-2">
+                                <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Correo Electrónico</label>
+                                <input
+                                    required
+                                    type="email"
+                                    className="w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600"
+                                    placeholder="Ej: juan@gmail.com"
+                                    value={formData.email}
+                                    onChange={e => setFormData({ ...formData, email: e.target.value })}
+                                />
+                            </div>
+                            <div className="space-y-2 md:col-span-2">
                                 <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Institución Educativa</label>
                                 <input
                                     required
@@ -97,7 +109,7 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
                                 type="button"
                                 onClick={handleNext}
                                 className="flex-[2] py-6 text-xl bg-brand-yellow text-brand-navy hover:bg-white"
-                                disabled={!formData.nombre || !formData.apellido || !formData.dni || !formData.institucion}
+                                disabled={!formData.nombre || !formData.apellido || !formData.dni || !formData.email || !formData.institucion}
                             >
                                 CONTINUAR <ArrowRight className="ml-2 w-6 h-6" />
                             </Button>
