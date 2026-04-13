@@ -304,7 +304,6 @@ export function Adventure() {
                                 <div className="mb-6 space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
                                     {SCHEDULE_ACTIVITIES[1].map((act, i) => (
                                         <div key={i} className="flex gap-3 p-3 bg-white/5 border border-white/10 rounded-lg">
-                                            <span className="text-xl">{act.icon}</span>
                                             <div>
                                                 {act.link ? (
                                                     <a
@@ -454,7 +453,6 @@ export function Adventure() {
                                 <div className="mt-6 mb-6 space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
                                     {SCHEDULE_ACTIVITIES[2].map((act, i) => (
                                         <div key={i} className="flex gap-3 p-3 bg-white/5 border border-white/10 rounded-lg">
-                                            <span className="text-xl">{act.icon}</span>
                                             <div>
                                                 {act.link ? (
                                                     <a
@@ -551,7 +549,6 @@ export function Adventure() {
                                 <div className="mt-6 mb-6 space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
                                     {SCHEDULE_ACTIVITIES[3].map((act, i) => (
                                         <div key={i} className="flex gap-3 p-3 bg-white/5 border border-white/10 rounded-lg">
-                                            <span className="text-xl">{act.icon}</span>
                                             <div>
                                                 {act.link ? (
                                                     <a
@@ -633,7 +630,6 @@ export function Adventure() {
                                 <div className="mb-6 space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
                                     {SCHEDULE_ACTIVITIES[4].map((act, i) => (
                                         <div key={i} className="flex gap-3 p-3 bg-white/5 border border-white/10 rounded-lg">
-                                            <span className="text-xl">{act.icon}</span>
                                             <div>
                                                 {act.link ? (
                                                     <a
@@ -693,7 +689,6 @@ export function Adventure() {
                                 <div className="mb-6 space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
                                     {SCHEDULE_ACTIVITIES[5].map((act, i) => (
                                         <div key={i} className="flex gap-3 p-3 bg-white/5 border border-white/10 rounded-lg">
-                                            <span className="text-xl">{act.icon}</span>
                                             <div>
                                                 {act.link ? (
                                                     <a
