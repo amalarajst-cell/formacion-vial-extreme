@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import {
@@ -22,7 +22,7 @@ import {
     TrainFront,
     Download
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { PreSurveyForm } from '../components/survey/PreSurveyForm';
 import { FieldLog } from '../components/survey/FieldLog';
 import { useSurveyStore } from '../hooks/useSurveyStore';
@@ -32,12 +32,20 @@ import { cn } from '../utils/cn';
 import { SCHEDULE_ACTIVITIES } from '../data/schedule';
 
 export function Adventure() {
+    const location = useLocation();
     const { state, setPreSurvey, setProfile, setFieldData, syncData, clearState, lastSync } = useSurveyStore();
     const { showToast } = useToast();
     const [expandedDay, setExpandedDay] = useState<number | null>(null);
     const [view, setView] = useState<'intro' | 'survey' | 'journey' | 'fieldlog'>(
-        state.profile ? 'journey' : 'intro'
+        (location.state as any)?.openFieldLog ? 'fieldlog' : (state.profile ? 'journey' : 'intro')
     );
+
+    useEffect(() => {
+        if ((location.state as any)?.openFieldLog) {
+            setView('fieldlog');
+            window.history.replaceState({}, document.title);
+        }
+    }, [location.state]);
 
     const handleStartSurvey = () => setView('survey');
 
@@ -604,21 +612,33 @@ export function Adventure() {
                                 onClick={(e) => e.stopPropagation()}
                             >
                                 {state.profile && (
-                                    <Link to="/auditoria" className="block">
+                                    <>
+                                        <Link to="/auditoria" className="block">
+                                            <Button
+                                                fullWidth
+                                                size="sm"
+                                                variant="outline"
+                                                className={cn(
+                                                    "justify-between group/btn transition-all duration-300 border-gray-800 hover:border-green-500"
+                                                )}
+                                            >
+                                                MÓDULO AUDITOR <Binoculars className="w-3 h-3 group-hover/btn:scale-125 transition-transform" />
+                                            </Button>
+                                        </Link>
                                         <Button
                                             fullWidth
                                             size="sm"
-                                            variant="outline"
+                                            onClick={() => setView('fieldlog')}
                                             className={cn(
                                                 "justify-between group/btn transition-all duration-300",
                                                 state.fieldData
-                                                    ? "border-green-500/50 bg-green-500/5 text-green-500 hover:bg-green-500 hover:text-brand-navy"
-                                                    : "border-gray-800 hover:border-green-500 animate-pulse"
+                                                    ? "border border-green-500/50 bg-green-500/5 text-green-500 hover:bg-green-500 hover:text-brand-navy"
+                                                    : "bg-green-500 hover:bg-green-600 text-brand-navy font-bold shadow-[0_0_15px_rgba(34,197,94,0.3)] animate-pulse"
                                             )}
                                         >
-                                            ENTRENAMIENTO AUDITOR <Binoculars className="w-3 h-3 group-hover/btn:scale-125 transition-transform" />
+                                            ACTIVAR BITÁCORA <ClipboardList className="w-3 h-3 group-hover/btn:scale-125 transition-transform" />
                                         </Button>
-                                    </Link>
+                                    </>
                                 )}
                             </div>
 

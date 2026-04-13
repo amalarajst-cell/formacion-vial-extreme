@@ -110,7 +110,7 @@ export function AuditoriaVialModule() {
 
             {/* Final CTA link to Adventure page for the real log */}
             <div className="mt-12 text-center">
-                <Link to="/adventure">
+                <Link to="/adventure" state={{ openFieldLog: true }}>
                     <Button size="lg" className="bg-brand-yellow text-brand-navy hover:bg-white text-lg py-6 px-10 shadow-hard">
                         ACTIVAR BITÁCORA DE CAMPO <Map className="ml-2 w-6 h-6" />
                     </Button>
