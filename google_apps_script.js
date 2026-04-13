@@ -22,18 +22,19 @@ function guardarDatos(data) {
         'Nombre',
         'Apellido',
         'DNI',
+        'Email',
         'Escuela',
         'Percepción_de_Seguridad',
         'Señal_Transitoria',
         'Conocimiento_RCP',
         'Simulacion_Emergencia',
+        'Prioridades_Paso',
         'Auditoria_Celular',
         'Sin_Celular',
         'Fuera_de_Senda',
         'Encuesta_Final_1',
         'Encuesta_Final_2',
-        'Encuesta_Final_3',
-        'Prioridades_Paso'
+        'Encuesta_Final_3'
     ];
 
     // 1. Obtener encabezados actuales
