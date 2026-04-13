@@ -385,11 +385,7 @@ export function Adventure() {
                                 className="pt-4 border-t border-white/5 space-y-3"
                                 onClick={(e) => e.stopPropagation()}
                             >
-                                <Link to="/quiz" className="block">
-                                    <Button fullWidth size="sm" variant="outline" className="justify-between group/btn border-gray-800 hover:border-brand-yellow">
-                                        TEST SEÑALES <Play className="w-3 h-3 fill-current group-hover/btn:scale-125 transition-transform" />
-                                    </Button>
-                                </Link>
+
                                 {true && (
                                     <Link to="/dia1" className="block animate-in slide-in-from-left duration-500">
                                         <Button fullWidth size="sm" variant="outline" className="justify-between group/btn border-brand-yellow/50 bg-brand-yellow/5 text-brand-yellow hover:bg-brand-yellow hover:text-brand-navy">
