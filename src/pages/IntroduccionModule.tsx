@@ -130,9 +130,21 @@ export function IntroduccionModule() {
                 {/* Introducción Text */}
                 <div className="bg-brand-navy p-4 sm:p-6 rounded-lg mb-8 border-t-4 border-brand-yellow">
                     <h2 className="text-xl font-bold uppercase text-brand-yellow mb-4">¿Qué es la Seguridad Vial?</h2>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed mb-6">
                         La seguridad vial es el conjunto de acciones y mecanismos que garantizan el buen funcionamiento de la circulación del tránsito, mediante la utilización de conocimientos (leyes, reglamento y disposiciones) y normas de conducta, bien sea como peatón, pasajero o conductor, a fin de usar correctamente la vía pública previniendo los incidentes de tránsito.
                     </p>
+                    <div className="aspect-video w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl shadow-black/80 border-2 border-gray-800 bg-black">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            src="https://www.youtube.com/embed/tuF35bFqbaE?rel=0"
+                            title="¿Qué es la Seguridad Vial?"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="w-full h-full border-0"
+                        ></iframe>
+                    </div>
                 </div>
 
                 {/* Global Statistics */}

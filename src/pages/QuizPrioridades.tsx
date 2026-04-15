@@ -26,17 +26,6 @@ export function QuizPrioridades() {
 
     const currentQuestion = prioridadesQuestions[currentQuestionIdx];
 
-    if (!currentQuestion) {
-        return (
-            <div className="min-h-screen bg-brand-navy flex items-center justify-center">
-                <div className="text-center">
-                    <div className="w-12 h-12 border-4 border-brand-red border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-                    <p className="text-white font-bold italic uppercase tracking-widest">Cargando desafío...</p>
-                </div>
-            </div>
-        );
-    }
-
     useEffect(() => {
         if (timeLeft > 0 && !isAnswered && !gameOver) {
             const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
@@ -50,6 +39,17 @@ export function QuizPrioridades() {
         if (streak >= 3) setIsTurbo(true);
         else setIsTurbo(false);
     }, [streak]);
+
+    if (!currentQuestion) {
+        return (
+            <div className="min-h-screen bg-brand-navy flex items-center justify-center">
+                <div className="text-center">
+                    <div className="w-12 h-12 border-4 border-brand-red border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+                    <p className="text-white font-bold italic uppercase tracking-widest">Cargando desafío...</p>
+                </div>
+            </div>
+        );
+    }
 
     const handleTimeOut = () => {
         setIsAnswered(true);
