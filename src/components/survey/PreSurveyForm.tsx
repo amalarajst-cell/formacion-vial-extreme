@@ -18,7 +18,8 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
         institucion: '',
         percepcion: 5,
         conocimientoSemanas: '',
-        habilidadSiniestro: ''
+        habilidadSiniestro: '',
+        semaforoPeaton: ''
     });
 
     const handleNext = () => setStep(s => s + 1);
@@ -177,11 +178,29 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
                             </div>
                         </div>
 
+                        <div className="space-y-4">
+                            <label className="block text-lg font-bold text-white">
+                                Como peatón, ¿de qué color debe estar el semáforo para poder cruzar?
+                            </label>
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                {['rojo', 'amarillo', 'verde'].map(opt => (
+                                    <button
+                                        key={opt}
+                                        type="button"
+                                        onClick={() => setFormData({ ...formData, semaforoPeaton: opt })}
+                                        className={`w-full py-4 text-center capitalize font-bold border rounded-lg transition-all ${formData.semaforoPeaton === opt ? 'bg-brand-yellow text-brand-navy border-brand-yellow' : 'bg-transparent border-gray-700 text-gray-400 hover:border-white'}`}
+                                    >
+                                        {opt}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
                         <div className="flex gap-4 pt-4">
                             <Button
                                 type="submit"
                                 className="w-full py-6 text-xl shadow-hard"
-                                disabled={!formData.conocimientoSemanas || !formData.habilidadSiniestro}
+                                disabled={!formData.conocimientoSemanas || !formData.habilidadSiniestro || !formData.semaforoPeaton}
                             >
                                 INICIAR TRAYECTO <Rocket className="ml-2 w-6 h-6" />
                             </Button>

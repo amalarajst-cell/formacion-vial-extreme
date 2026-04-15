@@ -358,6 +358,7 @@ export function useSurveyStore() {
             'Email': profile.email || '',
             'Escuela': profile.institucion || '',
             'Percepción_de_Seguridad': state.preSurvey?.percepcion || '',
+            'Semaforo_Peaton': state.preSurvey?.semaforoPeaton || '',
             'Señal_Transitoria': signalsScoreStr,
             'Conocimiento_RCP': quizScoreStr,
             'Simulacion_Emergencia': emergentologiaScoreStr,
