@@ -2823,7 +2823,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
+    "needsImage": true
   },
   {
     "id": "210",
@@ -2843,7 +2844,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
+    "needsImage": true
   },
   {
     "id": "211",
@@ -4278,7 +4280,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - Conocimiento del Vehículo",
+    "needsImage": true
   },
   {
     "id": "321",
@@ -4964,7 +4967,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - Conocimiento del Vehículo",
+    "needsImage": true
   },
   {
     "id": "385",
@@ -5259,7 +5263,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
+    "needsImage": true
   },
   {
     "id": "404",
@@ -6832,7 +6837,8 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
+    "needsImage": true
   },
   {
     "id": "575",
