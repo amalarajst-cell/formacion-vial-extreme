@@ -39,6 +39,21 @@ export function SimuladorTeorico() {
     const [themes, setThemes] = useState<string[]>([]);
     const [chapters, setChapters] = useState<string[]>([]);
 
+    const getImageUrl = (imagePath: string | undefined) => {
+        if (!imagePath) return '';
+        // Si ya es una URL completa (http), no tocar
+        if (imagePath.startsWith('http')) return imagePath;
+        
+        // Limpiar el path si empieza con /
+        const cleanPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath;
+        
+        // En Vite, import.meta.env.BASE_URL contiene la base path configurada (ej: /formacion-vial-extreme/)
+        const baseUrl = import.meta.env.BASE_URL;
+        const normalizedBase = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
+        
+        return `${normalizedBase}${cleanPath}`;
+    };
+
     const loadQuestionsData = async () => {
         if (allQuestions.length > 0) return allQuestions;
         setLoadingQuestions(true);
@@ -327,7 +342,7 @@ export function SimuladorTeorico() {
                                     {q.image && (
                                         <div className="pl-9 mb-4">
                                             <img 
-                                                src={q.image} 
+                                                src={getImageUrl(q.image)} 
                                                 alt="Visual de la pregunta" 
                                                 className="max-w-[200px] h-auto rounded border border-white/10"
                                             />
@@ -417,7 +432,7 @@ export function SimuladorTeorico() {
                 {question.image && (
                     <div className="mb-8 rounded-xl overflow-hidden border border-white/10 bg-black/20 flex justify-center">
                         <img 
-                            src={question.image} 
+                            src={getImageUrl(question.image)} 
                             alt="Visual de la pregunta" 
                             className="max-w-full max-h-[300px] object-contain"
                         />
