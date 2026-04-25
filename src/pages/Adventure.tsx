@@ -7,7 +7,7 @@ import {
     Rocket,
     Target,
     Heart,
-    Wrench,
+    Monitor,
     Eye,
     Users,
     Award,
@@ -525,9 +525,23 @@ export function Adventure() {
                         >
                             <div className="flex items-center justify-between mb-6">
                                 <div className="flex items-center gap-4">
-                                    <Wrench className="w-12 h-12 text-blue-500" />
-                                    <div className="border border-blue-500/50 bg-blue-500/10 px-3 py-1 text-[10px] font-bold text-blue-500 uppercase tracking-tighter">
-                                        Día 3
+                                    <Monitor className="w-12 h-12 text-blue-500" />
+                                    <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                                        <div className="border border-blue-500/50 bg-blue-500/10 px-3 py-1 text-[10px] font-bold text-blue-500 uppercase tracking-tighter w-fit">
+                                            Día 3
+                                        </div>
+                                        <Button
+                                            size="sm"
+                                            variant="outline"
+                                            className="h-7 px-2 text-[9px] border-blue-500/30 text-blue-500 hover:bg-blue-500 hover:text-white gap-1"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                window.open('https://www.google.com/maps/search/Profesor+Dr.+Pedro+Chutro+2928,+CABA', '_blank');
+                                            }}
+                                        >
+                                            <MapPin className="w-3 h-3" />
+                                            CÓMO LLEGO
+                                        </Button>
                                     </div>
                                 </div>
                                 <ChevronDown className={cn(
@@ -535,8 +549,8 @@ export function Adventure() {
                                     expandedDay === 3 ? "rotate-180 text-blue-500" : ""
                                 )} />
                             </div>
-                            <h3 className="text-2xl font-brand-heading font-bold italic uppercase mb-2 text-white group-hover:text-blue-500 transition-colors leading-tight">Seguridad Técnica y Control</h3>
-                            <p className="text-gray-400 text-sm mb-4">Visita a la planta VTV para entender el mantenimiento vehicular y simulacros operativos con Agentes de Tránsito.</p>
+                            <h3 className="text-2xl font-brand-heading font-bold italic uppercase mb-2 text-white group-hover:text-blue-500 transition-colors leading-tight">Centro de Monitoreo</h3>
+                            <p className="text-gray-400 text-sm mb-4">Conocé el Centro de Monitoreo de la Movilidad Urbana de CABA: descubrí cómo se gestiona y controla el tránsito de la ciudad en tiempo real.</p>
 
                             <div
                                 className="pt-4 border-t border-white/5"
@@ -544,7 +558,7 @@ export function Adventure() {
                             >
                                 <Link to="/vtv">
                                     <Button fullWidth size="sm" variant="outline" className="justify-between group/btn border-gray-800 hover:border-blue-500">
-                                        REVISIÓN TÉCNICA <Play className="w-3 h-3 fill-current group-hover/btn:scale-125 transition-transform" />
+                                        CENTRO DE MONITOREO <Play className="w-3 h-3 fill-current group-hover/btn:scale-125 transition-transform" />
                                     </Button>
                                 </Link>
                             </div>
@@ -569,6 +583,26 @@ export function Adventure() {
                                             </div>
                                         </div>
                                     ))}
+
+                                    {/* Información Logística de Acceso Día 3 */}
+                                    <div className="mt-4 p-4 bg-blue-500/5 border border-blue-500/20 rounded-xl space-y-3">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white shadow-lg">
+                                                <MapPin className="w-4 h-4" />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-[10px] font-black text-blue-500 uppercase tracking-widest">Centro de Monitoreo</h4>
+                                                <a
+                                                    href="https://www.google.com/maps/search/Profesor+Dr.+Pedro+Chutro+2928,+CABA"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-xs text-white font-bold hover:underline decoration-blue-500 underline-offset-4"
+                                                >
+                                                    Dr. Profesor Pedro Chutro 2928, CABA
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             )}
                         </Card>

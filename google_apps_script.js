@@ -25,6 +25,7 @@ function guardarDatos(data) {
         'Email',
         'Escuela',
         'Percepción_de_Seguridad',
+        'Semaforo_Peaton',
         'Señal_Transitoria',
         'Conocimiento_RCP',
         'Simulacion_Emergencia',

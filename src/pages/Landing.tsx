@@ -1,6 +1,6 @@
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
-import { ArrowRight, Trophy, Zap, Shield, Heart, Wrench, Eye } from 'lucide-react';
+import { ArrowRight, Trophy, Zap, Shield, Heart, Monitor, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useSurveyStore } from '../hooks/useSurveyStore';
 
@@ -85,14 +85,14 @@ export function Landing() {
                         <Link to="/vtv">
                             <Card hoverEffect className="group">
                                 <div className="flex items-center gap-4 mb-6">
-                                    <Wrench className="w-12 h-12 text-brand-yellow" />
+                                    <Monitor className="w-12 h-12 text-brand-yellow" />
                                     <span className="text-xs font-bold text-white bg-brand-yellow/20 px-2 py-1 rounded border border-brand-yellow/30 uppercase tracking-widest">Día 3</span>
                                 </div>
                                 <h3 className="text-3xl font-brand-heading font-bold italic uppercase mb-4 group-hover:text-brand-yellow transition-colors">
-                                    Seguridad Técnica y Control
+                                    Centro de Monitoreo
                                 </h3>
                                 <p className="text-gray-400">
-                                    Viví la experiencia técnica en una planta de VTV: aprendé a identificar los puntos críticos de la seguridad vehícular.
+                                    Conocé el Centro de Monitoreo de la Movilidad Urbana de CABA: descubrí cómo se gestiona y controla el tránsito de la ciudad en tiempo real.
                                 </p>
                             </Card>
                         </Link>
