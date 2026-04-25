@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
-import { Clock, CheckCircle, XCircle, AlertCircle, ArrowRight, ArrowLeft, Trophy, RotateCcw, Loader, BookOpen, GraduationCap, ChevronRight, Filter } from 'lucide-react';
+import { Clock, CheckCircle, XCircle, AlertCircle, ArrowRight, ArrowLeft, Trophy, RotateCcw, Loader, BookOpen, GraduationCap, ChevronRight, Filter, FileText, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const EXAM_TIME_MINUTES = 45;
@@ -173,9 +173,52 @@ export function SimuladorTeorico() {
                         </button>
                     </div>
 
-                    <div className="flex justify-center">
+                    <div className="mt-12 pt-8 border-t border-white/10">
+                        <h4 className="text-xl font-bold uppercase mb-6 flex items-center gap-2">
+                            <BookOpen className="text-brand-yellow w-6 h-6" />
+                            Material de Apoyo
+                        </h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <a 
+                                href={getImageUrl('assets/manuals/manual-auto.pdf')} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all group"
+                            >
+                                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+                                    <FileText className="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <p className="font-bold text-sm">Manual del Conductor (Auto)</p>
+                                    <p className="text-xs opacity-50">PDF • Vehículos 4 Ruedas</p>
+                                </div>
+                                <ExternalLink className="w-4 h-4 ml-auto opacity-30 group-hover:opacity-100 transition-opacity" />
+                            </a>
+
+                            <a 
+                                href={getImageUrl('assets/manuals/manual-moto.pdf')} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all group"
+                            >
+                                <div className="w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform">
+                                    <FileText className="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <p className="font-bold text-sm">Manual del Conductor (Moto)</p>
+                                    <p className="text-xs opacity-50">PDF • Motovehículos</p>
+                                </div>
+                                <ExternalLink className="w-4 h-4 ml-auto opacity-30 group-hover:opacity-100 transition-opacity" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className="flex justify-center mt-8">
                         <Link to="/">
-                            <Button variant="outline">Volver al Inicio</Button>
+                            <Button variant="ghost" className="text-gray-400 hover:text-white">
+                                <ArrowLeft className="w-4 h-4 mr-2" />
+                                Volver al Inicio
+                            </Button>
                         </Link>
                     </div>
                 </Card>
