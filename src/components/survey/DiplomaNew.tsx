@@ -42,6 +42,14 @@ export function DiplomaNew({ userName, dni }: DiplomaProps) {
 
                 {/* Content Container */}
                 <div className="relative z-10 flex flex-col items-center h-full text-center">
+                    {/* BA Logo (Top Left) */}
+                    <div className="absolute top-0 left-0">
+                        <img
+                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTEwIDIwIEMxMCAxNSAxNSAxMCAyMCAxMCBMODAgMTAgQzg1IDEwIDkwIDE1IDkwIDIwIEw5MCA4MCBDOTAgODUgODUgOTAgODAgOTAgTDIwIDkwIEMxNSA5MCAxMCA4NSAxMCA4MCBaIiBmaWxsPSIjRkZEMjAwIi8+CiAgPHRleHQgeD0iNTAiIHk9IjY1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iNTAiIGZpbGw9IiMwMDAwMDAiPkJBPC90ZXh0Pgo8L3N2Zz4="
+                            alt="Logo BA"
+                            className="h-16 w-auto"
+                        />
+                    </div>
 
                     {/* Header */}
                     <div className="mb-10">
