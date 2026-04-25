@@ -213,22 +213,23 @@ export function SimuladorTeorico() {
         return (
             <div className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in duration-500">
                 <Card className="p-8 border-brand-yellow/30 bg-brand-navy/95">
-                    <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
-                        <div className="flex items-center gap-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 border-b border-white/10 pb-6 gap-4">
+                        <div className="flex items-center gap-3">
                             <button onClick={() => setViewMode('intro')} className="p-2 hover:bg-white/10 rounded-full transition-colors">
                                 <ArrowLeft className="w-6 h-6 text-white" />
                             </button>
-                            <h2 className="text-3xl font-brand-heading font-bold italic uppercase text-white">
-                                {isTheme ? 'Seleccionar Tema' : 'Seleccionar Capitulo'}
+                            <h2 className="text-xl sm:text-3xl font-brand-heading font-bold italic uppercase text-white leading-tight">
+                                {isTheme ? 'Seleccionar Tema' : 'Seleccionar Capítulo'}
                             </h2>
                         </div>
                         <Button 
                             variant="outline" 
                             size="sm"
+                            className="w-full sm:w-auto"
                             onClick={() => setViewMode(isTheme ? 'chapter-selection' : 'theme-selection')}
                         >
                             <Filter className="w-4 h-4 mr-2" />
-                            {isTheme ? 'Ver por Capitulos' : 'Ver por Temas'}
+                            {isTheme ? 'Ver por Capítulos' : 'Ver por Temas'}
                         </Button>
                     </div>
 
