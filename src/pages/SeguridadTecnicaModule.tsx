@@ -4,7 +4,7 @@ import { Button } from '../components/ui/Button';
 import { vtvPoints } from '../data/vtvContent';
 import { cn } from '../utils/cn';
 import { Link } from 'react-router-dom';
-import { Wrench, ShieldCheck, Gauge, AlertTriangle, BadgeCheck } from 'lucide-react';
+import { Monitor, ShieldCheck, Gauge, AlertTriangle, BadgeCheck } from 'lucide-react';
 
 export function SeguridadTecnicaModule() {
     const [selectedPoint, setSelectedPoint] = useState<string | null>(null);
@@ -15,18 +15,18 @@ export function SeguridadTecnicaModule() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 md:mb-12 gap-4">
                 <div>
                     <h1 className="text-3xl md:text-5xl font-brand-heading font-bold italic uppercase tracking-tighter mb-2">
-                        Seguridad <span className="text-blue-500">Técnica y VTV</span>
+                        Centro de <span className="text-blue-500">Monitoreo</span>
                     </h1>
                     <p className="text-gray-400 text-sm md:text-base max-w-xl leading-relaxed">
-                        Aprendé a identificar los puntos críticos que hacen a la seguridad de un vehículo. La física no perdona: un mantenimiento adecuado salva vidas.
+                        Conocé cómo se gestiona y controla el tránsito de la ciudad en tiempo real para mejorar la seguridad vial.
                     </p>
                     <div className="flex items-center gap-2 mt-4 text-blue-500 font-bold uppercase tracking-tighter text-xs border border-blue-500/30 px-3 py-1 bg-blue-500/5 w-fit">
-                        🏢 Experiencia Planta VTV - GCBA
+                        🏢 Centro de Monitoreo - GCBA
                     </div>
                 </div>
                 <Link to="/vtv-simulador">
                     <Button size="lg" className="shadow-hard group text-sm md:text-base bg-blue-600 hover:bg-blue-500 border-blue-400">
-                        <BadgeCheck className="mr-2 w-5 h-5" /> SER INSPECTOR
+                        <BadgeCheck className="mr-2 w-5 h-5" /> SIMULAR OPERADOR
                     </Button>
                 </Link>
             </div>
@@ -36,7 +36,7 @@ export function SeguridadTecnicaModule() {
                 {/* Left: Interactive Diagram / List */}
                 <div className="lg:col-span-4 space-y-3">
                     <h3 className="text-white font-brand-heading font-bold italic uppercase tracking-widest text-sm mb-4 flex items-center gap-2">
-                        <Wrench className="w-4 h-4 text-blue-500" /> Puntos de Inspección
+                        <Monitor className="w-4 h-4 text-blue-500" /> Áreas de Monitoreo
                     </h3>
                     {vtvPoints.map((point) => (
                         <button
@@ -105,12 +105,12 @@ export function SeguridadTecnicaModule() {
                                                 <Gauge className="w-4 h-4 text-blue-500" /> Impacto en el riesgo vial
                                             </h4>
                                             <p className="text-gray-400 text-sm italic">
-                                                {point.id === 'frenos' && "Un sistema de frenos desequilibrado puede hacer que el vehículo pierda la trayectoria y patine (efecto tijera) ante una frenada de pánico."}
-                                                {point.id === 'neumaticos' && "El neumático 'liso' (testigo al ras) aumenta la distancia de frenado en mojado hasta un 50% y anula la dirección del vehículo."}
-                                                {point.id === 'luces' && "Un faro quemado o desalineado no solo reduce tu visión, sino que impide que otros conductores dimensionen el tamaño del vehículo de noche."}
-                                                {point.id === 'suspension' && "Amortiguadores vencidos provocan cabeceo, inestabilidad en curvas y aumentan el desgaste de los neumáticos."}
-                                                {point.id === 'emisiones' && "Un escape libre o defectuoso genera fatiga por ruido en el conductor y daño ambiental directo a los pulmones de los peatones."}
-                                                {point.id === 'seguridad' && "El cinturón de seguridad y el matafuego cargado son la última línea de defensa entre la supervivencia y la fatalidad."}
+                                                {point.id === 'semaforos' && "Un semáforo desincronizado o fuera de servicio puede generar congestionamientos severos y alto riesgo de colisiones en cruces."}
+                                                {point.id === 'camaras' && "La detección temprana de un incidente reduce el tiempo de respuesta de emergencias, salvando vidas."}
+                                                {point.id === 'velocidad' && "El exceso de velocidad es el principal factor de riesgo en siniestros viales mortales."}
+                                                {point.id === 'flujo' && "Conocer el volumen vehicular permite evitar colapsos que demoran los servicios de emergencia."}
+                                                {point.id === 'carteles' && "La información anticipada evita frenadas bruscas y choques en cadena ante obstáculos inesperados."}
+                                                {point.id === 'anillo' && "Restringir la circulación de vehículos irregulares o peligrosos aumenta la seguridad general de la Ciudad."}
                                             </p>
                                         </div>
                                     </div>
@@ -119,10 +119,10 @@ export function SeguridadTecnicaModule() {
                         </Card>
                     ) : (
                         <div className="h-full flex flex-col items-center justify-center p-12 border-2 border-dashed border-gray-800 rounded-lg text-center bg-brand-dark-grey/20">
-                            <Wrench className="w-16 h-16 text-gray-700 mb-6 animate-bounce-slow" />
-                            <h3 className="text-gray-500 font-brand-heading font-bold italic uppercase text-2xl mb-2">Ingresá a la fosa</h3>
+                            <Monitor className="w-16 h-16 text-gray-700 mb-6 animate-bounce-slow" />
+                            <h3 className="text-gray-500 font-brand-heading font-bold italic uppercase text-2xl mb-2">Ingresá al Centro</h3>
                             <p className="text-gray-600 max-w-sm">
-                                Seleccioná un punto de inspección del listado de la izquierda para ver el detalle de los controles técnicos.
+                                Seleccioná un área de monitoreo del listado de la izquierda para ver el detalle de la gestión de tránsito.
                             </p>
                         </div>
                     )}
@@ -132,16 +132,16 @@ export function SeguridadTecnicaModule() {
             {/* VTV Results Info */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 md:mt-24">
                 <div className="p-6 border-l-4 border-green-500 bg-green-500/5">
-                    <h4 className="text-green-500 font-bold uppercase italic mb-1">APTO</h4>
-                    <p className="text-xs text-gray-400">Vehículo sin fallas o leves que no comprometen la seguridad. Oblea habilitada por 1 año.</p>
+                    <h4 className="text-green-500 font-bold uppercase italic mb-1">NORMAL</h4>
+                    <p className="text-xs text-gray-400">Tránsito fluido sin incidentes ni demoras significativas. No requiere acciones inmediatas.</p>
                 </div>
                 <div className="p-6 border-l-4 border-brand-yellow bg-brand-yellow/5">
-                    <h4 className="text-brand-yellow font-bold uppercase italic mb-1">CONDICIONAL</h4>
-                    <p className="text-xs text-gray-400">Una o más fallas leves. El vehículo puede circular pero tiene 60 días para volver a verificar gratis.</p>
+                    <h4 className="text-brand-yellow font-bold uppercase italic mb-1">ALERTA</h4>
+                    <p className="text-xs text-gray-400">Situación que requiere atención (vehículo detenido, congestión leve). Monitoreo preventivo.</p>
                 </div>
                 <div className="p-6 border-l-4 border-brand-red bg-brand-red/5">
-                    <h4 className="text-brand-red font-bold uppercase italic mb-1">RECHAZADO</h4>
-                    <p className="text-xs text-gray-400">Falla crítica detectada. El vehículo NO está habilitado para circular hasta ser reparado.</p>
+                    <h4 className="text-brand-red font-bold uppercase italic mb-1">CRÍTICO</h4>
+                    <p className="text-xs text-gray-400">Incidente grave o corte total. Requiere coordinación inmediata con emergencias y desvíos.</p>
                 </div>
             </div>
         </div>

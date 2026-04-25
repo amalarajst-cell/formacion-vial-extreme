@@ -8,14 +8,14 @@ import { ArrowRight, RotateCcw, Home, BadgeCheck, ClipboardList, Target } from '
 
 export function VTVSimulador() {
     const [currentScenario, setCurrentScenario] = useState(0);
-    const [selectedResult, setSelectedResult] = useState<'apto' | 'condicional' | 'rechazado' | null>(null);
+    const [selectedResult, setSelectedResult] = useState<'normal' | 'alerta' | 'critico' | null>(null);
     const [showExplanation, setShowExplanation] = useState(false);
     const [score, setScore] = useState(0);
     const [completed, setCompleted] = useState(false);
 
     const scenario = vtvScenarios[currentScenario];
 
-    const handleVerdict = (verdict: 'apto' | 'condicional' | 'rechazado') => {
+    const handleVerdict = (verdict: 'normal' | 'alerta' | 'critico') => {
         if (showExplanation) return;
         setSelectedResult(verdict);
         setShowExplanation(true);
@@ -43,9 +43,9 @@ export function VTVSimulador() {
     };
 
     const resultColors = {
-        apto: "border-green-500 text-green-500 bg-green-500/10",
-        condicional: "border-brand-yellow text-brand-yellow bg-brand-yellow/10",
-        rechazado: "border-brand-red text-brand-red bg-brand-red/10",
+        normal: "border-green-500 text-green-500 bg-green-500/10",
+        alerta: "border-brand-yellow text-brand-yellow bg-brand-yellow/10",
+        critico: "border-brand-red text-brand-red bg-brand-red/10",
     };
 
     if (completed) {
@@ -54,10 +54,10 @@ export function VTVSimulador() {
                 <div className="mb-8">
                     <BadgeCheck className="w-20 h-20 text-blue-500 mx-auto mb-6" />
                     <h2 className="text-4xl md:text-6xl font-brand-heading font-bold italic uppercase tracking-tighter mb-4">
-                        Inspección <span className="text-blue-500">Completada</span>
+                        Guardia <span className="text-blue-500">Completada</span>
                     </h2>
                     <p className="text-gray-400 text-lg mb-8">
-                        Has finalizado tu entrenamiento en la línea de inspección de la VTV.
+                        Has finalizado tu turno operativo en el Centro de Monitoreo.
                     </p>
                     <div className="text-6xl font-brand-heading font-bold italic text-white mb-12">
                         {score} <span className="text-gray-600">/ {vtvScenarios.length}</span>
@@ -85,11 +85,11 @@ export function VTVSimulador() {
                 <div className="flex items-center gap-3">
                     <ClipboardList className="w-6 h-6 text-blue-500" />
                     <h1 className="text-xl md:text-2xl font-brand-heading font-bold italic uppercase tracking-tighter">
-                        Simulador de <span className="text-blue-500">Inspección VTV</span>
+                        Simulador <span className="text-blue-500">Centro de Monitoreo</span>
                     </h1>
                 </div>
                 <div className="text-xs md:text-sm font-mono text-gray-400">
-                    LÍNEA {currentScenario + 1} DE {vtvScenarios.length}
+                    EVENTO {currentScenario + 1} DE {vtvScenarios.length}
                 </div>
             </div>
 
@@ -101,14 +101,14 @@ export function VTVSimulador() {
                     <span className="text-[10px] font-bold text-blue-500 uppercase tracking-[0.3em] bg-blue-500/10 px-3 py-1 rounded border border-blue-500/20">
                         {scenario.vehicleType}
                     </span>
-                    <h3 className="text-gray-300 font-bold uppercase text-xs mt-6 mb-2 tracking-widest">OBSERVACIÓN DEL INSPECTOR:</h3>
+                    <h3 className="text-gray-300 font-bold uppercase text-xs mt-6 mb-2 tracking-widest">REPORTE DE SENSORES/CÁMARAS:</h3>
                     <p className="text-xl md:text-2xl font-brand-heading font-bold italic uppercase text-white leading-tight">
                         “{scenario.observation}”
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {(['apto', 'condicional', 'rechazado'] as const).map((verdict) => {
+                    {(['normal', 'alerta', 'critico'] as const).map((verdict) => {
                         const isCorrect = verdict === scenario.correctResult;
                         const isSelected = selectedResult === verdict;
 
@@ -143,7 +143,7 @@ export function VTVSimulador() {
                             )} />
                             <div>
                                 <h4 className="font-bold uppercase tracking-widest text-xs mb-2 text-white italic">
-                                    DICTAMEN TÉCNICO: <span className={cn("uppercase", resultColors[scenario.correctResult].split(' ')[1])}>{scenario.correctResult}</span>
+                                    NIVEL DE ALERTA: <span className={cn("uppercase", resultColors[scenario.correctResult].split(' ')[1])}>{scenario.correctResult}</span>
                                 </h4>
                                 <p className="text-gray-400 text-sm md:text-base leading-relaxed">
                                     {scenario.explanation}
@@ -154,7 +154,7 @@ export function VTVSimulador() {
                             onClick={nextScenario}
                             className="mt-8 w-full md:w-auto bg-blue-600 hover:bg-blue-500"
                         >
-                            {currentScenario === vtvScenarios.length - 1 ? 'CONCLUIR TURNO' : 'SIGUIENTE VEHÍCULO'} <ArrowRight className="ml-2 w-5 h-5" />
+                            {currentScenario === vtvScenarios.length - 1 ? 'FINALIZAR GUARDIA' : 'SIGUIENTE EVENTO'} <ArrowRight className="ml-2 w-5 h-5" />
                         </Button>
                     </div>
                 )}
@@ -162,7 +162,7 @@ export function VTVSimulador() {
 
             <div className="text-center">
                 <Link to="/vtv" className="text-gray-500 hover:text-white text-xs uppercase tracking-widest font-bold transition-colors">
-                    Salir de la planta
+                    Salir del Centro
                 </Link>
             </div>
         </div>

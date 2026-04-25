@@ -8,46 +8,46 @@ export interface VTVPoint {
 
 export const vtvPoints: VTVPoint[] = [
     {
-        id: 'frenos',
-        title: 'SISTEMA DE FRENADO',
-        description: 'Se verifica la eficacia de frenado y el desequilibrio entre ruedas del mismo eje. Un desequilibrio mayor al 30% es falla crítica.',
+        id: 'semaforos',
+        title: 'SISTEMA DE SEMÁFOROS',
+        description: 'Se monitorea el correcto funcionamiento de la red semafórica y su sincronización según la carga de tráfico.',
         faultLevel: 'grave',
-        icon: '🛑'
+        icon: '🚦'
     },
     {
-        id: 'luces',
-        title: 'SISTEMA DE LUCES',
-        description: 'Funcionamiento de luces de giro, freno, posición, marcha atrás y alineación de faros delanteros.',
+        id: 'camaras',
+        title: 'CÁMARAS DE MONITOREO',
+        description: 'Control visual en tiempo real de avenidas e intersecciones para detectar incidentes o congestiones.',
         faultLevel: 'leve',
-        icon: '💡'
+        icon: '📹'
     },
     {
-        id: 'neumaticos',
-        title: 'NEUMÁTICOS Y LLANTAS',
-        description: 'El dibujo debe tener una profundidad mínima de 1.6 mm. Se inspeccionan deformaciones, cortes o telas a la vista.',
+        id: 'velocidad',
+        title: 'CONTROL DE VELOCIDAD',
+        description: 'Supervisión de radares que fiscalizan las velocidades máximas permitidas para reducir siniestros.',
         faultLevel: 'grave',
-        icon: '🛞'
+        icon: '📸'
     },
     {
-        id: 'suspension',
-        title: 'SUSPENSIÓN Y DIRECCIÓN',
-        description: 'Estado de amortiguadores, bujes, extremos de dirección y juegos en la caja de dirección.',
-        faultLevel: 'grave',
-        icon: '⚙️'
-    },
-    {
-        id: 'emisiones',
-        title: 'EMISIÓN DE GASES',
-        description: 'Control de niveles de contaminación y ruidos del sistema de escape.',
+        id: 'flujo',
+        title: 'SENSORES DE FLUJO',
+        description: 'Dispositivos que miden la cantidad de vehículos para adaptar los tiempos de los semáforos.',
         faultLevel: 'leve',
-        icon: '💨'
+        icon: '📊'
     },
     {
-        id: 'seguridad',
-        title: 'SEGURIDAD PASIVA',
-        description: 'Estado de cinturones de seguridad, apoyacabezas y matafuego (vencimiento y carga).',
+        id: 'carteles',
+        title: 'CARTELES VARIABLES',
+        description: 'Mensajes dinámicos en avenidas para informar sobre desvíos, demoras o alertas.',
+        faultLevel: 'leve',
+        icon: '🪧'
+    },
+    {
+        id: 'anillo',
+        title: 'ANILLO DIGITAL',
+        description: 'Pórticos con lectoras de patentes para identificar vehículos con pedidos de captura.',
         faultLevel: 'grave',
-        icon: '🦺'
+        icon: '⭕'
     }
 ];
 
@@ -55,30 +55,30 @@ export interface VTVScenario {
     id: number;
     vehicleType: string;
     observation: string;
-    correctResult: 'apto' | 'condicional' | 'rechazado';
+    correctResult: 'normal' | 'alerta' | 'critico';
     explanation: string;
 }
 
 export const vtvScenarios: VTVScenario[] = [
     {
         id: 1,
-        vehicleType: "Moto 250cc",
-        observation: "Neumático trasero con dibujo de 0.8 mm de profundidad. Luces de giro funcionan correctamente.",
-        correctResult: 'rechazado',
-        explanation: "El límite legal de profundidad es de 1.6 mm. Por debajo de 1.0 mm en motos es considerado una falla crítica que compromete la adherencia (efecto aquaplaning)."
+        vehicleType: "Av. 9 de Julio y Corrientes",
+        observation: "Corte total de calzada por manifestación. Flujo vehicular completamente detenido.",
+        correctResult: 'critico',
+        explanation: "Situación crítica. Se debe emitir una alerta a los carteles de leyenda variable y coordinar con Agentes de Tránsito para desvíos inmediatos."
     },
     {
         id: 2,
-        vehicleType: "Auto Particular",
-        observation: "Pérdida leve de líquido de limpieza de parabrisas. Alineación de faros levemente desviada. Frenos OK.",
-        correctResult: 'condicional',
-        explanation: "Las fallas de alineación de faros son leves. El vehículo es condicional: puede circular pero debe subsanar y volver a verificar en 60 días."
+        vehicleType: "Autopista 25 de Mayo",
+        observation: "Vehículo detenido en la banquina por falla mecánica. Tráfico fluido, sin obstrucción de carriles.",
+        correctResult: 'alerta',
+        explanation: "Situación de alerta. Se debe dar aviso a seguridad vial de la autopista para remolque, pero no requiere cortes de tránsito."
     },
     {
         id: 3,
-        vehicleType: "Camioneta",
-        observation: "Falta el matafuego. Cinturón de seguridad del conductor trabado.",
-        correctResult: 'rechazado',
-        explanation: "Los elementos de seguridad pasiva (cinturones) y el equipo de emergencia (matafuego) son obligatorios y su falla o ausencia motiva el rechazo inmediato."
+        vehicleType: "Av. General Paz",
+        observation: "Tránsito fluido en ambas manos. Velocidades dentro de los límites permitidos. Sin incidentes.",
+        correctResult: 'normal',
+        explanation: "Situación normal. No se requieren acciones operativas. Se continúa con el monitoreo habitual."
     }
 ];
