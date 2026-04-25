@@ -19,6 +19,7 @@ interface SimulatorQuestion {
     options: SimulatorOption[];
     tema: string;
     manual: string;
+    image?: string; // Nuevo campo opcional para la ruta de la imagen
 }
 
 type ViewMode = 'intro' | 'mode-selection' | 'theme-selection' | 'chapter-selection' | 'quiz';
@@ -322,6 +323,16 @@ export function SimuladorTeorico() {
                                         <span className="text-gray-500 w-6 shrink-0">{i + 1}.</span>
                                         <span className="text-white">{q.question}</span>
                                     </p>
+                                    
+                                    {q.image && (
+                                        <div className="pl-9 mb-4">
+                                            <img 
+                                                src={q.image} 
+                                                alt="Visual de la pregunta" 
+                                                className="max-w-[200px] h-auto rounded border border-white/10"
+                                            />
+                                        </div>
+                                    )}
                                     <div className="pl-9 space-y-2">
                                         {q.options.map((opt, optIdx) => {
                                             let cls = 'p-3 rounded-lg border text-sm ';
@@ -402,6 +413,16 @@ export function SimuladorTeorico() {
                         </span>
                     )}
                 </div>
+                
+                {question.image && (
+                    <div className="mb-8 rounded-xl overflow-hidden border border-white/10 bg-black/20 flex justify-center">
+                        <img 
+                            src={question.image} 
+                            alt="Visual de la pregunta" 
+                            className="max-w-full max-h-[300px] object-contain"
+                        />
+                    </div>
+                )}
                 
                 <h2 className="text-2xl md:text-3xl text-white font-medium mb-8 leading-relaxed">
                     {question.question}
