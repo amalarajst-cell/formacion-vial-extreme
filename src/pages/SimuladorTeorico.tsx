@@ -66,7 +66,13 @@ export function SimuladorTeorico() {
             
             // Extraer temas y capitulos unicos
             const uniqueThemes = [...new Set(data.map(q => q.tema))].filter(Boolean).sort();
-            const uniqueChapters = [...new Set(data.map(q => q.manual))].filter(Boolean).sort();
+            const uniqueChapters = [...new Set(data.map(q => q.manual))].filter(Boolean).sort((a, b) => {
+                const aIsCap = a.startsWith('CAP');
+                const bIsCap = b.startsWith('CAP');
+                if (aIsCap && !bIsCap) return -1;
+                if (!aIsCap && bIsCap) return 1;
+                return a.localeCompare(b);
+            });
             setThemes(uniqueThemes);
             setChapters(uniqueChapters);
             
