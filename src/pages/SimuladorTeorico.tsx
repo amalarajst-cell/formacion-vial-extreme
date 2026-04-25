@@ -167,6 +167,28 @@ export function SimuladorTeorico() {
         );
     }
 
+    const formatChapterName = (name: string) => {
+        // Si tiene el patron "ANEXO X - TEXTO (Subtema)"
+        const match = name.match(/^(.*?)\s*-\s*(.*?)\s*\((.*?)\)$/);
+        if (match) {
+            return {
+                main: match[3], // El subtema en parentesis es lo mas importante
+                sub: `${match[1]} - ${match[2]}`
+            };
+        }
+        
+        // Si tiene el patron "CAPITULO X - Texto"
+        const dashMatch = name.match(/^(.*?)\s*-\s*(.*)$/);
+        if (dashMatch) {
+            return {
+                main: dashMatch[2],
+                sub: dashMatch[1]
+            };
+        }
+
+        return { main: name, sub: '' };
+    };
+
     // ─── PANTALLA SELECCION DE MODO ESTUDIO ───
     if (viewMode === 'theme-selection' || viewMode === 'chapter-selection') {
         const isTheme = viewMode === 'theme-selection';
@@ -201,16 +223,22 @@ export function SimuladorTeorico() {
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
-                            {list.map((item, idx) => (
-                                <button 
-                                    key={idx}
-                                    onClick={() => startCategoryStudy(isTheme ? 'theme' : 'chapter', item)}
-                                    className="flex items-center justify-between p-4 bg-white/5 border border-white/10 rounded-xl hover:border-brand-yellow hover:bg-brand-yellow/5 text-left group transition-all"
-                                >
-                                    <span className="text-white group-hover:text-brand-yellow font-medium leading-tight">{item}</span>
-                                    <ChevronRight className="w-5 h-5 text-gray-500 shrink-0 group-hover:text-brand-yellow" />
-                                </button>
-                            ))}
+                            {list.map((item, idx) => {
+                                const info = isTheme ? { main: item, sub: '' } : formatChapterName(item);
+                                return (
+                                    <button 
+                                        key={idx}
+                                        onClick={() => startCategoryStudy(isTheme ? 'theme' : 'chapter', item)}
+                                        className="flex items-center justify-between p-5 bg-white/5 border border-white/10 rounded-xl hover:border-brand-yellow hover:bg-brand-yellow/5 text-left group transition-all"
+                                    >
+                                        <div className="flex flex-col gap-1 pr-4">
+                                            {info.sub && <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{info.sub}</span>}
+                                            <span className="text-white group-hover:text-brand-yellow font-bold text-lg leading-tight uppercase italic">{info.main}</span>
+                                        </div>
+                                        <ChevronRight className="w-6 h-6 text-gray-600 shrink-0 group-hover:text-brand-yellow group-hover:translate-x-1 transition-all" />
+                                    </button>
+                                );
+                            })}
                         </div>
                     )}
                 </Card>
