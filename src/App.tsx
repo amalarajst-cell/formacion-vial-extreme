@@ -19,6 +19,7 @@ import { VTVSimulador } from './pages/VTVSimulador';
 import { AuditoriaVialModule } from './pages/AuditoriaVialModule';
 import { EfectoMultiplicadorModule } from './pages/EfectoMultiplicadorModule';
 import { Results } from './pages/Results';
+import { SimuladorTeorico } from './pages/SimuladorTeorico';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -53,6 +54,7 @@ function App() {
             <Route path="auditoria" element={<AuditoriaVialModule />} />
             <Route path="multiplicador" element={<EfectoMultiplicadorModule />} />
             <Route path="results" element={<Results />} />
+            <Route path="simulador" element={<SimuladorTeorico />} />
           </Route>
         </Routes>
       </HashRouter>
