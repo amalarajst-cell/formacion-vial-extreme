@@ -1,11 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
-import { Clock, CheckCircle, XCircle, AlertCircle, ArrowRight, ArrowLeft, Trophy, RotateCcw, Loader } from 'lucide-react';
+import { Clock, CheckCircle, XCircle, AlertCircle, ArrowRight, ArrowLeft, Trophy, RotateCcw, Loader, BookOpen, GraduationCap, ChevronRight, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const EXAM_TIME_MINUTES = 45;
-const QUESTIONS_COUNT = 40;
+const EXAM_QUESTIONS_COUNT = 40;
 const PASSING_PERCENTAGE = 85;
 
 interface SimulatorOption {
@@ -21,50 +21,81 @@ interface SimulatorQuestion {
     manual: string;
 }
 
+type ViewMode = 'intro' | 'mode-selection' | 'theme-selection' | 'chapter-selection' | 'quiz';
+
 export function SimuladorTeorico() {
     const [allQuestions, setAllQuestions] = useState<SimulatorQuestion[]>([]);
     const [loadingQuestions, setLoadingQuestions] = useState(false);
-    const [isStarted, setIsStarted] = useState(false);
+    const [viewMode, setViewMode] = useState<ViewMode>('intro');
     const [isFinished, setIsFinished] = useState(false);
+    const [isExamMode, setIsExamMode] = useState(false);
     const [timeLeft, setTimeLeft] = useState(EXAM_TIME_MINUTES * 60);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedAnswers, setSelectedAnswers] = useState<Record<string, number>>({});
     const [examQuestions, setExamQuestions] = useState<SimulatorQuestion[]>([]);
+    
+    // Categorias dinamicas
+    const [themes, setThemes] = useState<string[]>([]);
+    const [chapters, setChapters] = useState<string[]>([]);
 
-    const loadAndStartExam = useCallback(async () => {
+    const loadQuestionsData = async () => {
+        if (allQuestions.length > 0) return allQuestions;
         setLoadingQuestions(true);
         try {
-            let questions = allQuestions;
-            if (questions.length === 0) {
-                const mod = await import('../data/simulatorQuestions.json');
-                questions = mod.default as SimulatorQuestion[];
-                setAllQuestions(questions);
-            }
-            const shuffled = [...questions].sort(() => 0.5 - Math.random());
-            setExamQuestions(shuffled.slice(0, QUESTIONS_COUNT));
-            setSelectedAnswers({});
-            setTimeLeft(EXAM_TIME_MINUTES * 60);
-            setCurrentQuestionIndex(0);
-            setIsStarted(true);
-            setIsFinished(false);
+            const mod = await import('../data/simulatorQuestions.json');
+            const data = mod.default as SimulatorQuestion[];
+            setAllQuestions(data);
+            
+            // Extraer temas y capitulos unicos
+            const uniqueThemes = [...new Set(data.map(q => q.tema))].filter(Boolean).sort();
+            const uniqueChapters = [...new Set(data.map(q => q.manual))].filter(Boolean).sort();
+            setThemes(uniqueThemes);
+            setChapters(uniqueChapters);
+            
+            setLoadingQuestions(false);
+            return data;
         } catch (e) {
             console.error('Error loading questions', e);
-        } finally {
             setLoadingQuestions(false);
+            return [];
         }
-    }, [allQuestions]);
+    };
+
+    const startExamMode = async () => {
+        const data = await loadQuestionsData();
+        const shuffled = [...data].sort(() => 0.5 - Math.random());
+        setExamQuestions(shuffled.slice(0, EXAM_QUESTIONS_COUNT));
+        setIsExamMode(true);
+        initQuiz();
+    };
+
+    const startCategoryStudy = async (type: 'theme' | 'chapter', value: string) => {
+        const data = await loadQuestionsData();
+        const filtered = data.filter(q => type === 'theme' ? q.tema === value : q.manual === value);
+        setExamQuestions(filtered);
+        setIsExamMode(false);
+        initQuiz();
+    };
+
+    const initQuiz = () => {
+        setSelectedAnswers({});
+        setTimeLeft(EXAM_TIME_MINUTES * 60);
+        setCurrentQuestionIndex(0);
+        setIsFinished(false);
+        setViewMode('quiz');
+    };
 
     useEffect(() => {
         let timer: ReturnType<typeof setInterval>;
-        if (isStarted && !isFinished && timeLeft > 0) {
+        if (viewMode === 'quiz' && isExamMode && !isFinished && timeLeft > 0) {
             timer = setInterval(() => {
                 setTimeLeft((prev) => prev - 1);
             }, 1000);
-        } else if (timeLeft === 0 && isStarted && !isFinished) {
+        } else if (timeLeft === 0 && viewMode === 'quiz' && isExamMode && !isFinished) {
             setIsFinished(true);
         }
         return () => clearInterval(timer);
-    }, [isStarted, isFinished, timeLeft]);
+    }, [viewMode, isExamMode, isFinished, timeLeft]);
 
     const formatTime = (seconds: number) => {
         const m = Math.floor(seconds / 60);
@@ -90,23 +121,121 @@ export function SimuladorTeorico() {
         return { correct, total, percentage, passed: percentage >= PASSING_PERCENTAGE };
     };
 
-    // Pantalla de inicio
-    if (!isStarted) {
+    // ─── PANTALLA DE INTRODUCCION ───
+    if (viewMode === 'intro') {
         return (
             <div className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in duration-500">
                 <Card className="text-center p-8 border-brand-yellow/30 bg-brand-navy/95">
                     <Trophy className="w-20 h-20 text-brand-yellow mx-auto mb-6" />
                     <h1 className="text-4xl md:text-5xl font-brand-heading font-bold italic uppercase mb-6 text-white">
-                        Simulador Teorico de Examen
+                        Simulador de Licencia de Conducir
                     </h1>
                     <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                        Pon a prueba tus conocimientos antes de rendir el examen oficial para obtener la licencia de conducir.
+                        Preparate para el examen oficial. Practica con el simulador real o estudia por categorias especificas del manual.
                     </p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                        <button 
+                            onClick={() => setViewMode('mode-selection')}
+                            className="flex flex-col items-center p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-brand-yellow hover:text-brand-navy transition-all group"
+                        >
+                            <GraduationCap className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform" />
+                            <h3 className="text-2xl font-bold uppercase mb-2">Simulacro de Examen</h3>
+                            <p className="text-sm opacity-70">40 preguntas aleatorias con tiempo limite de 45 minutos.</p>
+                        </button>
+                        
+                        <button 
+                            onClick={async () => {
+                                await loadQuestionsData();
+                                setViewMode('theme-selection');
+                            }}
+                            className="flex flex-col items-center p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-brand-yellow hover:text-brand-navy transition-all group"
+                        >
+                            <BookOpen className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform" />
+                            <h3 className="text-2xl font-bold uppercase mb-2">Modo Estudio</h3>
+                            <p className="text-sm opacity-70">Repasa por temas, señales o capitulos especificos del manual.</p>
+                        </button>
+                    </div>
+
+                    <div className="flex justify-center">
+                        <Link to="/">
+                            <Button variant="outline">Volver al Inicio</Button>
+                        </Link>
+                    </div>
+                </Card>
+            </div>
+        );
+    }
+
+    // ─── PANTALLA SELECCION DE MODO ESTUDIO ───
+    if (viewMode === 'theme-selection' || viewMode === 'chapter-selection') {
+        const isTheme = viewMode === 'theme-selection';
+        const list = isTheme ? themes : chapters;
+        
+        return (
+            <div className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in duration-500">
+                <Card className="p-8 border-brand-yellow/30 bg-brand-navy/95">
+                    <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
+                        <div className="flex items-center gap-4">
+                            <button onClick={() => setViewMode('intro')} className="p-2 hover:bg-white/10 rounded-full transition-colors">
+                                <ArrowLeft className="w-6 h-6 text-white" />
+                            </button>
+                            <h2 className="text-3xl font-brand-heading font-bold italic uppercase text-white">
+                                {isTheme ? 'Seleccionar Tema' : 'Seleccionar Capitulo'}
+                            </h2>
+                        </div>
+                        <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => setViewMode(isTheme ? 'chapter-selection' : 'theme-selection')}
+                        >
+                            <Filter className="w-4 h-4 mr-2" />
+                            {isTheme ? 'Ver por Capitulos' : 'Ver por Temas'}
+                        </Button>
+                    </div>
+
+                    {loadingQuestions ? (
+                        <div className="flex flex-col items-center py-20">
+                            <Loader className="w-12 h-12 animate-spin text-brand-yellow mb-4" />
+                            <p className="text-gray-400">Preparando categorias...</p>
+                        </div>
+                    ) : (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+                            {list.map((item, idx) => (
+                                <button 
+                                    key={idx}
+                                    onClick={() => startCategoryStudy(isTheme ? 'theme' : 'chapter', item)}
+                                    className="flex items-center justify-between p-4 bg-white/5 border border-white/10 rounded-xl hover:border-brand-yellow hover:bg-brand-yellow/5 text-left group transition-all"
+                                >
+                                    <span className="text-white group-hover:text-brand-yellow font-medium leading-tight">{item}</span>
+                                    <ChevronRight className="w-5 h-5 text-gray-500 shrink-0 group-hover:text-brand-yellow" />
+                                </button>
+                            ))}
+                        </div>
+                    )}
+                </Card>
+            </div>
+        );
+    }
+
+    // ─── SELECCION DE MODO EXAMEN (Confirmacion) ───
+    if (viewMode === 'mode-selection') {
+        return (
+            <div className="max-w-4xl mx-auto px-4 py-12 animate-in fade-in duration-500">
+                <Card className="text-center p-8 border-brand-yellow/30 bg-brand-navy/95">
+                    <div className="flex justify-start mb-6">
+                         <button onClick={() => setViewMode('intro')} className="p-2 hover:bg-white/10 rounded-full transition-colors">
+                             <ArrowLeft className="w-6 h-6 text-white" />
+                         </button>
+                    </div>
+                    <GraduationCap className="w-20 h-20 text-brand-yellow mx-auto mb-6" />
+                    <h2 className="text-4xl font-brand-heading font-bold italic uppercase mb-6 text-white">Preparado para el simulacro?</h2>
+                    
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-left">
                         <div className="bg-white/5 p-4 rounded-lg border border-white/10 flex items-center gap-4">
                             <AlertCircle className="text-brand-yellow w-8 h-8 shrink-0" />
                             <div>
-                                <h3 className="font-bold text-white uppercase">{QUESTIONS_COUNT} Preguntas</h3>
+                                <h3 className="font-bold text-white uppercase">{EXAM_QUESTIONS_COUNT} Preguntas</h3>
                                 <p className="text-sm text-gray-400">Opcion multiple</p>
                             </div>
                         </div>
@@ -121,27 +250,20 @@ export function SimuladorTeorico() {
                             <CheckCircle className="text-brand-yellow w-8 h-8 shrink-0" />
                             <div>
                                 <h3 className="font-bold text-white uppercase">{PASSING_PERCENTAGE}% para Aprobar</h3>
-                                <p className="text-sm text-gray-400">Calificacion minima</p>
+                                <p className="text-sm text-gray-400">Minimo requerido</p>
                             </div>
                         </div>
                     </div>
-                    <Button
-                        size="lg"
-                        className="w-full sm:w-auto text-xl py-6 px-12"
-                        onClick={loadAndStartExam}
-                        disabled={loadingQuestions}
-                    >
-                        {loadingQuestions
-                            ? <><Loader className="mr-2 w-6 h-6 animate-spin" /> Cargando...</>
-                            : <><span>Comenzar Simulacro</span><ArrowRight className="ml-2 w-6 h-6" /></>
-                        }
+
+                    <Button size="lg" className="w-full sm:w-auto text-xl py-6 px-12" onClick={startExamMode}>
+                        Empezar Examen <ArrowRight className="ml-2 w-6 h-6" />
                     </Button>
                 </Card>
             </div>
         );
     }
 
-    // Pantalla de resultados
+    // ─── PANTALLA DE RESULTADOS ───
     if (isFinished) {
         const score = calculateScore();
         return (
@@ -151,13 +273,15 @@ export function SimuladorTeorico() {
                         ? <CheckCircle className="w-24 h-24 text-green-500 mx-auto mb-6" />
                         : <XCircle className="w-24 h-24 text-brand-red mx-auto mb-6" />
                     }
+
                     <h2 className="text-4xl font-brand-heading font-bold italic uppercase mb-2 text-white">
                         {score.passed ? 'Examen Aprobado!' : 'Examen Reprobado'}
                     </h2>
                     <p className="text-xl text-gray-300 mb-8">
                         Respondiste correctamente {score.correct} de {score.total} preguntas ({score.percentage}%).
                     </p>
-                    <div className="bg-white/5 rounded-lg p-6 mb-8 text-left max-h-96 overflow-y-auto">
+
+                    <div className="bg-white/5 rounded-lg p-6 mb-8 text-left max-h-96 overflow-y-auto custom-scrollbar">
                         <h3 className="text-2xl font-brand-heading font-bold italic uppercase mb-6 text-brand-yellow border-b border-brand-yellow/20 pb-2">
                             Revision de Respuestas
                         </h3>
@@ -184,17 +308,18 @@ export function SimuladorTeorico() {
                                         })}
                                     </div>
                                     {!isCorrect && q.manual && (
-                                        <p className="pl-9 mt-3 text-sm text-brand-yellow/80">
-                                            <strong>Referencia:</strong> {q.manual}
+                                        <p className="pl-9 mt-3 text-sm text-brand-yellow/80 bg-brand-yellow/5 p-3 rounded-lg border border-brand-yellow/20">
+                                            <strong>Referencia:</strong> {q.manual} {q.tema ? ` - ${q.tema}` : ''}
                                         </p>
                                     )}
                                 </div>
                             );
                         })}
                     </div>
+
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Button variant="outline" onClick={loadAndStartExam}>
-                            <RotateCcw className="w-5 h-5 mr-2" /> Reintentar
+                        <Button variant="outline" onClick={() => setViewMode('intro')}>
+                            <RotateCcw className="w-5 h-5 mr-2" /> Volver a Modos
                         </Button>
                         <Link to="/"><Button>Volver al Inicio</Button></Link>
                     </div>
@@ -203,7 +328,7 @@ export function SimuladorTeorico() {
         );
     }
 
-    // Pantalla de examen
+    // ─── PANTALLA DE EXAMEN / ESTUDIO ───
     const question = examQuestions[currentQuestionIndex];
     if (!question) return null;
 
@@ -216,50 +341,97 @@ export function SimuladorTeorico() {
             <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4 bg-brand-navy/50 p-4 rounded-xl border border-white/10">
                 <div className="flex flex-col items-start gap-1 w-full md:w-auto">
                     <span className="text-gray-400 font-bold uppercase tracking-wider text-sm">
-                        Pregunta {currentQuestionIndex + 1} de {QUESTIONS_COUNT}
+                        {isExamMode ? 'Pregunta' : 'Practica'} {currentQuestionIndex + 1} de {examQuestions.length}
                     </span>
                     <div className="w-full md:w-64 h-1.5 bg-white/10 rounded-full overflow-hidden">
                         <div
                             className="h-full bg-brand-yellow rounded-full transition-all duration-300"
-                            style={{ width: ((currentQuestionIndex + 1) / QUESTIONS_COUNT * 100) + '%' }}
+                            style={{ width: ((currentQuestionIndex + 1) / examQuestions.length * 100) + '%' }}
                         />
                     </div>
                 </div>
-                <div className={'flex items-center gap-2 font-bold ' + (timeLeft < 300 ? 'text-brand-red animate-pulse' : 'text-brand-yellow')}>
-                    <Clock className="w-5 h-5" />
-                    <span className="text-xl tracking-widest">{formatTime(timeLeft)}</span>
-                </div>
+                
+                {isExamMode ? (
+                    <div className={'flex items-center gap-2 font-bold ' + (timeLeft < 300 ? 'text-brand-red animate-pulse' : 'text-brand-yellow')}>
+                        <Clock className="w-5 h-5" />
+                        <span className="text-xl tracking-widest">{formatTime(timeLeft)}</span>
+                    </div>
+                ) : (
+                    <div className="px-4 py-2 bg-brand-yellow/10 border border-brand-yellow/20 rounded-full text-brand-yellow text-sm font-bold uppercase">
+                        Modo Estudio
+                    </div>
+                )}
             </div>
 
             <Card className="p-6 md:p-10 mb-6 bg-brand-navy/95 border-brand-yellow/20">
-                {question.manual && (
-                    <span className="text-xs font-bold text-brand-yellow/70 uppercase tracking-widest mb-4 block">
+                <div className="flex justify-between items-start mb-6">
+                    <span className="text-xs font-bold text-brand-yellow/70 uppercase tracking-widest bg-brand-yellow/10 px-3 py-1 rounded-full border border-brand-yellow/20">
                         {question.manual}
                     </span>
-                )}
+                    {!isExamMode && (
+                         <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">
+                            {question.tema}
+                        </span>
+                    )}
+                </div>
+                
                 <h2 className="text-2xl md:text-3xl text-white font-medium mb-8 leading-relaxed">
                     {question.question}
                 </h2>
+                
                 <div className="space-y-4">
                     {question.options.map((opt, idx) => {
                         const isSelected = selectedAnswers[question.id] === idx;
-                        const base = 'w-full text-left p-5 rounded-xl border transition-all duration-200 flex items-center gap-4 ';
-                        const sel = 'bg-brand-yellow text-brand-navy border-brand-yellow font-bold shadow-[0_0_15px_rgba(255,214,0,0.3)]';
-                        const unsel = 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/30';
+                        const showFeedback = !isExamMode && hasAnsweredCurrent;
+                        
+                        let optionClass = 'w-full text-left p-5 rounded-xl border transition-all duration-200 flex items-center gap-4 ';
+                        
+                        if (isSelected) {
+                            if (showFeedback) {
+                                optionClass += opt.isCorrect ? 'bg-green-500 text-white border-green-500 font-bold ' : 'bg-brand-red text-white border-brand-red font-bold ';
+                            } else {
+                                optionClass += 'bg-brand-yellow text-brand-navy border-brand-yellow font-bold shadow-[0_0_15px_rgba(255,214,0,0.3)] ';
+                            }
+                        } else {
+                            if (showFeedback && opt.isCorrect) {
+                                optionClass += 'bg-green-500/20 border-green-500 text-green-200 ';
+                            } else {
+                                optionClass += 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/30 ';
+                            }
+                        }
+                        
                         return (
                             <button
                                 key={idx}
                                 onClick={() => handleSelectOption(question.id, idx)}
-                                className={base + (isSelected ? sel : unsel)}
+                                disabled={!isExamMode && hasAnsweredCurrent}
+                                className={optionClass}
                             >
-                                <div className={'w-8 h-8 rounded-full border-2 flex items-center justify-center shrink-0 font-bold text-sm ' + (isSelected ? 'border-brand-navy' : 'border-gray-500')}>
+                                <div className={'w-8 h-8 rounded-full border-2 flex items-center justify-center shrink-0 font-bold text-sm ' + (isSelected ? 'border-current' : 'border-gray-500')}>
                                     {String.fromCharCode(65 + idx)}
                                 </div>
                                 <span className="text-lg">{opt.text}</span>
+                                {showFeedback && isSelected && opt.isCorrect && <CheckCircle className="ml-auto w-6 h-6" />}
+                                {showFeedback && isSelected && !opt.isCorrect && <XCircle className="ml-auto w-6 h-6" />}
                             </button>
                         );
                     })}
                 </div>
+
+                {!isExamMode && hasAnsweredCurrent && (
+                    <div className="mt-8 p-6 bg-white/5 rounded-xl border border-white/10 animate-in slide-in-from-bottom-4">
+                        <div className="flex items-center gap-3 mb-2 text-brand-yellow">
+                            <BookOpen className="w-5 h-5" />
+                            <span className="font-bold uppercase text-sm tracking-wider">Referencia de estudio</span>
+                        </div>
+                        <p className="text-gray-300">
+                             {selectedAnswers[question.id] !== undefined && question.options[selectedAnswers[question.id]].isCorrect 
+                                ? 'Correcto! ' 
+                                : 'Incorrecto. La respuesta correcta esta marcada en verde. '}
+                             Esta pregunta pertenece al manual: <strong>{question.manual}</strong> tema <strong>{question.tema}</strong>.
+                        </p>
+                    </div>
+                )}
             </Card>
 
             <div className="flex justify-between items-center">
@@ -270,17 +442,18 @@ export function SimuladorTeorico() {
                 >
                     <ArrowLeft className="w-5 h-5 mr-2" /> Anterior
                 </Button>
+
                 {isLastQuestion ? (
                     <div className="flex flex-col items-end gap-2">
                         <Button
                             onClick={() => setIsFinished(true)}
                             className="bg-brand-red hover:bg-brand-red/90 text-white"
-                            disabled={answeredCount < QUESTIONS_COUNT}
+                            disabled={isExamMode && answeredCount < examQuestions.length}
                         >
-                            Finalizar Examen <CheckCircle className="w-5 h-5 ml-2" />
+                            {isExamMode ? 'Finalizar Examen' : 'Ver Resultados'} <CheckCircle className="w-5 h-5 ml-2" />
                         </Button>
-                        {answeredCount < QUESTIONS_COUNT && (
-                            <p className="text-brand-red text-xs">Respondiste {answeredCount}/{QUESTIONS_COUNT}</p>
+                        {isExamMode && answeredCount < examQuestions.length && (
+                            <p className="text-brand-red text-xs">Respondiste {answeredCount}/{examQuestions.length}</p>
                         )}
                     </div>
                 ) : (
