@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Clock, CheckCircle, XCircle, AlertCircle, ArrowRight, ArrowLeft, Trophy, RotateCcw, Loader, BookOpen, GraduationCap, ChevronRight, Filter } from 'lucide-react';
