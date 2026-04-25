@@ -19,7 +19,8 @@ interface SimulatorQuestion {
     options: SimulatorOption[];
     tema: string;
     manual: string;
-    image?: string; // Nuevo campo opcional para la ruta de la imagen
+    image?: string;
+    needsImage?: boolean;
 }
 
 type ViewMode = 'intro' | 'mode-selection' | 'theme-selection' | 'chapter-selection' | 'quiz';
@@ -59,7 +60,8 @@ export function SimuladorTeorico() {
         setLoadingQuestions(true);
         try {
             const mod = await import('../data/simulatorQuestions.json');
-            const data = mod.default as SimulatorQuestion[];
+            // Filtrar preguntas que necesitan imagen pero no la tienen
+            const data = (mod.default as SimulatorQuestion[]).filter(q => !q.needsImage);
             setAllQuestions(data);
             
             // Extraer temas y capitulos unicos

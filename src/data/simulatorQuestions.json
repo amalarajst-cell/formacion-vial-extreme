@@ -345,7 +345,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones"
+    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
+    "needsImage": true
   },
   {
     "id": "44",
@@ -599,7 +600,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAP. 3 - Prioridades y Maniobras",
+    "needsImage": true
   },
   {
     "id": "64",
@@ -640,7 +642,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAP. 3 - Prioridades y Maniobras",
+    "needsImage": true
   },
   {
     "id": "66",
@@ -680,7 +683,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAP. 3 - Prioridades y Maniobras",
+    "needsImage": true
   },
   {
     "id": "68",
@@ -700,7 +704,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAP. 3 - Prioridades y Maniobras",
+    "needsImage": true
   },
   {
     "id": "69",
@@ -737,7 +742,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAP. 3 - Prioridades y Maniobras",
+    "needsImage": true
   },
   {
     "id": "71",
@@ -2899,7 +2905,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
+    "needsImage": true
   },
   {
     "id": "214",
@@ -2961,7 +2968,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
+    "needsImage": true
   },
   {
     "id": "217",
@@ -2981,7 +2989,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
+    "needsImage": true
   },
   {
     "id": "218",
@@ -3001,7 +3010,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
+    "needsImage": true
   },
   {
     "id": "219",
@@ -3658,7 +3668,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
+    "needsImage": true
   },
   {
     "id": "275",
@@ -4727,7 +4738,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - Conocimiento del Vehículo",
+    "needsImage": true
   },
   {
     "id": "364",
@@ -5996,7 +6008,8 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - Conducción Profesional",
+    "needsImage": true
   },
   {
     "id": "510",
@@ -7173,7 +7186,8 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAP. 3 - Prioridades y Maniobras",
+    "needsImage": true
   },
   {
     "id": "601",
