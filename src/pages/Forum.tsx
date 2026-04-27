@@ -53,6 +53,11 @@ const initialThreads: Thread[] = [
 
 export function Forum() {
     const [threads, setThreads] = useState<Thread[]>([]);
+    const [authorName, setAuthorName] = useState(() => localStorage.getItem('vial_forum_name') || '');
+
+    useEffect(() => {
+        localStorage.setItem('vial_forum_name', authorName);
+    }, [authorName]);
 
     useEffect(() => {
         const threadsRef = ref(database, 'forumThreads');
@@ -95,7 +100,7 @@ export function Forum() {
         
         const newReply: Reply = {
             id: Date.now().toString(),
-            author: 'Tú (Alumno)',
+            author: authorName.trim() || 'Anónimo',
             content: replyContent,
             timestamp: 'ahora'
         };
@@ -114,7 +119,7 @@ export function Forum() {
         const newThread: Thread = {
             id: Date.now().toString(),
             title: newTitle,
-            author: 'Tú (Alumno)',
+            author: authorName.trim() || 'Anónimo',
             content: newContent,
             timestamp: 'hace un momento',
             replies: [],
@@ -148,6 +153,21 @@ export function Forum() {
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto">
                         Espacio de debate y resolución de dudas. Preguntá lo que necesites o ayudá a otros alumnos.
                     </p>
+                </div>
+
+                {/* User Identification */}
+                <div className="bg-brand-dark-grey p-4 rounded-xl border border-brand-red/20 flex flex-col sm:flex-row items-start sm:items-center gap-4 animate-in fade-in">
+                    <div className="flex items-center gap-2 text-brand-yellow font-bold whitespace-nowrap">
+                        <User className="w-5 h-5" />
+                        Tu Nombre:
+                    </div>
+                    <input 
+                        type="text" 
+                        value={authorName}
+                        onChange={(e) => setAuthorName(e.target.value)}
+                        placeholder="Ej: Alejandro Malara Instructor" 
+                        className="bg-black/50 border border-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-brand-yellow w-full transition-colors"
+                    />
                 </div>
 
                 {/* Actions & Search */}
