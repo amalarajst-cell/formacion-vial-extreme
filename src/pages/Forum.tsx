@@ -66,6 +66,32 @@ export function Forum() {
     const [newContent, setNewContent] = useState('');
     const [newCategory, setNewCategory] = useState('General');
 
+    const [expandedThreadId, setExpandedThreadId] = useState<string | null>(null);
+    const [replyContent, setReplyContent] = useState('');
+
+    const handleLike = (threadId: string) => {
+        setThreads(threads.map(t => 
+            t.id === threadId ? { ...t, likes: t.likes + 1 } : t
+        ));
+    };
+
+    const handleReply = (e: React.FormEvent, threadId: string) => {
+        e.preventDefault();
+        if (!replyContent.trim()) return;
+        
+        const newReply: Reply = {
+            id: Date.now().toString(),
+            author: 'Tú (Alumno)',
+            content: replyContent,
+            timestamp: 'ahora'
+        };
+
+        setThreads(threads.map(t => 
+            t.id === threadId ? { ...t, replies: [...t.replies, newReply] } : t
+        ));
+        setReplyContent('');
+    };
+
     const handleCreateThread = (e: React.FormEvent) => {
         e.preventDefault();
         if (!newTitle.trim() || !newContent.trim()) return;
@@ -224,34 +250,81 @@ export function Forum() {
                                         <span>{thread.timestamp}</span>
                                     </div>
                                     <div className="flex items-center gap-4">
-                                        <div className="flex items-center gap-1.5 hover:text-brand-yellow cursor-pointer transition-colors">
+                                        <div 
+                                            onClick={() => handleLike(thread.id)}
+                                            className="flex items-center gap-1.5 hover:text-brand-yellow cursor-pointer transition-colors"
+                                        >
                                             <ThumbsUp className="w-4 h-4" />
                                             <span>{thread.likes}</span>
                                         </div>
-                                        <div className="flex items-center gap-1.5 hover:text-brand-yellow cursor-pointer transition-colors">
+                                        <div 
+                                            onClick={() => setExpandedThreadId(expandedThreadId === thread.id ? null : thread.id)}
+                                            className="flex items-center gap-1.5 hover:text-brand-yellow cursor-pointer transition-colors"
+                                        >
                                             <MessageCircle className="w-4 h-4" />
                                             <span>{thread.replies.length}</span>
                                         </div>
                                     </div>
                                 </div>
 
-                                {/* Preview Replies (just the first one for aesthetics) */}
-                                {thread.replies.length > 0 && (
-                                    <div className="mt-4 pt-4 border-t border-gray-800/50 pl-4 border-l-2 border-brand-yellow/30">
-                                        <div className="flex items-center gap-2 mb-2">
-                                            <div className="w-5 h-5 rounded-full bg-brand-yellow/20 flex items-center justify-center">
-                                                <User className="w-3 h-3 text-brand-yellow" />
-                                            </div>
-                                            <span className="text-white text-sm font-bold">{thread.replies[0].author}</span>
-                                            <span className="text-xs text-gray-500">{thread.replies[0].timestamp}</span>
+                                {/* Replies Section */}
+                                {expandedThreadId === thread.id ? (
+                                    <div className="mt-4 pt-4 border-t border-gray-800/50">
+                                        <div className="space-y-4 mb-4">
+                                            {thread.replies.map(reply => (
+                                                <div key={reply.id} className="pl-4 border-l-2 border-brand-yellow/30">
+                                                    <div className="flex items-center gap-2 mb-2">
+                                                        <div className="w-5 h-5 rounded-full bg-brand-yellow/20 flex items-center justify-center">
+                                                            <User className="w-3 h-3 text-brand-yellow" />
+                                                        </div>
+                                                        <span className="text-white text-sm font-bold">{reply.author}</span>
+                                                        <span className="text-xs text-gray-500">{reply.timestamp}</span>
+                                                    </div>
+                                                    <p className="text-sm text-gray-400">{reply.content}</p>
+                                                </div>
+                                            ))}
                                         </div>
-                                        <p className="text-sm text-gray-400">{thread.replies[0].content}</p>
-                                        {thread.replies.length > 1 && (
-                                            <button className="text-xs text-brand-yellow hover:text-yellow-400 mt-2 font-bold">
-                                                Ver {thread.replies.length - 1} respuestas más...
+                                        <form onSubmit={(e) => handleReply(e, thread.id)} className="flex gap-2">
+                                            <input 
+                                                type="text" 
+                                                value={replyContent}
+                                                onChange={(e) => setReplyContent(e.target.value)}
+                                                placeholder="Escribe una respuesta..." 
+                                                className="flex-1 bg-black/50 border border-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-brand-yellow text-sm"
+                                            />
+                                            <button type="submit" className="bg-brand-yellow text-brand-navy px-4 py-2 rounded-lg font-bold text-sm hover:bg-yellow-400 transition-colors">
+                                                Responder
                                             </button>
-                                        )}
+                                        </form>
                                     </div>
+                                ) : (
+                                    thread.replies.length > 0 && (
+                                        <div className="mt-4 pt-4 border-t border-gray-800/50 pl-4 border-l-2 border-brand-yellow/30">
+                                            <div className="flex items-center gap-2 mb-2">
+                                                <div className="w-5 h-5 rounded-full bg-brand-yellow/20 flex items-center justify-center">
+                                                    <User className="w-3 h-3 text-brand-yellow" />
+                                                </div>
+                                                <span className="text-white text-sm font-bold">{thread.replies[0].author}</span>
+                                                <span className="text-xs text-gray-500">{thread.replies[0].timestamp}</span>
+                                            </div>
+                                            <p className="text-sm text-gray-400">{thread.replies[0].content}</p>
+                                            {thread.replies.length > 1 ? (
+                                                <button 
+                                                    onClick={() => setExpandedThreadId(thread.id)}
+                                                    className="text-xs text-brand-yellow hover:text-yellow-400 mt-2 font-bold"
+                                                >
+                                                    Ver {thread.replies.length - 1} respuestas más...
+                                                </button>
+                                            ) : (
+                                                <button 
+                                                    onClick={() => setExpandedThreadId(thread.id)}
+                                                    className="text-xs text-brand-yellow hover:text-yellow-400 mt-2 font-bold"
+                                                >
+                                                    Responder
+                                                </button>
+                                            )}
+                                        </div>
+                                    )
                                 )}
                             </div>
                         ))

@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocalState } from '../hooks/useLocalState';
 import { AlertTriangle, Send, CheckCircle2, XCircle, Globe, Play } from 'lucide-react';
