@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { MessageSquare, Plus, User, Search, ThumbsUp, MessageCircle } from 'lucide-react';
+import { database } from '../lib/firebase';
+import { ref, onValue, set } from 'firebase/database';
 
 interface Reply {
     id: string;
@@ -50,15 +52,26 @@ const initialThreads: Thread[] = [
 ];
 
 export function Forum() {
-    const [threads, setThreads] = useState<Thread[]>(() => {
-        const saved = localStorage.getItem('vial_forum_threads');
-        return saved ? JSON.parse(saved) : initialThreads;
-    });
-    
-    // Guardar en localStorage cada vez que cambian los hilos
+    const [threads, setThreads] = useState<Thread[]>([]);
+
     useEffect(() => {
-        localStorage.setItem('vial_forum_threads', JSON.stringify(threads));
-    }, [threads]);
+        const threadsRef = ref(database, 'forumThreads');
+        const unsubscribe = onValue(threadsRef, (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                // Firebase might omit empty arrays like "replies", so we ensure it's an array
+                const parsed = data.map((t: any) => ({
+                    ...t,
+                    replies: t.replies || []
+                }));
+                setThreads(parsed);
+            } else {
+                set(threadsRef, initialThreads);
+            }
+        });
+        
+        return () => unsubscribe();
+    }, []);
 
     const [searchTerm, setSearchTerm] = useState('');
     const [isCreating, setIsCreating] = useState(false);
@@ -70,9 +83,10 @@ export function Forum() {
     const [replyContent, setReplyContent] = useState('');
 
     const handleLike = (threadId: string) => {
-        setThreads(threads.map(t => 
+        const updated = threads.map(t => 
             t.id === threadId ? { ...t, likes: t.likes + 1 } : t
-        ));
+        );
+        set(ref(database, 'forumThreads'), updated);
     };
 
     const handleReply = (e: React.FormEvent, threadId: string) => {
@@ -86,9 +100,10 @@ export function Forum() {
             timestamp: 'ahora'
         };
 
-        setThreads(threads.map(t => 
+        const updated = threads.map(t => 
             t.id === threadId ? { ...t, replies: [...t.replies, newReply] } : t
-        ));
+        );
+        set(ref(database, 'forumThreads'), updated);
         setReplyContent('');
     };
 
@@ -107,7 +122,9 @@ export function Forum() {
             category: newCategory
         };
 
-        setThreads([newThread, ...threads]);
+        const updated = [newThread, ...threads];
+        set(ref(database, 'forumThreads'), updated);
+
         setIsCreating(false);
         setNewTitle('');
         setNewContent('');
