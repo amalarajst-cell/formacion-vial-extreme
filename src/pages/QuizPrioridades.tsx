@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocalState } from '../hooks/useLocalState';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { prioridadesQuestions } from '../data/prioridades';
@@ -11,17 +12,17 @@ export function QuizPrioridades() {
     const navigate = useNavigate();
     const { showToast } = useToast();
     const { setPrioridadesScore } = useSurveyStore();
-    const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
-    const [selectedOption, setSelectedOption] = useState<number | null>(null);
-    const [score, setScore] = useState(0);
-    const [timeLeft, setTimeLeft] = useState(25);
-    const [isAnswered, setIsAnswered] = useState(false);
+    const [currentQuestionIdx, setCurrentQuestionIdx] = useLocalState('quiz_prio_currentQuestionIdx', 0);
+    const [selectedOption, setSelectedOption] = useLocalState<number | null>('quiz_prio_selectedOption', null);
+    const [score, setScore] = useLocalState('quiz_prio_score', 0);
+    const [timeLeft, setTimeLeft] = useLocalState('quiz_prio_timeLeft', 25);
+    const [isAnswered, setIsAnswered] = useLocalState('quiz_prio_isAnswered', false);
 
     // Gamification states
-    const [lives, setLives] = useState(3);
-    const [streak, setStreak] = useState(0);
-    const [isTurbo, setIsTurbo] = useState(false);
-    const [gameOver, setGameOver] = useState(false);
+    const [lives, setLives] = useLocalState('quiz_prio_lives', 3);
+    const [streak, setStreak] = useLocalState('quiz_prio_streak', 0);
+    const [isTurbo, setIsTurbo] = useLocalState('quiz_prio_isTurbo', false);
+    const [gameOver, setGameOver] = useLocalState('quiz_prio_gameOver', false);
     const [shake, setShake] = useState(false);
 
     const currentQuestion = prioridadesQuestions[currentQuestionIdx];

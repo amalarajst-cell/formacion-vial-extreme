@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocalState } from '../hooks/useLocalState';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { emergentologiaQuestions } from '../data/emergentologiaQuiz';
@@ -8,11 +9,11 @@ import { Link } from 'react-router-dom';
 import { CheckCircle2, XCircle, ArrowRight, RotateCcw, Home, Siren } from 'lucide-react';
 
 export function QuizEmergentologia() {
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
-    const [showResult, setShowResult] = useState(false);
-    const [score, setScore] = useState(0);
-    const [quizCompleted, setQuizCompleted] = useState(false);
+    const [currentQuestion, setCurrentQuestion] = useLocalState('quiz_em_currentQuestion', 0);
+    const [selectedAnswer, setSelectedAnswer] = useLocalState<number | null>('quiz_em_selectedAnswer', null);
+    const [showResult, setShowResult] = useLocalState('quiz_em_showResult', false);
+    const [score, setScore] = useLocalState('quiz_em_score', 0);
+    const [quizCompleted, setQuizCompleted] = useLocalState('quiz_em_quizCompleted', false);
 
     const { setEmergentologiaScore } = useSurveyStore();
 

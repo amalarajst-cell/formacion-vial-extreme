@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocalState } from '../hooks/useLocalState';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { quizQuestions } from '../data/quiz';
@@ -12,17 +13,17 @@ export function Quiz() {
     const { showToast } = useToast();
     const { completeSignalsModule } = useSurveyStore();
 
-    const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
-    const [selectedOption, setSelectedOption] = useState<number | null>(null);
-    const [score, setScore] = useState(0);
-    const [timeLeft, setTimeLeft] = useState(20);
-    const [isAnswered, setIsAnswered] = useState(false);
+    const [currentQuestionIdx, setCurrentQuestionIdx] = useLocalState('quiz_currentQuestionIdx', 0);
+    const [selectedOption, setSelectedOption] = useLocalState<number | null>('quiz_selectedOption', null);
+    const [score, setScore] = useLocalState('quiz_score', 0);
+    const [timeLeft, setTimeLeft] = useLocalState('quiz_timeLeft', 20);
+    const [isAnswered, setIsAnswered] = useLocalState('quiz_isAnswered', false);
 
     // Gamification states
-    const [lives, setLives] = useState(3);
-    const [streak, setStreak] = useState(0);
-    const [isTurbo, setIsTurbo] = useState(false);
-    const [gameOver, setGameOver] = useState(false);
+    const [lives, setLives] = useLocalState('quiz_lives', 3);
+    const [streak, setStreak] = useLocalState('quiz_streak', 0);
+    const [isTurbo, setIsTurbo] = useLocalState('quiz_isTurbo', false);
+    const [gameOver, setGameOver] = useLocalState('quiz_gameOver', false);
     const [shake, setShake] = useState(false);
 
     const currentQuestion = quizQuestions[currentQuestionIdx];

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useLocalState } from '../hooks/useLocalState';
 import { AlertTriangle, Send, CheckCircle2, XCircle, Globe, Play } from 'lucide-react';
 
 interface QuizAnswers {
@@ -15,14 +16,14 @@ export function IntroduccionModule() {
         window.scrollTo(0, 0);
     }, []);
 
-    const [answer, setAnswer] = useState('');
-    const [isAnswered, setIsAnswered] = useState(false);
-    const [quizAnswers, setQuizAnswers] = useState<QuizAnswers>({ q1: '', q2: '', q3: '', q4: '', q5: '' });
-    const [showQuizResults, setShowQuizResults] = useState(false);
+    const [answer, setAnswer] = useLocalState('intro_answer', '');
+    const [isAnswered, setIsAnswered] = useLocalState('intro_isAnswered', false);
+    const [quizAnswers, setQuizAnswers] = useLocalState<QuizAnswers>('intro_quizAnswers', { q1: '', q2: '', q3: '', q4: '', q5: '' });
+    const [showQuizResults, setShowQuizResults] = useLocalState('intro_showQuizResults', false);
     const videoContainerRef = useRef<HTMLDivElement>(null);
 
-    const [percentages, setPercentages] = useState({ conductor: '', vehiculo: '', camino: '' });
-    const [showPercentageResult, setShowPercentageResult] = useState(false);
+    const [percentages, setPercentages] = useLocalState('intro_percentages', { conductor: '', vehiculo: '', camino: '' });
+    const [showPercentageResult, setShowPercentageResult] = useLocalState('intro_showPercentageResult', false);
     const totalPercentage = (parseInt(percentages.conductor) || 0) + (parseInt(percentages.vehiculo) || 0) + (parseInt(percentages.camino) || 0);
 
     const checkQuizComplete = () => {

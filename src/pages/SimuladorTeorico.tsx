@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocalState } from '../hooks/useLocalState';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Clock, CheckCircle, XCircle, AlertCircle, ArrowRight, ArrowLeft, Trophy, RotateCcw, Loader, BookOpen, GraduationCap, ChevronRight, Filter, FileText, ExternalLink } from 'lucide-react';
@@ -28,13 +29,13 @@ type ViewMode = 'intro' | 'mode-selection' | 'theme-selection' | 'chapter-select
 export function SimuladorTeorico() {
     const [allQuestions, setAllQuestions] = useState<SimulatorQuestion[]>([]);
     const [loadingQuestions, setLoadingQuestions] = useState(false);
-    const [viewMode, setViewMode] = useState<ViewMode>('intro');
-    const [isFinished, setIsFinished] = useState(false);
-    const [isExamMode, setIsExamMode] = useState(false);
-    const [timeLeft, setTimeLeft] = useState(EXAM_TIME_MINUTES * 60);
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [selectedAnswers, setSelectedAnswers] = useState<Record<string, number>>({});
-    const [examQuestions, setExamQuestions] = useState<SimulatorQuestion[]>([]);
+    const [viewMode, setViewMode] = useLocalState<ViewMode>('sim_viewMode', 'intro');
+    const [isFinished, setIsFinished] = useLocalState('sim_isFinished', false);
+    const [isExamMode, setIsExamMode] = useLocalState('sim_isExamMode', false);
+    const [timeLeft, setTimeLeft] = useLocalState('sim_timeLeft', EXAM_TIME_MINUTES * 60);
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useLocalState('sim_currentQuestionIndex', 0);
+    const [selectedAnswers, setSelectedAnswers] = useLocalState<Record<string, number>>('sim_selectedAnswers', {});
+    const [examQuestions, setExamQuestions] = useLocalState<SimulatorQuestion[]>('sim_examQuestions', []);
     
     // Categorias dinamicas
     const [themes, setThemes] = useState<string[]>([]);

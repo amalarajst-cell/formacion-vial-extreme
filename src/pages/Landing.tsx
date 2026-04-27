@@ -1,6 +1,6 @@
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
-import { ArrowRight, Trophy, Zap, Shield, Heart, Monitor, Eye } from 'lucide-react';
+import { ArrowRight, Trophy, Zap, Shield, Heart, Monitor, Eye, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useSurveyStore } from '../hooks/useSurveyStore';
 
@@ -133,6 +133,35 @@ export function Landing() {
                                 <p className="text-gray-400">
                                     Ponete a prueba con 40 preguntas del manual oficial. Simulá el examen real y verificá si estás listo/a para obtener tu licencia.
                                 </p>
+                            </Card>
+                        </Link>
+                    </div>
+
+                    {/* Foro Section */}
+                    <div className="mt-8">
+                        <Link to="/foro">
+                            <Card hoverEffect className="group bg-brand-dark-grey border-brand-red/30 hover:border-brand-red/60 relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                                    <MessageSquare className="w-32 h-32 text-brand-red" />
+                                </div>
+                                <div className="relative z-10 flex flex-col md:flex-row items-center gap-6">
+                                    <div className="bg-brand-red/20 p-4 rounded-full border border-brand-red/30 flex-shrink-0">
+                                        <MessageSquare className="w-12 h-12 text-brand-red" />
+                                    </div>
+                                    <div className="text-center md:text-left">
+                                        <h3 className="text-3xl font-brand-heading font-bold italic uppercase mb-2 group-hover:text-brand-red transition-colors text-white">
+                                            Foro de Consultas
+                                        </h3>
+                                        <p className="text-gray-400 max-w-2xl">
+                                            ¿Tenés dudas sobre los contenidos? Ingresá al foro, hacé tus preguntas o ayudá a otros estudiantes a resolver las suyas. ¡Construyamos conocimiento juntos!
+                                        </p>
+                                    </div>
+                                    <div className="md:ml-auto">
+                                        <div className="flex items-center gap-2 text-brand-red font-bold uppercase tracking-wider text-sm group-hover:translate-x-2 transition-transform">
+                                            Ingresar <ArrowRight className="w-5 h-5" />
+                                        </div>
+                                    </div>
+                                </div>
                             </Card>
                         </Link>
                     </div>

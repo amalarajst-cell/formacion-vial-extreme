@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocalState } from '../hooks/useLocalState';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { vtvScenarios } from '../data/vtvContent';
@@ -7,11 +8,11 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, RotateCcw, Home, BadgeCheck, ClipboardList, Target } from 'lucide-react';
 
 export function VTVSimulador() {
-    const [currentScenario, setCurrentScenario] = useState(0);
-    const [selectedResult, setSelectedResult] = useState<'normal' | 'alerta' | 'critico' | null>(null);
-    const [showExplanation, setShowExplanation] = useState(false);
-    const [score, setScore] = useState(0);
-    const [completed, setCompleted] = useState(false);
+    const [currentScenario, setCurrentScenario] = useLocalState('vtv_currentScenario', 0);
+    const [selectedResult, setSelectedResult] = useLocalState<'normal' | 'alerta' | 'critico' | null>('vtv_selectedResult', null);
+    const [showExplanation, setShowExplanation] = useLocalState('vtv_showExplanation', false);
+    const [score, setScore] = useLocalState('vtv_score', 0);
+    const [completed, setCompleted] = useLocalState('vtv_completed', false);
 
     const scenario = vtvScenarios[currentScenario];
 

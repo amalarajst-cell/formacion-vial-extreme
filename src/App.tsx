@@ -20,6 +20,7 @@ import { AuditoriaVialModule } from './pages/AuditoriaVialModule';
 import { EfectoMultiplicadorModule } from './pages/EfectoMultiplicadorModule';
 import { Results } from './pages/Results';
 import { SimuladorTeorico } from './pages/SimuladorTeorico';
+import { Forum } from './pages/Forum';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -55,6 +56,7 @@ function App() {
             <Route path="multiplicador" element={<EfectoMultiplicadorModule />} />
             <Route path="results" element={<Results />} />
             <Route path="simulador" element={<SimuladorTeorico />} />
+            <Route path="foro" element={<Forum />} />
           </Route>
         </Routes>
       </HashRouter>
