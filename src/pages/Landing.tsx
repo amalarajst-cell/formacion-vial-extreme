@@ -18,6 +18,9 @@ export function Landing() {
 
                 <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                     <div className="max-w-3xl">
+                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.3em] text-xs md:text-sm mb-4 block">
+                            2ª año consecutivo junto
+                        </span>
                         <div className="mb-6 max-w-[80%] sm:max-w-none">
                             <img src={logoVinculacion} alt="Vinculación con el futuro" className="w-full max-w-lg md:max-w-3xl h-auto" />
                         </div>
