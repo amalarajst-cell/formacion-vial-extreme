@@ -16,13 +16,13 @@ export function Landing() {
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale contrast-125 opacity-40"></div>
 
-                <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-20 md:pt-40">
                     <div className="max-w-3xl">
-                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.3em] text-xs md:text-sm mb-4 block">
+                        <span className="text-brand-yellow font-brand-heading font-medium uppercase tracking-[0.2em] text-[10px] md:text-xs mb-2 block opacity-90">
                             2ª año consecutivo junto
                         </span>
-                        <div className="mb-6 max-w-[80%] sm:max-w-none">
-                            <img src={logoVinculacion} alt="Vinculación con el futuro" className="w-full max-w-lg md:max-w-3xl h-auto" />
+                        <div className="mb-8 max-w-[80%] sm:max-w-none">
+                            <img src={logoVinculacion} alt="Vinculación con el futuro" className="w-full max-w-lg md:max-w-2xl h-auto" />
                         </div>
                         <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-xl font-light">
                             Transformando la movilidad urbana con conciencia y acción.
