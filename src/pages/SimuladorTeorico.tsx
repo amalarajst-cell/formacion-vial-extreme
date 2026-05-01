@@ -40,6 +40,11 @@ export function SimuladorTeorico() {
     // Categorias dinamicas
     const [themes, setThemes] = useState<string[]>([]);
     const [chapters, setChapters] = useState<string[]>([]);
+    
+    // Reiniciar scroll al cambiar de modo de vista
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, [viewMode]);
 
     const getImageUrl = (imagePath: string | undefined) => {
         if (!imagePath) return '';

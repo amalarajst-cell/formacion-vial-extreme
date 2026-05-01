@@ -25,6 +25,11 @@ export function QuizPrioridades() {
     const [gameOver, setGameOver] = useLocalState('quiz_prio_gameOver', false);
     const [shake, setShake] = useState(false);
 
+    // Reiniciar scroll al cambiar de pregunta
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, [currentQuestionIdx]);
+
     const currentQuestion = prioridadesQuestions[currentQuestionIdx];
 
     useEffect(() => {

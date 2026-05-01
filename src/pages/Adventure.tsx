@@ -40,6 +40,11 @@ export function Adventure() {
         (location.state as any)?.openFieldLog ? 'fieldlog' : (state.profile ? 'journey' : 'intro')
     );
 
+    // Reiniciar scroll al cambiar de vista interna
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, [view]);
+
     useEffect(() => {
         if ((location.state as any)?.openFieldLog) {
             setView('fieldlog');

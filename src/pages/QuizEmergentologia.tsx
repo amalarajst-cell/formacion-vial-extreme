@@ -1,4 +1,4 @@
-
+import { useEffect } from 'react';
 import { useLocalState } from '../hooks/useLocalState';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
@@ -16,6 +16,11 @@ export function QuizEmergentologia() {
     const [quizCompleted, setQuizCompleted] = useLocalState('quiz_em_quizCompleted', false);
 
     const { setEmergentologiaScore } = useSurveyStore();
+
+    // Reiniciar scroll al cambiar de pregunta
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, [currentQuestion]);
 
     const question = emergentologiaQuestions[currentQuestion];
 

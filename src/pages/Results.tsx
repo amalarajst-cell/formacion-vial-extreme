@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
@@ -18,6 +18,11 @@ export function Results() {
     const [step, setStep] = useState<'survey' | 'final' | 'diploma' | 'quiz'>(
         quizResult ? 'quiz' : (surveyState.completed ? 'final' : 'survey')
     );
+
+    // Reiniciar scroll al cambiar de paso interno
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, [step]);
 
     const handlePostSurveyComplete = (data: any) => {
         setPostSurvey(data);
