@@ -25,10 +25,8 @@ export function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16 md:h-20">
                     <div className="flex items-center">
-                        <Link to="/" className="flex-shrink-0">
-                            <span className="font-brand-heading font-bold italic text-xs sm:text-lg md:text-2xl text-white tracking-tighter uppercase">
-                                MULTIPLICADORES <span className="text-brand-red">VIALES</span>
-                            </span>
+                        <Link to="/" className="flex-shrink-0 flex items-center h-full py-2">
+                            <img src="/logo-vinculacion.png" alt="Vinculación con el futuro" className="h-8 sm:h-10 md:h-12 w-auto object-contain" />
                         </Link>
                     </div>
                     <div className="flex items-center gap-3">
