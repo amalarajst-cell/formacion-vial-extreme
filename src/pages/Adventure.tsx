@@ -27,9 +27,7 @@ import { PreSurveyForm } from '../components/survey/PreSurveyForm';
 import { FieldLog } from '../components/survey/FieldLog';
 import { useSurveyStore } from '../hooks/useSurveyStore';
 import { useToast } from '../components/ui/Toast';
-import { cn } from '../utils/cn';
-
-import { SCHEDULE_ACTIVITIES } from '../data/schedule';
+import { forceScrollToTop } from '../utils/scroll';
 
 export function Adventure() {
     const location = useLocation();
@@ -40,9 +38,9 @@ export function Adventure() {
         (location.state as any)?.openFieldLog ? 'fieldlog' : (state.profile ? 'journey' : 'intro')
     );
 
-    // Reiniciar scroll al cambiar de vista interna
+    // Reiniciar scroll al cambiar de vista interna con refuerzo
     useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        forceScrollToTop();
     }, [view]);
 
     useEffect(() => {

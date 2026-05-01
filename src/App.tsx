@@ -22,16 +22,13 @@ import { Results } from './pages/Results';
 import { SimuladorTeorico } from './pages/SimuladorTeorico';
 import { Forum } from './pages/Forum';
 
+import { forceScrollToTop } from './utils/scroll';
+
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    // Refuerzo para asegurar el scroll al inicio en navegadores móviles o con carga asíncrona
-    const timer = setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 10);
-    return () => clearTimeout(timer);
+    forceScrollToTop();
   }, [pathname]);
 
   return null;
