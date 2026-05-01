@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logoVinculacion from '../../assets/logo-vinculacion.png';
 import { SyncStatusIndicator } from '../SyncStatusIndicator';
 import { useSurveyStore } from '../../hooks/useSurveyStore';
 import { ChevronDown, Lock, BookOpen, AlertTriangle } from 'lucide-react';
