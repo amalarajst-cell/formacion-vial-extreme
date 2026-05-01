@@ -3,6 +3,7 @@ import { Card } from '../components/ui/Card';
 import { ArrowRight, Trophy, Zap, Shield, Heart, Monitor, Eye, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useSurveyStore } from '../hooks/useSurveyStore';
+import logoVinculacion from '../assets/logo-vinculacion.png';
 
 export function Landing() {
     const { state } = useSurveyStore();
@@ -18,7 +19,7 @@ export function Landing() {
                 <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                     <div className="max-w-3xl">
                         <div className="mb-6 max-w-[80%] sm:max-w-none">
-                            <img src="/logo-vinculacion.png" alt="Vinculación con el futuro" className="w-full max-w-lg md:max-w-3xl h-auto" />
+                            <img src={logoVinculacion} alt="Vinculación con el futuro" className="w-full max-w-lg md:max-w-3xl h-auto" />
                         </div>
                         <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-xl font-light">
                             Transformando la movilidad urbana con conciencia y acción.

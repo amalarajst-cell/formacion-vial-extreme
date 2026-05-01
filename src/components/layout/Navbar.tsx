@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import logoVinculacion from '../../assets/logo-vinculacion.png';
 import { SyncStatusIndicator } from '../SyncStatusIndicator';
 import { useSurveyStore } from '../../hooks/useSurveyStore';
 import { ChevronDown, Lock, BookOpen, AlertTriangle } from 'lucide-react';
@@ -26,7 +27,7 @@ export function Navbar() {
                 <div className="flex items-center justify-between h-16 md:h-20">
                     <div className="flex items-center">
                         <Link to="/" className="flex-shrink-0 flex items-center h-full py-2">
-                            <img src="/logo-vinculacion.png" alt="Vinculación con el futuro" className="h-8 sm:h-10 md:h-12 w-auto object-contain" />
+                            <img src={logoVinculacion} alt="Vinculación con el futuro" className="h-8 sm:h-10 md:h-12 w-auto object-contain" />
                         </Link>
                     </div>
                     <div className="flex items-center gap-3">
