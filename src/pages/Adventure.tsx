@@ -27,6 +27,8 @@ import { PreSurveyForm } from '../components/survey/PreSurveyForm';
 import { FieldLog } from '../components/survey/FieldLog';
 import { useSurveyStore } from '../hooks/useSurveyStore';
 import { useToast } from '../components/ui/Toast';
+import { cn } from '../utils/cn';
+import { SCHEDULE_ACTIVITIES } from '../data/schedule';
 import { forceScrollToTop } from '../utils/scroll';
 
 export function Adventure() {
