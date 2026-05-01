@@ -11,12 +11,12 @@ export function Landing() {
     return (
         <div className="animate-in fade-in duration-500">
             {/* Hero Section */}
-            <section className="relative min-h-[65vh] flex items-center overflow-hidden">
+            <section className="relative min-h-[60vh] flex items-center overflow-hidden">
                 {/* Background Image Placeholder - Replace with actual lively street image */}
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale contrast-125 opacity-40"></div>
 
-                <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-16 pb-12 md:pt-24">
+                <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-10 pb-8 md:pt-16">
                     <div className="max-w-3xl">
                         <span className="text-brand-yellow font-brand-heading font-medium uppercase tracking-[0.2em] text-[10px] md:text-xs mb-1 block opacity-90">
                             2º año consecutivo junto a

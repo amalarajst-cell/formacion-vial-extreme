@@ -6,9 +6,9 @@ export function Layout() {
     const isEmbedded = window.location.href.includes('embedded=true');
 
     return (
-        <div className="min-h-screen bg-brand-navy text-white font-brand-body selection:bg-brand-red selection:text-white">
+        <div className="flex flex-col min-h-screen bg-brand-navy text-white font-brand-body selection:bg-brand-red selection:text-white">
             {!isEmbedded && <Navbar />}
-            <main>
+            <main className="flex-grow">
                 <Outlet />
             </main>
             {!isEmbedded && (
