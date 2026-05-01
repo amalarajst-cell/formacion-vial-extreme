@@ -11,27 +11,27 @@ export function Landing() {
     return (
         <div className="animate-in fade-in duration-500">
             {/* Hero Section */}
-            <section className="relative h-[90vh] flex items-center overflow-hidden">
+            <section className="relative min-h-[85vh] flex items-center overflow-hidden">
                 {/* Background Image Placeholder - Replace with actual lively street image */}
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale contrast-125 opacity-40"></div>
 
-                <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-20 md:pt-40">
+                <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-16 pb-12 md:pt-24">
                     <div className="max-w-3xl">
-                        <span className="text-brand-yellow font-brand-heading font-medium uppercase tracking-[0.2em] text-[10px] md:text-xs mb-2 block opacity-90">
+                        <span className="text-brand-yellow font-brand-heading font-medium uppercase tracking-[0.2em] text-[10px] md:text-xs mb-1 block opacity-90">
                             2º año consecutivo junto a
                         </span>
-                        <div className="mb-8 max-w-[80%] sm:max-w-none">
-                            <img src={logoVinculacion} alt="Vinculación con el futuro" className="w-full max-w-lg md:max-w-2xl h-auto" />
+                        <div className="mb-4 max-w-[70%] sm:max-w-none">
+                            <img src={logoVinculacion} alt="Vinculación con el futuro" className="w-full max-w-xs md:max-w-xl h-auto" />
                         </div>
-                        <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-xl font-light">
+                        <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-xl font-light">
                             Transformando la movilidad urbana con conciencia y acción.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link to="/adventure">
                                 <Button
                                     size="lg"
-                                    className="text-xl py-6 px-12"
+                                    className="text-lg py-4 px-10"
                                 >
                                     Comienza Tu Aventura <ArrowRight className="ml-2 w-6 h-6" />
                                 </Button>
