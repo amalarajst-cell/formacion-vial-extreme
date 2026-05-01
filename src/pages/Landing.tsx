@@ -11,7 +11,7 @@ export function Landing() {
     return (
         <div className="animate-in fade-in duration-500">
             {/* Hero Section */}
-            <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+            <section className="relative min-h-[65vh] flex items-center overflow-hidden">
                 {/* Background Image Placeholder - Replace with actual lively street image */}
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale contrast-125 opacity-40"></div>

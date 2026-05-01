@@ -12,7 +12,7 @@ export function Layout() {
                 <Outlet />
             </main>
             {!isEmbedded && (
-                <footer className="bg-black py-16 border-t border-gray-900 mt-20">
+                <footer className="bg-black py-8 border-t border-gray-900">
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="flex flex-col md:flex-row items-center justify-center gap-6 w-full">
                             <div className="flex flex-col md:flex-row items-center gap-6">
