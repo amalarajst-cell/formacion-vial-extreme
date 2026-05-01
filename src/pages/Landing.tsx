@@ -17,9 +17,9 @@ export function Landing() {
 
                 <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                     <div className="max-w-3xl">
-                        <h1 className="text-3xl sm:text-5xl md:text-8xl font-brand-heading font-bold italic uppercase tracking-tighter text-white mb-6 leading-[0.8]">
+                        <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold tracking-tight text-white mb-6 leading-[0.9]">
                             Vinculación <br />
-                            <span className="text-brand-red">con el futuro</span>
+                            con el futuro
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-xl font-light">
                             Transformando la movilidad urbana con conciencia y acción.
