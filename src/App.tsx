@@ -1,5 +1,6 @@
+// Trigger fresh deploy
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Layout } from './components/layout/Layout';
 import { ToastProvider } from './components/ui/Toast';
 // Pages will be imported here as they are created
