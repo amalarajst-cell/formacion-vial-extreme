@@ -24,31 +24,14 @@ interface Thread {
 
 const initialThreads: Thread[] = [
     {
-        id: '1',
-        title: '¿Dudas sobre la prioridad de paso en rotondas?',
-        author: 'María Gómez',
-        content: 'Hola a todos, estaba repasando el módulo de prioridades y me surgió una duda. Si estoy por ingresar a una rotonda, ¿siempre tengo que ceder el paso al que ya está circulando por ella?',
-        timestamp: 'hace 2 horas',
-        replies: [
-            {
-                id: 'r1',
-                author: 'Carlos Instructor',
-                content: '¡Hola María! Exactamente. Quien circula por la rotonda tiene prioridad de paso sobre el que intenta ingresar. ¡Excelente pregunta!',
-                timestamp: 'hace 1 hora'
-            }
-        ],
-        likes: 0,
-        likedBy: [],
-    },
-    {
-        id: '2',
-        title: 'Significado de la doble línea amarilla',
-        author: 'Juan Pérez',
-        content: 'En la autovía noté una doble línea amarilla continua. ¿Puedo cruzarla para sobrepasar si no viene nadie de frente?',
-        timestamp: 'hace 5 horas',
+        id: 'welcome',
+        title: '¡Bienvenidos al Foro de Consultas!',
+        author: 'Equipo de Formación Vial',
+        content: 'Este es un espacio para que puedan despejar sus dudas, compartir experiencias y ayudarse mutuamente en este trayecto formativo. ¡No duden en participar!',
+        timestamp: new Date().toLocaleDateString('es-AR'),
         replies: [],
         likes: 0,
-        likedBy: [],
+        likedBy: []
     }
 ];
 
@@ -71,7 +54,7 @@ export function Forum() {
     }, [authorName]);
 
     useEffect(() => {
-        const threadsRef = ref(database, 'forumThreads');
+        const threadsRef = ref(database, 'forumThreads_v2');
         const unsubscribe = onValue(threadsRef, (snapshot) => {
             const data = snapshot.val();
             if (data) {
