@@ -108,7 +108,7 @@ export function Forum() {
             }
             return t;
         });
-        set(ref(database, 'forumThreads'), updated);
+        set(ref(database, 'forumThreads_v2'), updated);
     };
 
     const handleReply = (e: React.FormEvent, threadId: string) => {
@@ -134,7 +134,7 @@ export function Forum() {
         const updated = threads.map(t => 
             t.id === threadId ? { ...t, replies: [...t.replies, newReply] } : t
         );
-        set(ref(database, 'forumThreads'), updated);
+        set(ref(database, 'forumThreads_v2'), updated);
         setReplyContent('');
         showToast('Respuesta publicada', 'success');
     };
@@ -164,7 +164,7 @@ export function Forum() {
         };
 
         const updated = [newThread, ...threads];
-        set(ref(database, 'forumThreads'), updated);
+        set(ref(database, 'forumThreads_v2'), updated);
 
         setIsCreating(false);
         setNewTitle('');

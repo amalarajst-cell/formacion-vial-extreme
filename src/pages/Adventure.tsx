@@ -20,7 +20,8 @@ import {
     MapPin,
     Bus,
     TrainFront,
-    Download
+    Download,
+    Lock
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { PreSurveyForm } from '../components/survey/PreSurveyForm';
