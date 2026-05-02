@@ -25,11 +25,11 @@ import { Forum } from './pages/Forum';
 import { forceScrollToTop } from './utils/scroll';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
 
   useEffect(() => {
     forceScrollToTop();
-  }, [pathname]);
+  }, [pathname, search]);
 
   return null;
 }

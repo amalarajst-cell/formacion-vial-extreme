@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { MessageSquare, Plus, User, Search, ThumbsUp, MessageCircle } from 'lucide-react';
 import { database } from '../lib/firebase';
 import { ref, onValue, set } from 'firebase/database';
+import { useToast } from '../components/ui/Toast';
 
 interface Reply {
     id: string;
@@ -18,6 +19,7 @@ interface Thread {
     timestamp: string;
     replies: Reply[];
     likes: number;
+    likedBy?: string[];
     category: string;
 }
 
@@ -36,7 +38,8 @@ const initialThreads: Thread[] = [
                 timestamp: 'hace 1 hora'
             }
         ],
-        likes: 5,
+        likes: 0,
+        likedBy: [],
         category: 'Prioridades'
     },
     {
@@ -46,14 +49,25 @@ const initialThreads: Thread[] = [
         content: 'En la autovía noté una doble línea amarilla continua. ¿Puedo cruzarla para sobrepasar si no viene nadie de frente?',
         timestamp: 'hace 5 horas',
         replies: [],
-        likes: 2,
+        likes: 0,
+        likedBy: [],
         category: 'Señales'
     }
 ];
 
 export function Forum() {
+    const { showToast } = useToast();
     const [threads, setThreads] = useState<Thread[]>([]);
     const [authorName, setAuthorName] = useState(() => localStorage.getItem('vial_forum_name') || '');
+
+    const [userId] = useState(() => {
+        let id = localStorage.getItem('vial_forum_user_id');
+        if (!id) {
+            id = 'user_' + Math.random().toString(36).substr(2, 9);
+            localStorage.setItem('vial_forum_user_id', id);
+        }
+        return id;
+    });
 
     useEffect(() => {
         localStorage.setItem('vial_forum_name', authorName);
@@ -64,10 +78,11 @@ export function Forum() {
         const unsubscribe = onValue(threadsRef, (snapshot) => {
             const data = snapshot.val();
             if (data) {
-                // Firebase might omit empty arrays like "replies", so we ensure it's an array
+                // Firebase might omit empty arrays, so we ensure they exist
                 const parsed = data.map((t: any) => ({
                     ...t,
-                    replies: t.replies || []
+                    replies: t.replies || [],
+                    likedBy: t.likedBy || []
                 }));
                 setThreads(parsed);
             } else {
@@ -88,21 +103,53 @@ export function Forum() {
     const [replyContent, setReplyContent] = useState('');
 
     const handleLike = (threadId: string) => {
-        const updated = threads.map(t => 
-            t.id === threadId ? { ...t, likes: t.likes + 1 } : t
-        );
+        if (!authorName.trim()) {
+            showToast('Ingresá tu nombre para poder dar "Me gusta"', 'info');
+            return;
+        }
+
+        const updated = threads.map(t => {
+            if (t.id === threadId) {
+                const likedBy = Array.isArray(t.likedBy) ? t.likedBy : [];
+                const hasLiked = likedBy.includes(userId);
+                
+                const newLikedBy = hasLiked 
+                    ? likedBy.filter(id => id !== userId)
+                    : [...likedBy, userId];
+
+                if (!hasLiked) {
+                    showToast('¡Te gusta esta consulta!', 'success');
+                }
+                
+                return { 
+                    ...t, 
+                    likedBy: newLikedBy,
+                    likes: newLikedBy.length
+                };
+            }
+            return t;
+        });
         set(ref(database, 'forumThreads'), updated);
     };
 
     const handleReply = (e: React.FormEvent, threadId: string) => {
         e.preventDefault();
         if (!replyContent.trim()) return;
+
+        if (!authorName.trim()) {
+            showToast('Por favor, ingresá tu nombre arriba para comentar', 'error');
+            const nameInput = document.getElementById('author-name-input');
+            nameInput?.focus();
+            nameInput?.classList.add('border-brand-red');
+            setTimeout(() => nameInput?.classList.remove('border-brand-red'), 2000);
+            return;
+        }
         
         const newReply: Reply = {
             id: Date.now().toString(),
-            author: authorName.trim() || 'Anónimo',
+            author: authorName.trim(),
             content: replyContent,
-            timestamp: 'ahora'
+            timestamp: new Date().toLocaleString('es-AR', { hour: '2-digit', minute: '2-digit' })
         };
 
         const updated = threads.map(t => 
@@ -110,20 +157,31 @@ export function Forum() {
         );
         set(ref(database, 'forumThreads'), updated);
         setReplyContent('');
+        showToast('Respuesta publicada', 'success');
     };
 
     const handleCreateThread = (e: React.FormEvent) => {
         e.preventDefault();
         if (!newTitle.trim() || !newContent.trim()) return;
 
+        if (!authorName.trim()) {
+            showToast('Por favor, ingresá tu nombre arriba para publicar', 'error');
+            const nameInput = document.getElementById('author-name-input');
+            nameInput?.focus();
+            nameInput?.classList.add('border-brand-red');
+            setTimeout(() => nameInput?.classList.remove('border-brand-red'), 2000);
+            return;
+        }
+
         const newThread: Thread = {
             id: Date.now().toString(),
             title: newTitle,
-            author: authorName.trim() || 'Anónimo',
+            author: authorName.trim(),
             content: newContent,
-            timestamp: 'hace un momento',
+            timestamp: new Date().toLocaleDateString('es-AR'),
             replies: [],
             likes: 0,
+            likedBy: [],
             category: newCategory
         };
 
@@ -134,6 +192,7 @@ export function Forum() {
         setNewTitle('');
         setNewContent('');
         setNewCategory('General');
+        showToast('Consulta publicada con éxito', 'success');
     };
 
     const filteredThreads = threads.filter(t => 
@@ -162,11 +221,12 @@ export function Forum() {
                         Tu Nombre:
                     </div>
                     <input 
+                        id="author-name-input"
                         type="text" 
                         value={authorName}
                         onChange={(e) => setAuthorName(e.target.value)}
                         placeholder="Ej: Alejandro Malara Instructor" 
-                        className="bg-black/50 border border-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-brand-yellow w-full transition-colors"
+                        className="bg-black/50 border border-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-brand-yellow w-full transition-all"
                     />
                 </div>
 
@@ -287,13 +347,15 @@ export function Forum() {
                                         <span>{thread.timestamp}</span>
                                     </div>
                                     <div className="flex items-center gap-4">
-                                        <div 
+                                        <button 
                                             onClick={() => handleLike(thread.id)}
-                                            className="flex items-center gap-1.5 hover:text-brand-yellow cursor-pointer transition-colors"
+                                            className={`flex items-center gap-1.5 cursor-pointer transition-colors ${
+                                                thread.likedBy?.includes(userId) ? 'text-brand-yellow' : 'hover:text-brand-yellow text-gray-500'
+                                            }`}
                                         >
-                                            <ThumbsUp className="w-4 h-4" />
+                                            <ThumbsUp className={`w-4 h-4 ${thread.likedBy?.includes(userId) ? 'fill-brand-yellow' : ''}`} />
                                             <span>{thread.likes}</span>
-                                        </div>
+                                        </button>
                                         <div 
                                             onClick={() => setExpandedThreadId(expandedThreadId === thread.id ? null : thread.id)}
                                             className="flex items-center gap-1.5 hover:text-brand-yellow cursor-pointer transition-colors"
