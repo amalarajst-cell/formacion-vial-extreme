@@ -20,7 +20,6 @@ interface Thread {
     replies: Reply[];
     likes: number;
     likedBy?: string[];
-    category: string;
 }
 
 const initialThreads: Thread[] = [
@@ -40,7 +39,6 @@ const initialThreads: Thread[] = [
         ],
         likes: 0,
         likedBy: [],
-        category: 'Prioridades'
     },
     {
         id: '2',
@@ -51,7 +49,6 @@ const initialThreads: Thread[] = [
         replies: [],
         likes: 0,
         likedBy: [],
-        category: 'Señales'
     }
 ];
 
@@ -97,7 +94,6 @@ export function Forum() {
     const [isCreating, setIsCreating] = useState(false);
     const [newTitle, setNewTitle] = useState('');
     const [newContent, setNewContent] = useState('');
-    const [newCategory, setNewCategory] = useState('General');
 
     const [expandedThreadId, setExpandedThreadId] = useState<string | null>(null);
     const [replyContent, setReplyContent] = useState('');
@@ -182,7 +178,6 @@ export function Forum() {
             replies: [],
             likes: 0,
             likedBy: [],
-            category: newCategory
         };
 
         const updated = [newThread, ...threads];
@@ -191,7 +186,6 @@ export function Forum() {
         setIsCreating(false);
         setNewTitle('');
         setNewContent('');
-        setNewCategory('General');
         showToast('Consulta publicada con éxito', 'success');
     };
 
@@ -273,21 +267,6 @@ export function Forum() {
                                     required
                                 />
                             </div>
-                            <div className="flex gap-4">
-                                <div className="w-1/3">
-                                    <label className="block text-sm text-gray-400 mb-1">Categoría</label>
-                                    <select 
-                                        value={newCategory}
-                                        onChange={(e) => setNewCategory(e.target.value)}
-                                        className="w-full bg-black/50 border border-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-brand-yellow transition-colors"
-                                    >
-                                        <option>General</option>
-                                        <option>Señales</option>
-                                        <option>Prioridades</option>
-                                        <option>Emergentología</option>
-                                    </select>
-                                </div>
-                            </div>
                             <div>
                                 <label className="block text-sm text-gray-400 mb-1">Mensaje</label>
                                 <textarea 
@@ -322,11 +301,6 @@ export function Forum() {
                             <div key={thread.id} className="bg-brand-dark-grey p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-colors group">
                                 <div className="flex items-start justify-between gap-4 mb-4">
                                     <div>
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <span className="text-xs font-bold px-2 py-1 rounded bg-brand-navy text-brand-yellow border border-brand-yellow/20">
-                                                {thread.category}
-                                            </span>
-                                        </div>
                                         <h3 className="text-xl font-bold text-white group-hover:text-brand-red transition-colors">
                                             {thread.title}
                                         </h3>
