@@ -795,11 +795,24 @@ export function Adventure() {
                                 </Button>
                             </Link>
                         ) : (
-                            <Link to="/results">
-                                <Button size="lg" className="bg-brand-red text-white hover:bg-red-600 text-xl py-8 px-12 shadow-hard">
-                                    IR AL CIERRE (POST-SURVEY) <ClipboardList className="ml-2 w-6 h-6" />
-                                </Button>
-                            </Link>
+                            <div className="flex flex-col items-center gap-2">
+                                {state.fieldData ? (
+                                    <Link to="/results">
+                                        <Button size="lg" className="bg-brand-red text-white hover:bg-red-600 text-xl py-8 px-12 shadow-hard">
+                                            IR AL CIERRE (POST-SURVEY) <ClipboardList className="ml-2 w-6 h-6" />
+                                        </Button>
+                                    </Link>
+                                ) : (
+                                    <div className="group relative">
+                                        <Button size="lg" disabled className="bg-gray-800 text-gray-600 cursor-not-allowed text-xl py-8 px-12 border border-gray-700 opacity-50 grayscale">
+                                            IR AL CIERRE (BLOQUEADO) <Lock className="ml-2 w-6 h-6" />
+                                        </Button>
+                                        <p className="mt-2 text-[10px] text-brand-red font-bold uppercase tracking-widest">
+                                            ⚠️ COMPLETÁ LA BITÁCORA DEL DÍA 4 PARA HABILITAR
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
                         )}
                         <Link to="/">
                             <Button variant="outline" className="text-xl py-8 px-12">
