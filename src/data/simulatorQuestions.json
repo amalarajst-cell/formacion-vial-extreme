@@ -1,23 +1,45 @@
 [
   {
-    "id": "3",
-    "question": "Según las últimas estadísticas del Observatorio Vial de la Ciudad de Bs. As., la tasa más alta de víctimas fatales como consecuencia de incidentes de tránsito son usuarios/as de:",
+    "id": "4",
+    "question": "El riesgo en la vía pública surge como resultado de diversos factores, ¿cuáles son?",
     "options": [
       {
-        "text": "Opción A.",
+        "text": "Vehicular y Ambiental.",
         "isCorrect": false
       },
       {
-        "text": "Opción B.",
+        "text": "Humano y Vehicular.",
+        "isCorrect": false
+      },
+      {
+        "text": "Humano, Vehicular y Ambiental.",
+        "isCorrect": true
+      }
+    ],
+    "tema": "Generalidades",
+    "manual": "INTRODUCCIÓN - ¿ACCIDENTE O INCIDENTE DE TRÁNSITO?",
+    "image": "/simulator/images/q_4_img004.png"
+  },
+  {
+    "id": "5",
+    "question": "¿A qué factor se deben la mayoría de los siniestros viales?",
+    "options": [
+      {
+        "text": "Al humano.",
         "isCorrect": true
       },
       {
-        "text": "Opción C.",
+        "text": "Al vehicular.",
+        "isCorrect": false
+      },
+      {
+        "text": "Al ambiental.",
         "isCorrect": false
       }
     ],
     "tema": "Generalidades",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones"
+    "manual": "INTRODUCCIÓN - ¿ACCIDENTE O INCIDENTE DE TRÁNSITO?",
+    "image": "/simulator/images/q_5_img005.png"
   },
   {
     "id": "6",
@@ -32,12 +54,68 @@
         "isCorrect": true
       },
       {
+        "text": "Ninguna de las anteriores.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Generalidades",
+    "manual": "INTRODUCCIÓN - ¿ACCIDENTE O INCIDENTE DE TRÁNSITO?",
+    "image": "/simulator/images/q_6_img006.png"
+  },
+  {
+    "id": "7",
+    "question": "El factor ambiental es el principal factor de riesgo ya que las colisiones, en su mayoría, se deben a las condiciones meteorológicas o del camino",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": false
+      },
+      {
         "text": "Falso.",
         "isCorrect": true
       }
     ],
-    "tema": "",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones"
+    "tema": "Generalidades",
+    "manual": "INTRODUCCIÓN - ¿ACCIDENTE O INCIDENTE DE TRÁNSITO?",
+    "image": "/simulator/images/q_7_img007.png"
+  },
+  {
+    "id": "8",
+    "question": "Por lo general, las fallas mecánicas se deben a conductas negligentes por parte de las personas que no se ocupan de la verificación del estado del vehículo:",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": true
+      },
+      {
+        "text": "Falso.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Generalidades",
+    "manual": "INTRODUCCIÓN - ¿ACCIDENTE O INCIDENTE DE TRÁNSITO?",
+    "image": "/simulator/images/q_8_img008.png"
+  },
+  {
+    "id": "9",
+    "question": "¿A qué se denomina incidente de tránsito o incidente vial?",
+    "options": [
+      {
+        "text": "Hecho que puede ser evitado, en el cual se produce daño a persona o cosa, en ocasión de circulación en la vía pública.",
+        "isCorrect": true
+      },
+      {
+        "text": "Hecho impredecible e inevitable en ocasión de circulación en la vía pública.",
+        "isCorrect": false
+      },
+      {
+        "text": "Hecho, evitable o no, que involucra daños a terceros.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Generalidades",
+    "manual": "INTRODUCCIÓN - ¿ACCIDENTE O INCIDENTE DE TRÁNSITO?",
+    "image": "/simulator/images/q_9_img009.png"
   },
   {
     "id": "11",
@@ -54,6 +132,19 @@
       {
         "text": "Víctimas humanas fatales y bienes materiales (daños en el vehículo propio o de terceros).",
         "isCorrect": false
+      }
+    ],
+    "tema": "Generalidades",
+    "manual": "INTRODUCCIÓN - ¿ACCIDENTE O INCIDENTE DE TRÁNSITO?",
+    "image": "/simulator/images/q_11_img011.png"
+  },
+  {
+    "id": "12",
+    "question": "¿A qué se denomina Movilidad Sustentable?",
+    "options": [
+      {
+        "text": "Forma de trasladarnos de manera más efectiva, priorizando el uso del vehículo particular.",
+        "isCorrect": false
       },
       {
         "text": "Forma de trasladarnos de manera más rápida, independientemente del tipo de movilidad elegida.",
@@ -64,8 +155,9 @@
         "isCorrect": true
       }
     ],
-    "tema": "",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones"
+    "tema": "Generalidades",
+    "manual": "CAPÍTULO 1 -  ¿QUÉ ES LA MOVILIDAD SUSTENTABLE?",
+    "image": "/simulator/images/q_12_img012.png"
   },
   {
     "id": "13",
@@ -85,7 +177,8 @@
       }
     ],
     "tema": "Generalidades",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones"
+    "manual": "INTRODUCCIÓN - PLAN DE SEGURIDAD VIAL DE LA CIUDAD DE BUENOS AIRES",
+    "image": "/simulator/images/q_13_img013.png"
   },
   {
     "id": "15",
@@ -105,7 +198,8 @@
       }
     ],
     "tema": "Generalidades",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 5 - CONDUCCIÓN PREVENTIVA Y EFICIENTE",
+    "image": "/simulator/images/q_15_img015.png"
   },
   {
     "id": "17",
@@ -125,7 +219,8 @@
       }
     ],
     "tema": "Generalidades",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones"
+    "manual": "INTRODUCCIÓN - ENFOQUE ÉTICO-CIUDADANO EN LA CULTURA VIAL",
+    "image": "/simulator/images/q_17_img017.png"
   },
   {
     "id": "19",
@@ -145,8 +240,8 @@
       }
     ],
     "tema": "Generalidades",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image181.jpg"
+    "manual": "CAPÍTULO 1 - CIUDADES PARA LAS PERSONAS",
+    "image": "/simulator/images/q_19_img019.png"
   },
   {
     "id": "23",
@@ -166,7 +261,7 @@
       }
     ],
     "tema": "Generalidades",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 5 - CONDUCCIÓN PREVENTIVA Y EFICIENTE"
   },
   {
     "id": "24",
@@ -186,8 +281,8 @@
       }
     ],
     "tema": "Generalidades",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/examen___categor_a_a_docx_image269.jpg"
+    "manual": "CAPÍTULO 5 - CONDUCCIÓN PREVENTIVA Y EFICIENTE",
+    "image": "/simulator/images/q_24_img024.png"
   },
   {
     "id": "35",
@@ -207,8 +302,8 @@
       }
     ],
     "tema": "Generalidades",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image88.jpg"
+    "manual": "CAPÍTULO 1 - BICICLETA",
+    "image": "/simulator/images/q_35_img035.png"
   },
   {
     "id": "36",
@@ -228,8 +323,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image96.jpg"
+    "manual": "CAPÍTULO 1 - PRIORIDAD PEATONAL",
+    "image": "/simulator/images/q_36_img036.png"
   },
   {
     "id": "37",
@@ -245,8 +340,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image37.jpg"
+    "manual": "CAPÍTULO 1 - PRIORIDAD PEATONAL",
+    "image": "/simulator/images/q_37_img037.png"
   },
   {
     "id": "39",
@@ -262,8 +357,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image63.jpg"
+    "manual": "CAPÍTULO 1 - PRIORIDAD PEATONAL",
+    "image": "/simulator/images/q_39_img039.png"
   },
   {
     "id": "40",
@@ -283,8 +378,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image118.jpg"
+    "manual": "CAPÍTULO 1 - PRIORIDAD PEATONAL",
+    "image": "/simulator/images/q_40_img040.png"
   },
   {
     "id": "41",
@@ -304,7 +399,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones"
+    "manual": "CAPÍTULO 1 - PRIORIDAD PEATONAL",
+    "image": "/simulator/images/q_41_img041.png"
   },
   {
     "id": "42",
@@ -324,8 +420,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image106.jpg"
+    "manual": "CAPÍTULO 1 - PRIORIDAD PEATONAL",
+    "image": "/simulator/images/q_42_img042.png"
   },
   {
     "id": "43",
@@ -345,8 +441,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "needsImage": true
+    "manual": "CAPÍTULO 1 - PRIORIDAD PEATONAL",
+    "image": "/simulator/images/q_43_img043.png"
   },
   {
     "id": "44",
@@ -366,8 +462,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image207.jpg"
+    "manual": "CAPÍTULO 1 - PRIORIDAD PEATONAL",
+    "image": "/simulator/images/q_44_img044.jpg"
   },
   {
     "id": "45",
@@ -387,7 +483,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones"
+    "manual": "CAPÍTULO 1 - BICICLETA",
+    "image": "/simulator/images/q_45_img045.png"
   },
   {
     "id": "48",
@@ -404,6 +501,19 @@
       {
         "text": "Ambas respuestas, la A y la B, son correctas.",
         "isCorrect": true
+      }
+    ],
+    "tema": "Prioridades de Paso",
+    "manual": "CAPÍTULO 1 - BICICLETA",
+    "image": "/simulator/images/q_48_img048.png"
+  },
+  {
+    "id": "49",
+    "question": "Es correcto el desplazamiento del motociclista de la imagen, que circula con el casco puesto y las luces encendidas",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": false
       },
       {
         "text": "Falso.",
@@ -411,7 +521,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones"
+    "manual": "CAPÍTULO 1 - BICICLETA",
+    "image": "/simulator/images/q_49_img049.png"
   },
   {
     "id": "50",
@@ -431,7 +542,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_50_img050.png"
   },
   {
     "id": "51",
@@ -451,8 +563,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image82.jpg"
+    "manual": "CAPÍTULO 1 - BICICLETA",
+    "image": "/simulator/images/q_51_img051.png"
   },
   {
     "id": "54",
@@ -472,8 +584,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image182.jpg"
+    "manual": "CAPÍTULO 1 - SISTEMA DE TRANSPORTE PÚBLICO",
+    "image": "/simulator/images/q_54_img054.png"
   },
   {
     "id": "55",
@@ -490,6 +602,19 @@
       {
         "text": "Ambas respuestas, la A y la B, son incorrectas.",
         "isCorrect": true
+      }
+    ],
+    "tema": "Prioridades de Paso",
+    "manual": "CAPÍTULO 1 - SISTEMA DE TRANSPORTE PÚBLICO",
+    "image": "/simulator/images/q_55_img055.png"
+  },
+  {
+    "id": "56",
+    "question": "El motovehículo que se muestra en la imagen circula correctamente, sin entorpecer la circulación.",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": false
       },
       {
         "text": "Falso.",
@@ -497,8 +622,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image57.jpg"
+    "manual": "CAPÍTULO 1 - SISTEMA DE TRANSPORTE PÚBLICO",
+    "image": "/simulator/images/q_56_img056.png"
   },
   {
     "id": "57",
@@ -518,7 +643,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones"
+    "manual": "CAPÍTULO 1 - SISTEMA DE TRANSPORTE PÚBLICO",
+    "image": "/simulator/images/q_57_img057.png"
   },
   {
     "id": "58",
@@ -538,8 +664,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image277.jpg"
+    "manual": "CAPÍTULO 1 - SISTEMA DE TRANSPORTE PÚBLICO",
+    "image": "/simulator/images/q_58_img058.png"
   },
   {
     "id": "60",
@@ -559,7 +685,8 @@
       }
     ],
     "tema": "",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones"
+    "manual": "CAPÍTULO 1 - SISTEMA DE TRANSPORTE PÚBLICO",
+    "image": "/simulator/images/q_60_img060.png"
   },
   {
     "id": "61",
@@ -579,8 +706,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image236.jpg"
+    "manual": "CAPÍTULO 1 - SISTEMA DE TRANSPORTE PÚBLICO",
+    "image": "/simulator/images/q_61_img061.jpg"
   },
   {
     "id": "62",
@@ -600,8 +727,25 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "needsImage": true
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_62_img062.png"
+  },
+  {
+    "id": "63",
+    "question": "El siguiente símbolo indica que se trata de un carril que debe ser liberado cuando se aproxima un vehículo en emergencia",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": true
+      },
+      {
+        "text": "Falso.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "De Relevancia",
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_63_img063.png"
   },
   {
     "id": "64",
@@ -621,8 +765,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image66.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_64_img064.png"
   },
   {
     "id": "65",
@@ -642,8 +786,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "needsImage": true
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_65_img065.png"
   },
   {
     "id": "66",
@@ -663,7 +807,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_66_img066.png"
   },
   {
     "id": "67",
@@ -683,8 +828,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "needsImage": true
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_67_img067.png"
   },
   {
     "id": "68",
@@ -704,8 +849,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "needsImage": true
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_68_img068.png"
   },
   {
     "id": "69",
@@ -725,8 +870,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image144.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_69_img069.png"
   },
   {
     "id": "70",
@@ -742,8 +887,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "needsImage": true
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_70_img070.png"
   },
   {
     "id": "71",
@@ -763,8 +908,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image2.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS",
+    "image": "/simulator/images/q_71_img071.png"
   },
   {
     "id": "72",
@@ -784,8 +929,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image271.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS",
+    "image": "/simulator/images/q_72_img072.png"
   },
   {
     "id": "73",
@@ -801,8 +946,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image18.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS",
+    "image": "/simulator/images/q_73_img073.png"
   },
   {
     "id": "74",
@@ -822,8 +967,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image218.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_74_img074.png"
   },
   {
     "id": "75",
@@ -843,8 +988,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image28.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_75_img075.png"
   },
   {
     "id": "76",
@@ -864,8 +1009,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image13.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_76_img076.png"
   },
   {
     "id": "77",
@@ -881,8 +1026,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image48.jpg"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_77_img077.png"
   },
   {
     "id": "78",
@@ -902,8 +1047,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image125.jpg"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_78_img078.png"
   },
   {
     "id": "79",
@@ -923,8 +1068,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image175.jpg"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_79_img079.png"
   },
   {
     "id": "80",
@@ -944,7 +1089,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS",
+    "image": "/simulator/images/q_80_img080.png"
   },
   {
     "id": "81",
@@ -964,7 +1110,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_81_img081.png"
   },
   {
     "id": "83",
@@ -984,8 +1131,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image36.jpg"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_83_img083.png"
   },
   {
     "id": "84",
@@ -1005,7 +1152,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_84_img084.png"
   },
   {
     "id": "85",
@@ -1025,8 +1173,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image3.jpg"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_85_img085.png"
   },
   {
     "id": "86",
@@ -1046,7 +1194,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_86_img086.png"
   },
   {
     "id": "87",
@@ -1062,8 +1211,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image103.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS",
+    "image": "/simulator/images/q_87_img087.png"
   },
   {
     "id": "88",
@@ -1083,7 +1232,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_88_img088.png"
   },
   {
     "id": "89",
@@ -1103,7 +1253,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_89_img089.png"
   },
   {
     "id": "90",
@@ -1123,7 +1274,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_90_img090.png"
   },
   {
     "id": "91",
@@ -1143,8 +1295,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image279.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA",
+    "image": "/simulator/images/q_91_img091.png"
   },
   {
     "id": "92",
@@ -1164,7 +1316,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_92_img092.png"
   },
   {
     "id": "94",
@@ -1184,7 +1337,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_94_img094.png"
   },
   {
     "id": "95",
@@ -1204,8 +1358,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image107.jpg"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_95_img095.png"
   },
   {
     "id": "96",
@@ -1225,7 +1379,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_96_img096.png"
   },
   {
     "id": "97",
@@ -1245,28 +1400,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Velocidad y Circulación"
-  },
-  {
-    "id": "98",
-    "question": "¿Cuál de las siguientes imágenes muestra el sector correcto por dónde debe circular un motovehículo?",
-    "options": [
-      {
-        "text": "Opción A",
-        "isCorrect": false
-      },
-      {
-        "text": "Opción B.",
-        "isCorrect": false
-      },
-      {
-        "text": "Opción C.",
-        "isCorrect": true
-      }
-    ],
-    "tema": "Prioridades de Paso",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image6.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS",
+    "image": "/simulator/images/q_97_img097.png"
   },
   {
     "id": "99",
@@ -1286,7 +1421,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Normas de circulación)",
+    "image": "/simulator/images/q_99_img099.png"
   },
   {
     "id": "100",
@@ -1302,8 +1438,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image73.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Normas de circulación)",
+    "image": "/simulator/images/q_100_img100.png"
   },
   {
     "id": "101",
@@ -1319,7 +1455,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS",
+    "image": "/simulator/images/q_101_img101.png"
   },
   {
     "id": "102",
@@ -1339,8 +1476,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_c_y_e_docx_image31.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS",
+    "image": "/simulator/images/q_102_img102.png"
   },
   {
     "id": "103",
@@ -1360,7 +1497,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS",
+    "image": "/simulator/images/q_103_img103.png"
   },
   {
     "id": "104",
@@ -1380,8 +1518,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image195.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_104_img104.png"
   },
   {
     "id": "106",
@@ -1397,8 +1535,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image186.jpg"
+    "manual": "CAPÍTULO 3 - GIROS EN INTERSECCIONES y se complementa con PRIORIDAD NORMATIVA (Demarcación horizontal)",
+    "image": "/simulator/images/q_106_img106.png"
   },
   {
     "id": "107",
@@ -1418,8 +1556,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image232.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_107_img107.png"
   },
   {
     "id": "110",
@@ -1439,8 +1577,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image65.jpg"
+    "manual": "CAPÍTULO 3 - GIROS EN INTERSECCIONES",
+    "image": "/simulator/images/q_110_img110.png"
   },
   {
     "id": "111",
@@ -1460,8 +1598,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image180.jpg"
+    "manual": "CAPÍTULO 3 - GIROS EN INTERSECCIONES",
+    "image": "/simulator/images/q_111_img111.png"
   },
   {
     "id": "112",
@@ -1481,7 +1619,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_112_img112.png"
   },
   {
     "id": "115",
@@ -1501,8 +1640,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image194.jpg"
+    "manual": "CAPÍTULO 3 - GIROS EN INTERSECCIONES",
+    "image": "/simulator/images/q_115_img115.png"
   },
   {
     "id": "116",
@@ -1522,8 +1661,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image169.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_116_img116.png"
   },
   {
     "id": "117",
@@ -1543,8 +1682,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image217.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_117_img117.png"
   },
   {
     "id": "120",
@@ -1564,8 +1703,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image56.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_120_img120.png"
   },
   {
     "id": "121",
@@ -1585,8 +1724,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image156.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_121_img121.png"
   },
   {
     "id": "122",
@@ -1602,8 +1741,8 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image1.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO",
+    "image": "/simulator/images/q_122_img122.png"
   },
   {
     "id": "124",
@@ -1623,8 +1762,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image173.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_124_img124.png"
   },
   {
     "id": "125",
@@ -1644,8 +1783,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image15.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_125_img125.png"
   },
   {
     "id": "126",
@@ -1662,14 +1801,32 @@
       {
         "text": "50 km/h.",
         "isCorrect": false
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_126_img126.png"
+  },
+  {
+    "id": "127",
+    "question": "Según la Ley 2148, ¿cuál es la velocidad máxima permitida para el transporte escolar en esta calle?",
+    "options": [
+      {
+        "text": "60 km/h.",
+        "isCorrect": false
       },
       {
         "text": "45 km/h.",
         "isCorrect": false
+      },
+      {
+        "text": "40 km/h.",
+        "isCorrect": true
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_127_img127.png"
   },
   {
     "id": "128",
@@ -1689,8 +1846,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image173.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_128_img128.png"
   },
   {
     "id": "131",
@@ -1710,8 +1867,29 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image228.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_131_img131.png"
+  },
+  {
+    "id": "131",
+    "question": "Según las normas generales, ¿cuál es la velocidad máxima permitida para un automóvil particular en esta avenida?",
+    "options": [
+      {
+        "text": "40 km/h.",
+        "isCorrect": false
+      },
+      {
+        "text": "70 km/h.",
+        "isCorrect": false
+      },
+      {
+        "text": "60 km/h.",
+        "isCorrect": true
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_131_img131.png"
   },
   {
     "id": "132",
@@ -1731,8 +1909,29 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image193.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_132_img132.png"
+  },
+  {
+    "id": "132",
+    "question": "¿Cuál es la velocidad máxima permitida para un automóvil particular en este tramo de la avenida?",
+    "options": [
+      {
+        "text": "60 km/h.",
+        "isCorrect": false
+      },
+      {
+        "text": "50 km/h.",
+        "isCorrect": false
+      },
+      {
+        "text": "40 km/h.",
+        "isCorrect": true
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_132_img132.png"
   },
   {
     "id": "134",
@@ -1752,8 +1951,29 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image21.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_134_img134.png"
+  },
+  {
+    "id": "134",
+    "question": "¿Cuál es la velocidad máxima permitida para automóviles particulares en este tramo de la Av. Costanera Rafael Obligado?",
+    "options": [
+      {
+        "text": "60 km/h.",
+        "isCorrect": true
+      },
+      {
+        "text": "70 km/h.",
+        "isCorrect": false
+      },
+      {
+        "text": "40 km/h.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_134_img134.png"
   },
   {
     "id": "135",
@@ -1773,8 +1993,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image50.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_135_img135.png"
   },
   {
     "id": "136",
@@ -1794,8 +2014,29 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image3.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_136_img136.png"
+  },
+  {
+    "id": "136",
+    "question": "Según la Ley N° 2148, ¿cuál es la velocidad máxima permitida en esta arteria para vehículos de carga (de más de 3500 Kilos de peso bruto y menor a 12 toneladas)?",
+    "options": [
+      {
+        "text": "45 km/h.",
+        "isCorrect": false
+      },
+      {
+        "text": "50 km/h.",
+        "isCorrect": true
+      },
+      {
+        "text": "60 km/h.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_136_img136.png"
   },
   {
     "id": "137",
@@ -1815,8 +2056,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image9.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_137_img137.png"
   },
   {
     "id": "139",
@@ -1836,8 +2077,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image12.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_139_img139.png"
   },
   {
     "id": "140",
@@ -1853,8 +2094,42 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image246.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_140_img140.png"
+  },
+  {
+    "id": "140",
+    "question": "Según la Ley 2148, los límites de velocidad para un automóvil particular que circula por esta arteria son de 30 km/h (mínima) y 60 km/h (máxima).",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": true
+      },
+      {
+        "text": "Falso.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_140_img140.png"
+  },
+  {
+    "id": "140",
+    "question": "Según la Ley 2148, los límites de velocidad para un taxi que circula por esta arteria son de 30 km/h (mínima) y 60 km/h (máxima).",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": true
+      },
+      {
+        "text": "Falso.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_140_img140.png"
   },
   {
     "id": "141",
@@ -1874,8 +2149,29 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image30.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_141_img141.png"
+  },
+  {
+    "id": "141",
+    "question": "Según las normas generales, ¿cuál es la velocidad máxima permitida para automóviles particulares en esta zona de la ruta?",
+    "options": [
+      {
+        "text": "110 km/h.",
+        "isCorrect": true
+      },
+      {
+        "text": "130 km/h.",
+        "isCorrect": false
+      },
+      {
+        "text": "80 km/h.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_141_img141.png"
   },
   {
     "id": "142",
@@ -1895,7 +2191,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_142_img142.png"
   },
   {
     "id": "143",
@@ -1911,7 +2208,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - ADELANTAMIENTO Y SOBREPASO",
+    "image": "/simulator/images/q_143_img143.png"
   },
   {
     "id": "144",
@@ -1928,6 +2226,19 @@
       {
         "text": "30 km/h.",
         "isCorrect": false
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_144_img144.png"
+  },
+  {
+    "id": "146",
+    "question": "En esta vía, los vehículos de transporte de escolares y colectivos de pasajeros/as, tienen una velocidad máxima diferente entre sí.",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": false
       },
       {
         "text": "Falso.",
@@ -1935,8 +2246,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image45.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_146_img146.png"
   },
   {
     "id": "147",
@@ -1956,7 +2267,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS",
+    "image": "/simulator/images/q_147_img147.png"
   },
   {
     "id": "148",
@@ -1976,7 +2288,29 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_148_img148.png"
+  },
+  {
+    "id": "148",
+    "question": "Según Ley N° 2148, ¿cuál es la velocidad máxima permitida para automóviles en los carriles centrales de la Av. Gral. Paz, en el tramo entre Autopista Ingeniero Pascual Palazzo y Av. 27 de Febrero?",
+    "options": [
+      {
+        "text": "60 km/h.",
+        "isCorrect": false
+      },
+      {
+        "text": "80 km/h.",
+        "isCorrect": true
+      },
+      {
+        "text": "100 km/h.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_148_img148.png"
   },
   {
     "id": "150",
@@ -1996,7 +2330,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_150_img150.png"
   },
   {
     "id": "151",
@@ -2016,7 +2351,71 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_151_img151.png"
+  },
+  {
+    "id": "151",
+    "question": "¿Cuál es la velocidad máxima permitida para un automóvil particular en Av. Intendente Cantilo, salvo señalización que indique otra velocidad?",
+    "options": [
+      {
+        "text": "60 km/h.",
+        "isCorrect": false
+      },
+      {
+        "text": "110 km/h.",
+        "isCorrect": false
+      },
+      {
+        "text": "100 km/h.",
+        "isCorrect": true
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_151_img151.png"
+  },
+  {
+    "id": "152",
+    "question": "Según la Ley Nacional N° 24.449, ¿cuál es la velocidad máxima permitida para motovehículos en semiautopistas?",
+    "options": [
+      {
+        "text": "130 km/h.",
+        "isCorrect": false
+      },
+      {
+        "text": "120 km/h.",
+        "isCorrect": true
+      },
+      {
+        "text": "110 km/h.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_152_img152.png"
+  },
+  {
+    "id": "152",
+    "question": "Según la Ley Nacional N° 24.449, ¿cuál es la velocidad máxima permitida para automóviles particulares en semiautopistas?",
+    "options": [
+      {
+        "text": "130 km/h.",
+        "isCorrect": false
+      },
+      {
+        "text": "120 km/h.",
+        "isCorrect": true
+      },
+      {
+        "text": "110 km/h.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_152_img152.png"
   },
   {
     "id": "153",
@@ -2036,8 +2435,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image16.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_153_img153.png"
   },
   {
     "id": "154",
@@ -2057,7 +2456,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_154_img154.png"
   },
   {
     "id": "155",
@@ -2077,8 +2477,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image281.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_155_img155.png"
   },
   {
     "id": "160",
@@ -2098,7 +2498,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_160_img160.jpg"
   },
   {
     "id": "161",
@@ -2118,7 +2519,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_161_img161.png"
   },
   {
     "id": "162",
@@ -2138,8 +2540,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image18.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_162_img162.jpg"
   },
   {
     "id": "163",
@@ -2159,7 +2561,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_163_img163.png"
   },
   {
     "id": "164",
@@ -2179,7 +2582,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_164_img164.png"
   },
   {
     "id": "165",
@@ -2199,8 +2603,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image16.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_165_img165.png"
   },
   {
     "id": "166",
@@ -2216,7 +2620,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_166_img166.png"
   },
   {
     "id": "167",
@@ -2236,7 +2641,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_167_img167.png"
   },
   {
     "id": "168",
@@ -2256,7 +2662,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_168_img168.png"
   },
   {
     "id": "169",
@@ -2272,7 +2679,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 5 - CONDUCCIÓN PREVENTIVA Y EFICIENTE",
+    "image": "/simulator/images/q_169_img169.png"
   },
   {
     "id": "170",
@@ -2288,7 +2696,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_170_img170.png"
   },
   {
     "id": "171",
@@ -2308,8 +2717,8 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image24.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (En curvas)",
+    "image": "/simulator/images/q_171_img171.png"
   },
   {
     "id": "172",
@@ -2329,8 +2738,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image17.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_172_img172.png"
   },
   {
     "id": "173",
@@ -2343,6 +2752,19 @@
       {
         "text": "Falso.",
         "isCorrect": false
+      }
+    ],
+    "tema": "Velocidad",
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Técnica de frenado)",
+    "image": "/simulator/images/q_173_img173.png"
+  },
+  {
+    "id": "174",
+    "question": "¿Cómo es recomendable proceder frente a esta circunstancia?",
+    "options": [
+      {
+        "text": "Sintonizar un programa radial donde un/a locutor/a hable sin música constante, ya que colabora a contrarrestar los efectos de la fatiga y somnolencia.",
+        "isCorrect": false
       },
       {
         "text": "Interrumpir el viaje y hacer una parada de descanso.",
@@ -2353,8 +2775,9 @@
         "isCorrect": false
       }
     ],
-    "tema": "Velocidad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "tema": "De Relevancia",
+    "manual": "CAPÍTULO 4 - SUEÑO Y FATIGA",
+    "image": "/simulator/images/q_174_img174.png"
   },
   {
     "id": "177",
@@ -2374,7 +2797,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - SUEÑO Y FATIGA",
+    "image": "/simulator/images/q_177_img177.png"
   },
   {
     "id": "178",
@@ -2394,7 +2818,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - SUEÑO Y FATIGA",
+    "image": "/simulator/images/q_178_img178.png"
   },
   {
     "id": "179",
@@ -2414,7 +2839,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - SUEÑO Y FATIGA",
+    "image": "/simulator/images/q_179_img179.png"
   },
   {
     "id": "180",
@@ -2434,7 +2860,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - SUEÑO Y FATIGA",
+    "image": "/simulator/images/q_180_img180.png"
   },
   {
     "id": "181",
@@ -2454,7 +2881,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - SUEÑO Y FATIGA",
+    "image": "/simulator/images/q_181_img181.png"
   },
   {
     "id": "182",
@@ -2474,7 +2902,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - SUEÑO Y FATIGA",
+    "image": "/simulator/images/q_182_img182.png"
   },
   {
     "id": "183",
@@ -2494,7 +2923,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - SUEÑO Y FATIGA",
+    "image": "/simulator/images/q_183_img183.png"
   },
   {
     "id": "185",
@@ -2514,7 +2944,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - ESTRÉS",
+    "image": "/simulator/images/q_185_img185.png"
   },
   {
     "id": "186",
@@ -2531,6 +2962,19 @@
       {
         "text": "Ambas respuestas, A y B, son correctas.",
         "isCorrect": true
+      }
+    ],
+    "tema": "Capacidad Natural",
+    "manual": "CAPÍTULO 4 - ESTRÉS",
+    "image": "/simulator/images/q_186_img186.png"
+  },
+  {
+    "id": "188",
+    "question": "En relación al conductor, ¿qué cantidad total de distracciones están presentes en la siguiente imagen?",
+    "options": [
+      {
+        "text": "Una.",
+        "isCorrect": false
       },
       {
         "text": "Dos.",
@@ -2542,8 +2986,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/examen___categor_a_a_docx_image17.jpg"
+    "manual": "CAPÍTULO 4 - DISTRACCIONES",
+    "image": "/simulator/images/q_188_img188.png"
   },
   {
     "id": "189",
@@ -2559,8 +3003,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image31.jpg"
+    "manual": "CAPÍTULO 4 - DISTRACCIONES",
+    "image": "/simulator/images/q_189_img189.png"
   },
   {
     "id": "190",
@@ -2580,8 +3024,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image56.jpg"
+    "manual": "CAPÍTULO 4 - DISTRACCIONES",
+    "image": "/simulator/images/q_190_img190.png"
   },
   {
     "id": "191",
@@ -2601,7 +3045,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_191_img191.png"
   },
   {
     "id": "193",
@@ -2621,8 +3066,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image47.jpg"
+    "manual": "CAPÍTULO 4 - DISTRACCIONES",
+    "image": "/simulator/images/q_193_img193.png"
   },
   {
     "id": "194",
@@ -2642,8 +3087,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/examen___categor_a_a_docx_image76.jpg"
+    "manual": "CAPÍTULO 4 - DISTRACCIONES",
+    "image": "/simulator/images/q_194_img194.png"
   },
   {
     "id": "195",
@@ -2663,8 +3108,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/examen___categor_a_a_docx_image16.jpg"
+    "manual": "CAPÍTULO 4 - DISTRACCIONES",
+    "image": "/simulator/images/q_195_img195.png"
   },
   {
     "id": "197",
@@ -2684,7 +3129,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - DISTRACCIONES",
+    "image": "/simulator/images/q_197_img197.png"
   },
   {
     "id": "198",
@@ -2704,8 +3150,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/examen___categor_a_a_docx_image230.jpg"
+    "manual": "CAPÍTULO 4 - DISTRACCIONES",
+    "image": "/simulator/images/q_198_img198.png"
   },
   {
     "id": "200",
@@ -2725,7 +3171,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_200_img200.png"
   },
   {
     "id": "202",
@@ -2745,7 +3192,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_202_img202.png"
   },
   {
     "id": "203",
@@ -2761,8 +3209,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image54.jpg"
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_203_img203.png"
   },
   {
     "id": "204",
@@ -2782,7 +3230,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_204_img204.png"
   },
   {
     "id": "205",
@@ -2802,8 +3251,7 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/examen___categor_a_a_docx_image149.jpg"
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS"
   },
   {
     "id": "207",
@@ -2823,8 +3271,50 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "needsImage": true
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_207_img207.png"
+  },
+  {
+    "id": "207",
+    "question": "Si un/a conductor/a de un automóvil particular obtiene el siguiente resultado en un control de alcoholemia realizado en la Ciudad Autónoma de Buenos Aires, ¿cómo debe proceder la autoridad de control de tránsito?",
+    "options": [
+      {
+        "text": "Sancionar la falta administrativa, retener la licencia de conducir y remitir el vehículo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Esperar un tiempo prudencial y realizar una contraprueba, a la espera de que descienda la graduación alcohólica.",
+        "isCorrect": false
+      },
+      {
+        "text": "Darle la opción al conductor de llamar a un tercero para que se haga responsable de la conducción del vehículo.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Capacidad Natural",
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_207_img207.png"
+  },
+  {
+    "id": "207",
+    "question": "Si un/a conductor/a profesional obtiene el siguiente resultado en un control de alcoholemia realizado en la Ciudad Autónoma de Buenos Aires, ¿cómo debe proceder la autoridad de control de tránsito?",
+    "options": [
+      {
+        "text": "Sancionar la falta administrativa, retener la licencia de conducir y remitir el vehículo.",
+        "isCorrect": true
+      },
+      {
+        "text": "Esperar un tiempo prudencial y realizar una contraprueba, a la espera de que descienda la graduación alcohólica.",
+        "isCorrect": false
+      },
+      {
+        "text": "Darle la opción al conductor de llamar a un tercero para que se haga responsable de la conducción del vehículo.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Capacidad Natural",
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_207_img207.png"
   },
   {
     "id": "210",
@@ -2844,8 +3334,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "needsImage": true
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA",
+    "image": "/simulator/images/q_210_img210.png"
   },
   {
     "id": "211",
@@ -2865,8 +3355,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/examen___categor_a_a_docx_image15.jpg"
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_211_img211.png"
   },
   {
     "id": "212",
@@ -2886,8 +3376,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image58.jpg"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA",
+    "image": "/simulator/images/q_212_img212.png"
   },
   {
     "id": "213",
@@ -2907,8 +3397,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "needsImage": true
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_213_img213.png"
   },
   {
     "id": "214",
@@ -2928,8 +3418,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/examen___categor_a_a_docx_image222.jpg"
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_214_img214.png"
   },
   {
     "id": "215",
@@ -2949,8 +3439,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/examen___categor_a_a_docx_image94.jpg"
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_215_img215.png"
   },
   {
     "id": "216",
@@ -2970,8 +3460,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "needsImage": true
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_216_img216.png"
   },
   {
     "id": "217",
@@ -2991,8 +3481,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "needsImage": true
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_217_img217.png"
   },
   {
     "id": "218",
@@ -3012,8 +3502,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "needsImage": true
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_218_img218.png"
   },
   {
     "id": "219",
@@ -3033,7 +3523,8 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_219_img219.png"
   },
   {
     "id": "221",
@@ -3053,7 +3544,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor"
+    "manual": "CAPÍTULO 4 - INGESTA DE ALCOHOL Y DROGAS",
+    "image": "/simulator/images/q_221_img221.png"
   },
   {
     "id": "233",
@@ -3073,8 +3565,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image15.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_233_img233.png"
   },
   {
     "id": "234",
@@ -3094,8 +3586,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image13.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_234_img234.png"
   },
   {
     "id": "235",
@@ -3112,6 +3604,19 @@
       {
         "text": "Sí, de 21 a 07 horas durante los días hábiles.",
         "isCorrect": false
+      }
+    ],
+    "tema": "Estacionamiento y Detención",
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_235_img235.png"
+  },
+  {
+    "id": "236",
+    "question": "Si su motovehículo no funciona, ud. puede estacionarlo durante unos días hasta que sea reparado, tal como se muestra en la imagen.",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": false
       },
       {
         "text": "Falso.",
@@ -3119,8 +3624,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image135.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_236_img236.png"
   },
   {
     "id": "237",
@@ -3140,8 +3645,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image8.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_237_img237.png"
   },
   {
     "id": "238",
@@ -3157,8 +3662,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image18.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_238_img238.png"
   },
   {
     "id": "239",
@@ -3175,6 +3680,19 @@
       {
         "text": "No, ya que tanto la detención como el estacionamiento en este sector se encuentra prohibido.",
         "isCorrect": true
+      }
+    ],
+    "tema": "Estacionamiento y Detención",
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_239_img239.png"
+  },
+  {
+    "id": "243",
+    "question": "Como norma general, frente a esta señal, ¿está permitido detenerse para el ascenso o descenso de pasajeros/as?",
+    "options": [
+      {
+        "text": "No. Está prohibido estacionar y detenerse.",
+        "isCorrect": false
       },
       {
         "text": "Sí. Sólo está prohibido estacionar pero no detenerse.",
@@ -3186,8 +3704,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image11.jpg"
+    "manual": "ANEXO V - REGLAMENTARIAS",
+    "image": "/simulator/images/q_243_img243.png"
   },
   {
     "id": "244",
@@ -3203,8 +3721,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image282.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_244_img244.png"
   },
   {
     "id": "245",
@@ -3221,6 +3739,19 @@
       {
         "text": "c. 20 minutos.",
         "isCorrect": false
+      }
+    ],
+    "tema": "Estacionamiento y Detención",
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_245_img245.png"
+  },
+  {
+    "id": "246",
+    "question": "Está prohibido estacionar en la vía pública ómnibus, micros, camiones, acoplados o maquinaria especial.",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": true
       },
       {
         "text": "Falso.",
@@ -3228,7 +3759,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_246_img246.png"
   },
   {
     "id": "247",
@@ -3248,8 +3780,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image247.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_247_img247.png"
   },
   {
     "id": "248",
@@ -3269,7 +3801,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_248_img248.png"
   },
   {
     "id": "250",
@@ -3285,8 +3818,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image131.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_250_img250.png"
   },
   {
     "id": "251",
@@ -3306,8 +3839,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_c_y_e_docx_image20.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_251_img251.png"
   },
   {
     "id": "252",
@@ -3327,8 +3860,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image44.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_252_img252.png"
   },
   {
     "id": "254",
@@ -3348,8 +3881,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image19.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_254_img254.png"
   },
   {
     "id": "255",
@@ -3369,8 +3902,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image58.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_255_img255.png"
   },
   {
     "id": "257",
@@ -3390,8 +3923,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image20.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_257_img257.png"
   },
   {
     "id": "258",
@@ -3411,8 +3944,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image25.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_258_img258.png"
   },
   {
     "id": "259",
@@ -3432,8 +3965,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image31.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_259_img259.png"
   },
   {
     "id": "260",
@@ -3453,7 +3986,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_260_img260.png"
   },
   {
     "id": "261",
@@ -3473,8 +4007,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image203.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_261_img261.png"
   },
   {
     "id": "262",
@@ -3493,9 +4027,9 @@
         "isCorrect": false
       }
     ],
-    "tema": "",
-    "manual": "ANEXO III - Conducción Profesional",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image23.jpg"
+    "tema": "Estacionamiento y Detención",
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA  CONDUCCIÓN (Interacción pon pasajeros/as)",
+    "image": "/simulator/images/q_262_img262.png"
   },
   {
     "id": "263",
@@ -3515,7 +4049,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_263_img263.png"
   },
   {
     "id": "265",
@@ -3535,8 +4070,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image165.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN",
+    "image": "/simulator/images/q_265_img265.png"
   },
   {
     "id": "267",
@@ -3552,7 +4087,8 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - USO DE LUCES",
+    "image": "/simulator/images/q_267_img267.png"
   },
   {
     "id": "268",
@@ -3568,8 +4104,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image6.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (Airbag)",
+    "image": "/simulator/images/q_268_img268.png"
   },
   {
     "id": "270",
@@ -3589,7 +4125,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (Airbag)",
+    "image": "/simulator/images/q_270_img270.png"
   },
   {
     "id": "271",
@@ -3609,7 +4146,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (SRI)",
+    "image": "/simulator/images/q_271_img271.png"
   },
   {
     "id": "272",
@@ -3629,7 +4167,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (SRI)",
+    "image": "/simulator/images/q_272_img272.png"
   },
   {
     "id": "273",
@@ -3649,8 +4188,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image13.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (SRI)",
+    "image": "/simulator/images/q_273_img273.png"
   },
   {
     "id": "274",
@@ -3670,8 +4209,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "needsImage": true
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (SRI)",
+    "image": "/simulator/images/q_274_img274.png"
   },
   {
     "id": "275",
@@ -3691,8 +4230,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image50.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (SRI)",
+    "image": "/simulator/images/q_275_img275.png"
   },
   {
     "id": "276",
@@ -3708,8 +4247,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image49.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (Apoyacabeza)",
+    "image": "/simulator/images/q_276_img276.png"
   },
   {
     "id": "277",
@@ -3729,8 +4268,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image49.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (Apoyacabeza)",
+    "image": "/simulator/images/q_277_img277.png"
   },
   {
     "id": "278",
@@ -3750,8 +4289,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image37.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (Apoyacabeza)",
+    "image": "/simulator/images/q_278_img278.png"
   },
   {
     "id": "279",
@@ -3771,8 +4310,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image55.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (Cinturón de seguridad)",
+    "image": "/simulator/images/q_279_img279.png"
   },
   {
     "id": "281",
@@ -3792,7 +4331,8 @@
       }
     ],
     "tema": "Generalidades",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - UNA RESPONSABILIDAD SOCIAL",
+    "image": "/simulator/images/q_281_img281.png"
   },
   {
     "id": "282",
@@ -3808,8 +4348,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image4.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (Cinturón de seguridad)",
+    "image": "/simulator/images/q_282_img282.png"
   },
   {
     "id": "284",
@@ -3829,8 +4369,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image28.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (Cinturón de seguridad)",
+    "image": "/simulator/images/q_284_img284.png"
   },
   {
     "id": "286",
@@ -3850,8 +4390,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image29.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (Seguridad del habitáculo)",
+    "image": "/simulator/images/q_286_img286.png"
   },
   {
     "id": "288",
@@ -3867,8 +4407,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image19.jpg"
+    "manual": "CAPÍTULO 3 - USO DE LUCES",
+    "image": "/simulator/images/q_288_img288.png"
   },
   {
     "id": "290",
@@ -3884,8 +4424,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image1.jpg"
+    "manual": "CAPÍTULO 3 - USO DE LUCES",
+    "image": "/simulator/images/q_290_img290.png"
   },
   {
     "id": "294",
@@ -3905,8 +4445,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image158.jpg"
+    "manual": "CAPÍTULO 3 - USO DE LUCES",
+    "image": "/simulator/images/q_294_img294.png"
   },
   {
     "id": "296",
@@ -3922,7 +4462,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - USO DE LUCES",
+    "image": "/simulator/images/q_296_img296.png"
   },
   {
     "id": "297",
@@ -3942,8 +4483,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image12.jpg"
+    "manual": "CAPÍTULO 3 - USO DE LUCES",
+    "image": "/simulator/images/q_297_img297.png"
   },
   {
     "id": "298",
@@ -3963,8 +4504,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image45.jpg"
+    "manual": "CAPÍTULO 3 - USO DE LUCES",
+    "image": "/simulator/images/q_298_img298.png"
   },
   {
     "id": "302",
@@ -3984,8 +4525,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo",
-    "image": "/simulator/images/examen___categor_a_a_docx_image109.jpg"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)",
+    "image": "/simulator/images/q_302_img302.png"
   },
   {
     "id": "303",
@@ -4005,7 +4546,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - USO DE LUCES",
+    "image": "/simulator/images/q_303_img303.png"
   },
   {
     "id": "304",
@@ -4024,8 +4566,9 @@
         "isCorrect": true
       }
     ],
-    "tema": "",
-    "manual": "ANEXO III - Conducción Profesional"
+    "tema": "Elementos de Seguridad",
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA  CONDUCCIÓN (Interacción pon pasajeros/as)",
+    "image": "/simulator/images/q_304_img304.png"
   },
   {
     "id": "305",
@@ -4045,8 +4588,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image29.jpg"
+    "manual": "CAPÍTULO 3 - USO DE LUCES",
+    "image": "/simulator/images/q_305_img305.png"
   },
   {
     "id": "308",
@@ -4062,7 +4605,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)",
+    "image": "/simulator/images/q_308_img308.png"
   },
   {
     "id": "309",
@@ -4082,7 +4626,50 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)",
+    "image": "/simulator/images/q_309_img309.png"
+  },
+  {
+    "id": "309",
+    "question": "¿Cómo se pueden reducir los puntos ciegos al conducir un automóvil particular?",
+    "options": [
+      {
+        "text": "Acomodar correctamente los espejos retrovisores antes de iniciar la marcha. Mientras se circula, además de revisar los espejos retrovisores, utilizar la visión periférica dando vistazos por encima de los hombros cuando sea  necesario.",
+        "isCorrect": false
+      },
+      {
+        "text": "Antes de realizar una maniobra se debe disminuir la velocidad de circulación, colocar la luz de giro y mirar por los espejos realizando un pequeño movimiento corporal hacia adelante para ampliar el ángulo de visión.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ambas respuestas, A y B, son correctas.",
+        "isCorrect": true
+      }
+    ],
+    "tema": "De Relevancia",
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD ACTIVA (Espejos retrovisores)",
+    "image": "/simulator/images/q_309_img309.png"
+  },
+  {
+    "id": "309",
+    "question": "¿Cómo se pueden reducir los puntos ciegos al conducir un vehículo?",
+    "options": [
+      {
+        "text": "Acomodar correctamente los espejos retrovisores antes de iniciar la marcha. Mientras se circula, además de revisar los espejos retrovisores, utilizar la visión periférica dando vistazos por encima de los hombros cuando sea  necesario.",
+        "isCorrect": false
+      },
+      {
+        "text": "Antes de realizar una maniobra se debe disminuir la velocidad de circulación, colocar la luz de giro y mirar por los espejos realizando un pequeño movimiento corporal hacia adelante para ampliar el ángulo de visión.",
+        "isCorrect": false
+      },
+      {
+        "text": "Ambas respuestas, A y B, son correctas.",
+        "isCorrect": true
+      }
+    ],
+    "tema": "De Relevancia",
+    "manual": "ANEXO III - ELEMENTOS DE SEGURIDAD (Espejos retrovisores)",
+    "image": "/simulator/images/q_309_img309.png"
   },
   {
     "id": "310",
@@ -4102,7 +4689,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)",
+    "image": "/simulator/images/q_310_img310.png"
   },
   {
     "id": "311",
@@ -4118,7 +4706,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - USO DE LUCES",
+    "image": "/simulator/images/q_311_img311.png"
   },
   {
     "id": "312",
@@ -4138,7 +4727,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)",
+    "image": "/simulator/images/q_312_img312.png"
   },
   {
     "id": "313",
@@ -4158,7 +4748,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)",
+    "image": "/simulator/images/q_313_img313.png"
   },
   {
     "id": "314",
@@ -4178,7 +4769,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)",
+    "image": "/simulator/images/q_314_img314.png"
   },
   {
     "id": "315",
@@ -4198,8 +4790,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image20.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD ACTIVA (Espejos retrovisores)",
+    "image": "/simulator/images/q_315_img315.jpg"
   },
   {
     "id": "316",
@@ -4219,7 +4811,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (Cristales)",
+    "image": "/simulator/images/q_316_img316.png"
   },
   {
     "id": "317",
@@ -4239,7 +4832,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (Cristales)",
+    "image": "/simulator/images/q_317_img317.png"
   },
   {
     "id": "318",
@@ -4259,8 +4853,8 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image201.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)",
+    "image": "/simulator/images/q_318_img318.png"
   },
   {
     "id": "319",
@@ -4280,8 +4874,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo",
-    "needsImage": true
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_319_img319.png"
   },
   {
     "id": "321",
@@ -4301,7 +4895,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_321_img321.png"
   },
   {
     "id": "323",
@@ -4317,7 +4912,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_323_img323.png"
   },
   {
     "id": "324",
@@ -4337,7 +4933,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_324_img324.png"
   },
   {
     "id": "325",
@@ -4357,7 +4954,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_325_img325.png"
   },
   {
     "id": "326",
@@ -4377,7 +4975,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_326_img326.png"
   },
   {
     "id": "329",
@@ -4397,8 +4996,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image48.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS",
+    "image": "/simulator/images/q_329_img329.png"
   },
   {
     "id": "330",
@@ -4418,7 +5017,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_330_img330.png"
   },
   {
     "id": "331",
@@ -4438,7 +5038,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_331_img331.png"
   },
   {
     "id": "332",
@@ -4458,8 +5059,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "ANEXO I - Conocimiento del Vehículo",
-    "image": "/simulator/images/examen___categor_a_a_docx_image126.jpg"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_332_img332.png"
   },
   {
     "id": "336",
@@ -4479,8 +5080,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo",
-    "image": "/simulator/images/examen___categor_a_a_docx_image126.jpg"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_336_img336.png"
   },
   {
     "id": "339",
@@ -4500,8 +5101,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo",
-    "image": "/simulator/images/examen___categor_a_a_docx_image266.jpg"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_339_img339.png"
   },
   {
     "id": "342",
@@ -4521,7 +5122,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_342_img342.png"
   },
   {
     "id": "343",
@@ -4541,7 +5143,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_343_img343.png"
   },
   {
     "id": "344",
@@ -4561,7 +5164,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_344_img344.png"
   },
   {
     "id": "345",
@@ -4577,8 +5181,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo",
-    "image": "/simulator/images/examen___categor_a_a_docx_image11.jpg"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_345_img345.png"
   },
   {
     "id": "347",
@@ -4598,7 +5202,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_347_img347.png"
   },
   {
     "id": "349",
@@ -4618,7 +5223,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_349_img349.png"
   },
   {
     "id": "351",
@@ -4638,7 +5244,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)",
+    "image": "/simulator/images/q_351_img351.png"
   },
   {
     "id": "352",
@@ -4658,28 +5265,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
-  },
-  {
-    "id": "355",
-    "question": "Al cruzar con un motovehículo por un paso a nivel, existirá menos riesgo de caída si se atraviesa de forma que las ruedas y la vía queden como la imagen:",
-    "options": [
-      {
-        "text": "Opción A.",
-        "isCorrect": true
-      },
-      {
-        "text": "Opción B.",
-        "isCorrect": false
-      },
-      {
-        "text": "Opción C.",
-        "isCorrect": false
-      }
-    ],
-    "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image58.jpg"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad pasiva)"
   },
   {
     "id": "360",
@@ -4699,29 +5285,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "CAP. 4 - Factores de Riesgo del Conductor",
-    "image": "/simulator/images/examen___categor_a_a_docx_image212.jpg"
-  },
-  {
-    "id": "361",
-    "question": "¿Cuál de las siguientes opciones está directamente vinculada a la prevención y reducción de siniestros viales?",
-    "options": [
-      {
-        "text": "A.Opción A.",
-        "isCorrect": false
-      },
-      {
-        "text": "Opción B.",
-        "isCorrect": true
-      },
-      {
-        "text": "Ambas respuestas, A y B, son correctas.",
-        "isCorrect": false
-      }
-    ],
-    "tema": "Elementos de Seguridad",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "image": "/simulator/images/examen___categor_a_a_docx_image25.jpg"
+    "manual": "CAPÍTULO 5 - CONDUCCIÓN PREVENTIVA Y EFICIENTE"
   },
   {
     "id": "363",
@@ -4741,8 +5305,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo",
-    "needsImage": true
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)"
   },
   {
     "id": "364",
@@ -4762,7 +5325,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Técnica de frenado)"
   },
   {
     "id": "365",
@@ -4782,7 +5345,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Técnica de frenado)"
   },
   {
     "id": "366",
@@ -4802,8 +5365,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image20.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Postura corporal)"
   },
   {
     "id": "370",
@@ -4823,8 +5385,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image55.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Ubicación de comandos)"
   },
   {
     "id": "371",
@@ -4844,8 +5405,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image9.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (equipaje)"
   },
   {
     "id": "374",
@@ -4865,8 +5425,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image142.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)",
+    "image": "/simulator/images/q_374_img374.jpg"
   },
   {
     "id": "378",
@@ -4886,7 +5446,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Postura corporal)"
   },
   {
     "id": "379",
@@ -4906,7 +5466,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Postura corporal)"
   },
   {
     "id": "382",
@@ -4926,7 +5486,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)"
   },
   {
     "id": "383",
@@ -4946,8 +5506,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image39.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD ACTIVA (Neumáticos)"
   },
   {
     "id": "384",
@@ -4967,8 +5526,8 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo",
-    "needsImage": true
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)",
+    "image": "/simulator/images/q_384_img384.png"
   },
   {
     "id": "385",
@@ -4988,28 +5547,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
-  },
-  {
-    "id": "386",
-    "question": "¿Cuál es la rueda motriz del siguiente vehículo?",
-    "options": [
-      {
-        "text": "Opción A.",
-        "isCorrect": true
-      },
-      {
-        "text": "Opción B.",
-        "isCorrect": false
-      },
-      {
-        "text": "Ambas respuestas, la A y la B son correctas.",
-        "isCorrect": false
-      }
-    ],
-    "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo",
-    "image": "/simulator/images/examen___categor_a_a_docx_image239.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD ACTIVA (Neumáticos)"
   },
   {
     "id": "387",
@@ -5029,8 +5567,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image161.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)"
   },
   {
     "id": "388",
@@ -5050,8 +5587,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo",
-    "image": "/simulator/images/examen___categor_a_a_docx_image166.jpg"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)"
   },
   {
     "id": "389",
@@ -5071,7 +5607,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)"
   },
   {
     "id": "390",
@@ -5087,7 +5623,25 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - ELEMENTOS DE SEGURIDAD (Neumáticos)",
+    "image": "/simulator/images/q_390_img390.png"
+  },
+  {
+    "id": "390",
+    "question": "Está permitido utilizar los neumáticos reconstruidos (recapados) en el eje delantero de un camión únicamente cuando éstos tienen 1,6 mm. o menos de profundidad en el dibujo.",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": false
+      },
+      {
+        "text": "Falso.",
+        "isCorrect": true
+      }
+    ],
+    "tema": "Elementos de Seguridad",
+    "manual": "ANEXO IV - ELEMENTOS DE SEGURIDAD (Neumáticos)",
+    "image": "/simulator/images/q_390_img390.png"
   },
   {
     "id": "391",
@@ -5107,8 +5661,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image51.jpg"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD ACTIVA (Neumáticos)"
   },
   {
     "id": "392",
@@ -5128,8 +5681,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo",
-    "image": "/simulator/images/examen___categor_a_a_docx_image215.jpg"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)"
   },
   {
     "id": "393",
@@ -5149,28 +5701,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
-  },
-  {
-    "id": "394",
-    "question": "Generalmente, el freno delantero de una moto se acciona con…",
-    "options": [
-      {
-        "text": "Opción A.",
-        "isCorrect": true
-      },
-      {
-        "text": "Opción B.",
-        "isCorrect": false
-      },
-      {
-        "text": "Ambas respuestas, la A y la B son correctas.",
-        "isCorrect": false
-      }
-    ],
-    "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image270.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Técnica de frenado)"
   },
   {
     "id": "396",
@@ -5190,7 +5721,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Técnica de frenado)"
   },
   {
     "id": "400",
@@ -5210,7 +5741,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)"
   },
   {
     "id": "401",
@@ -5230,7 +5761,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - OTROS ELEMENTOS DE SEGURIDAD OBLIGATORIOS"
   },
   {
     "id": "402",
@@ -5246,8 +5777,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image25.jpg"
+    "manual": "ANEXO II - OTROS ELEMENTOS DE SEGURIDAD OBLIGATORIOS"
   },
   {
     "id": "403",
@@ -5263,8 +5793,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo",
-    "needsImage": true
+    "manual": "ANEXO II - OTROS ELEMENTOS DE SEGURIDAD OBLIGATORIOS"
   },
   {
     "id": "404",
@@ -5284,7 +5813,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD ACTIVA (Bocina)"
   },
   {
     "id": "405",
@@ -5304,7 +5833,7 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "408",
@@ -5324,8 +5853,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image90.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "409",
@@ -5345,7 +5873,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "410",
@@ -5365,8 +5893,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image110.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "411",
@@ -5383,6 +5910,18 @@
       {
         "text": "Sí, pero sólo en rutas.",
         "isCorrect": false
+      }
+    ],
+    "tema": "Conducción en Situaciones Adversas",
+    "manual": "CAPÍTULO 3 - USO DE LUCES"
+  },
+  {
+    "id": "414",
+    "question": "Cuando se conduce bajo esta condición climática, ¿a cuánto sería recomendable incrementar, como mínimo, los 2 segundos de distancia de seguridad?",
+    "options": [
+      {
+        "text": "A 4 segundos.",
+        "isCorrect": true
       },
       {
         "text": "A 3 segundos.",
@@ -5394,8 +5933,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image43.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "415",
@@ -5415,8 +5953,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image1.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "416",
@@ -5436,8 +5973,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image110.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "417",
@@ -5457,7 +5993,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Técnica de frenado)"
   },
   {
     "id": "419",
@@ -5473,8 +6009,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image276.jpg"
+    "manual": "CAPÍTULO 3 - USO DE LUCES"
   },
   {
     "id": "420",
@@ -5494,8 +6029,7 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image162.jpg"
+    "manual": "CAPÍTULO 3 - USO DE LUCES"
   },
   {
     "id": "421",
@@ -5515,7 +6049,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS"
   },
   {
     "id": "422",
@@ -5535,8 +6069,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image112.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS"
   },
   {
     "id": "423",
@@ -5556,8 +6089,27 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image80.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS"
+  },
+  {
+    "id": "423",
+    "question": "En este tipo de vía, ¿está permitido remolcar con su automóvil particular a otro que se encuentra descompuesto?",
+    "options": [
+      {
+        "text": "Sí, ya que es riesgoso que quede detenido pero sólo puede hacerse hasta el lugar más próximo donde pueda quedar inmovilizado.",
+        "isCorrect": false
+      },
+      {
+        "text": "Sí, pero sólo si soy titular de una licencia que autoriza a conducir vehículos con remolque.",
+        "isCorrect": false
+      },
+      {
+        "text": "No, sólo pueden hacerlo los vehículos autorizados a tal fin.",
+        "isCorrect": true
+      }
+    ],
+    "tema": "Conducción en Situaciones Adversas",
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS"
   },
   {
     "id": "424",
@@ -5577,8 +6129,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image185.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN AUTOPISTAS Y OTRAS VÍAS RÁPIDAS"
   },
   {
     "id": "425",
@@ -5598,7 +6149,8 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - OBLIGACIONES EN CASO DE INCIDENTES VIALES",
+    "image": "/simulator/images/q_425_img425.jpg"
   },
   {
     "id": "426",
@@ -5618,8 +6170,8 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image6.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS",
+    "image": "/simulator/images/q_426_img426.png"
   },
   {
     "id": "427",
@@ -5639,7 +6191,8 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - VELOCIDAD",
+    "image": "/simulator/images/q_427_img427.jpg"
   },
   {
     "id": "428",
@@ -5659,8 +6212,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image21.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "429",
@@ -5680,8 +6232,7 @@
       }
     ],
     "tema": "De Relevancia",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image7.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "430",
@@ -5701,8 +6252,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image52.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "431",
@@ -5722,8 +6272,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image133.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "432",
@@ -5743,7 +6292,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "434",
@@ -5763,8 +6312,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image29.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "435",
@@ -5780,7 +6328,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "436",
@@ -5800,8 +6348,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image34.jpg"
+    "manual": "CAPÍTULO 3 - CONDUCCIÓN EN SITUACIONES ADVERSAS"
   },
   {
     "id": "438",
@@ -5821,8 +6368,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image61.jpg"
+    "manual": "CAPÍTULO 2 - OBLIGACIONES EN CASO DE INCIDENTES VIALES"
   },
   {
     "id": "439",
@@ -5838,8 +6384,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image17.jpg"
+    "manual": "CAPÍTULO 2 - OBLIGACIONES EN CASO DE INCIDENTES VIALES"
   },
   {
     "id": "441",
@@ -5855,7 +6400,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - RESPONSABILIDADES LEGALES"
   },
   {
     "id": "442",
@@ -5875,8 +6420,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image26.jpg"
+    "manual": "CAPÍTULO 2 - OBLIGACIONES EN CASO DE INCIDENTES VIALES"
   },
   {
     "id": "443",
@@ -5896,7 +6440,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - OBLIGACIONES EN CASO DE INCIDENTES VIALES"
   },
   {
     "id": "445",
@@ -5916,7 +6460,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - OBLIGACIONES EN CASO DE INCIDENTES VIALES"
   },
   {
     "id": "448",
@@ -5932,7 +6476,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (Seguridad del habitáculo)"
   },
   {
     "id": "451",
@@ -5952,7 +6496,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Ante posible o inminente caída)"
   },
   {
     "id": "453",
@@ -5972,7 +6516,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - OBLIGACIONES EN CASO DE INCIDENTES VIALES"
   },
   {
     "id": "462",
@@ -5992,8 +6536,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "ANEXO III - Conducción Profesional",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image33.jpg"
+    "manual": "ANEXO III - AUTOPISTAS Y HOSPITALES"
   },
   {
     "id": "465",
@@ -6013,8 +6556,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "ANEXO III - Conducción Profesional",
-    "needsImage": true
+    "manual": "ANEXO III - AUTOPISTAS Y HOSPITALES"
   },
   {
     "id": "510",
@@ -6034,8 +6576,7 @@
       }
     ],
     "tema": "Conducción en Situaciones Adversas",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image4.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)"
   },
   {
     "id": "511",
@@ -6051,7 +6592,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (equipaje)"
   },
   {
     "id": "512",
@@ -6071,7 +6612,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - ELEMENTOS DE SEGURIDAD PASIVA (equipaje)"
   },
   {
     "id": "513",
@@ -6091,7 +6632,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)"
   },
   {
     "id": "514",
@@ -6107,8 +6648,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image97.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)"
   },
   {
     "id": "516",
@@ -6124,8 +6664,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image274.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)"
   },
   {
     "id": "518",
@@ -6145,7 +6684,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)"
   },
   {
     "id": "520",
@@ -6161,7 +6700,23 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)"
+  },
+  {
+    "id": "521",
+    "question": "En un motovehículo pueden circular hasta dos personas, sólo si cuenta con doble asiento, reposapiés y agarradera.",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": true
+      },
+      {
+        "text": "Falso.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Legales y Documentación",
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)"
   },
   {
     "id": "522",
@@ -6180,8 +6735,8 @@
         "isCorrect": false
       }
     ],
-    "tema": "",
-    "manual": "ANEXO III - Conducción Profesional"
+    "tema": "Legales y Documentación",
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN (Interacción pon pasajeros/as)"
   },
   {
     "id": "523",
@@ -6201,7 +6756,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO IV - PERFIL DEL TRANSPORTISTA DE CARGAS"
   },
   {
     "id": "524",
@@ -6220,8 +6775,8 @@
         "isCorrect": false
       }
     ],
-    "tema": "",
-    "manual": "ANEXO III - Conducción Profesional"
+    "tema": "Legales y Documentación",
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN (Interacción pon pasajeros/as)"
   },
   {
     "id": "525",
@@ -6240,8 +6795,8 @@
         "isCorrect": true
       }
     ],
-    "tema": "",
-    "manual": "ANEXO III - Conducción Profesional"
+    "tema": "Legales y Documentación",
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN (Interacción pon pasajeros/as)"
   },
   {
     "id": "527",
@@ -6261,7 +6816,7 @@
       }
     ],
     "tema": "Elementos de seguridad",
-    "manual": "ANEXO II - Elementos de Seguridad del Vehículo"
+    "manual": "ANEXO II - OTROS ELEMENTOS DE SEGURIDAD OBLIGATORIOS"
   },
   {
     "id": "528",
@@ -6280,8 +6835,8 @@
         "isCorrect": true
       }
     ],
-    "tema": "",
-    "manual": "ANEXO III - Conducción Profesional"
+    "tema": "Legales y Documentación",
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN (Interacción pon pasajeros/as)"
   },
   {
     "id": "531",
@@ -6301,7 +6856,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "532",
@@ -6321,7 +6876,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)"
   },
   {
     "id": "533",
@@ -6341,8 +6896,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image40.jpg"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "534",
@@ -6362,8 +6916,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "image": "/simulator/images/examen___categor_a_a_docx_image262.jpg"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "535",
@@ -6383,7 +6936,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "536",
@@ -6403,8 +6956,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image72.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)"
   },
   {
     "id": "537",
@@ -6424,7 +6976,27 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
+  },
+  {
+    "id": "537",
+    "question": "La ubicación y posición de las placas de dominio del vehículo, ¿pueden sufrir algún tipo de modificación?",
+    "options": [
+      {
+        "text": "Sólo puede, eventualmente, ampliarse para mejorar su visibilidad.",
+        "isCorrect": false
+      },
+      {
+        "text": "No, debe estar colocada en el lugar y de forma reglamentaria.",
+        "isCorrect": true
+      },
+      {
+        "text": "Sólo está prohibido modificar su posición pero no el lugar donde se exhibe.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Legales y Documentación",
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "538",
@@ -6444,7 +7016,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)"
   },
   {
     "id": "544",
@@ -6464,7 +7036,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO I - Conductas Seguras de Conducción"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Acompañante y peso adicional)"
   },
   {
     "id": "548",
@@ -6484,7 +7056,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - RESPONSABILIDADES LEGALES"
   },
   {
     "id": "550",
@@ -6503,8 +7075,8 @@
         "isCorrect": true
       }
     ],
-    "tema": "",
-    "manual": "ANEXO III - Conducción Profesional"
+    "tema": "Legales y Documentación",
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN (Interacción pon pasajeros/as)"
   },
   {
     "id": "551",
@@ -6519,8 +7091,8 @@
         "isCorrect": false
       }
     ],
-    "tema": "",
-    "manual": "ANEXO III - Conducción Profesional"
+    "tema": "Legales y Documentación",
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN (Interacción pon pasajeros/as)"
   },
   {
     "id": "552",
@@ -6539,8 +7111,8 @@
         "isCorrect": false
       }
     ],
-    "tema": "",
-    "manual": "ANEXO III - Conducción Profesional"
+    "tema": "Legales y Documentación",
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN (Interacción pon pasajeros/as)"
   },
   {
     "id": "553",
@@ -6559,8 +7131,8 @@
         "isCorrect": false
       }
     ],
-    "tema": "",
-    "manual": "ANEXO III - Conducción Profesional"
+    "tema": "Legales y Documentación",
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN (Interacción pon pasajeros/as)"
   },
   {
     "id": "555",
@@ -6580,7 +7152,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - RESPONSABILIDADES LEGALES"
   },
   {
     "id": "556",
@@ -6600,7 +7172,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - RESPONSABILIDADES LEGALES"
   },
   {
     "id": "559",
@@ -6620,7 +7192,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - RESPONSABILIDADES LEGALES"
   },
   {
     "id": "560",
@@ -6640,7 +7212,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - RESPONSABILIDADES LEGALES"
   },
   {
     "id": "562",
@@ -6660,7 +7232,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - OBLIGACIONES EN CASO DE INCIDENTES VIALES"
   },
   {
     "id": "563",
@@ -6680,7 +7252,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - OBLIGACIONES EN CASO DE INCIDENTES VIALES"
   },
   {
     "id": "564",
@@ -6700,7 +7272,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "566",
@@ -6720,7 +7292,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - UNA RESPONSABILIDAD SOCIAL"
   },
   {
     "id": "567",
@@ -6740,7 +7312,7 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN"
   },
   {
     "id": "568",
@@ -6760,7 +7332,7 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN"
   },
   {
     "id": "569",
@@ -6776,7 +7348,7 @@
       }
     ],
     "tema": "Capacidad Natural",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN"
   },
   {
     "id": "570",
@@ -6796,7 +7368,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "571",
@@ -6816,8 +7388,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "image": "/simulator/images/examen___categor_a_a_docx_image40.jpg"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "573",
@@ -6837,8 +7408,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "needsImage": true
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "575",
@@ -6858,8 +7428,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image59.jpg"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "576",
@@ -6879,7 +7448,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "578",
@@ -6899,7 +7468,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "583",
@@ -6915,7 +7484,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - CONDUCCIÓN SEGURA"
   },
   {
     "id": "584",
@@ -6935,7 +7504,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - CONDUCCIÓN SEGURA"
   },
   {
     "id": "585",
@@ -6955,7 +7524,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - ELEMENTOS DE SEGURIDAD"
   },
   {
     "id": "586",
@@ -6975,8 +7544,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "image": "/simulator/images/preguntas_filtradas_de_b_docx_image48.jpg"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "587",
@@ -6996,8 +7564,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "image": "/simulator/images/examen___categor_a_a_docx_image38.jpg"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "588",
@@ -7017,7 +7584,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "589",
@@ -7037,7 +7604,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "590",
@@ -7053,7 +7620,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "591",
@@ -7073,8 +7640,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales",
-    "image": "/simulator/images/examen___categor_a_a_docx_image64.jpg"
+    "manual": "CAPÍTULO 2 - DOCUMENTACIÓN OBLIGATORIA"
   },
   {
     "id": "592",
@@ -7094,8 +7660,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO III - Conducción Profesional",
-    "image": "/simulator/images/preguntas_filtradas_de_d_docx_image35.jpg"
+    "manual": "ANEXO III - ELEMENTOS DE SEGURIDAD"
   },
   {
     "id": "594",
@@ -7115,7 +7680,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - SCORING"
   },
   {
     "id": "595",
@@ -7135,7 +7700,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "CAP. 2 - Documentación y Obligaciones Legales"
+    "manual": "CAPÍTULO 2 - SCORING"
   },
   {
     "id": "596",
@@ -7155,8 +7720,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image121.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "598",
@@ -7172,7 +7736,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "599",
@@ -7192,8 +7756,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "needsImage": true
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "601",
@@ -7213,8 +7776,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image151.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "602",
@@ -7234,8 +7796,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image119.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "603",
@@ -7255,8 +7816,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/examen___categor_a_a_docx_image245.jpg"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN"
   },
   {
     "id": "604",
@@ -7273,6 +7833,18 @@
       {
         "text": "Detenerse.",
         "isCorrect": false
+      }
+    ],
+    "tema": "Señales",
+    "manual": "CAPÍTULO 1 - BICICLETA"
+  },
+  {
+    "id": "607",
+    "question": "Una indicación puede estar expresada con una señal vertical o con una demarcación horizontal, ya que ambas tienen el mismo significado y orden jerárquico.",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": true
       },
       {
         "text": "Falso.",
@@ -7280,8 +7852,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image2.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "608",
@@ -7301,8 +7872,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image25.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "609",
@@ -7322,8 +7892,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image11.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "610",
@@ -7343,8 +7912,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image10.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "613",
@@ -7364,7 +7932,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial"
+    "manual": "ANEXO V - MARCAS ESPECIALES"
   },
   {
     "id": "614",
@@ -7384,7 +7952,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - PRIORIDADES DE PASO"
   },
   {
     "id": "615",
@@ -7404,8 +7972,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image157.jpg"
+    "manual": "CAPÍTULO 1 - PRIORIDAD PEATONAL"
   },
   {
     "id": "616",
@@ -7425,8 +7992,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image146.jpg"
+    "manual": "CAPÍTULO 1 - PRIORIDAD PEATONAL"
   },
   {
     "id": "617",
@@ -7442,8 +8008,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/examen___categor_a_a_docx_image44.jpg"
+    "manual": "ANEXO V - MARCAS TRANSVERSALES"
   },
   {
     "id": "618",
@@ -7463,8 +8028,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image98.jpg"
+    "manual": "CAPÍTULO 1 - PRIORIDAD PEATONAL"
   },
   {
     "id": "620",
@@ -7484,8 +8048,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image23.jpg"
+    "manual": "CAPÍTULO 1 - PRIORIDAD PEATONAL"
   },
   {
     "id": "621",
@@ -7505,8 +8068,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image91.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Zona de detención segura de motos)"
   },
   {
     "id": "622",
@@ -7526,8 +8088,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO I - Conductas Seguras de Conducción",
-    "image": "/simulator/images/examen___categor_a_a_docx_image264.jpg"
+    "manual": "ANEXO I - CONDUCTAS SEGURAS DE CONDUCCIÓN (Zona de detención segura de motos)"
   },
   {
     "id": "624",
@@ -7547,8 +8108,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image191.jpg"
+    "manual": "CAPÍTULO 1 - BICICLETA"
   },
   {
     "id": "629",
@@ -7568,8 +8128,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image213.jpg"
+    "manual": "CAPÍTULO 1 - SISTEMA DE TRANSPORTE PÚBLICO"
   },
   {
     "id": "630",
@@ -7589,8 +8148,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 1 - Movilidad Urbana y Peatones",
-    "image": "/simulator/images/examen___categor_a_a_docx_image263.jpg"
+    "manual": "CAPÍTULO 1 - SISTEMA DE TRANSPORTE PÚBLICO"
   },
   {
     "id": "632",
@@ -7610,8 +8168,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image200.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "633",
@@ -7631,8 +8188,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image197.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "634",
@@ -7652,8 +8208,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/examen___categor_a_a_docx_image258.jpg"
+    "manual": "ANEXO V - SEÑALAMIENTO LUMINOSO"
   },
   {
     "id": "635",
@@ -7673,7 +8228,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial"
+    "manual": "ANEXO V - SEÑALAMIENTO LUMINOSO"
   },
   {
     "id": "637",
@@ -7693,7 +8248,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial"
+    "manual": "ANEXO V - SEÑALAMIENTO LUMINOSO"
   },
   {
     "id": "638",
@@ -7713,8 +8268,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/examen___categor_a_a_docx_image252.jpg"
+    "manual": "ANEXO V - SEÑALAMIENTO LUMINOSO"
   },
   {
     "id": "639",
@@ -7734,8 +8288,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image251.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "641",
@@ -7751,8 +8304,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image148.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "646",
@@ -7772,8 +8324,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image183.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "648",
@@ -7793,8 +8344,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image160.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "652",
@@ -7814,8 +8364,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image23.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD"
   },
   {
     "id": "659",
@@ -7835,8 +8384,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/preguntas_filtradas_de_c_y_e_docx_image10.jpg"
+    "manual": "ANEXO V - PREVENTIVAS"
   },
   {
     "id": "660",
@@ -7856,7 +8404,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial"
+    "manual": "ANEXO V - PREVENTIVAS"
   },
   {
     "id": "661",
@@ -7876,7 +8424,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial"
+    "manual": "ANEXO V - PREVENTIVAS"
   },
   {
     "id": "663",
@@ -7896,7 +8444,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial"
+    "manual": "ANEXO V - PREVENTIVAS"
   },
   {
     "id": "664",
@@ -7916,7 +8464,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial"
+    "manual": "ANEXO V - PREVENTIVAS"
   },
   {
     "id": "667",
@@ -7936,8 +8484,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/examen___categor_a_a_docx_image199.jpg"
+    "manual": "ANEXO V - PREVENTIVAS"
   },
   {
     "id": "668",
@@ -7957,8 +8504,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/examen___categor_a_a_docx_image49.jpg"
+    "manual": "ANEXO V - PREVENTIVAS"
   },
   {
     "id": "677",
@@ -7978,8 +8524,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Velocidad y Circulación",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image5.jpg"
+    "manual": "CAPÍTULO 3 - VELOCIDAD"
   },
   {
     "id": "679",
@@ -7999,8 +8544,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/examen___categor_a_a_docx_image152.jpg"
+    "manual": "ANEXO V - REGLAMENTARIAS"
   },
   {
     "id": "683",
@@ -8020,8 +8564,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image12.jpg"
+    "manual": "ANEXO V - REGLAMENTARIAS"
   },
   {
     "id": "685",
@@ -8041,8 +8584,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image83.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "686",
@@ -8062,8 +8604,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/preguntas_filtradas_de_c_y_e_docx_image3.jpg"
+    "manual": "ANEXO V - REGLAMENTARIAS"
   },
   {
     "id": "687",
@@ -8083,7 +8624,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial"
+    "manual": "ANEXO V - REGLAMENTARIAS"
   },
   {
     "id": "688",
@@ -8103,7 +8644,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial"
+    "manual": "ANEXO V - REGLAMENTARIAS"
   },
   {
     "id": "689",
@@ -8123,7 +8664,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial"
+    "manual": "ANEXO V - REGLAMENTARIAS"
   },
   {
     "id": "693",
@@ -8143,8 +8684,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/examen___categor_a_a_docx_image249.jpg"
+    "manual": "ANEXO V - REGLAMENTARIAS"
   },
   {
     "id": "700",
@@ -8164,7 +8704,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial"
+    "manual": "ANEXO V - REGLAMENTARIAS"
   },
   {
     "id": "701",
@@ -8184,7 +8724,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial"
+    "manual": "ANEXO V - REGLAMENTARIAS"
   },
   {
     "id": "702",
@@ -8204,8 +8744,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "CAP. 3 - Prioridades y Maniobras",
-    "image": "/simulator/images/examen___categor_a_a_docx_image59.jpg"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "704",
@@ -8221,8 +8760,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/examen___categor_a_a_docx_image176.jpg"
+    "manual": "ANEXO V - INFORMATIVAS"
   },
   {
     "id": "710",
@@ -8238,8 +8776,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/examen___categor_a_a_docx_image9.jpg"
+    "manual": "ANEXO V - INFORMATIVAS"
   },
   {
     "id": "722",
@@ -8259,8 +8796,7 @@
       }
     ],
     "tema": "Señales",
-    "manual": "ANEXO V - Señalización Vial",
-    "image": "/simulator/images/preguntas_zona_fuera_de_caba_docx_image14.jpg"
+    "manual": "ANEXO V - INFORMATIVAS"
   },
   {
     "id": "724",
@@ -8275,13 +8811,28 @@
         "isCorrect": true
       },
       {
-        "text": "Falso.",
+        "text": "Sí, ya que la Ley sólo indica la obligación del uso de un faro pero no especifica su color.",
         "isCorrect": false
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO I - Conocimiento del Vehículo",
-    "image": "/simulator/images/examen___categor_a_a_docx_image61.jpg"
+    "manual": "ANEXO I - CONOCIMIENTO DEL VEHÍCULO (Elementos de seguridad activa)"
+  },
+  {
+    "id": "725",
+    "question": "La persona que conduce vehículos de transporte de pasajeros tiene un rol clave en la vía pública ya que funciona como soporte imprescindible de la movilidad dentro de la sociedad.",
+    "options": [
+      {
+        "text": "Verdadero.",
+        "isCorrect": true
+      },
+      {
+        "text": "Falso.",
+        "isCorrect": false
+      }
+    ],
+    "tema": "Generalidades",
+    "manual": "ANEXO III - UNA RESPONSABILIDAD SOCIAL"
   },
   {
     "id": "726",
@@ -8301,7 +8852,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - ELEMENTOS DE SEGURIDAD (Sistema de suspensión)"
   },
   {
     "id": "727",
@@ -8321,7 +8872,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN (Interacción con pasajeros/as)"
   },
   {
     "id": "728",
@@ -8341,7 +8892,7 @@
       }
     ],
     "tema": "Legales y Documentación",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO III - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN (Interacción con pasajeros/as)"
   },
   {
     "id": "729",
@@ -8361,7 +8912,7 @@
       }
     ],
     "tema": "Velocidad",
-    "manual": "CAP. 3 - Prioridades y Maniobras"
+    "manual": "CAPÍTULO 3 - PRIORIDAD NORMATIVA"
   },
   {
     "id": "731",
@@ -8377,7 +8928,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO IV - ELEMENTOS DE SEGURIDAD (Espejos retrovisores)"
   },
   {
     "id": "732",
@@ -8393,7 +8944,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO IV - ELEMENTOS DE SEGURIDAD (Chaleco reflectivo)"
   },
   {
     "id": "733",
@@ -8413,7 +8964,7 @@
       }
     ],
     "tema": "Elementos de Seguridad",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO IV - ELEMENTOS DE SEGURIDAD"
   },
   {
     "id": "735",
@@ -8429,7 +8980,7 @@
       }
     ],
     "tema": "Prioridades de Paso",
-    "manual": "ANEXO III - Conducción Profesional"
+    "manual": "ANEXO IV - CONDUCCIÓN SEGURA (Red de tránsito pesado)"
   },
   {
     "id": "738",
@@ -8448,8 +8999,8 @@
         "isCorrect": true
       }
     ],
-    "tema": "",
-    "manual": "ANEXO III - Conducción Profesional"
+    "tema": "Generalidades",
+    "manual": "ANEXO IV - FACTORES INVOLUCRADOS EN LA CONDUCCIÓN (paradas de descanso)"
   },
   {
     "id": "740",
@@ -8468,8 +9019,8 @@
         "isCorrect": true
       }
     ],
-    "tema": "",
-    "manual": "ANEXO III - Conducción Profesional"
+    "tema": "Generalidades",
+    "manual": "ANEXO IV - FACTORES INVOLUCRADOS EN LA  CONDUCCIÓN"
   },
   {
     "id": "741",
@@ -8489,7 +9040,27 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN"
+  },
+  {
+    "id": "742",
+    "question": "La Ley Nº 2148 establece como norma general, la prohibicion de estacionamiento de los vehículos ....",
+    "options": [
+      {
+        "text": "A: En avenidas con ciclovías junto al carril afectado a ésta, todos los días durante las veinticuatro (24) horas.",
+        "isCorrect": false
+      },
+      {
+        "text": "B: En avenidas junto a ambas aceras los días hábiles entre las siete (7) y las veintiuna (21) horas.",
+        "isCorrect": false
+      },
+      {
+        "text": "C: Ambas respuestas son correctas",
+        "isCorrect": true
+      }
+    ],
+    "tema": "Estacionamiento y Detención",
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN"
   },
   {
     "id": "743",
@@ -8505,6 +9076,6 @@
       }
     ],
     "tema": "Estacionamiento y Detención",
-    "manual": "CAP. 3 - Velocidad y Circulación"
+    "manual": "CAPÍTULO 3 - ESTACIONAMIENTO Y DETENCIÓN"
   }
 ]

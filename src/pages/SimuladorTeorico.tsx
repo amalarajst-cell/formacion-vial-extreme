@@ -66,8 +66,8 @@ export function SimuladorTeorico() {
         setLoadingQuestions(true);
         try {
             const mod = await import('../data/simulatorQuestions.json');
-            // Filtrar preguntas que necesitan imagen pero no la tienen
-            const data = (mod.default as SimulatorQuestion[]).filter(q => !q.needsImage);
+            // Filtrar preguntas inválidas: las que no tienen opciones de texto o las que necesitan imagen no disponible
+            const data = (mod.default as SimulatorQuestion[]).filter(q => !q.needsImage && q.options.length >= 2);
             setAllQuestions(data);
             
             // Extraer temas y capitulos unicos
@@ -96,6 +96,15 @@ export function SimuladorTeorico() {
         const shuffled = [...data].sort(() => 0.5 - Math.random());
         setExamQuestions(shuffled.slice(0, EXAM_QUESTIONS_COUNT));
         setIsExamMode(true);
+        initQuiz();
+    };
+
+    const startVerificationMode = async () => {
+        const data = await loadQuestionsData();
+        // Ordenar por ID numérico (de la columna C del excel)
+        const sorted = [...data].sort((a, b) => parseInt(a.id) - parseInt(b.id));
+        setExamQuestions(sorted);
+        setIsExamMode(false);
         initQuiz();
     };
 
@@ -357,9 +366,14 @@ export function SimuladorTeorico() {
                         </div>
                     </div>
 
-                    <Button size="lg" className="w-full sm:w-auto text-xl py-6 px-12" onClick={startExamMode}>
-                        Empezar Examen <ArrowRight className="ml-2 w-6 h-6" />
-                    </Button>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                        <Button size="lg" className="w-full text-xl py-6" onClick={startExamMode}>
+                            Empezar Examen <ArrowRight className="ml-2 w-6 h-6" />
+                        </Button>
+                        <Button size="lg" variant="outline" className="w-full text-xl py-6 border-brand-yellow/30 text-brand-yellow" onClick={startVerificationMode}>
+                            Verificar Orden Excel <CheckCircle className="ml-2 w-6 h-6" />
+                        </Button>
+                    </div>
                 </Card>
             </div>
         );
@@ -476,10 +490,15 @@ export function SimuladorTeorico() {
             </div>
 
             <Card className="p-6 md:p-10 mb-6 bg-brand-navy/95 border-brand-yellow/20">
-                <div className="flex justify-between items-start mb-6">
-                    <span className="text-xs font-bold text-brand-yellow/70 uppercase tracking-widest bg-brand-yellow/10 px-3 py-1 rounded-full border border-brand-yellow/20">
-                        {question.manual}
-                    </span>
+                <div className="flex flex-wrap gap-2 justify-between items-start mb-6">
+                    <div className="flex gap-2">
+                        <span className="text-xs font-bold text-brand-yellow/70 uppercase tracking-widest bg-brand-yellow/10 px-3 py-1 rounded-full border border-brand-yellow/20">
+                            Excel #{question.id}
+                        </span>
+                        <span className="text-xs font-bold text-gray-400 uppercase tracking-widest bg-white/5 px-3 py-1 rounded-full border border-white/10">
+                            {question.manual}
+                        </span>
+                    </div>
                     {!isExamMode && (
                          <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">
                             {question.tema}

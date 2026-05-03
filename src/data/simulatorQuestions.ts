@@ -9,6 +9,8 @@ export interface SimulatorQuestion {
     options: SimulatorOption[];
     tema: string;
     manual: string;
+    image?: string;
+    needsImage?: boolean;
 }
 
 import rawQuestions from './simulatorQuestions.json';
