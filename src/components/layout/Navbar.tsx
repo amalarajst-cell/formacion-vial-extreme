@@ -98,6 +98,20 @@ export function Navbar() {
                                                     </div>
                                                 </div>
                                             )}
+                                            
+                                            <div className="h-px bg-gray-700/50 mx-3"></div>
+                                            
+                                            <Link
+                                                to="/review-preguntas"
+                                                onClick={() => setModulesOpen(false)}
+                                                className="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors group"
+                                            >
+                                                <BookOpen className="w-5 h-5 text-gray-400 group-hover:scale-110 transition-transform" />
+                                                <div>
+                                                    <span className="text-white text-sm font-bold uppercase block">Revisión Preguntas</span>
+                                                    <span className="text-gray-500 text-[10px] uppercase tracking-wider">Admin Tool</span>
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 )}

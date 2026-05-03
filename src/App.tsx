@@ -22,6 +22,7 @@ import { EfectoMultiplicadorModule } from './pages/EfectoMultiplicadorModule';
 import { Results } from './pages/Results';
 import { SimuladorTeorico } from './pages/SimuladorTeorico';
 import { Forum } from './pages/Forum';
+import { ReviewQuestions } from './pages/ReviewQuestions';
 
 import { forceScrollToTop } from './utils/scroll';
 
@@ -60,6 +61,7 @@ function App() {
             <Route path="results" element={<Results />} />
             <Route path="simulador" element={<SimuladorTeorico />} />
             <Route path="foro" element={<Forum />} />
+            <Route path="review-preguntas" element={<ReviewQuestions />} />
           </Route>
         </Routes>
       </HashRouter>
