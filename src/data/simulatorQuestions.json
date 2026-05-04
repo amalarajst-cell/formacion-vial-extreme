@@ -1,6 +1,7 @@
 [
   {
     "id": "4",
+    "excelOrder": 2,
     "question": "El riesgo en la vía pública surge como resultado de diversos factores, ¿cuáles son?",
     "options": [
       {
@@ -22,6 +23,7 @@
   },
   {
     "id": "5",
+    "excelOrder": 3,
     "question": "¿A qué factor se deben la mayoría de los siniestros viales?",
     "options": [
       {
@@ -43,6 +45,7 @@
   },
   {
     "id": "6",
+    "excelOrder": 4,
     "question": "A fin de aumentar la propia seguridad y la de los demás, ¿a qué se debería poner atención durante la circulación?",
     "options": [
       {
@@ -64,6 +67,7 @@
   },
   {
     "id": "7",
+    "excelOrder": 5,
     "question": "El factor ambiental es el principal factor de riesgo ya que las colisiones, en su mayoría, se deben a las condiciones meteorológicas o del camino",
     "options": [
       {
@@ -81,6 +85,7 @@
   },
   {
     "id": "8",
+    "excelOrder": 6,
     "question": "Por lo general, las fallas mecánicas se deben a conductas negligentes por parte de las personas que no se ocupan de la verificación del estado del vehículo:",
     "options": [
       {
@@ -98,6 +103,7 @@
   },
   {
     "id": "9",
+    "excelOrder": 7,
     "question": "¿A qué se denomina incidente de tránsito o incidente vial?",
     "options": [
       {
@@ -119,6 +125,7 @@
   },
   {
     "id": "11",
+    "excelOrder": 8,
     "question": "En términos generales, ¿cuáles son las consecuencias de los incidentes de tránsito?",
     "options": [
       {
@@ -140,6 +147,7 @@
   },
   {
     "id": "12",
+    "excelOrder": 9,
     "question": "¿A qué se denomina Movilidad Sustentable?",
     "options": [
       {
@@ -161,6 +169,7 @@
   },
   {
     "id": "13",
+    "excelOrder": 10,
     "question": "¿De qué se trata el \"Programa Visión Cero\" creado en 1997 en Suecia?",
     "options": [
       {
@@ -182,6 +191,7 @@
   },
   {
     "id": "15",
+    "excelOrder": 11,
     "question": "Mirar hacia ambos lados al llegar a una intersección de calles de un solo sentido, ¿es un ejemplo de conducción anticipada?",
     "options": [
       {
@@ -203,6 +213,7 @@
   },
   {
     "id": "17",
+    "excelOrder": 12,
     "question": "\"Como usuarios de la vía pública estamos obligados a no entorpecer injustificadamente la circulación y a no causar peligro, perjuicios o molestias innecesarias a las personas o daños a los bienes.\" ¿Es correcta esta premisa?",
     "options": [
       {
@@ -224,6 +235,7 @@
   },
   {
     "id": "19",
+    "excelOrder": 13,
     "question": "Indique cuál es la premisa correcta:",
     "options": [
       {
@@ -245,6 +257,7 @@
   },
   {
     "id": "23",
+    "excelOrder": 14,
     "question": "¿A qué se denomina conducción eficiente?",
     "options": [
       {
@@ -265,6 +278,7 @@
   },
   {
     "id": "24",
+    "excelOrder": 15,
     "question": "De los factores citados, ¿cuál interviene en el exceso de consumo de combustible?",
     "options": [
       {
@@ -286,6 +300,7 @@
   },
   {
     "id": "35",
+    "excelOrder": 16,
     "question": "¿Cuál es la velocidad máxima permitida para circular con una bicicleta con asistencia eléctrica?",
     "options": [
       {
@@ -307,6 +322,7 @@
   },
   {
     "id": "36",
+    "excelOrder": 17,
     "question": "En esta situación, ¿es correcto que el vehículo avance?",
     "options": [
       {
@@ -328,6 +344,7 @@
   },
   {
     "id": "37",
+    "excelOrder": 18,
     "question": "¿Cómo debe proceder, si al llegar a esta intersección, se desea continuar en línea recta?",
     "options": [
       {
@@ -345,6 +362,7 @@
   },
   {
     "id": "39",
+    "excelOrder": 19,
     "question": "Dadas las características de esta intersección, ¿el peatón también tiene prioridad?",
     "options": [
       {
@@ -362,6 +380,7 @@
   },
   {
     "id": "40",
+    "excelOrder": 20,
     "question": "La siguiente imagen corresponde a:",
     "options": [
       {
@@ -383,6 +402,7 @@
   },
   {
     "id": "41",
+    "excelOrder": 21,
     "question": "Cuando no hay demarcación de la senda peatonal, ¿por dónde deben cruzar las personas que son peatones?",
     "options": [
       {
@@ -404,6 +424,7 @@
   },
   {
     "id": "42",
+    "excelOrder": 22,
     "question": "Frente a la siguiente situación, ¿qué actitud debe tomar usted como conductor/a?",
     "options": [
       {
@@ -425,6 +446,7 @@
   },
   {
     "id": "43",
+    "excelOrder": 23,
     "question": "Si ud. conduce un vehículo, ¿qué conducta debe adoptar en la siguiente situación?",
     "options": [
       {
@@ -446,6 +468,7 @@
   },
   {
     "id": "44",
+    "excelOrder": 24,
     "question": "En esta intersección, ¿quién tiene prioridad de paso?",
     "options": [
       {
@@ -467,6 +490,7 @@
   },
   {
     "id": "45",
+    "excelOrder": 25,
     "question": "¿Qué distancia lateral debe dejar respecto de la bicicleta en caso de querer adelantarla?",
     "options": [
       {
@@ -488,6 +512,7 @@
   },
   {
     "id": "48",
+    "excelOrder": 26,
     "question": "¿Por dónde tienen permitida la circulación los y las ciclistas mayores de 12 años?",
     "options": [
       {
@@ -509,6 +534,7 @@
   },
   {
     "id": "49",
+    "excelOrder": 27,
     "question": "Es correcto el desplazamiento del motociclista de la imagen, que circula con el casco puesto y las luces encendidas",
     "options": [
       {
@@ -526,6 +552,7 @@
   },
   {
     "id": "50",
+    "excelOrder": 28,
     "question": "En esta intersección sin semáforos, donde el automóvil gira a la derecha, ¿quién tiene prioridad de paso?",
     "options": [
       {
@@ -547,6 +574,7 @@
   },
   {
     "id": "51",
+    "excelOrder": 29,
     "question": "Si usted pretende cruzar esta intersección, ¿hacia qué lado debe mirar?",
     "options": [
       {
@@ -568,6 +596,7 @@
   },
   {
     "id": "54",
+    "excelOrder": 30,
     "question": "¿Cuáles de los motovehículos que se muestran en la imagen circulan en infracción?",
     "options": [
       {
@@ -589,6 +618,7 @@
   },
   {
     "id": "55",
+    "excelOrder": 31,
     "question": "Además de colectivos, ¿quiénes pueden circular por este carril?",
     "options": [
       {
@@ -610,6 +640,7 @@
   },
   {
     "id": "56",
+    "excelOrder": 32,
     "question": "El motovehículo que se muestra en la imagen circula correctamente, sin entorpecer la circulación.",
     "options": [
       {
@@ -627,6 +658,7 @@
   },
   {
     "id": "57",
+    "excelOrder": 33,
     "question": "La autoridad de tránsito ¿puede retener la licencia de conducir a quien conduzca un vehículo por este carril, si no es un colectivo o un vehículo de emergencia?",
     "options": [
       {
@@ -648,6 +680,7 @@
   },
   {
     "id": "58",
+    "excelOrder": 34,
     "question": "¿Qué vehículos pueden circular por el carril señalizado en la imagen?",
     "options": [
       {
@@ -669,6 +702,7 @@
   },
   {
     "id": "60",
+    "excelOrder": 35,
     "question": "¿Qué son los carriles exclusivos?",
     "options": [
       {
@@ -690,6 +724,7 @@
   },
   {
     "id": "61",
+    "excelOrder": 36,
     "question": "El auto señalizado con un círculo rojo, ¿tiene permitido girar a la derecha en el próximo cruce?",
     "options": [
       {
@@ -711,6 +746,7 @@
   },
   {
     "id": "62",
+    "excelOrder": 37,
     "question": "Frente a la siguiente situación de emergencia, ¿qué deben hacer quienes circulen en su proximidad?",
     "options": [
       {
@@ -732,6 +768,7 @@
   },
   {
     "id": "63",
+    "excelOrder": 38,
     "question": "El siguiente símbolo indica que se trata de un carril que debe ser liberado cuando se aproxima un vehículo en emergencia",
     "options": [
       {
@@ -749,6 +786,7 @@
   },
   {
     "id": "64",
+    "excelOrder": 39,
     "question": "Frente a la siguiente situación de emergencia, ¿hacia qué sector es recomendable que se aparten los vehículos de la imagen para facilitar el paso a la ambulancia?",
     "options": [
       {
@@ -770,6 +808,7 @@
   },
   {
     "id": "65",
+    "excelOrder": 40,
     "question": "Frente a la siguiente situación de emergencia, ¿hacia qué sector es recomendable que se aparten los vehículos de la imagen para facilitar el paso a la ambulancia?",
     "options": [
       {
@@ -791,6 +830,7 @@
   },
   {
     "id": "66",
+    "excelOrder": 41,
     "question": "Según la Ley N° 2148, los vehículos destinados al servicio de emergencia en cumplimiento de su función, ¿tienen la prioridad de paso sobre todos los demás vehículos?",
     "options": [
       {
@@ -812,6 +852,7 @@
   },
   {
     "id": "67",
+    "excelOrder": 42,
     "question": "Frente a la siguiente situación de emergencia, ¿qué deben hacer quienes circulen en su proximidad?",
     "options": [
       {
@@ -833,6 +874,7 @@
   },
   {
     "id": "68",
+    "excelOrder": 43,
     "question": "Ud. se encuentra frente a la siguiente situación donde el/la conductor/a toca repetidamente la bocina, ¿qué debe hacer si se encuentra conduciendo en su proximidad?",
     "options": [
       {
@@ -854,6 +896,7 @@
   },
   {
     "id": "69",
+    "excelOrder": 44,
     "question": "En un cruce de dos calles sin semáforo, frente a la siguiente situación, ¿quién tiene prioridad de paso?",
     "options": [
       {
@@ -875,6 +918,7 @@
   },
   {
     "id": "70",
+    "excelOrder": 45,
     "question": "En un cruce de dos calles sin semáforo, frente a la siguiente situación, ¿quién tiene prioridad de paso?",
     "options": [
       {
@@ -892,6 +936,7 @@
   },
   {
     "id": "71",
+    "excelOrder": 46,
     "question": "El vehículo señalado con un círculo rojo, ¿circula correctamente?",
     "options": [
       {
@@ -913,6 +958,7 @@
   },
   {
     "id": "72",
+    "excelOrder": 47,
     "question": "El motovehículo señalado con el círculo rojo, ¿circula correctamente?",
     "options": [
       {
@@ -934,6 +980,7 @@
   },
   {
     "id": "73",
+    "excelOrder": 48,
     "question": "Un vehículo podrá circular por la franja paralela a la calzada, indicada en la imagen, sólo cuando el flujo vehicular esté absolutamente congestionado.",
     "options": [
       {
@@ -951,6 +998,7 @@
   },
   {
     "id": "74",
+    "excelOrder": 49,
     "question": "En la siguiente situación, el motovehículo...",
     "options": [
       {
@@ -972,6 +1020,7 @@
   },
   {
     "id": "75",
+    "excelOrder": 50,
     "question": "En la siguiente situación, ¿el vehículo B puede sobrepasar al vehículo A?",
     "options": [
       {
@@ -993,6 +1042,7 @@
   },
   {
     "id": "76",
+    "excelOrder": 51,
     "question": "¿Cuáles de los siguientes vehículos NO se encuentran en infracción?",
     "options": [
       {
@@ -1014,6 +1064,7 @@
   },
   {
     "id": "77",
+    "excelOrder": 52,
     "question": "El vehículo A pretende cambiar de carril hacia su derecha, ¿cuál de los dos vehículos tiene prioridad?",
     "options": [
       {
@@ -1031,6 +1082,7 @@
   },
   {
     "id": "78",
+    "excelOrder": 53,
     "question": "En este tipo de arteria, ¿quién tiene prioridad cuando se desea realizar un cambio de carril?",
     "options": [
       {
@@ -1052,6 +1104,7 @@
   },
   {
     "id": "79",
+    "excelOrder": 54,
     "question": "Es obligatorio al finalizar un adelantamiento...",
     "options": [
       {
@@ -1073,6 +1126,7 @@
   },
   {
     "id": "80",
+    "excelOrder": 55,
     "question": "¿Cuál de estos carriles es el llamado \"carril de sobrepaso\"?",
     "options": [
       {
@@ -1094,6 +1148,7 @@
   },
   {
     "id": "81",
+    "excelOrder": 56,
     "question": "Quien conduce el vehículo A quiere volver rápidamente al carril derecho porque vé que delante suyo hay una situación de peligro, ¿qué debe el vehículo B?",
     "options": [
       {
@@ -1115,6 +1170,7 @@
   },
   {
     "id": "83",
+    "excelOrder": 57,
     "question": "¿Está permitido sobrepasar a otro vehículo en este lugar?",
     "options": [
       {
@@ -1136,6 +1192,7 @@
   },
   {
     "id": "84",
+    "excelOrder": 58,
     "question": "Cuando varios vehículos circulan encolumnados, ¿cuál de ellos tiene prioridad para realizar el sobrepaso?",
     "options": [
       {
@@ -1157,6 +1214,7 @@
   },
   {
     "id": "85",
+    "excelOrder": 59,
     "question": "En esta situación, ¿quién tiene prioridad para realizar el sobrepaso al camión?",
     "options": [
       {
@@ -1178,6 +1236,7 @@
   },
   {
     "id": "86",
+    "excelOrder": 60,
     "question": "Frente a esta situación de obstrucción de vía, ¿qué debe hacer el vehículo señalado?",
     "options": [
       {
@@ -1199,6 +1258,7 @@
   },
   {
     "id": "87",
+    "excelOrder": 61,
     "question": "El vehículo, que circula por el carril destinado al tránsito lento, no puede abandonarlo para sobrepasar a otro vehículo que transita más lento.",
     "options": [
       {
@@ -1216,6 +1276,7 @@
   },
   {
     "id": "88",
+    "excelOrder": 62,
     "question": "Si al llegar a una intersección sin semáforos, se encuentra que el vehículo que está delante suyo está detenido esperando poder doblar hacia la izquierda, ¿qué debe hacer si ud. desea continuar en línea recta?",
     "options": [
       {
@@ -1237,6 +1298,7 @@
   },
   {
     "id": "89",
+    "excelOrder": 63,
     "question": "¿Qué peligro debe preverse al sobrepasar un colectivo detenido?",
     "options": [
       {
@@ -1258,6 +1320,7 @@
   },
   {
     "id": "90",
+    "excelOrder": 64,
     "question": "Según la Ley N°2148, ¿qué significa el término sobrepaso?",
     "options": [
       {
@@ -1279,6 +1342,7 @@
   },
   {
     "id": "91",
+    "excelOrder": 65,
     "question": "¿Se puede traspasar la siguiente señal horizontal?",
     "options": [
       {
@@ -1300,6 +1364,7 @@
   },
   {
     "id": "92",
+    "excelOrder": 66,
     "question": "Como norma general, ¿dónde está prohibido el sobrepaso de un vehículo?",
     "options": [
       {
@@ -1321,6 +1386,7 @@
   },
   {
     "id": "94",
+    "excelOrder": 67,
     "question": "En una vía de doble sentido de circulación, ¿qué deberá comprobar antes de iniciar un sobrepaso?",
     "options": [
       {
@@ -1342,6 +1408,7 @@
   },
   {
     "id": "95",
+    "excelOrder": 68,
     "question": "En este lugar, ¿está permitido sobrepasar a otro vehículo?",
     "options": [
       {
@@ -1363,6 +1430,7 @@
   },
   {
     "id": "96",
+    "excelOrder": 69,
     "question": "Al advertir que está por ser sobrepasado, ¿cuál debería ser su actitud?",
     "options": [
       {
@@ -1384,6 +1452,7 @@
   },
   {
     "id": "97",
+    "excelOrder": 70,
     "question": "El carril de sobrepaso en una autopista sirve para...",
     "options": [
       {
@@ -1405,6 +1474,7 @@
   },
   {
     "id": "99",
+    "excelOrder": 72,
     "question": "Para que un motovehículo circule correctamente, ¿qué sector del carril debe utilizar?",
     "options": [
       {
@@ -1426,6 +1496,7 @@
   },
   {
     "id": "100",
+    "excelOrder": 73,
     "question": "Esta manera de circular se puede realizar sólo si se hace a baja velocidad y se recorren distancias cortas.",
     "options": [
       {
@@ -1443,6 +1514,7 @@
   },
   {
     "id": "101",
+    "excelOrder": 74,
     "question": "Según la Ley N° 2148, los vehículos de transporte de carga o de pasajeros/as de más de 3500 Kg de peso bruto deben circular únicamente por el carril de la derecha en autopistas , sin poder realizar sobrepasos",
     "options": [
       {
@@ -1460,6 +1532,7 @@
   },
   {
     "id": "102",
+    "excelOrder": 75,
     "question": "Los camiones sin acoplado, ¿por qué sector de esta vía deben circular?",
     "options": [
       {
@@ -1481,6 +1554,7 @@
   },
   {
     "id": "103",
+    "excelOrder": 76,
     "question": "¿A qué se denomina \"carril de aceleración\"?",
     "options": [
       {
@@ -1502,6 +1576,7 @@
   },
   {
     "id": "104",
+    "excelOrder": 77,
     "question": "¿Quién tiene prioridad de paso en el cruce de estas dos calles?",
     "options": [
       {
@@ -1523,6 +1598,7 @@
   },
   {
     "id": "106",
+    "excelOrder": 78,
     "question": "El vehículo señalizado tiene permitido girar a la izquierda en este cruce que no tiene semáforo.",
     "options": [
       {
@@ -1540,6 +1616,7 @@
   },
   {
     "id": "107",
+    "excelOrder": 79,
     "question": "¿Qué vehículo tiene prioridad de paso en esta intersección sin semáforo?",
     "options": [
       {
@@ -1561,6 +1638,7 @@
   },
   {
     "id": "110",
+    "excelOrder": 80,
     "question": "De acuerdo a la Ley N° 2148, ¿está permitido realizar el siguiente giro?",
     "options": [
       {
@@ -1582,6 +1660,7 @@
   },
   {
     "id": "111",
+    "excelOrder": 81,
     "question": "De acuerdo a la Ley N° 2148, ¿está permitido realizar este giro?",
     "options": [
       {
@@ -1603,6 +1682,7 @@
   },
   {
     "id": "112",
+    "excelOrder": 82,
     "question": "De acuerdo a la Ley N° 2148, en encrucijadas sin semáforos, ¿cuál es el orden de prioridad de paso según el tipo de arteria?",
     "options": [
       {
@@ -1624,6 +1704,7 @@
   },
   {
     "id": "115",
+    "excelOrder": 83,
     "question": "El vehículo con un círculo de color rojo quería girar a la derecha y, por error continuó en línea recta, de modo que:",
     "options": [
       {
@@ -1645,6 +1726,7 @@
   },
   {
     "id": "116",
+    "excelOrder": 84,
     "question": "En la siguiente situación, ¿a quién le corresponde la prioridad de paso?",
     "options": [
       {
@@ -1666,6 +1748,7 @@
   },
   {
     "id": "117",
+    "excelOrder": 85,
     "question": "¿Quién tiene prioridad de paso en una rotonda?",
     "options": [
       {
@@ -1687,6 +1770,7 @@
   },
   {
     "id": "120",
+    "excelOrder": 86,
     "question": "El vehículo señalizado quiere incorporarse al tránsito, ¿tiene prioridad de paso sobre los otros vehículos que están circulando por esta arteria?",
     "options": [
       {
@@ -1708,6 +1792,7 @@
   },
   {
     "id": "121",
+    "excelOrder": 87,
     "question": "El vehículo señalizado quiere incorporarse al tránsito, ¿tiene prioridad de paso sobre los otros vehículos que están detenidos en la arteria?",
     "options": [
       {
@@ -1729,6 +1814,7 @@
   },
   {
     "id": "122",
+    "excelOrder": 88,
     "question": "En esta pendiente estrecha, ¿cuál de los dos vehículos tiene prioridad de paso?",
     "options": [
       {
@@ -1746,6 +1832,7 @@
   },
   {
     "id": "124",
+    "excelOrder": 89,
     "question": "Según las normas generales, ¿cuál es la velocidad máxima permitida en esta calle?",
     "options": [
       {
@@ -1767,6 +1854,7 @@
   },
   {
     "id": "125",
+    "excelOrder": 90,
     "question": "Según la Ley 2148, ¿cuál es la velocidad máxima a la que pueden circular los vehículos destinados al servicio de transporte de personas con movilidad reducida en esta calle?",
     "options": [
       {
@@ -1788,6 +1876,7 @@
   },
   {
     "id": "126",
+    "excelOrder": 91,
     "question": "Según la Ley 2148, ¿cuál es la velocidad máxima permitida para el transporte colectivo de pasajeros/as en esta calle?",
     "options": [
       {
@@ -1809,6 +1898,7 @@
   },
   {
     "id": "127",
+    "excelOrder": 92,
     "question": "Según la Ley 2148, ¿cuál es la velocidad máxima permitida para el transporte escolar en esta calle?",
     "options": [
       {
@@ -1830,6 +1920,7 @@
   },
   {
     "id": "128",
+    "excelOrder": 93,
     "question": "Según las normas generales, ¿cuál es la velocidad mínima permitida en esta calle?",
     "options": [
       {
@@ -1851,6 +1942,7 @@
   },
   {
     "id": "131",
+    "excelOrder": 94,
     "question": "Según las normas generales, ¿cuál es la velocidad máxima permitida para un motovehículo en esta avenida?",
     "options": [
       {
@@ -1872,6 +1964,7 @@
   },
   {
     "id": "131",
+    "excelOrder": 95,
     "question": "Según las normas generales, ¿cuál es la velocidad máxima permitida para un automóvil particular en esta avenida?",
     "options": [
       {
@@ -1893,6 +1986,7 @@
   },
   {
     "id": "132",
+    "excelOrder": 96,
     "question": "¿Cuál es la velocidad máxima permitida para un motovehículo en este tramo de la avenida?",
     "options": [
       {
@@ -1914,6 +2008,7 @@
   },
   {
     "id": "132",
+    "excelOrder": 97,
     "question": "¿Cuál es la velocidad máxima permitida para un automóvil particular en este tramo de la avenida?",
     "options": [
       {
@@ -1935,6 +2030,7 @@
   },
   {
     "id": "134",
+    "excelOrder": 98,
     "question": "¿Cuál es la velocidad máxima permitida para motovehículos en este tramo de la Av. Costanera Rafael Obligado?",
     "options": [
       {
@@ -1956,6 +2052,7 @@
   },
   {
     "id": "134",
+    "excelOrder": 99,
     "question": "¿Cuál es la velocidad máxima permitida para automóviles particulares en este tramo de la Av. Costanera Rafael Obligado?",
     "options": [
       {
@@ -1977,6 +2074,7 @@
   },
   {
     "id": "135",
+    "excelOrder": 100,
     "question": "Según la Ley N° 2148, ¿cuál es la velocidad máxima a la que pueden circular los vehículos destinados al servicio de transporte de escolares en esta avenida?",
     "options": [
       {
@@ -1998,6 +2096,7 @@
   },
   {
     "id": "136",
+    "excelOrder": 101,
     "question": "Según la Ley N° 2148, ¿cuál es la velocidad máxima permitida en esta arteria para transporte colectivo de pasajeros/as?",
     "options": [
       {
@@ -2019,6 +2118,7 @@
   },
   {
     "id": "136",
+    "excelOrder": 102,
     "question": "Según la Ley N° 2148, ¿cuál es la velocidad máxima permitida en esta arteria para vehículos de carga (de más de 3500 Kilos de peso bruto y menor a 12 toneladas)?",
     "options": [
       {
@@ -2040,6 +2140,7 @@
   },
   {
     "id": "137",
+    "excelOrder": 103,
     "question": "Según la Ley N° 2148, ¿cuál es la velocidad máxima permitida en esta arteria para taxis?",
     "options": [
       {
@@ -2061,6 +2162,7 @@
   },
   {
     "id": "139",
+    "excelOrder": 104,
     "question": "Según la Ley N° 2148, ¿cuál es la velocidad mínima permitida en esta arteria, para el vehículo marcado con un círculo rojo?",
     "options": [
       {
@@ -2082,6 +2184,7 @@
   },
   {
     "id": "140",
+    "excelOrder": 105,
     "question": "Según la Ley 2148, los límites de velocidad para un motovehículo que circula por esta arteria son de 30 km/h (mínima) y 60 km/h (máxima).",
     "options": [
       {
@@ -2099,6 +2202,7 @@
   },
   {
     "id": "140",
+    "excelOrder": 106,
     "question": "Según la Ley 2148, los límites de velocidad para un automóvil particular que circula por esta arteria son de 30 km/h (mínima) y 60 km/h (máxima).",
     "options": [
       {
@@ -2116,6 +2220,7 @@
   },
   {
     "id": "140",
+    "excelOrder": 107,
     "question": "Según la Ley 2148, los límites de velocidad para un taxi que circula por esta arteria son de 30 km/h (mínima) y 60 km/h (máxima).",
     "options": [
       {
@@ -2133,6 +2238,7 @@
   },
   {
     "id": "141",
+    "excelOrder": 108,
     "question": "Según las normas generales, ¿cuál es la velocidad máxima permitida para motovehículos en esta zona de la ruta?",
     "options": [
       {
@@ -2154,6 +2260,7 @@
   },
   {
     "id": "141",
+    "excelOrder": 109,
     "question": "Según las normas generales, ¿cuál es la velocidad máxima permitida para automóviles particulares en esta zona de la ruta?",
     "options": [
       {
@@ -2175,6 +2282,7 @@
   },
   {
     "id": "142",
+    "excelOrder": 110,
     "question": "Según las normas generales, ¿cuál es la velocidad máxima que puede alcanzar un vehículo, al circular por ruta cuando atraviesa una zona urbana?",
     "options": [
       {
@@ -2196,6 +2304,7 @@
   },
   {
     "id": "143",
+    "excelOrder": 111,
     "question": "Al circular por una ruta a la velocidad máxima permitida sólo se está habilitado a superarla en el momento del sobrepaso",
     "options": [
       {
@@ -2213,6 +2322,7 @@
   },
   {
     "id": "144",
+    "excelOrder": 112,
     "question": "¿Cuál es la velocidad máxima permitida en este tramo de calle?",
     "options": [
       {
@@ -2234,6 +2344,7 @@
   },
   {
     "id": "146",
+    "excelOrder": 113,
     "question": "En esta vía, los vehículos de transporte de escolares y colectivos de pasajeros/as, tienen una velocidad máxima diferente entre sí.",
     "options": [
       {
@@ -2251,6 +2362,7 @@
   },
   {
     "id": "147",
+    "excelOrder": 114,
     "question": "Al pretender abandonar una autopista o semiautopista, ¿cuándo se debe reducir la velocidad?",
     "options": [
       {
@@ -2272,6 +2384,7 @@
   },
   {
     "id": "148",
+    "excelOrder": 115,
     "question": "Según Ley N° 2148, ¿cuál es la velocidad máxima permitida para motovehículos en los carriles centrales de la Av. Gral. Paz, en el tramo entre Autopista Ingeniero Pascual Palazzo y Av. 27 de Febrero?",
     "options": [
       {
@@ -2293,6 +2406,7 @@
   },
   {
     "id": "148",
+    "excelOrder": 116,
     "question": "Según Ley N° 2148, ¿cuál es la velocidad máxima permitida para automóviles en los carriles centrales de la Av. Gral. Paz, en el tramo entre Autopista Ingeniero Pascual Palazzo y Av. 27 de Febrero?",
     "options": [
       {
@@ -2314,6 +2428,7 @@
   },
   {
     "id": "150",
+    "excelOrder": 117,
     "question": "Según la Ley N° 2148, ¿cuál es la velocidad máxima a la que pueden circular los vehículos destinados al servicio de transporte de personas con movilidad reducida en una autopista?",
     "options": [
       {
@@ -2335,6 +2450,7 @@
   },
   {
     "id": "151",
+    "excelOrder": 118,
     "question": "¿Cuál es la velocidad máxima permitida para un motovehículo en Av. Intendente Cantilo, salvo señalización que indique otra velocidad?",
     "options": [
       {
@@ -2356,6 +2472,7 @@
   },
   {
     "id": "151",
+    "excelOrder": 119,
     "question": "¿Cuál es la velocidad máxima permitida para un automóvil particular en Av. Intendente Cantilo, salvo señalización que indique otra velocidad?",
     "options": [
       {
@@ -2377,6 +2494,7 @@
   },
   {
     "id": "152",
+    "excelOrder": 120,
     "question": "Según la Ley Nacional N° 24.449, ¿cuál es la velocidad máxima permitida para motovehículos en semiautopistas?",
     "options": [
       {
@@ -2398,6 +2516,7 @@
   },
   {
     "id": "152",
+    "excelOrder": 121,
     "question": "Según la Ley Nacional N° 24.449, ¿cuál es la velocidad máxima permitida para automóviles particulares en semiautopistas?",
     "options": [
       {
@@ -2419,6 +2538,7 @@
   },
   {
     "id": "153",
+    "excelOrder": 122,
     "question": "Según la Ley Nacional N° 24.449, ¿cuál es la velocidad máxima permitida en semiautopistas para ómnibus y microbús?",
     "options": [
       {
@@ -2440,6 +2560,7 @@
   },
   {
     "id": "154",
+    "excelOrder": 123,
     "question": "Según la Ley Nacional N º 24.449, en carácter general, ¿cuál es la velocidad mínima permitida en las semiautopistas?",
     "options": [
       {
@@ -2461,6 +2582,7 @@
   },
   {
     "id": "155",
+    "excelOrder": 124,
     "question": "¿Qué se conoce como velocidad precautoria?",
     "options": [
       {
@@ -2482,6 +2604,7 @@
   },
   {
     "id": "160",
+    "excelOrder": 125,
     "question": "Si al circular por ruta, el vehículo sale involuntariamente de la calzada, es recomendable:",
     "options": [
       {
@@ -2503,6 +2626,7 @@
   },
   {
     "id": "161",
+    "excelOrder": 126,
     "question": "¿A qué se denomina \"distancia de seguridad\"?",
     "options": [
       {
@@ -2524,6 +2648,7 @@
   },
   {
     "id": "162",
+    "excelOrder": 127,
     "question": "¿Cuál es la \"distancia mínima de seguridad\" a la que debe circular el vehículo A con respecto al B?",
     "options": [
       {
@@ -2545,6 +2670,7 @@
   },
   {
     "id": "163",
+    "excelOrder": 128,
     "question": "¿A qué se denomina \"tiempo de reacción\"?",
     "options": [
       {
@@ -2566,6 +2692,7 @@
   },
   {
     "id": "164",
+    "excelOrder": 129,
     "question": "¿A qué se denomina \"distancia de reacción\"?",
     "options": [
       {
@@ -2587,6 +2714,7 @@
   },
   {
     "id": "165",
+    "excelOrder": 130,
     "question": "Según la Ley 2148, al circular con un motovehículo detrás de éste camión, ¿cuál es la distancia mínima de seguridad que debe mantener respecto de él? La distancia que resulte de una separación de por lo menos…",
     "options": [
       {
@@ -2608,6 +2736,7 @@
   },
   {
     "id": "166",
+    "excelOrder": 131,
     "question": "Circular por debajo del límite mínimo de velocidad puede causar incidentes.",
     "options": [
       {
@@ -2625,6 +2754,7 @@
   },
   {
     "id": "167",
+    "excelOrder": 132,
     "question": "¿Qué relación existe entre la velocidad y el campo visual de quien conduce?",
     "options": [
       {
@@ -2646,6 +2776,7 @@
   },
   {
     "id": "168",
+    "excelOrder": 133,
     "question": "Los excesos de velocidad...",
     "options": [
       {
@@ -2667,6 +2798,7 @@
   },
   {
     "id": "169",
+    "excelOrder": 134,
     "question": "Circular a velocidad constante y dentro de los límites establecidos por la Ley, además de minimizar las posibilidades de provocar un siniestro vial, puede optimizar el consumo de combustible en un vehículo.",
     "options": [
       {
@@ -2684,6 +2816,7 @@
   },
   {
     "id": "170",
+    "excelOrder": 135,
     "question": "Circular a mayor velocidad de la precautoria implica que aumenten las posibilidades de que un siniestro vial sea más grave.",
     "options": [
       {
@@ -2701,6 +2834,7 @@
   },
   {
     "id": "171",
+    "excelOrder": 136,
     "question": "Si se encuentra conduciendo un motovehículo a excesiva velocidad en este tramo de la ruta, ¿cómo es recomendable que actúe para controlar el mismo?",
     "options": [
       {
@@ -2722,6 +2856,7 @@
   },
   {
     "id": "172",
+    "excelOrder": 137,
     "question": "¿Cuál es la manera más adecuada de conducir un vehículo en este tramo de la ruta?",
     "options": [
       {
@@ -2743,6 +2878,7 @@
   },
   {
     "id": "173",
+    "excelOrder": 138,
     "question": "Conduciendo un motovehículo, ante una frenada de emergencia, nunca se debe frenar única y bruscamente con el freno delantero.",
     "options": [
       {
@@ -2760,6 +2896,7 @@
   },
   {
     "id": "174",
+    "excelOrder": 139,
     "question": "¿Cómo es recomendable proceder frente a esta circunstancia?",
     "options": [
       {
@@ -2781,6 +2918,7 @@
   },
   {
     "id": "177",
+    "excelOrder": 140,
     "question": "Si se va a conducir por un largo tiempo, lo recomendable es dormir la noche anterior...",
     "options": [
       {
@@ -2802,6 +2940,7 @@
   },
   {
     "id": "178",
+    "excelOrder": 141,
     "question": "¿Estar 17 horas despierto/a provoca tener el mismo nivel de reacción que una persona con un nivel de alcohol en sangre mayor al permitido por Ley?",
     "options": [
       {
@@ -2823,6 +2962,7 @@
   },
   {
     "id": "179",
+    "excelOrder": 142,
     "question": "El cansancio puede verse inducido por ingerir:",
     "options": [
       {
@@ -2844,6 +2984,7 @@
   },
   {
     "id": "180",
+    "excelOrder": 143,
     "question": "¿Cuáles de éstos son los síntomas que advierten sobre la fatiga en la conducción?",
     "options": [
       {
@@ -2865,6 +3006,7 @@
   },
   {
     "id": "181",
+    "excelOrder": 144,
     "question": "Una persona en condición de principiante, ¿puede sentirse más fácilmente fatigada?",
     "options": [
       {
@@ -2886,6 +3028,7 @@
   },
   {
     "id": "182",
+    "excelOrder": 145,
     "question": "¿Por qué es peligroso conducir con cansancio?",
     "options": [
       {
@@ -2907,6 +3050,7 @@
   },
   {
     "id": "183",
+    "excelOrder": 146,
     "question": "¿Qué consecuencias tiene conducir habiendo dormido pocas horas previamente?",
     "options": [
       {
@@ -2928,6 +3072,7 @@
   },
   {
     "id": "185",
+    "excelOrder": 147,
     "question": "¿Puede verse afectada negativamente la conducción de una persona que está discutiendo con su acompañante o con otra persona de la vía pública?",
     "options": [
       {
@@ -2949,6 +3094,7 @@
   },
   {
     "id": "186",
+    "excelOrder": 148,
     "question": "Bajo los efectos del estrés, la conducción se vuelve:",
     "options": [
       {
@@ -2970,6 +3116,7 @@
   },
   {
     "id": "188",
+    "excelOrder": 149,
     "question": "En relación al conductor, ¿qué cantidad total de distracciones están presentes en la siguiente imagen?",
     "options": [
       {
@@ -2991,6 +3138,7 @@
   },
   {
     "id": "189",
+    "excelOrder": 150,
     "question": "La acción que realiza el conductor en la imagen es riesgosa para la conducción.",
     "options": [
       {
@@ -3008,6 +3156,7 @@
   },
   {
     "id": "190",
+    "excelOrder": 151,
     "question": "¿Cuáles de las siguientes acciones son consideradas factores de distracción cuando se conduce un vehículo?",
     "options": [
       {
@@ -3029,6 +3178,7 @@
   },
   {
     "id": "191",
+    "excelOrder": 152,
     "question": "¿Cuál es el tiempo promedio desde que se percibe un peligro hasta que se reacciona, por ejemplo, accionando el freno?",
     "options": [
       {
@@ -3050,6 +3200,7 @@
   },
   {
     "id": "193",
+    "excelOrder": 153,
     "question": "¿Cuál de estos sistemas de comunicación telefónica no es considerado riesgoso al momento de conducir un vehículo?",
     "options": [
       {
@@ -3071,6 +3222,7 @@
   },
   {
     "id": "194",
+    "excelOrder": 154,
     "question": "La siguiente acción del conductor, ¿es considerada un factor de riesgo?",
     "options": [
       {
@@ -3092,6 +3244,7 @@
   },
   {
     "id": "195",
+    "excelOrder": 155,
     "question": "La siguiente acción del conductor es riesgosa porque:",
     "options": [
       {
@@ -3113,6 +3266,7 @@
   },
   {
     "id": "197",
+    "excelOrder": 156,
     "question": "Si un/a conductor/a necesita realizar una llamada de urgencia con el teléfono celular, ¿qué debe hacer para no generar una situación de riesgo en la vía pública?",
     "options": [
       {
@@ -3134,6 +3288,7 @@
   },
   {
     "id": "198",
+    "excelOrder": 157,
     "question": "La presente conducta, ¿es riesgosa al momento de conducir?",
     "options": [
       {
@@ -3155,6 +3310,7 @@
   },
   {
     "id": "200",
+    "excelOrder": 158,
     "question": "Cuando se consume alcohol, ¿se pueden producir alteraciones en la visión?",
     "options": [
       {
@@ -3176,6 +3332,7 @@
   },
   {
     "id": "202",
+    "excelOrder": 159,
     "question": "Beber cerveza, ¿puede influir en la conducción de un motovehículo?",
     "options": [
       {
@@ -3197,6 +3354,7 @@
   },
   {
     "id": "203",
+    "excelOrder": 160,
     "question": "Consumir cerveza influye en la conducción de un vehículo, haciendo que el conductor reduzca su capacidad de reacción y aumentando el tiempo necesario para responder ante un estímulo.",
     "options": [
       {
@@ -3214,6 +3372,7 @@
   },
   {
     "id": "204",
+    "excelOrder": 161,
     "question": "Conducir al día siguiente de una noche de consumo excesivo de alcohol es riesgoso porque:",
     "options": [
       {
@@ -3235,6 +3394,7 @@
   },
   {
     "id": "205",
+    "excelOrder": 162,
     "question": "¿La resaca tiene efectos en el organismo que puedan afectar la conducción?",
     "options": [
       {
@@ -3255,6 +3415,7 @@
   },
   {
     "id": "207",
+    "excelOrder": 163,
     "question": "Si un/a conductor/a de motovehículo obtiene el siguiente resultado en un control de alcoholemia realizado en la Ciudad Autónoma de Buenos Aires, ¿cómo debe proceder la autoridad de control de tránsito?",
     "options": [
       {
@@ -3276,6 +3437,7 @@
   },
   {
     "id": "207",
+    "excelOrder": 164,
     "question": "Si un/a conductor/a de un automóvil particular obtiene el siguiente resultado en un control de alcoholemia realizado en la Ciudad Autónoma de Buenos Aires, ¿cómo debe proceder la autoridad de control de tránsito?",
     "options": [
       {
@@ -3297,6 +3459,7 @@
   },
   {
     "id": "207",
+    "excelOrder": 165,
     "question": "Si un/a conductor/a profesional obtiene el siguiente resultado en un control de alcoholemia realizado en la Ciudad Autónoma de Buenos Aires, ¿cómo debe proceder la autoridad de control de tránsito?",
     "options": [
       {
@@ -3318,6 +3481,7 @@
   },
   {
     "id": "210",
+    "excelOrder": 166,
     "question": "De acuerdo al siguiente símbolo, ¿por cuánto tiempo se tiene prohibido conducir con más de 0,0 gramos de alcohol por litro de sangre?",
     "options": [
       {
@@ -3339,6 +3503,7 @@
   },
   {
     "id": "211",
+    "excelOrder": 167,
     "question": "Si la conductora que se señaliza en la imagen es principiante, ¿cuál es el nivel máximo de alcoholemia que tiene admitido por normativa?",
     "options": [
       {
@@ -3360,6 +3525,7 @@
   },
   {
     "id": "212",
+    "excelOrder": 168,
     "question": "De acuerdo al símbolo que exhibe, ¿cuál es el nivel máximo de alcoholemia admitido?",
     "options": [
       {
@@ -3381,6 +3547,7 @@
   },
   {
     "id": "213",
+    "excelOrder": 169,
     "question": "¿Cuál es el nivel máximo de alcoholemia admitido para quien conduzca el vehículo que se visualiza en la imagen?",
     "options": [
       {
@@ -3402,6 +3569,7 @@
   },
   {
     "id": "214",
+    "excelOrder": 170,
     "question": "¿Cuál es el límite de alcohol en sangre permitido para la persona que está señalada en la foto con un círculo rojo?",
     "options": [
       {
@@ -3423,6 +3591,7 @@
   },
   {
     "id": "215",
+    "excelOrder": 171,
     "question": "Si la conductora que se señaliza en la imagen no es principiante, ¿cuál es el nivel máximo de alcoholemia que tiene admitido por normativa?",
     "options": [
       {
@@ -3444,6 +3613,7 @@
   },
   {
     "id": "216",
+    "excelOrder": 172,
     "question": "¿Cuál es el nivel máximo de alcoholemia admitido para quien conduzca el vehículo que se visualiza en la imagen?",
     "options": [
       {
@@ -3465,6 +3635,7 @@
   },
   {
     "id": "217",
+    "excelOrder": 173,
     "question": "¿Cuál es el nivel máximo de alcoholemia admitido para quien conduzca el vehículo que se visualiza en la imagen?",
     "options": [
       {
@@ -3486,6 +3657,7 @@
   },
   {
     "id": "218",
+    "excelOrder": 174,
     "question": "¿Cuál es el nivel máximo de alcoholemia admitido para quien conduzca el vehículo que se visualiza en la imagen?",
     "options": [
       {
@@ -3507,6 +3679,7 @@
   },
   {
     "id": "219",
+    "excelOrder": 175,
     "question": "¿Consumir cuál de estas sustancias pueden afectar la capacidad para conducir?",
     "options": [
       {
@@ -3528,6 +3701,7 @@
   },
   {
     "id": "221",
+    "excelOrder": 176,
     "question": "¿Cuál de estas sustancias pueden afectar negativamente la capacidad de conducir?",
     "options": [
       {
@@ -3549,6 +3723,7 @@
   },
   {
     "id": "233",
+    "excelOrder": 177,
     "question": "¿El vehículo de la imagen se encuentra en infracción?",
     "options": [
       {
@@ -3570,6 +3745,7 @@
   },
   {
     "id": "234",
+    "excelOrder": 178,
     "question": "El motovehículo de la imagen, ¿se encuentra correctamente estacionado?",
     "options": [
       {
@@ -3591,6 +3767,7 @@
   },
   {
     "id": "235",
+    "excelOrder": 179,
     "question": "Según la Ley N° 2148, ¿está permitido estacionar un motovehículo del modo que se visualiza en la imagen?",
     "options": [
       {
@@ -3612,6 +3789,7 @@
   },
   {
     "id": "236",
+    "excelOrder": 180,
     "question": "Si su motovehículo no funciona, ud. puede estacionarlo durante unos días hasta que sea reparado, tal como se muestra en la imagen.",
     "options": [
       {
@@ -3629,6 +3807,7 @@
   },
   {
     "id": "237",
+    "excelOrder": 181,
     "question": "¿Es correcto estacionar el vehículo de esta manera?",
     "options": [
       {
@@ -3650,6 +3829,7 @@
   },
   {
     "id": "238",
+    "excelOrder": 182,
     "question": "El vehículo con la oblea universal de discapacidad que se muestra en esta imagen, ¿se encuentra en infracción?",
     "options": [
       {
@@ -3667,6 +3847,7 @@
   },
   {
     "id": "239",
+    "excelOrder": 183,
     "question": "¿Es correcta la detención del vehículo en este sector?",
     "options": [
       {
@@ -3688,6 +3869,7 @@
   },
   {
     "id": "243",
+    "excelOrder": 184,
     "question": "Como norma general, frente a esta señal, ¿está permitido detenerse para el ascenso o descenso de pasajeros/as?",
     "options": [
       {
@@ -3709,6 +3891,7 @@
   },
   {
     "id": "244",
+    "excelOrder": 185,
     "question": "En estas zonas, está permitido estacionar a partir de los 20 metros para cada lado.",
     "options": [
       {
@@ -3726,6 +3909,7 @@
   },
   {
     "id": "245",
+    "excelOrder": 186,
     "question": "De acuerdo a la señalética en la vía pública,  en general, ¿cuál es el tiempo máximo permitido de carga y descarga?",
     "options": [
       {
@@ -3747,6 +3931,7 @@
   },
   {
     "id": "246",
+    "excelOrder": 187,
     "question": "Está prohibido estacionar en la vía pública ómnibus, micros, camiones, acoplados o maquinaria especial.",
     "options": [
       {
@@ -3764,6 +3949,7 @@
   },
   {
     "id": "247",
+    "excelOrder": 188,
     "question": "La Ley Nº 2148 establece como norma general que en avenidas de este tipo, está prohibido estacionar vehículos...",
     "options": [
       {
@@ -3785,6 +3971,7 @@
   },
   {
     "id": "248",
+    "excelOrder": 189,
     "question": "La Ley Nº 2148 establece como norma general que en avenidas de este tipo, está prohibido estacionar vehículos...",
     "options": [
       {
@@ -3806,6 +3993,7 @@
   },
   {
     "id": "250",
+    "excelOrder": 190,
     "question": "En el siguiente espacio, se encuentra permitido detenerse pero no estacionar.",
     "options": [
       {
@@ -3823,6 +4011,7 @@
   },
   {
     "id": "251",
+    "excelOrder": 191,
     "question": "El vehículo señalado, ¿está correctamente ubicado?",
     "options": [
       {
@@ -3844,6 +4033,7 @@
   },
   {
     "id": "252",
+    "excelOrder": 192,
     "question": "En la presente situación, el vehículo señalado no se encuentra en infracción si...",
     "options": [
       {
@@ -3865,6 +4055,7 @@
   },
   {
     "id": "254",
+    "excelOrder": 193,
     "question": "La Ley N° 2148 establece como norma general la prohibición de detenerse de la siguiente forma, excepto:",
     "options": [
       {
@@ -3886,6 +4077,7 @@
   },
   {
     "id": "255",
+    "excelOrder": 194,
     "question": "¿Está permitida la acción que se presenta en la siguiente imagen?",
     "options": [
       {
@@ -3907,6 +4099,7 @@
   },
   {
     "id": "257",
+    "excelOrder": 195,
     "question": "Según la Ley Nº 24.449, en el caso de detener un vehículo en esta zona, ¿cuál es la distancia mínima que se debe mantener?",
     "options": [
       {
@@ -3928,6 +4121,7 @@
   },
   {
     "id": "258",
+    "excelOrder": 196,
     "question": "¿Este vehículo se encuentra bien estacionado?",
     "options": [
       {
@@ -3949,6 +4143,7 @@
   },
   {
     "id": "259",
+    "excelOrder": 197,
     "question": "¿Qué precauciones se deben tener al dejar estacionado un vehículo en esta situación?",
     "options": [
       {
@@ -3970,6 +4165,7 @@
   },
   {
     "id": "260",
+    "excelOrder": 198,
     "question": "¿Qué precauciones se deben tener al dejar estacionado un vehículo en esta situación?",
     "options": [
       {
@@ -3991,6 +4187,7 @@
   },
   {
     "id": "261",
+    "excelOrder": 199,
     "question": "¿Se está habilitado a detener un vehículo en este lugar?",
     "options": [
       {
@@ -4012,6 +4209,7 @@
   },
   {
     "id": "262",
+    "excelOrder": 200,
     "question": "¿Este vehículo se encuentra correctamente detenido?",
     "options": [
       {
@@ -4033,6 +4231,7 @@
   },
   {
     "id": "263",
+    "excelOrder": 201,
     "question": "¿Está permitido circular marcha atrás en la Ciudad de Buenos Aires?",
     "options": [
       {
@@ -4054,6 +4253,7 @@
   },
   {
     "id": "265",
+    "excelOrder": 202,
     "question": "Si el vehículo que lo precede, circula con estas luces intermitentes encendidas, ¿qué podría estar indicando?",
     "options": [
       {
@@ -4075,6 +4275,7 @@
   },
   {
     "id": "267",
+    "excelOrder": 203,
     "question": "En los vehículos donde estructuralmente se tiene obstaculizada la visión a través del espejo retrovisor central, al circular marcha atrás, es obligatoria la utilización de una alarma sonora.",
     "options": [
       {
@@ -4092,6 +4293,7 @@
   },
   {
     "id": "268",
+    "excelOrder": 204,
     "question": "Este elemento de seguridad pasiva sirve para reducir el daño producido a los ocupantes de un vehículo al momento de un siniestro.",
     "options": [
       {
@@ -4109,6 +4311,7 @@
   },
   {
     "id": "270",
+    "excelOrder": 205,
     "question": "Durante un siniestro, si las personas no llevan puesto el cinturón de seguridad, el airbag...",
     "options": [
       {
@@ -4130,6 +4333,7 @@
   },
   {
     "id": "271",
+    "excelOrder": 206,
     "question": "Según la Ley Nº 2148, ¿es correcto que un/a niño/a de 11 años utilice un Sistema de Retención Infantil, en este asiento central?",
     "options": [
       {
@@ -4151,6 +4355,7 @@
   },
   {
     "id": "272",
+    "excelOrder": 207,
     "question": "Según Ley N° 2148, ¿cuál es la edad mínima permitida para viajar en el asiento delantero de acompañante en un auto?",
     "options": [
       {
@@ -4172,6 +4377,7 @@
   },
   {
     "id": "273",
+    "excelOrder": 208,
     "question": "¿Es correcta la colocación del dispositivo de retención infantil en este vehículo?",
     "options": [
       {
@@ -4193,6 +4399,7 @@
   },
   {
     "id": "274",
+    "excelOrder": 209,
     "question": "En la siguiente imagen, ¿es correcta la colocación del dispositivo de retención infantil para un/a niño/a de 7 años?",
     "options": [
       {
@@ -4214,6 +4421,7 @@
   },
   {
     "id": "275",
+    "excelOrder": 210,
     "question": "¿Es correcta la manera en que utiliza el Sistema de Retención Infantil (SRI) esta niña?",
     "options": [
       {
@@ -4235,6 +4443,7 @@
   },
   {
     "id": "276",
+    "excelOrder": 211,
     "question": "El apoyacabeza está correctamente ubicado en función del conductor.",
     "options": [
       {
@@ -4252,6 +4461,7 @@
   },
   {
     "id": "277",
+    "excelOrder": 212,
     "question": "¿Es obligatoria la utilización de este elemento en todos los asientos del automóvil?",
     "options": [
       {
@@ -4273,6 +4483,7 @@
   },
   {
     "id": "278",
+    "excelOrder": 213,
     "question": "Frente a un siniestro, ¿qué puede evitar este elemento si está correctamente ubicado?",
     "options": [
       {
@@ -4294,6 +4505,7 @@
   },
   {
     "id": "279",
+    "excelOrder": 214,
     "question": "¿Todos los ocupantes del vehículo viajan de manera correcta?",
     "options": [
       {
@@ -4315,6 +4527,7 @@
   },
   {
     "id": "281",
+    "excelOrder": 215,
     "question": "Lograr una mayor profesionalización del oficio del conductor/a profesional, conlleva a:",
     "options": [
       {
@@ -4336,6 +4549,7 @@
   },
   {
     "id": "282",
+    "excelOrder": 216,
     "question": "¿Cuál de estas imágenes muestra el uso adecuado del cinturón de seguridad durante el embarazo?",
     "options": [
       {
@@ -4353,6 +4567,7 @@
   },
   {
     "id": "284",
+    "excelOrder": 217,
     "question": "¿Esta persona tiene el cinturón correctamente colocado?",
     "options": [
       {
@@ -4374,6 +4589,7 @@
   },
   {
     "id": "286",
+    "excelOrder": 218,
     "question": "Los ocupantes de este vehículo ¿viajan de manera segura?",
     "options": [
       {
@@ -4395,6 +4611,7 @@
   },
   {
     "id": "288",
+    "excelOrder": 219,
     "question": "Si el vehículo de la imagen se dispone a ingresar a un garaje ubicado a su derecha, está anticipando su maniobra utilizando las luces correctas.",
     "options": [
       {
@@ -4412,6 +4629,7 @@
   },
   {
     "id": "290",
+    "excelOrder": 220,
     "question": "El vehículo, señalado con un círculo rojo, circula utilizando las luces correctas.",
     "options": [
       {
@@ -4429,6 +4647,7 @@
   },
   {
     "id": "294",
+    "excelOrder": 221,
     "question": "En cuanto al uso reglamentario de luces, ¿este motovehículo circula correctamente?",
     "options": [
       {
@@ -4450,6 +4669,7 @@
   },
   {
     "id": "296",
+    "excelOrder": 222,
     "question": "Circular con la luz alta encendida está prohibido en zonas urbanas.",
     "options": [
       {
@@ -4467,6 +4687,7 @@
   },
   {
     "id": "297",
+    "excelOrder": 223,
     "question": "Al observar las luces de este vehículo, ¿qué significado tienen en cuanto al sentido de circulación?",
     "options": [
       {
@@ -4488,6 +4709,7 @@
   },
   {
     "id": "298",
+    "excelOrder": 224,
     "question": "Es obligatoria la circulación con luces bajas encendidas las 24 horas en...",
     "options": [
       {
@@ -4509,6 +4731,7 @@
   },
   {
     "id": "302",
+    "excelOrder": 225,
     "question": "En líneas generales, para que se accione esta luz, será preciso...",
     "options": [
       {
@@ -4530,6 +4753,7 @@
   },
   {
     "id": "303",
+    "excelOrder": 226,
     "question": "Según la Ley Nº  2148, ¿está permitido colocar a un automóvil particular luces adicionales?",
     "options": [
       {
@@ -4551,6 +4775,7 @@
   },
   {
     "id": "304",
+    "excelOrder": 227,
     "question": "¿Cómo debe ser el sistema de indicadores de puertas abiertas que deben poseer los vehículos de transporte escolar?",
     "options": [
       {
@@ -4572,6 +4797,7 @@
   },
   {
     "id": "305",
+    "excelOrder": 228,
     "question": "¿Qué significado tiene el color de las luces encendidas que se indican en la imagen?",
     "options": [
       {
@@ -4593,6 +4819,7 @@
   },
   {
     "id": "308",
+    "excelOrder": 229,
     "question": "Si los espejos retrovisores de su vehículo están bien orientados, igualmente es posible que se produzcan puntos ciegos cuando observe por los mismos.",
     "options": [
       {
@@ -4610,6 +4837,7 @@
   },
   {
     "id": "309",
+    "excelOrder": 230,
     "question": "¿Cómo se pueden reducir los puntos ciegos al conducir un motovehículo?",
     "options": [
       {
@@ -4631,6 +4859,7 @@
   },
   {
     "id": "309",
+    "excelOrder": 231,
     "question": "¿Cómo se pueden reducir los puntos ciegos al conducir un automóvil particular?",
     "options": [
       {
@@ -4652,6 +4881,7 @@
   },
   {
     "id": "309",
+    "excelOrder": 232,
     "question": "¿Cómo se pueden reducir los puntos ciegos al conducir un vehículo?",
     "options": [
       {
@@ -4673,6 +4903,7 @@
   },
   {
     "id": "310",
+    "excelOrder": 233,
     "question": "¿A qué se llama \"Punto Ciego\"?",
     "options": [
       {
@@ -4694,6 +4925,7 @@
   },
   {
     "id": "311",
+    "excelOrder": 234,
     "question": "El sistema de luces que posee un vehículo, además de iluminar, brinda información que permite la comunicación entre vehículos y también peatones.",
     "options": [
       {
@@ -4711,6 +4943,7 @@
   },
   {
     "id": "312",
+    "excelOrder": 235,
     "question": "Un motovehículo, ¿puede circular sin espejos?",
     "options": [
       {
@@ -4732,6 +4965,7 @@
   },
   {
     "id": "313",
+    "excelOrder": 236,
     "question": "Un ciclomotor, con respecto a los espejos retrovisores...",
     "options": [
       {
@@ -4753,6 +4987,7 @@
   },
   {
     "id": "314",
+    "excelOrder": 237,
     "question": "Para realizar una conducción segura, ¿cuándo es recomendable verificar la orientación de los espejos retrovisores?",
     "options": [
       {
@@ -4774,6 +5009,7 @@
   },
   {
     "id": "315",
+    "excelOrder": 238,
     "question": "Indique cuál de estas imágenes muestra la manera correcta de colocar el espejo retrovisor:",
     "options": [
       {
@@ -4794,6 +5030,7 @@
   },
   {
     "id": "316",
+    "excelOrder": 239,
     "question": "Todos los cristales de un vehículo deben garantizar visibilidad...",
     "options": [
       {
@@ -4815,6 +5052,7 @@
   },
   {
     "id": "317",
+    "excelOrder": 240,
     "question": "En cuanto al grado o tono de color que pueden tener los cristales de un automóvil, ¿qué establece la ley 2148, con respecto a su control en la vía pública?",
     "options": [
       {
@@ -4836,6 +5074,7 @@
   },
   {
     "id": "318",
+    "excelOrder": 241,
     "question": "Al conducir un motovehículo, ¿es obligatorio utilizar un chaleco reflectivo?",
     "options": [
       {
@@ -4857,6 +5096,7 @@
   },
   {
     "id": "319",
+    "excelOrder": 242,
     "question": "Al conducir un motovehículo, ¿se está obligado a utilizar el siguiente elemento de seguridad?",
     "options": [
       {
@@ -4878,6 +5118,7 @@
   },
   {
     "id": "321",
+    "excelOrder": 243,
     "question": "De acuerdo a la Ley 2148, ¿es correcta la manera de circular de la acompañante respecto a la protección ocular?",
     "options": [
       {
@@ -4899,6 +5140,7 @@
   },
   {
     "id": "323",
+    "excelOrder": 244,
     "question": "Este motociclista tiene los principales elementos de protección personal recomendados para conducir un motovehículo.",
     "options": [
       {
@@ -4916,6 +5158,7 @@
   },
   {
     "id": "324",
+    "excelOrder": 245,
     "question": "¿Es aconsejable usar guantes para conducir un motovehículo?",
     "options": [
       {
@@ -4937,6 +5180,7 @@
   },
   {
     "id": "325",
+    "excelOrder": 246,
     "question": "¿Cuál es la vestimenta recomendada para conducir un motovehículo?",
     "options": [
       {
@@ -4958,6 +5202,7 @@
   },
   {
     "id": "326",
+    "excelOrder": 247,
     "question": "En función a la seguridad vial, ¿tiene importancia la ropa que utilicen las personas que conducen o que sean acompañantes de motovehículos?",
     "options": [
       {
@@ -4979,6 +5224,7 @@
   },
   {
     "id": "329",
+    "excelOrder": 248,
     "question": "¿Es seguro conducir con este tipo de calzado?",
     "options": [
       {
@@ -5000,6 +5246,7 @@
   },
   {
     "id": "330",
+    "excelOrder": 249,
     "question": "Para tener seguridad y control sobre los mandos de un motovehículo conviene utilizar botas que…",
     "options": [
       {
@@ -5021,6 +5268,7 @@
   },
   {
     "id": "331",
+    "excelOrder": 250,
     "question": "¿Qué se entiende por casco homologado?",
     "options": [
       {
@@ -5042,6 +5290,7 @@
   },
   {
     "id": "332",
+    "excelOrder": 251,
     "question": "¿A qué tipo de seguridad pertenece el siguiente elemento?",
     "options": [
       {
@@ -5063,6 +5312,7 @@
   },
   {
     "id": "336",
+    "excelOrder": 252,
     "question": "En la siguiente imagen ¿el casco A brinda mayor protección que el B?",
     "options": [
       {
@@ -5084,6 +5334,7 @@
   },
   {
     "id": "339",
+    "excelOrder": 253,
     "question": "En caso de siniestro con un motovehículo, la importancia del uso correcto del casco es…",
     "options": [
       {
@@ -5105,6 +5356,7 @@
   },
   {
     "id": "342",
+    "excelOrder": 254,
     "question": "Ante la caída de un/a motociclista que circula a 25 km/h sin casco, ¿pueden producirse lesiones de gravedad, como fractura de cráneo y daños cerebrales?",
     "options": [
       {
@@ -5126,6 +5378,7 @@
   },
   {
     "id": "343",
+    "excelOrder": 255,
     "question": "Usar el visor del casco rayado, ¿ puede afectar negativamente la conducción de un motovehículo?",
     "options": [
       {
@@ -5147,6 +5400,7 @@
   },
   {
     "id": "344",
+    "excelOrder": 256,
     "question": "Su casco de protección ha sufrido un golpe pero no se observa ningún deterioro, ¿este golpe pudo haber afectado su eficacia?",
     "options": [
       {
@@ -5168,6 +5422,7 @@
   },
   {
     "id": "345",
+    "excelOrder": 257,
     "question": "El conductor del motovehículo que se muestra en la imagen NO está en infracción.",
     "options": [
       {
@@ -5185,6 +5440,7 @@
   },
   {
     "id": "347",
+    "excelOrder": 258,
     "question": "Al utilizar el casco en un motovehículo es fundamental...",
     "options": [
       {
@@ -5206,6 +5462,7 @@
   },
   {
     "id": "349",
+    "excelOrder": 259,
     "question": "¿Es igual de seguro si el casco para conducir un motovehículo está abrochado con la correa apretada al mentón o floja?",
     "options": [
       {
@@ -5227,6 +5484,7 @@
   },
   {
     "id": "351",
+    "excelOrder": 260,
     "question": "¿Los cascos de protección para motovehículos tienen vencimiento?",
     "options": [
       {
@@ -5248,6 +5506,7 @@
   },
   {
     "id": "352",
+    "excelOrder": 261,
     "question": "¿Cómo puede saber cuál es la medida del casco de protección que corresponde al usuario de un motovehículo?",
     "options": [
       {
@@ -5268,6 +5527,7 @@
   },
   {
     "id": "360",
+    "excelOrder": 263,
     "question": "Es importante realizar un correcto mantenimiento vehicular porque...",
     "options": [
       {
@@ -5288,6 +5548,7 @@
   },
   {
     "id": "363",
+    "excelOrder": 265,
     "question": "Si al conducir observa a través del espejo retrovisor la siguiente imagen, esto se debe a que…",
     "options": [
       {
@@ -5308,6 +5569,7 @@
   },
   {
     "id": "364",
+    "excelOrder": 266,
     "question": "Al acelerar un motovehículo, ¿hacia dónde se desplaza la masa?",
     "options": [
       {
@@ -5328,6 +5590,7 @@
   },
   {
     "id": "365",
+    "excelOrder": 267,
     "question": "Al frenar correctamente un motovehículo...",
     "options": [
       {
@@ -5348,6 +5611,7 @@
   },
   {
     "id": "366",
+    "excelOrder": 268,
     "question": "La posición de conducción en un motovehículo debe ser…",
     "options": [
       {
@@ -5368,6 +5632,7 @@
   },
   {
     "id": "370",
+    "excelOrder": 269,
     "question": "En general, los mandos accionados con la mano señalada son:",
     "options": [
       {
@@ -5388,6 +5653,7 @@
   },
   {
     "id": "371",
+    "excelOrder": 270,
     "question": "Con respecto al consumo de combustible, ¿qué consecuencias trae circular de la siguiente forma?",
     "options": [
       {
@@ -5408,6 +5674,7 @@
   },
   {
     "id": "374",
+    "excelOrder": 271,
     "question": "En relación al peso, ¿qué debe tener en cuenta en la siguiente situación?",
     "options": [
       {
@@ -5429,6 +5696,7 @@
   },
   {
     "id": "378",
+    "excelOrder": 272,
     "question": "Una correcta postura corporal de conducción urbana de motovehículo, debe ser…",
     "options": [
       {
@@ -5449,6 +5717,7 @@
   },
   {
     "id": "379",
+    "excelOrder": 273,
     "question": "La posición corporal recomendada para conducir un motovehículo es…",
     "options": [
       {
@@ -5469,6 +5738,7 @@
   },
   {
     "id": "382",
+    "excelOrder": 274,
     "question": "¿Cómo deben encontrarse los neumáticos para comprobar la correcta presión de aire?",
     "options": [
       {
@@ -5489,6 +5759,7 @@
   },
   {
     "id": "383",
+    "excelOrder": 275,
     "question": "¿En qué momento es necesario renovar el siguiente elemento de seguridad? Cuando la profundidad del dibujo es menor de…",
     "options": [
       {
@@ -5509,6 +5780,7 @@
   },
   {
     "id": "384",
+    "excelOrder": 276,
     "question": "¿En qué momento es necesario renovar el siguiente elemento de seguridad? Cuando la profundidad del dibujo es menor de…",
     "options": [
       {
@@ -5530,6 +5802,7 @@
   },
   {
     "id": "385",
+    "excelOrder": 277,
     "question": "¿Cuál es la correcta presión de los neumáticos de un automóvil particular?",
     "options": [
       {
@@ -5550,6 +5823,7 @@
   },
   {
     "id": "387",
+    "excelOrder": 279,
     "question": "En relación al peso transportado en este vehículo, ¿qué debe realizar el conductor antes de circular?",
     "options": [
       {
@@ -5570,6 +5844,7 @@
   },
   {
     "id": "388",
+    "excelOrder": 280,
     "question": "El siguiente elemento de seguridad, ¿debe ser sustituido?",
     "options": [
       {
@@ -5590,6 +5865,7 @@
   },
   {
     "id": "389",
+    "excelOrder": 281,
     "question": "Cuando la cubierta de un motovehículo tiene más presión que la adecuada…",
     "options": [
       {
@@ -5610,6 +5886,7 @@
   },
   {
     "id": "390",
+    "excelOrder": 282,
     "question": "Está permitido utilizar los neumáticos reconstruidos (recapados) en el eje delantero de un ómnibus únicamente cuando éstos tienen 1,6 mm. o menos de profundidad en el dibujo.",
     "options": [
       {
@@ -5627,6 +5904,7 @@
   },
   {
     "id": "390",
+    "excelOrder": 283,
     "question": "Está permitido utilizar los neumáticos reconstruidos (recapados) en el eje delantero de un camión únicamente cuando éstos tienen 1,6 mm. o menos de profundidad en el dibujo.",
     "options": [
       {
@@ -5644,6 +5922,7 @@
   },
   {
     "id": "391",
+    "excelOrder": 284,
     "question": "Si al circular se presenta la siguiente situación, ¿cuál es la acción que se recomienda realizar?",
     "options": [
       {
@@ -5664,6 +5943,7 @@
   },
   {
     "id": "392",
+    "excelOrder": 285,
     "question": "¿Qué neumático sufre mayor desgaste en este vehículo?",
     "options": [
       {
@@ -5684,6 +5964,7 @@
   },
   {
     "id": "393",
+    "excelOrder": 286,
     "question": "Al realizar con un motovehículo un giro muy cerrado, a una velocidad de 30 km/h, ¿qué puede suceder si en dicho giro aprieta fuertemente el freno delantero?",
     "options": [
       {
@@ -5704,6 +5985,7 @@
   },
   {
     "id": "396",
+    "excelOrder": 288,
     "question": "Si se tiene una distancia corta para detenerse, ¿cómo debería frenar un motovehículo para que sea seguro?",
     "options": [
       {
@@ -5724,6 +6006,7 @@
   },
   {
     "id": "400",
+    "excelOrder": 289,
     "question": "¿Puede verse afectada la conducción de un vehículo si el sistema de suspensión delantero está en mal estado?",
     "options": [
       {
@@ -5744,6 +6027,7 @@
   },
   {
     "id": "401",
+    "excelOrder": 290,
     "question": "¿Cuál de las siguientes opciones enumera los elementos de seguridad obligatorios que se deben llevar en un automóvil?",
     "options": [
       {
@@ -5764,6 +6048,7 @@
   },
   {
     "id": "402",
+    "excelOrder": 291,
     "question": "El siguiente elemento de seguridad, está correctamente ubicado.",
     "options": [
       {
@@ -5780,6 +6065,7 @@
   },
   {
     "id": "403",
+    "excelOrder": 292,
     "question": "El siguiente elemento de seguridad, está correctamente ubicado.",
     "options": [
       {
@@ -5796,6 +6082,7 @@
   },
   {
     "id": "404",
+    "excelOrder": 293,
     "question": "¿En qué ocasiones se permite el uso de la bocina?",
     "options": [
       {
@@ -5816,6 +6103,7 @@
   },
   {
     "id": "405",
+    "excelOrder": 294,
     "question": "Si ud. se encontrase en esta situación, ¿qué debería considerar en cuanto a la velocidad?",
     "options": [
       {
@@ -5836,6 +6124,7 @@
   },
   {
     "id": "408",
+    "excelOrder": 295,
     "question": "¿A qué se denomina \"aquaplaning\"?",
     "options": [
       {
@@ -5856,6 +6145,7 @@
   },
   {
     "id": "409",
+    "excelOrder": 296,
     "question": "Si la calzada está mojada y hay charcos, ¿pueden perder eficacia los frenos?",
     "options": [
       {
@@ -5876,6 +6166,7 @@
   },
   {
     "id": "410",
+    "excelOrder": 297,
     "question": "Con esta condición climática, el motovehículo se adhiere mejor a la calzada si...",
     "options": [
       {
@@ -5896,6 +6187,7 @@
   },
   {
     "id": "411",
+    "excelOrder": 298,
     "question": "Frente a esta condición climática, ¿se deben encender las luces bajas?",
     "options": [
       {
@@ -5916,6 +6208,7 @@
   },
   {
     "id": "414",
+    "excelOrder": 299,
     "question": "Cuando se conduce bajo esta condición climática, ¿a cuánto sería recomendable incrementar, como mínimo, los 2 segundos de distancia de seguridad?",
     "options": [
       {
@@ -5936,6 +6229,7 @@
   },
   {
     "id": "415",
+    "excelOrder": 300,
     "question": "Al conducir sobre una calzada en estas condiciones, la distancia de frenado será...",
     "options": [
       {
@@ -5956,6 +6250,7 @@
   },
   {
     "id": "416",
+    "excelOrder": 301,
     "question": "Si se encuentra conduciendo un motovehículo con la calzada mojada porque llovió, en el caso de frenada, esta situación provocará...",
     "options": [
       {
@@ -5976,6 +6271,7 @@
   },
   {
     "id": "417",
+    "excelOrder": 302,
     "question": "Si tiene que conducir un motovehículo por una zona resbaladiza, ¿qué precauciones debe tomar?",
     "options": [
       {
@@ -5996,6 +6292,7 @@
   },
   {
     "id": "419",
+    "excelOrder": 303,
     "question": "Conducir de noche aumenta el riesgo de sufrir un incidente.",
     "options": [
       {
@@ -6012,6 +6309,7 @@
   },
   {
     "id": "420",
+    "excelOrder": 304,
     "question": "En estas condiciones, ¿una incorrecta regulación de la altura de las luces bajas puede producir encandilamiento?",
     "options": [
       {
@@ -6032,6 +6330,7 @@
   },
   {
     "id": "421",
+    "excelOrder": 305,
     "question": "Si al conducir por una autopista advierte que el vehículo presenta una falla grave, pero a pesar de ella puede seguir circulando; ¿qué se recomienda hacer en estos casos?",
     "options": [
       {
@@ -6052,6 +6351,7 @@
   },
   {
     "id": "422",
+    "excelOrder": 306,
     "question": "¿Qué vehículo puede realizar el acarreo de otro en esta vía?",
     "options": [
       {
@@ -6072,6 +6372,7 @@
   },
   {
     "id": "423",
+    "excelOrder": 307,
     "question": "En este tipo de vía, ¿está permitido remolcar con su motovehículo a otro que se encuentra descompuesto?",
     "options": [
       {
@@ -6092,6 +6393,7 @@
   },
   {
     "id": "423",
+    "excelOrder": 308,
     "question": "En este tipo de vía, ¿está permitido remolcar con su automóvil particular a otro que se encuentra descompuesto?",
     "options": [
       {
@@ -6112,6 +6414,7 @@
   },
   {
     "id": "424",
+    "excelOrder": 309,
     "question": "¿Es correcta esta manera de acarrear a un motovehículo?",
     "options": [
       {
@@ -6132,6 +6435,7 @@
   },
   {
     "id": "425",
+    "excelOrder": 310,
     "question": "¿Qué debe hacer usted si su vehículo queda inmovilizado en un túnel?",
     "options": [
       {
@@ -6153,6 +6457,7 @@
   },
   {
     "id": "426",
+    "excelOrder": 311,
     "question": "¿Cuál es el límite de velocidad máxima en esta situación?",
     "options": [
       {
@@ -6174,6 +6479,7 @@
   },
   {
     "id": "427",
+    "excelOrder": 312,
     "question": "Frente a estas condiciones climáticas si se reduce la velocidad de circulación del motovehículo, ¿disminuiría la posibilidad de participar de un siniestro?",
     "options": [
       {
@@ -6195,6 +6501,7 @@
   },
   {
     "id": "428",
+    "excelOrder": 313,
     "question": "Ante la siguiente situación, ¿qué es lo que se recomienda hacer?",
     "options": [
       {
@@ -6215,6 +6522,7 @@
   },
   {
     "id": "429",
+    "excelOrder": 314,
     "question": "Con estas condiciones climáticas, ¿qué luces debe utilizar para poder circular en esta ruta?",
     "options": [
       {
@@ -6235,6 +6543,7 @@
   },
   {
     "id": "430",
+    "excelOrder": 315,
     "question": "¿En qué caso deberán utilizarse estas luces?",
     "options": [
       {
@@ -6255,6 +6564,7 @@
   },
   {
     "id": "431",
+    "excelOrder": 316,
     "question": "Si se encuentra en esta vía bajo estas condiciones climáticas, ¿lo más conveniente es detenerse en la banquina?",
     "options": [
       {
@@ -6275,6 +6585,7 @@
   },
   {
     "id": "432",
+    "excelOrder": 317,
     "question": "La niebla, como factor de riesgo, produce modificaciones en…",
     "options": [
       {
@@ -6295,6 +6606,7 @@
   },
   {
     "id": "434",
+    "excelOrder": 318,
     "question": "Si circula con un motovehículo en una calzada en estas condiciones, ¿qué técnica de conducción debe emplear?",
     "options": [
       {
@@ -6315,6 +6627,7 @@
   },
   {
     "id": "435",
+    "excelOrder": 319,
     "question": "En condiciones de viento fuerte, es recomendable realizar los sobrepasos de un camión con una diferencia de velocidad no demasiado elevada.",
     "options": [
       {
@@ -6331,6 +6644,7 @@
   },
   {
     "id": "436",
+    "excelOrder": 320,
     "question": "Bajo estas condiciones climáticas ¿qué debe hacer para circular con seguridad con un ciclomotor?",
     "options": [
       {
@@ -6351,6 +6665,7 @@
   },
   {
     "id": "438",
+    "excelOrder": 321,
     "question": "En el caso de que un vehículo quede inmovilizado por un siniestro vial o desperfecto mecánico en los carriles marcados de esta vía, ¿qué es recomendable hacer?",
     "options": [
       {
@@ -6371,6 +6686,7 @@
   },
   {
     "id": "439",
+    "excelOrder": 322,
     "question": "En un procedimiento judicial de un siniestro vial, al ser convocados en carácter de testigo, no es obligatorio presentarse a declarar en la Fiscalía correspondiente.",
     "options": [
       {
@@ -6387,6 +6703,7 @@
   },
   {
     "id": "441",
+    "excelOrder": 323,
     "question": "La persona que se da a la fuga en un siniestro vial, dejando a alguien herido, puede ser juzgada por el delito de abandono de persona.",
     "options": [
       {
@@ -6403,6 +6720,7 @@
   },
   {
     "id": "442",
+    "excelOrder": 324,
     "question": "En caso de un siniestro vial o desperfecto mecánico, ¿qué es recomendable hacer cuando el vehículo queda inmovilizado en el sector señalado?",
     "options": [
       {
@@ -6423,6 +6741,7 @@
   },
   {
     "id": "443",
+    "excelOrder": 325,
     "question": "En caso de participar de un siniestro vial, ¿de cuánto tiempo se dispone para dar aviso sobre el hecho a la compañía aseguradora del vehículo?",
     "options": [
       {
@@ -6443,6 +6762,7 @@
   },
   {
     "id": "445",
+    "excelOrder": 326,
     "question": "En caso de participar en un siniestro vial, es recomendable que quien llame por teléfono al servicio de emergencias (107), indique con claridad:",
     "options": [
       {
@@ -6463,6 +6783,7 @@
   },
   {
     "id": "448",
+    "excelOrder": 327,
     "question": "Los objetos sueltos como lentes, celular, llaves o similares resultan muy peligrosos en caso de incidentes o maniobras bruscas, porque pueden ocasionar una lesión grave producto de la energía cinética que poseen.",
     "options": [
       {
@@ -6479,6 +6800,7 @@
   },
   {
     "id": "451",
+    "excelOrder": 328,
     "question": "Si al conducir un motovehículo, usted sufre una caída que no le produce lesión alguna, ¿qué comportamiento debería adoptar si desea proseguir el viaje?",
     "options": [
       {
@@ -6499,6 +6821,7 @@
   },
   {
     "id": "453",
+    "excelOrder": 329,
     "question": "¿Cuáles son los números de emergencia que toda persona debe conocer con el objetivo de poder llamar y pedir ayuda ante el acontecimiento de algún incidente?",
     "options": [
       {
@@ -6519,6 +6842,7 @@
   },
   {
     "id": "462",
+    "excelOrder": 330,
     "question": "¿A qué barrio pertenece el Hospital que se visualiza en la imagen?",
     "options": [
       {
@@ -6539,6 +6863,7 @@
   },
   {
     "id": "465",
+    "excelOrder": 331,
     "question": "¿A qué barrio pertenece el Hospital que se visualiza en la imagen?",
     "options": [
       {
@@ -6559,6 +6884,7 @@
   },
   {
     "id": "510",
+    "excelOrder": 332,
     "question": "Frente a la siguiente situación, ¿qué posición debe adoptar el acompañante de un motovehículo?",
     "options": [
       {
@@ -6579,6 +6905,7 @@
   },
   {
     "id": "511",
+    "excelOrder": 333,
     "question": "Al transportar cualquier elemento, éste debe ubicarse de modo que no perturbe la visibilidad, afecte peligrosamente las condiciones aerodinámicas del vehículo, oculte luces o sobresalga de los límites permitidos.",
     "options": [
       {
@@ -6595,6 +6922,7 @@
   },
   {
     "id": "512",
+    "excelOrder": 334,
     "question": "¿En qué parte del vehículo es conveniente poner el equipaje?",
     "options": [
       {
@@ -6615,6 +6943,7 @@
   },
   {
     "id": "513",
+    "excelOrder": 335,
     "question": "Si un motovehículo dispone de 2 baúles laterales para llevar carga, ¿cómo es recomendable utilizarlas?",
     "options": [
       {
@@ -6635,6 +6964,7 @@
   },
   {
     "id": "514",
+    "excelOrder": 336,
     "question": "Este motociclista y sus acompañantes están circulando de manera segura y correcta.",
     "options": [
       {
@@ -6651,6 +6981,7 @@
   },
   {
     "id": "516",
+    "excelOrder": 337,
     "question": "Según la Ley 2148, el niño de 10 años de edad que se observa detrás del conductor, se encuentra circulando de manera segura y correcta.",
     "options": [
       {
@@ -6667,6 +6998,7 @@
   },
   {
     "id": "518",
+    "excelOrder": 338,
     "question": "Según la Ley 2148, ¿es correcta la manera de circular de la acompañante?",
     "options": [
       {
@@ -6687,6 +7019,7 @@
   },
   {
     "id": "520",
+    "excelOrder": 339,
     "question": "La Ley de tránsito en Argentina exige el uso de Dispositivos de Retención Infantil (SRI) para llevar menores de edad en motovehículos.",
     "options": [
       {
@@ -6703,6 +7036,7 @@
   },
   {
     "id": "521",
+    "excelOrder": 340,
     "question": "En un motovehículo pueden circular hasta dos personas, sólo si cuenta con doble asiento, reposapiés y agarradera.",
     "options": [
       {
@@ -6719,6 +7053,7 @@
   },
   {
     "id": "522",
+    "excelOrder": 341,
     "question": "El transporte de perros guía que acompañen a personas con discapacidad en taxis es…",
     "options": [
       {
@@ -6739,6 +7074,7 @@
   },
   {
     "id": "523",
+    "excelOrder": 342,
     "question": "¿Qué se entiende por la sigla TARA?",
     "options": [
       {
@@ -6759,6 +7095,7 @@
   },
   {
     "id": "524",
+    "excelOrder": 343,
     "question": "En transporte de colectivo y taxi, el traslado de sillas de ruedas...",
     "options": [
       {
@@ -6779,6 +7116,7 @@
   },
   {
     "id": "525",
+    "excelOrder": 344,
     "question": "Según la Ley N° 2148, en un vehículo destinado al servicio de transporte de escolares está prohibido...",
     "options": [
       {
@@ -6799,6 +7137,7 @@
   },
   {
     "id": "527",
+    "excelOrder": 345,
     "question": "Según la Ley N° 2148, ¿es obligatorio llevar un chaleco de material reflectivo?",
     "options": [
       {
@@ -6819,6 +7158,7 @@
   },
   {
     "id": "528",
+    "excelOrder": 346,
     "question": "Según la Ley N° 2148, en los vehículos de transporte de pasajeros/as, los y las menores de 12 años no pueden sentarse...",
     "options": [
       {
@@ -6839,6 +7179,7 @@
   },
   {
     "id": "531",
+    "excelOrder": 347,
     "question": "¿Cuántas placas de dominio deben llevar los motovehículos?",
     "options": [
       {
@@ -6859,6 +7200,7 @@
   },
   {
     "id": "532",
+    "excelOrder": 348,
     "question": "Al conducir un motovehículo en C.A.B.A., ¿se está obligado a llevar el número de la patente impreso en el chaleco reflectivo?",
     "options": [
       {
@@ -6879,6 +7221,7 @@
   },
   {
     "id": "533",
+    "excelOrder": 349,
     "question": "¿Está permitido circular con la placa de dominio de este modo?",
     "options": [
       {
@@ -6899,6 +7242,7 @@
   },
   {
     "id": "534",
+    "excelOrder": 350,
     "question": "¿Se encuentra permitido circular con esta impresión de placa de dominio?",
     "options": [
       {
@@ -6919,6 +7263,7 @@
   },
   {
     "id": "535",
+    "excelOrder": 351,
     "question": "Al sufrir la pérdida de la placa de dominio de un vehículo, ¿dónde se puede solicitar su reposición?",
     "options": [
       {
@@ -6939,6 +7284,7 @@
   },
   {
     "id": "536",
+    "excelOrder": 352,
     "question": "En relación al chaleco reflectante y de acuerdo al Código de Tránsito y Transporte de CABA, ¿es correcta la manera de circular observada en la siguiente imagen?",
     "options": [
       {
@@ -6959,6 +7305,7 @@
   },
   {
     "id": "537",
+    "excelOrder": 353,
     "question": "La ubicación y posición de la placa de dominio del motovehículo, ¿puede sufrir algún tipo de modificación?",
     "options": [
       {
@@ -6979,6 +7326,7 @@
   },
   {
     "id": "537",
+    "excelOrder": 354,
     "question": "La ubicación y posición de las placas de dominio del vehículo, ¿pueden sufrir algún tipo de modificación?",
     "options": [
       {
@@ -6999,6 +7347,7 @@
   },
   {
     "id": "538",
+    "excelOrder": 355,
     "question": "Según el Código de Tránsito y Transporte de CABA, las personas que conducen motovehículos son responsables…",
     "options": [
       {
@@ -7019,6 +7368,7 @@
   },
   {
     "id": "544",
+    "excelOrder": 356,
     "question": "Según la Ley 2148, el o la acompañante de un motovehículo…",
     "options": [
       {
@@ -7039,6 +7389,7 @@
   },
   {
     "id": "548",
+    "excelOrder": 357,
     "question": "¿Quién es la persona responsable civilmente por un incidente de tránsito producido por un/a menor de edad con licencia de conducir?",
     "options": [
       {
@@ -7059,6 +7410,7 @@
   },
   {
     "id": "550",
+    "excelOrder": 358,
     "question": "¿Cuál es la función de la persona acompañante de un vehículo afectado al servicio de transporte de escolares?",
     "options": [
       {
@@ -7079,6 +7431,7 @@
   },
   {
     "id": "551",
+    "excelOrder": 359,
     "question": "Según la Ley N° 2148, en los vehículos de transporte de escolares con más de 15 plazas, es obligatoria la presencia de una persona acompañante habilitada por la Autoridad de Aplicación.",
     "options": [
       {
@@ -7095,6 +7448,7 @@
   },
   {
     "id": "552",
+    "excelOrder": 360,
     "question": "Al conducir un colectivo, ¿cuándo se está obligado a detener antes de una bocacalle, aunque no coincida con una parada?",
     "options": [
       {
@@ -7115,6 +7469,7 @@
   },
   {
     "id": "553",
+    "excelOrder": 361,
     "question": "¿Podrá negarse a la prestación del servicio de taxi si se considera que algún/a usuario/a representa un inminente peligro?",
     "options": [
       {
@@ -7135,6 +7490,7 @@
   },
   {
     "id": "555",
+    "excelOrder": 362,
     "question": "Frente a un incidente de tránsito, ¿puede transferirse la Responsabilidad Penal de la persona que conduce un vehículo al dueño/a del mismo?",
     "options": [
       {
@@ -7155,6 +7511,7 @@
   },
   {
     "id": "556",
+    "excelOrder": 363,
     "question": "En un incidente de tránsito, ¿qué significa que la persona que conduce sea considerada responsable por negligencia?",
     "options": [
       {
@@ -7175,6 +7532,7 @@
   },
   {
     "id": "559",
+    "excelOrder": 364,
     "question": "En taxis, la prohibición de fumar durante la prestación del servicio con pasajeros/as...:",
     "options": [
       {
@@ -7195,6 +7553,7 @@
   },
   {
     "id": "560",
+    "excelOrder": 365,
     "question": "Frente a un control de tránsito en CABA, si la autoridad realiza una infracción ante una falta cometida por un/a conductor/a, ¿dónde puede efectuarse el pago de la multa por dicha infracción?",
     "options": [
       {
@@ -7215,6 +7574,7 @@
   },
   {
     "id": "562",
+    "excelOrder": 366,
     "question": "¿Qué obligaciones impone la ley a aquella persona que al conducir participe de un siniestro?",
     "options": [
       {
@@ -7235,6 +7595,7 @@
   },
   {
     "id": "563",
+    "excelOrder": 367,
     "question": "Si ud. se encuentra involucrado en un siniestro de tránsito en el cual un/a motociclista resultó herido/a, pero ud. no es quien conduce el vehículo implicado, ¿cómo debería actuar en esta situación?",
     "options": [
       {
@@ -7255,6 +7616,7 @@
   },
   {
     "id": "564",
+    "excelOrder": 368,
     "question": "Al tener la licencia vencida, ¿por cuánto tiempo puede seguir conduciendo sin estar en infracción?",
     "options": [
       {
@@ -7275,6 +7637,7 @@
   },
   {
     "id": "566",
+    "excelOrder": 369,
     "question": "La ley de Tránsito considera conductores profesionales a los poseedores de las siguientes clases de licencias:",
     "options": [
       {
@@ -7295,6 +7658,7 @@
   },
   {
     "id": "567",
+    "excelOrder": 370,
     "question": "¿Por qué es importante la postura corporal en un/a conductor/a profesional?",
     "options": [
       {
@@ -7315,6 +7679,7 @@
   },
   {
     "id": "568",
+    "excelOrder": 371,
     "question": "Para un/a conductor/a profesional, ¿por qué es importante planificar su jornada laboral teniendo en cuenta la alimentación?",
     "options": [
       {
@@ -7335,6 +7700,7 @@
   },
   {
     "id": "569",
+    "excelOrder": 372,
     "question": "Es recomendable, para una postura saludable, colocar un almohadón entre el asiento y la zona lumbar del conductor/a.",
     "options": [
       {
@@ -7351,6 +7717,7 @@
   },
   {
     "id": "570",
+    "excelOrder": 373,
     "question": "Cuando se vence la licencia de conducir, ¿cuánto tiempo puede transcurrir para su renovación antes de que se necesite tramitarla como si fuese un otorgamiento?",
     "options": [
       {
@@ -7371,6 +7738,7 @@
   },
   {
     "id": "571",
+    "excelOrder": 374,
     "question": "¿Cuánto dura en su totalidad la condición de principiante?",
     "options": [
       {
@@ -7391,6 +7759,7 @@
   },
   {
     "id": "573",
+    "excelOrder": 375,
     "question": "Un/a conductor/a principiante de motovehículo, ¿tiene obligación de llevar la siguiente documentación?",
     "options": [
       {
@@ -7411,6 +7780,7 @@
   },
   {
     "id": "575",
+    "excelOrder": 376,
     "question": "¿En qué mes del año debe realizar la Verificación Técnica Vehicular el vehículo que porte esta placa de dominio?",
     "options": [
       {
@@ -7431,6 +7801,7 @@
   },
   {
     "id": "576",
+    "excelOrder": 377,
     "question": "¿En qué mes del año debe realizar la Verificación Técnica Vehicular el vehículo que porte esta placa de dominio?",
     "options": [
       {
@@ -7451,6 +7822,7 @@
   },
   {
     "id": "578",
+    "excelOrder": 378,
     "question": "¿Cuál es el objetivo de la Verificación Técnica Vehicular?",
     "options": [
       {
@@ -7471,6 +7843,7 @@
   },
   {
     "id": "583",
+    "excelOrder": 379,
     "question": "El Off-Tracking es un fenómeno que involucra a todos los vehículos con dirección en el eje delantero solamente.",
     "options": [
       {
@@ -7487,6 +7860,7 @@
   },
   {
     "id": "584",
+    "excelOrder": 380,
     "question": "Los conductores y las conductoras de vehículos de gran porte, ¿por qué deben tener mayor precaución al girar?",
     "options": [
       {
@@ -7507,6 +7881,7 @@
   },
   {
     "id": "585",
+    "excelOrder": 381,
     "question": "¿Es obligación de quien conduce supervisar que el vehículo se encuentre en adecuadas condiciones de seguridad antes de iniciar su marcha?",
     "options": [
       {
@@ -7527,6 +7902,7 @@
   },
   {
     "id": "586",
+    "excelOrder": 382,
     "question": "Con esta documentación, ¿quién está autorizado a conducir el vehículo?",
     "options": [
       {
@@ -7547,6 +7923,7 @@
   },
   {
     "id": "587",
+    "excelOrder": 383,
     "question": "Con esta documentación, ¿quién está autorizado a conducir el motovehículo?",
     "options": [
       {
@@ -7567,6 +7944,7 @@
   },
   {
     "id": "588",
+    "excelOrder": 384,
     "question": "¿Cuántas \"cédulas para autorizados a conducir\" podrán otorgarse para un mismo vehículo?",
     "options": [
       {
@@ -7587,6 +7965,7 @@
   },
   {
     "id": "589",
+    "excelOrder": 385,
     "question": "¿Se puede manejar un vehículo con \"cédula para autorizado a conducir\" a nombre de otra persona?",
     "options": [
       {
@@ -7607,6 +7986,7 @@
   },
   {
     "id": "590",
+    "excelOrder": 386,
     "question": "El certificado del seguro de responsabilidad civil es obligatorio llevarlo ÚNICAMENTE cuando se conduce por vías interurbanas.",
     "options": [
       {
@@ -7623,6 +8003,7 @@
   },
   {
     "id": "591",
+    "excelOrder": 387,
     "question": "Todo vehículo debe estar cubierto por un seguro, ¿qué daños mínimamente debe cubrir?",
     "options": [
       {
@@ -7643,6 +8024,7 @@
   },
   {
     "id": "592",
+    "excelOrder": 388,
     "question": "¿Dónde debe ubicarse el matafuegos en un taxi?",
     "options": [
       {
@@ -7663,6 +8045,7 @@
   },
   {
     "id": "594",
+    "excelOrder": 389,
     "question": "¿En qué consiste el Sistema de Evaluación Permanente de Conductores (Scoring)?",
     "options": [
       {
@@ -7683,6 +8066,7 @@
   },
   {
     "id": "595",
+    "excelOrder": 390,
     "question": "Según el Sistema de Evaluación Permanente de Conductores (Scoring), ¿cuántos puntos se otorgan a la persona que obtiene la licencia de conducir por primera vez?",
     "options": [
       {
@@ -7703,6 +8087,7 @@
   },
   {
     "id": "596",
+    "excelOrder": 391,
     "question": "Indique el orden de prioridad normativo que debe respetar (de mayor a menor jerarquía):",
     "options": [
       {
@@ -7723,6 +8108,7 @@
   },
   {
     "id": "598",
+    "excelOrder": 392,
     "question": "Los y las agentes de tránsito pueden proceder a la detención de un vehículo únicamente con la presencia de personal policial.",
     "options": [
       {
@@ -7739,6 +8125,7 @@
   },
   {
     "id": "599",
+    "excelOrder": 393,
     "question": "Como conductor/a, ¿qué debe realizar frente a la siguiente situación?",
     "options": [
       {
@@ -7759,6 +8146,7 @@
   },
   {
     "id": "601",
+    "excelOrder": 394,
     "question": "Si al circular por una vía y la persona señalada le indica detenerse, ¿está obligado usted a obedecer?",
     "options": [
       {
@@ -7779,6 +8167,7 @@
   },
   {
     "id": "602",
+    "excelOrder": 395,
     "question": "Si se encuentra en esta situación y el personal ferroviario le indica que avance, ¿qué debe hacer?",
     "options": [
       {
@@ -7799,6 +8188,7 @@
   },
   {
     "id": "603",
+    "excelOrder": 396,
     "question": "¿Son válidas este tipo de señas?",
     "options": [
       {
@@ -7819,6 +8209,7 @@
   },
   {
     "id": "604",
+    "excelOrder": 397,
     "question": "¿Qué indica esta seña?",
     "options": [
       {
@@ -7839,6 +8230,7 @@
   },
   {
     "id": "607",
+    "excelOrder": 398,
     "question": "Una indicación puede estar expresada con una señal vertical o con una demarcación horizontal, ya que ambas tienen el mismo significado y orden jerárquico.",
     "options": [
       {
@@ -7855,6 +8247,7 @@
   },
   {
     "id": "608",
+    "excelOrder": 399,
     "question": "¿Qué significa esta demarcación amarilla en la calzada?",
     "options": [
       {
@@ -7875,6 +8268,7 @@
   },
   {
     "id": "609",
+    "excelOrder": 400,
     "question": "En la siguiente imagen, ¿qué indican las líneas centrales de la calzada señaladas?",
     "options": [
       {
@@ -7895,6 +8289,7 @@
   },
   {
     "id": "610",
+    "excelOrder": 401,
     "question": "Frente a la demarcación central de la calzada señalada, ¿cuál es la conducta a seguir?",
     "options": [
       {
@@ -7915,6 +8310,7 @@
   },
   {
     "id": "613",
+    "excelOrder": 402,
     "question": "En materia de señalamiento horizontal, ¿qué se entiende por \"isleta\"?",
     "options": [
       {
@@ -7935,6 +8331,7 @@
   },
   {
     "id": "614",
+    "excelOrder": 403,
     "question": "Al conducir un vehículo, ¿cómo debe proceder frente a esta señal horizontal?",
     "options": [
       {
@@ -7955,6 +8352,7 @@
   },
   {
     "id": "615",
+    "excelOrder": 404,
     "question": "¿Qué indica la demarcación horizontal que se visualiza en la imagen?",
     "options": [
       {
@@ -7975,6 +8373,7 @@
   },
   {
     "id": "616",
+    "excelOrder": 405,
     "question": "¿Qué significa la demarcación horizontal que se visualiza en la imagen?",
     "options": [
       {
@@ -7995,6 +8394,7 @@
   },
   {
     "id": "617",
+    "excelOrder": 406,
     "question": "En la imagen se muestra un cruce exclusivo para ciclistas:",
     "options": [
       {
@@ -8011,6 +8411,7 @@
   },
   {
     "id": "618",
+    "excelOrder": 407,
     "question": "Las intervenciones horizontales señaladas, sirven para…",
     "options": [
       {
@@ -8031,6 +8432,7 @@
   },
   {
     "id": "620",
+    "excelOrder": 408,
     "question": "¿Para qué sirve la demarcación horizontal de color amarillo que se visualiza en la imagen?",
     "options": [
       {
@@ -8051,6 +8453,7 @@
   },
   {
     "id": "621",
+    "excelOrder": 409,
     "question": "¿Qué significa la demarcación horizontal señalada?",
     "options": [
       {
@@ -8071,6 +8474,7 @@
   },
   {
     "id": "622",
+    "excelOrder": 410,
     "question": "¿Para qué sirve la demarcación horizontal señalada?",
     "options": [
       {
@@ -8091,6 +8495,7 @@
   },
   {
     "id": "624",
+    "excelOrder": 411,
     "question": "¿Qué indica esta demarcación horizontal verde?",
     "options": [
       {
@@ -8111,6 +8516,7 @@
   },
   {
     "id": "629",
+    "excelOrder": 412,
     "question": "¿Qué indica la señal horizontal de color rojo que se encuentra demarcada sobre la calzada?",
     "options": [
       {
@@ -8131,6 +8537,7 @@
   },
   {
     "id": "630",
+    "excelOrder": 413,
     "question": "¿Qué indica la señal horizontal que se encuentra demarcada sobre la calzada?",
     "options": [
       {
@@ -8151,6 +8558,7 @@
   },
   {
     "id": "632",
+    "excelOrder": 414,
     "question": "Según la Ley Nº 2148, ¿qué indica la siguiente demarcación horizontal?",
     "options": [
       {
@@ -8171,6 +8579,7 @@
   },
   {
     "id": "633",
+    "excelOrder": 415,
     "question": "Según la Ley N° 2148, ¿qué indica un cordón pintado de este color?",
     "options": [
       {
@@ -8191,6 +8600,7 @@
   },
   {
     "id": "634",
+    "excelOrder": 416,
     "question": "Si al conducir un vehículo se encuentra en una intersección con esta señalización intermitente, ¿qué actitud debe tomar?",
     "options": [
       {
@@ -8211,6 +8621,7 @@
   },
   {
     "id": "635",
+    "excelOrder": 417,
     "question": "Si al conducir un vehículo se encuentra en una intersección con esta señalización intermitente, ¿qué actitud debe tomar?",
     "options": [
       {
@@ -8231,6 +8642,7 @@
   },
   {
     "id": "637",
+    "excelOrder": 418,
     "question": "Frente a esta situación, ¿qué debe hacer el vehículo señalado con el círculo rojo?",
     "options": [
       {
@@ -8251,6 +8663,7 @@
   },
   {
     "id": "638",
+    "excelOrder": 419,
     "question": "Cuando un semáforo cambia de luz roja a verde, está habilitando a reiniciar la marcha; no obstante ello, ¿qué precauciones se deben adoptar?",
     "options": [
       {
@@ -8271,6 +8684,7 @@
   },
   {
     "id": "639",
+    "excelOrder": 420,
     "question": "¿Qué indican las señales transitorias naranjas ubicadas en la calzada de la presente imagen?",
     "options": [
       {
@@ -8291,6 +8705,7 @@
   },
   {
     "id": "641",
+    "excelOrder": 421,
     "question": "La señalización transitoria se encuentra como prioridad normativa sobre los semáforos, si es que modifica el régimen normal de uso de la vía.",
     "options": [
       {
@@ -8307,6 +8722,7 @@
   },
   {
     "id": "646",
+    "excelOrder": 422,
     "question": "¿Cuál de las siguientes imágenes , por forma y color, corresponde a la señal indicativa de una rotonda o pendiente pronunciada?",
     "options": [
       {
@@ -8327,6 +8743,7 @@
   },
   {
     "id": "648",
+    "excelOrder": 423,
     "question": "¿Cuál de estas señales comunica \"Prevención\"?",
     "options": [
       {
@@ -8347,6 +8764,7 @@
   },
   {
     "id": "652",
+    "excelOrder": 424,
     "question": "Si ve esta señal mientras conduce, usted debe…",
     "options": [
       {
@@ -8367,6 +8785,7 @@
   },
   {
     "id": "659",
+    "excelOrder": 425,
     "question": "Determine qué indica la señal que a continuación se presenta:",
     "options": [
       {
@@ -8387,6 +8806,7 @@
   },
   {
     "id": "660",
+    "excelOrder": 426,
     "question": "Determine qué indica la señal que a continuación se presenta:",
     "options": [
       {
@@ -8407,6 +8827,7 @@
   },
   {
     "id": "661",
+    "excelOrder": 427,
     "question": "¿Qué indica esta señal preventiva?",
     "options": [
       {
@@ -8427,6 +8848,7 @@
   },
   {
     "id": "663",
+    "excelOrder": 428,
     "question": "Determine qué indica la señal que a continuación se presenta:",
     "options": [
       {
@@ -8447,6 +8869,7 @@
   },
   {
     "id": "664",
+    "excelOrder": 429,
     "question": "Determine qué indica la señal que a continuación se presenta:",
     "options": [
       {
@@ -8467,6 +8890,7 @@
   },
   {
     "id": "667",
+    "excelOrder": 430,
     "question": "Determine qué indica la señal vertical que a continuación se presenta:",
     "options": [
       {
@@ -8487,6 +8911,7 @@
   },
   {
     "id": "668",
+    "excelOrder": 431,
     "question": "¿Cuál de estas señales indica \"Cruce de Peatones (máximo peligro)\"?",
     "options": [
       {
@@ -8507,6 +8932,7 @@
   },
   {
     "id": "677",
+    "excelOrder": 432,
     "question": "Si al circular en ruta se encuentra con esta señal, ¿qué conducta debe seguir?",
     "options": [
       {
@@ -8527,6 +8953,7 @@
   },
   {
     "id": "679",
+    "excelOrder": 433,
     "question": "¿Cuál de estas señales es Reglamentaria?:",
     "options": [
       {
@@ -8547,6 +8974,7 @@
   },
   {
     "id": "683",
+    "excelOrder": 434,
     "question": "¿Qué significa esta señal?",
     "options": [
       {
@@ -8567,6 +8995,7 @@
   },
   {
     "id": "685",
+    "excelOrder": 435,
     "question": "¿Cuál de estas señales es una señal reglamentaria?",
     "options": [
       {
@@ -8587,6 +9016,7 @@
   },
   {
     "id": "686",
+    "excelOrder": 436,
     "question": "¿A qué vehículos prohíbe pasar esta señal?",
     "options": [
       {
@@ -8607,6 +9037,7 @@
   },
   {
     "id": "687",
+    "excelOrder": 437,
     "question": "¿A qué vehículos prohíbe pasar esta señal?",
     "options": [
       {
@@ -8627,6 +9058,7 @@
   },
   {
     "id": "688",
+    "excelOrder": 438,
     "question": "Determine qué indica la señal que a continuación se presenta:",
     "options": [
       {
@@ -8647,6 +9079,7 @@
   },
   {
     "id": "689",
+    "excelOrder": 439,
     "question": "¿Qué indica esta señal?",
     "options": [
       {
@@ -8667,6 +9100,7 @@
   },
   {
     "id": "693",
+    "excelOrder": 440,
     "question": "Esta señal vertical reglamentaria indica…",
     "options": [
       {
@@ -8687,6 +9121,7 @@
   },
   {
     "id": "700",
+    "excelOrder": 441,
     "question": "Determine qué indica la señal que a continuación se presenta:",
     "options": [
       {
@@ -8707,6 +9142,7 @@
   },
   {
     "id": "701",
+    "excelOrder": 442,
     "question": "Determine qué indica la señal que a continuación se presenta",
     "options": [
       {
@@ -8727,6 +9163,7 @@
   },
   {
     "id": "702",
+    "excelOrder": 443,
     "question": "¿Cuál de estas señales es Informativa?",
     "options": [
       {
@@ -8747,6 +9184,7 @@
   },
   {
     "id": "704",
+    "excelOrder": 444,
     "question": "La señal que se muestra indica un camino sin salida:",
     "options": [
       {
@@ -8763,6 +9201,7 @@
   },
   {
     "id": "710",
+    "excelOrder": 445,
     "question": "Esta señal advierte que en el lugar ocurrió un siniestro vial que produjo una víctima fatal.",
     "options": [
       {
@@ -8779,6 +9218,7 @@
   },
   {
     "id": "722",
+    "excelOrder": 446,
     "question": "Indique qué tipo de señal es la que a continuación se muestra:",
     "options": [
       {
@@ -8799,6 +9239,7 @@
   },
   {
     "id": "724",
+    "excelOrder": 447,
     "question": "Según la Ley Nº 2148, ¿está permitido el faro delantero de este motovehículo?",
     "options": [
       {
@@ -8819,6 +9260,7 @@
   },
   {
     "id": "725",
+    "excelOrder": 448,
     "question": "La persona que conduce vehículos de transporte de pasajeros tiene un rol clave en la vía pública ya que funciona como soporte imprescindible de la movilidad dentro de la sociedad.",
     "options": [
       {
@@ -8835,6 +9277,7 @@
   },
   {
     "id": "726",
+    "excelOrder": 449,
     "question": "¿A qué grupo de elementos de seguridad pertenece el sistema de suspensión?",
     "options": [
       {
@@ -8855,6 +9298,7 @@
   },
   {
     "id": "727",
+    "excelOrder": 450,
     "question": "Según la Ley 2148, ¿los vehículos de Transporte de personas con Movilidad Reducida deben disponer de al menos una rampa o plataforma elevadora para el ascenso o descenso de pasajeros?",
     "options": [
       {
@@ -8875,6 +9319,7 @@
   },
   {
     "id": "728",
+    "excelOrder": 451,
     "question": "En el caso de que un/a pasajero/a solicite, a la persona conductora de un taxi, ir a mayor velocidad de la máxima establecida por Ley, ¿quién es responsable frente a la autoridad de control?",
     "options": [
       {
@@ -8895,6 +9340,7 @@
   },
   {
     "id": "729",
+    "excelOrder": 452,
     "question": "¿Cuál es la velocidad máxima permitida para automóviles particulares en este tramo de la Av. Gral Roca, por encontrarse cerca de un establecimiento escolar?",
     "options": [
       {
@@ -8915,6 +9361,7 @@
   },
   {
     "id": "731",
+    "excelOrder": 453,
     "question": "En los camiones, las áreas de punto ciego son mayores que en los autos.",
     "options": [
       {
@@ -8931,6 +9378,7 @@
   },
   {
     "id": "732",
+    "excelOrder": 454,
     "question": "Es obligatorio llevar un chaleco de material reflectivo dentro del habitáculo del vehículo y su uso sólo es obligatorio cuando se descienda por razones de fuerza mayor, en autopistas u otras vías rápidas.",
     "options": [
       {
@@ -8947,6 +9395,7 @@
   },
   {
     "id": "733",
+    "excelOrder": 455,
     "question": "¿Para qué sirven los elementos de seguridad activa de un vehículo?",
     "options": [
       {
@@ -8967,6 +9416,7 @@
   },
   {
     "id": "735",
+    "excelOrder": 456,
     "question": "La prohibición de circulación por arterias que no pertenecen a la red de tránsito pesado, aplica sólo a camiones y acoplados cargados con un peso de 12 toneladas o más.",
     "options": [
       {
@@ -8983,6 +9433,7 @@
   },
   {
     "id": "738",
+    "excelOrder": 457,
     "question": "Para disminuir el impacto del desgaste provocado por el conjunto de tareas que realiza un/a conductor/a profesional de cargas, es necesario tener programadas paradas de descanso, ¿por qué?",
     "options": [
       {
@@ -9003,6 +9454,7 @@
   },
   {
     "id": "740",
+    "excelOrder": 458,
     "question": "El exceso de confianza...",
     "options": [
       {
@@ -9023,6 +9475,7 @@
   },
   {
     "id": "741",
+    "excelOrder": 459,
     "question": "La Ley Nº 2148 establece como norma general en calles, el permiso de estacionamiento de los vehículos ....",
     "options": [
       {
@@ -9043,6 +9496,7 @@
   },
   {
     "id": "742",
+    "excelOrder": 460,
     "question": "La Ley Nº 2148 establece como norma general, la prohibicion de estacionamiento de los vehículos ....",
     "options": [
       {
@@ -9063,6 +9517,7 @@
   },
   {
     "id": "743",
+    "excelOrder": 461,
     "question": "Los vehículos que realicen la operación de carga y descarga deberán indicar la condición de detención manteniendo obligatoriamente las luces de balizas intermitentes encendidas.",
     "options": [
       {

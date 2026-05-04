@@ -104,6 +104,7 @@ var lastPregunta = '';
 var lastManual = '';
 var lastTema = '';
 var currentQ = null;
+var excelOrderCounter = 0; // Tracks insertion order from Excel
 
 for (var i = 1; i < rawData.length; i++) {
     var row = rawData[i];
@@ -129,12 +130,13 @@ for (var i = 1; i < rawData.length; i++) {
     if (!respuesta) continue;
 
     // Use Question Text + Number as a unique key to avoid merging different questions that might have same number
-    // But usually same number means same question.
     var qKey = lastPregunta + '_' + lastNro;
 
     if (!questionsMap.has(qKey)) {
+        excelOrderCounter++;
         currentQ = {
             id: lastNro,
+            excelOrder: excelOrderCounter, // Position in the original Excel file
             question: lastPregunta,
             options: [],
             tema: lastTema,
@@ -186,8 +188,12 @@ var finalQuestions = Array.from(questionsMap.values()).filter(function(q) {
     return q.options.length >= 2 && hasCorrect;
 });
 
+// Keep Excel order (already in insertion order from Map, but sort by excelOrder to be explicit)
+finalQuestions.sort(function(a, b) { return a.excelOrder - b.excelOrder; });
+
 finalQuestions.forEach(function(q) {
     if (!q.image) delete q.image;
+    delete q._imgNum;
 });
 
 console.log('\nPreguntas válidas: ' + finalQuestions.length);
@@ -197,7 +203,7 @@ console.log('Fotos no encontradas: ' + photosNotFound.length);
 fs.writeFileSync(OUTPUT_JSON, JSON.stringify(finalQuestions, null, 2), 'utf8');
 console.log('\nGuardado: ' + OUTPUT_JSON);
 
-var tsContent = 'export interface SimulatorOption {\n    text: string;\n    isCorrect: boolean;\n}\n\nexport interface SimulatorQuestion {\n    id: string;\n    question: string;\n    options: SimulatorOption[];\n    tema: string;\n    manual: string;\n    image?: string;\n    needsImage?: boolean;\n}\n\nimport rawQuestions from \'./simulatorQuestions.json\';\nexport const simulatorQuestions: SimulatorQuestion[] = rawQuestions as SimulatorQuestion[];\n';
+var tsContent = 'export interface SimulatorOption {\n    text: string;\n    isCorrect: boolean;\n}\n\nexport interface SimulatorQuestion {\n    id: string;\n    excelOrder: number;\n    question: string;\n    options: SimulatorOption[];\n    tema: string;\n    manual: string;\n    image?: string;\n    needsImage?: boolean;\n}\n\nimport rawQuestions from \'./simulatorQuestions.json\';\nexport const simulatorQuestions: SimulatorQuestion[] = rawQuestions as SimulatorQuestion[];\n';
 fs.writeFileSync(path.join('src', 'data', 'simulatorQuestions.ts'), tsContent, 'utf8');
 console.log('Guardado: src/data/simulatorQuestions.ts');
 

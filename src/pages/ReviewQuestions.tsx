@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import { simulatorQuestions } from '../data/simulatorQuestions';
 
+// Sort by Excel order so the user can match the rows in the source file
+const sortedQuestions = [...simulatorQuestions].sort((a, b) => {
+  const ao = (a as any).excelOrder ?? 0;
+  const bo = (b as any).excelOrder ?? 0;
+  return ao - bo;
+});
+
 const PAGE_SIZE = 20;
 
 export const ReviewQuestions: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(simulatorQuestions.length / PAGE_SIZE);
+  const totalPages = Math.ceil(sortedQuestions.length / PAGE_SIZE);
 
-  const paginatedQuestions = simulatorQuestions.slice(
+  const paginatedQuestions = sortedQuestions.slice(
     (currentPage - 1) * PAGE_SIZE,
     currentPage * PAGE_SIZE
   );
@@ -17,7 +24,7 @@ export const ReviewQuestions: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-slate-800">
-            Revisión de Preguntas ({simulatorQuestions.length})
+            Revisión de Preguntas ({sortedQuestions.length} total)
           </h1>
           <div className="flex gap-2 items-center">
             <button 
@@ -54,7 +61,7 @@ export const ReviewQuestions: React.FC = () => {
             <div key={q.id} className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
               <div className="flex justify-between items-start mb-4">
                 <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-                  Pregunta #{q.id} (Índice: {actualIndex})
+                  Fila Excel #{(q as any).excelOrder ?? '?'} &nbsp;·&nbsp; ID: {q.id}
                 </span>
                 <span className="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded">
                   Tema: {q.tema}
