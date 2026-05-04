@@ -1,16 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { simulatorQuestions } from '../data/simulatorQuestions';
 
+const PAGE_SIZE = 20;
+
 export const ReviewQuestions: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(simulatorQuestions.length / PAGE_SIZE);
+
+  const paginatedQuestions = simulatorQuestions.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE
+  );
+
   return (
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8 text-slate-800">
-          Revisión de Preguntas del Simulador ({simulatorQuestions.length})
-        </h1>
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-3xl font-bold text-slate-800">
+            Revisión de Preguntas ({simulatorQuestions.length})
+          </h1>
+          <div className="flex gap-2 items-center">
+            <button 
+              disabled={currentPage === 1}
+              onClick={() => setCurrentPage(prev => prev - 1)}
+              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+            >
+              Anterior
+            </button>
+            <span className="font-semibold text-gray-700">Página {currentPage} de {totalPages}</span>
+            <button 
+              disabled={currentPage === totalPages}
+              onClick={() => setCurrentPage(prev => prev + 1)}
+              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+            >
+              Siguiente
+            </button>
+          </div>
+        </div>
         
         <div className="space-y-8">
-          {simulatorQuestions.map((q, index) => {
+          {paginatedQuestions.map((q, index) => {
+            const actualIndex = (currentPage - 1) * PAGE_SIZE + index + 1;
             const getImageUrl = (imagePath: string | undefined) => {
               if (!imagePath) return '';
               if (imagePath.startsWith('http')) return imagePath;
@@ -24,7 +54,7 @@ export const ReviewQuestions: React.FC = () => {
             <div key={q.id} className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
               <div className="flex justify-between items-start mb-4">
                 <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-                  Pregunta #{q.id} (Índice: {index + 1})
+                  Pregunta #{q.id} (Índice: {actualIndex})
                 </span>
                 <span className="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded">
                   Tema: {q.tema}
@@ -41,6 +71,7 @@ export const ReviewQuestions: React.FC = () => {
                   <img 
                     src={getImageUrl(q.image)} 
                     alt={`Imagen para pregunta ${q.id}`}
+                    loading="lazy"
                     className="max-h-64 object-contain border border-gray-300 bg-white shadow-sm"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x200?text=Imagen+No+Encontrada';
@@ -80,6 +111,32 @@ export const ReviewQuestions: React.FC = () => {
               </div>
             </div>
           )})}
+        </div>
+
+        <div className="flex justify-center mt-8">
+          <div className="flex gap-2 items-center">
+            <button 
+              disabled={currentPage === 1}
+              onClick={() => {
+                setCurrentPage(prev => prev - 1);
+                window.scrollTo(0, 0);
+              }}
+              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+            >
+              Anterior
+            </button>
+            <span className="font-semibold text-gray-700">Página {currentPage} de {totalPages}</span>
+            <button 
+              disabled={currentPage === totalPages}
+              onClick={() => {
+                setCurrentPage(prev => prev + 1);
+                window.scrollTo(0, 0);
+              }}
+              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+            >
+              Siguiente
+            </button>
+          </div>
         </div>
       </div>
     </div>
