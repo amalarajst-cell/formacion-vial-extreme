@@ -2,8 +2,8 @@ const XLSX = require('xlsx');
 const fs = require('fs');
 const path = require('path');
 
-const EXCEL_FILE = 'Preguntas Sep 2023 - ultima versión (1).xlsx';
-const FOTOS_BASE = path.join('FOTO EXAMEN', 'Fotos examen teórico');
+const EXCEL_FILE = path.join('Excel y fotos', 'Preguntas Sep 2023 - ultima versión (1).xlsx');
+const FOTOS_BASE = 'Excel y fotos';
 const OUTPUT_JSON = path.join('src', 'data', 'simulatorQuestions.json');
 const OUTPUT_IMAGES = path.join('public', 'simulator', 'images');
 
