@@ -6,7 +6,9 @@ export interface SimulatorOption {
 export interface SimulatorQuestion {
     id: string;
     excelOrder: number;
+    excelRow: number;
     question: string;
+    categoria?: string;
     options: SimulatorOption[];
     tema: string;
     manual: string;

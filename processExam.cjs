@@ -111,6 +111,7 @@ for (var i = 1; i < rawData.length; i++) {
     
     // Column C [2] is the Image Number / Question ID
     var nro = String(row[2] || '').trim();
+    var categoria = cleanText(row[3]); // Column D
     var pregunta = cleanText(row[4]);
     var respuesta = cleanText(row[5]);
     var correcta = String(row[6] || '').trim().toUpperCase() === 'X';
@@ -129,30 +130,35 @@ for (var i = 1; i < rawData.length; i++) {
 
     if (!respuesta) continue;
 
-    // Use Question Text + Number as a unique key to avoid merging different questions that might have same number
-    var qKey = lastPregunta + '_' + lastNro;
+    // Use Row Index + Question Text + Number to ensure ABSOLUTELY EVERY row is treated as unique
+    // and stays in the exact Excel order without merging.
+    var qKey = 'row_' + i + '_' + lastNro;
 
     if (!questionsMap.has(qKey)) {
         excelOrderCounter++;
         currentQ = {
             id: lastNro,
-            excelOrder: excelOrderCounter, // Position in the original Excel file
+            excelRow: i + 1, // Store the physical row number for easier debugging
+            excelOrder: excelOrderCounter,
             question: lastPregunta,
+            categoria: categoria,
             options: [],
             tema: lastTema,
             manual: lastManual,
             image: null,
-            _imgNum: lastNro // Column C is the image number
+            _imgNum: lastNro 
         };
         questionsMap.set(qKey, currentQ);
     } else {
         currentQ = questionsMap.get(qKey);
     }
 
+    /* 
     if (isPlaceholder(respuesta)) {
         // Skip placeholders but keep the question
         continue;
     }
+    */
 
     var exists = currentQ.options.some(function(o) { return o.text === respuesta; });
     if (!exists && respuesta !== '') {
@@ -183,6 +189,9 @@ for (var entry of questionsMap) {
 }
 
 var finalQuestions = Array.from(questionsMap.values()).filter(function(q) {
+    // FORCE include the first rows of the Excel (Pandemia Vial) even if they don't have answers yet
+    if (q.excelRow <= 15) return true; 
+
     if (q.options.length === 0) return false;
     var hasCorrect = q.options.some(function(o) { return o.isCorrect; });
     return q.options.length >= 2 && hasCorrect;
@@ -203,7 +212,7 @@ console.log('Fotos no encontradas: ' + photosNotFound.length);
 fs.writeFileSync(OUTPUT_JSON, JSON.stringify(finalQuestions, null, 2), 'utf8');
 console.log('\nGuardado: ' + OUTPUT_JSON);
 
-var tsContent = 'export interface SimulatorOption {\n    text: string;\n    isCorrect: boolean;\n}\n\nexport interface SimulatorQuestion {\n    id: string;\n    excelOrder: number;\n    question: string;\n    options: SimulatorOption[];\n    tema: string;\n    manual: string;\n    image?: string;\n    needsImage?: boolean;\n}\n\nimport rawQuestions from \'./simulatorQuestions.json\';\nexport const simulatorQuestions: SimulatorQuestion[] = rawQuestions as SimulatorQuestion[];\n';
+var tsContent = 'export interface SimulatorOption {\n    text: string;\n    isCorrect: boolean;\n}\n\nexport interface SimulatorQuestion {\n    id: string;\n    excelOrder: number;\n    excelRow: number;\n    question: string;\n    categoria?: string;\n    options: SimulatorOption[];\n    tema: string;\n    manual: string;\n    image?: string;\n    needsImage?: boolean;\n}\n\nimport rawQuestions from \'./simulatorQuestions.json\';\nexport const simulatorQuestions: SimulatorQuestion[] = rawQuestions as SimulatorQuestion[];\n';
 fs.writeFileSync(path.join('src', 'data', 'simulatorQuestions.ts'), tsContent, 'utf8');
 console.log('Guardado: src/data/simulatorQuestions.ts');
 
