@@ -7,14 +7,58 @@ const FOTOS_BASE = 'Excel y fotos';
 const OUTPUT_JSON = path.join('src', 'data', 'simulatorQuestions.json');
 const OUTPUT_IMAGES = path.join('public', 'simulator', 'images');
 
-function cleanText(t) {
+const MANUAL_FIXES = {
+    '3': {
+        'Opción A.': 'Automóvil',
+        'Opción B.': 'Motovehículo',
+        'Opción C.': 'Bicicleta'
+    },
+    '98': {
+        'Opción A': 'Por el sector izquierdo del carril',
+        'Opción B.': 'Por el centro del carril',
+        'Opción C.': 'Por el sector derecho del carril'
+    },
+    '193': {
+        'Opción A. Ya que al utilizar un sólo auricular la audición no se encuentra afectada.': 'Un auricular (no afecta la audición)',
+        'Opción B. Ya que al activar el manos libres las manos quedan disponibles para la conducción.': 'Manos libres (manos disponibles)',
+        'C. Ambos sistemas son riesgosos.': 'Ambos sistemas son riesgosos'
+    },
+    '355': {
+        'Opción A.': 'Perpendicular a las vías (90°)',
+        'Opción B.': 'Diagonal a las vías',
+        'Opción C.': 'Paralelo a las vías'
+    },
+    '361': {
+        'Opción A.': 'Grabado de autopartes',
+        'Opción B.': 'Verificación Técnica Vehicular (VTV)',
+        'C.': 'Ninguna de las anteriores'
+    },
+    '386': {
+        'Opción A.': 'La rueda trasera',
+        'Opción B.': 'La rueda delantera'
+    },
+    '394': {
+        'Opción A.': 'La mano derecha',
+        'Opción B.': 'La mano izquierda'
+    }
+};
+
+function cleanText(t, qId) {
     if (t === null || t === undefined) return '';
-    return String(t)
+    let text = String(t)
         .replace(/\u201c|\u201d/g, '"')
         .replace(/\u2018|\u2019/g, "'")
-        .replace(/^[A-Z]\.\s+/, '')
+        .replace(/^[A-Z][\.\)]\s+/, '')
         .replace(/\n|\r/g, ' ')
         .trim();
+    
+    // Apply manual fixes for placeholders
+    if (MANUAL_FIXES[qId]) {
+        for (let key in MANUAL_FIXES[qId]) {
+            if (t.includes(key)) return MANUAL_FIXES[qId][key];
+        }
+    }
+    return text;
 }
 
 function isPlaceholder(text) {
@@ -121,17 +165,21 @@ for (var i = 1; i < rawData.length; i++) {
     // Col J [9]: Manual
     // Col K [10]: Tema
 
-    var qId = String(row[2] || '').trim();
-    var categoria = cleanText(row[3]);
-    var pregunta = cleanText(row[4]);
-    var respuesta = cleanText(row[5]);
+    var qIdFromRow = String(row[2] || '').trim();
+    if (qIdFromRow !== '') {
+        lastNro = qIdFromRow;
+        lastImgNum = null; 
+    }
+
+    var categoria = cleanText(row[3], lastNro);
+    var pregunta = cleanText(row[4], lastNro);
+    var respuesta = cleanText(row[5], lastNro);
     var correcta = String(row[6] || '').trim().toUpperCase() === 'X';
     var imgNum = String(row[7] || '').trim();
-    var manual = cleanText(row[9]);
-    var tema = cleanText(row[10]);
+    var manual = cleanText(row[9], lastNro);
+    var tema = cleanText(row[10], lastNro);
 
-    if (qId !== '') {
-        lastNro = qId; // We use 'lastNro' as the Question ID
+    if (qIdFromRow !== '') {
         if (pregunta !== '') {
             lastPregunta = pregunta;
             lastManual = manual;
@@ -139,20 +187,13 @@ for (var i = 1; i < rawData.length; i++) {
         }
     }
     
-    // Track the last image number found in Col H
     if (imgNum !== '') {
         lastImgNum = imgNum;
-    } else if (qId !== '') {
-        // Fallback to qId if imgNum is missing but we have a new question
-        // though user said H is the image number.
-        // We'll keep lastImgNum as is if it was set.
     }
 
     if (!respuesta) continue;
 
-    // Grouping by ID + Categoria + Question text to ensure we don't duplicate
-    // but also keep categories separate if they have different options.
-    var qKey = lastNro + '_' + (categoria || 'GEN') + '_' + lastPregunta.substring(0, 50);
+    var qKey = lastNro + '_' + lastPregunta.substring(0, 100);
 
     if (!questionsMap.has(qKey)) {
         excelOrderCounter++;
@@ -161,20 +202,23 @@ for (var i = 1; i < rawData.length; i++) {
             excelRow: i + 1,
             excelOrder: excelOrderCounter,
             question: lastPregunta,
-            categoria: categoria,
+            categories: [],
             options: [],
             tema: lastTema,
             manual: lastManual,
             image: null,
-            _imgNum: lastImgNum || lastNro // Use Col H if available, else Col C
+            _imgNum: lastImgNum || String(row[8] || '').trim() || lastNro 
         };
         questionsMap.set(qKey, currentQ);
     } else {
         currentQ = questionsMap.get(qKey);
-        // If this row has an image and the previous didn't, update it
         if (lastImgNum && !currentQ._imgNum) {
             currentQ._imgNum = lastImgNum;
         }
+    }
+
+    if (categoria && !currentQ.categories.includes(categoria)) {
+        currentQ.categories.push(categoria);
     }
 
     var exists = currentQ.options.some(function(o) { return o.text === respuesta; });
@@ -183,12 +227,17 @@ for (var i = 1; i < rawData.length; i++) {
     }
 }
 
-console.log('\nAsignando imágenes desde carpetas...');
+console.log('\nAsignando imágenes y limpiando datos...');
 var photoCopied = 0;
 var photosNotFound = [];
 
-for (var entry of questionsMap) {
-    var q = entry[1];
+var finalQuestions = [];
+for (var q of questionsMap.values()) {
+    // 1. Join categories
+    q.categoria = q.categories.join(', ');
+    delete q.categories;
+
+    // 2. Assign image
     var imgNum = q._imgNum;
     if (imgNum) {
         var photoSrc = findPhoto(imgNum);
@@ -203,18 +252,15 @@ for (var entry of questionsMap) {
         }
     }
     delete q._imgNum;
+
+    // 3. Validate
+    var hasCorrect = q.options.some(function(o) { return o.isCorrect; });
+    if (q.options.length >= 2 && hasCorrect) {
+        finalQuestions.push(q);
+    }
 }
 
-var finalQuestions = Array.from(questionsMap.values()).filter(function(q) {
-    // FORCE include the first rows of the Excel (Pandemia Vial) even if they don't have answers yet
-    if (q.excelRow <= 15) return true; 
-
-    if (q.options.length === 0) return false;
-    var hasCorrect = q.options.some(function(o) { return o.isCorrect; });
-    return q.options.length >= 2 && hasCorrect;
-});
-
-// Keep Excel order (already in insertion order from Map, but sort by excelOrder to be explicit)
+// Keep Excel order
 finalQuestions.sort(function(a, b) { return a.excelOrder - b.excelOrder; });
 
 finalQuestions.forEach(function(q) {
