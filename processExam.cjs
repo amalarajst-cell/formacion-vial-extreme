@@ -207,7 +207,7 @@ for (var i = 1; i < rawData.length; i++) {
             tema: lastTema,
             manual: lastManual,
             image: null,
-            _imgNum: lastImgNum || String(row[8] || '').trim() || lastNro 
+            _imgNum: lastImgNum || String(row[8] || '').trim() // ONLY H -> I. NO fallback to ID.
         };
         questionsMap.set(qKey, currentQ);
     } else {
