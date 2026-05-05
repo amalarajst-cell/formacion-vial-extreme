@@ -57,7 +57,7 @@ export const ReviewQuestions: React.FC = () => {
             };
 
             return (
-            <div key={q.id} className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+            <div key={(q as any).excelOrder || q.id} className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
               <div className="flex justify-between items-start mb-4">
                 <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
                   Fila Excel #{(q as any).excelOrder ?? '?'} &nbsp;·&nbsp; ID: {q.id} &nbsp;·&nbsp; Cat: {(q as any).categoria ?? '-'}

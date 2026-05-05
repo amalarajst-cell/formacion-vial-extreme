@@ -1,7 +1,18 @@
 import { useState, useEffect } from 'react';
 import { MessageSquare, Plus, User, Search, ThumbsUp, MessageCircle } from 'lucide-react';
-import { database } from '../lib/firebase';
-import { ref, onValue, set } from 'firebase/database';
+import { db } from '../lib/firebase';
+import { 
+    collection, 
+    onSnapshot, 
+    addDoc, 
+    updateDoc, 
+    doc, 
+    query, 
+    orderBy, 
+    arrayUnion, 
+    arrayRemove,
+    Timestamp 
+} from 'firebase/firestore';
 import { useToast } from '../components/ui/Toast';
 
 interface Reply {
@@ -17,23 +28,11 @@ interface Thread {
     author: string;
     content: string;
     timestamp: string;
+    createdAt?: any; // For Firestore sorting
     replies: Reply[];
     likes: number;
     likedBy?: string[];
 }
-
-const initialThreads: Thread[] = [
-    {
-        id: 'welcome',
-        title: '¡Bienvenidos al Foro de Consultas!',
-        author: 'Equipo de Formación Vial',
-        content: 'Este es un espacio para que puedan despejar sus dudas, compartir experiencias y ayudarse mutuamente en este trayecto formativo. ¡No duden en participar!',
-        timestamp: new Date().toLocaleDateString('es-AR'),
-        replies: [],
-        likes: 0,
-        likedBy: []
-    }
-];
 
 export function Forum() {
     const { showToast } = useToast();
@@ -54,20 +53,16 @@ export function Forum() {
     }, [authorName]);
 
     useEffect(() => {
-        const threadsRef = ref(database, 'forumThreads_v2');
-        const unsubscribe = onValue(threadsRef, (snapshot) => {
-            const data = snapshot.val();
-            if (data) {
-                // Firebase might omit empty arrays, so we ensure they exist
-                const parsed = data.map((t: any) => ({
-                    ...t,
-                    replies: t.replies || [],
-                    likedBy: t.likedBy || []
-                }));
-                setThreads(parsed);
-            } else {
-                set(threadsRef, initialThreads);
-            }
+        const q = query(collection(db, 'forum_threads'), orderBy('createdAt', 'desc'));
+        const unsubscribe = onSnapshot(q, (snapshot) => {
+            const data = snapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            })) as Thread[];
+            setThreads(data);
+        }, (error) => {
+            console.error("Firestore error:", error);
+            showToast('Error al conectar con el servidor', 'error');
         });
         
         return () => unsubscribe();
@@ -81,46 +76,45 @@ export function Forum() {
     const [expandedThreadId, setExpandedThreadId] = useState<string | null>(null);
     const [replyContent, setReplyContent] = useState('');
 
-    const handleLike = (threadId: string) => {
+    const handleLike = async (threadId: string) => {
         if (!authorName.trim()) {
             showToast('Ingresá tu nombre para poder dar "Me gusta"', 'info');
             return;
         }
 
-        const updated = threads.map(t => {
-            if (t.id === threadId) {
-                const likedBy = Array.isArray(t.likedBy) ? t.likedBy : [];
-                const hasLiked = likedBy.includes(userId);
-                
-                const newLikedBy = hasLiked 
-                    ? likedBy.filter(id => id !== userId)
-                    : [...likedBy, userId];
+        const thread = threads.find(t => t.id === threadId);
+        if (!thread) return;
 
-                if (!hasLiked) {
-                    showToast('¡Te gusta esta consulta!', 'success');
-                }
-                
-                return { 
-                    ...t, 
-                    likedBy: newLikedBy,
-                    likes: newLikedBy.length
-                };
+        const likedBy = Array.isArray(thread.likedBy) ? thread.likedBy : [];
+        const hasLiked = likedBy.includes(userId);
+        
+        const threadRef = doc(db, 'forum_threads', threadId);
+
+        try {
+            if (hasLiked) {
+                await updateDoc(threadRef, {
+                    likedBy: arrayRemove(userId),
+                    likes: Math.max(0, (thread.likes || 1) - 1)
+                });
+            } else {
+                await updateDoc(threadRef, {
+                    likedBy: arrayUnion(userId),
+                    likes: (thread.likes || 0) + 1
+                });
+                showToast('¡Te gusta esta consulta!', 'success');
             }
-            return t;
-        });
-        set(ref(database, 'forumThreads_v2'), updated);
+        } catch (e) {
+            console.error("Error liking thread:", e);
+            showToast('Error al actualizar "Me gusta"', 'error');
+        }
     };
 
-    const handleReply = (e: React.FormEvent, threadId: string) => {
+    const handleReply = async (e: React.FormEvent, threadId: string) => {
         e.preventDefault();
         if (!replyContent.trim()) return;
 
         if (!authorName.trim()) {
             showToast('Por favor, ingresá tu nombre arriba para comentar', 'error');
-            const nameInput = document.getElementById('author-name-input');
-            nameInput?.focus();
-            nameInput?.classList.add('border-brand-red');
-            setTimeout(() => nameInput?.classList.remove('border-brand-red'), 2000);
             return;
         }
         
@@ -131,45 +125,49 @@ export function Forum() {
             timestamp: new Date().toLocaleString('es-AR', { hour: '2-digit', minute: '2-digit' })
         };
 
-        const updated = threads.map(t => 
-            t.id === threadId ? { ...t, replies: [...t.replies, newReply] } : t
-        );
-        set(ref(database, 'forumThreads_v2'), updated);
-        setReplyContent('');
-        showToast('Respuesta publicada', 'success');
+        const threadRef = doc(db, 'forum_threads', threadId);
+        try {
+            await updateDoc(threadRef, {
+                replies: arrayUnion(newReply)
+            });
+            setReplyContent('');
+            showToast('Respuesta publicada', 'success');
+        } catch (e) {
+            console.error("Error replying:", e);
+            showToast('Error al publicar respuesta', 'error');
+        }
     };
 
-    const handleCreateThread = (e: React.FormEvent) => {
+    const handleCreateThread = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!newTitle.trim() || !newContent.trim()) return;
 
         if (!authorName.trim()) {
             showToast('Por favor, ingresá tu nombre arriba para publicar', 'error');
-            const nameInput = document.getElementById('author-name-input');
-            nameInput?.focus();
-            nameInput?.classList.add('border-brand-red');
-            setTimeout(() => nameInput?.classList.remove('border-brand-red'), 2000);
             return;
         }
 
-        const newThread: Thread = {
-            id: Date.now().toString(),
+        const newThread = {
             title: newTitle,
             author: authorName.trim(),
             content: newContent,
             timestamp: new Date().toLocaleDateString('es-AR'),
+            createdAt: Timestamp.now(),
             replies: [],
             likes: 0,
             likedBy: [],
         };
 
-        const updated = [newThread, ...threads];
-        set(ref(database, 'forumThreads_v2'), updated);
-
-        setIsCreating(false);
-        setNewTitle('');
-        setNewContent('');
-        showToast('Consulta publicada con éxito', 'success');
+        try {
+            await addDoc(collection(db, 'forum_threads'), newThread);
+            setIsCreating(false);
+            setNewTitle('');
+            setNewContent('');
+            showToast('Consulta publicada con éxito', 'success');
+        } catch (e) {
+            console.error("Error creating thread:", e);
+            showToast('Error al publicar la consulta', 'error');
+        }
     };
 
     const filteredThreads = threads.filter(t => 
