@@ -75,8 +75,9 @@ function copyPhoto(srcPath, imageNum, questionId) {
     }
 }
 
-console.log('=== Generando simulatorQuestions.json desde Excel (MAPEO COLUMNA C) ===');
-console.log('NOTA: Se usa la Columna C (Nº) para el número de imagen.');
+console.log('=== Generando simulatorQuestions.json desde Excel ===');
+console.log('MAREO: Col E=Pregunta, Col F=Respuesta, Col G=Correcta, Col H=Imagen');
+console.log('NOTA: Se usa la Columna H (index 7) para el número de imagen/carpeta.');
 
 if (!fs.existsSync(OUTPUT_IMAGES)) {
     fs.mkdirSync(OUTPUT_IMAGES, { recursive: true });
@@ -103,42 +104,61 @@ var lastNro = null;
 var lastPregunta = '';
 var lastManual = '';
 var lastTema = '';
+var lastImgNum = null;
 var currentQ = null;
 var excelOrderCounter = 0; // Tracks insertion order from Excel
 
 for (var i = 1; i < rawData.length; i++) {
     var row = rawData[i];
     
-    // Column C [2] is the Image Number / Question ID
-    var nro = String(row[2] || '').trim();
-    var categoria = cleanText(row[3]); // Column D
+    // Mapping based on user request:
+    // Col C [2]: Question ID
+    // Col D [3]: Categoria
+    // Col E [4]: Pregunta
+    // Col F [5]: Respuesta
+    // Col G [6]: Respuesta Correcta (X)
+    // Col H [7]: Numero de Imagen (Folder name)
+    // Col J [9]: Manual
+    // Col K [10]: Tema
+
+    var qId = String(row[2] || '').trim();
+    var categoria = cleanText(row[3]);
     var pregunta = cleanText(row[4]);
     var respuesta = cleanText(row[5]);
     var correcta = String(row[6] || '').trim().toUpperCase() === 'X';
+    var imgNum = String(row[7] || '').trim();
     var manual = cleanText(row[9]);
     var tema = cleanText(row[10]);
 
-    // If row has a number in Column C, it's a new question or a sub-category repetition
-    if (nro !== '') {
-        lastNro = nro;
+    if (qId !== '') {
+        lastNro = qId; // We use 'lastNro' as the Question ID
         if (pregunta !== '') {
             lastPregunta = pregunta;
             lastManual = manual;
             lastTema = tema;
         }
     }
+    
+    // Track the last image number found in Col H
+    if (imgNum !== '') {
+        lastImgNum = imgNum;
+    } else if (qId !== '') {
+        // Fallback to qId if imgNum is missing but we have a new question
+        // though user said H is the image number.
+        // We'll keep lastImgNum as is if it was set.
+    }
 
     if (!respuesta) continue;
 
-    // Use Row Index + Question Text + Number to ensure ABSOLUTELY EVERY row is treated as unique
-    // and stays in the exact Excel order without merging.
-    var qKey = 'row_' + i + '_' + lastNro;
+    // Grouping by ID + Categoria + Question text to ensure we don't duplicate
+    // but also keep categories separate if they have different options.
+    var qKey = lastNro + '_' + (categoria || 'GEN') + '_' + lastPregunta.substring(0, 50);
 
     if (!questionsMap.has(qKey)) {
         excelOrderCounter++;
         currentQ = {
             id: lastNro,
-            excelRow: i + 1, // Store the physical row number for easier debugging
+            excelRow: i + 1,
             excelOrder: excelOrderCounter,
             question: lastPregunta,
             categoria: categoria,
@@ -146,19 +166,16 @@ for (var i = 1; i < rawData.length; i++) {
             tema: lastTema,
             manual: lastManual,
             image: null,
-            _imgNum: lastNro 
+            _imgNum: lastImgNum || lastNro // Use Col H if available, else Col C
         };
         questionsMap.set(qKey, currentQ);
     } else {
         currentQ = questionsMap.get(qKey);
+        // If this row has an image and the previous didn't, update it
+        if (lastImgNum && !currentQ._imgNum) {
+            currentQ._imgNum = lastImgNum;
+        }
     }
-
-    /* 
-    if (isPlaceholder(respuesta)) {
-        // Skip placeholders but keep the question
-        continue;
-    }
-    */
 
     var exists = currentQ.options.some(function(o) { return o.text === respuesta; });
     if (!exists && respuesta !== '') {
