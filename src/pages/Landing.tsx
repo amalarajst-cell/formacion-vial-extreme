@@ -1,6 +1,6 @@
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
-import { ArrowRight, Trophy, Zap, Shield, Heart, Monitor, Eye, MessageSquare } from 'lucide-react';
+import { ArrowRight, Trophy, Zap, Heart, Monitor, Eye, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useSurveyStore } from '../hooks/useSurveyStore';
 import logoVinculacion from '../assets/logo-vinculacion.png';
