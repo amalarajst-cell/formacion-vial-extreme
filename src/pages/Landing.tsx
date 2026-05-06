@@ -23,6 +23,9 @@ export function Landing() {
                         </span>
                         <div className="mb-4 max-w-[70%] sm:max-w-none">
                             <img src={logoVinculacion} alt="Vinculación con el futuro" className="w-full max-w-xs md:max-w-xl h-auto" />
+                            <span className="text-brand-yellow font-brand-heading font-medium uppercase tracking-[0.2em] text-[10px] md:text-xs mt-2 block opacity-90">
+                                POLÍTICA PÚBLICA DEL MINISTERIO DE EDUCACIÓN
+                            </span>
                         </div>
                         <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-xl font-light">
                             Transformando la movilidad urbana con conciencia y acción.
