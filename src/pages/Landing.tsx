@@ -127,17 +127,7 @@ export function Landing() {
                                 </p>
                             </Card>
                         </Link>
-                        <Link to="/simulador">
-                            <Card hoverEffect className="group">
-                                <Shield className="w-12 h-12 text-brand-yellow mb-6" />
-                                <h3 className="text-3xl font-brand-heading font-bold italic uppercase mb-4 group-hover:text-brand-yellow transition-colors">
-                                    Simulador teórico para obtener la licencia de conducir
-                                </h3>
-                                <p className="text-gray-400">
-                                    Ponete a prueba con 40 preguntas del manual oficial. Simulá el examen real y verificá si estás listo/a para obtener tu licencia.
-                                </p>
-                            </Card>
-                        </Link>
+
                     </div>
 
                     {/* Foro Section */}
