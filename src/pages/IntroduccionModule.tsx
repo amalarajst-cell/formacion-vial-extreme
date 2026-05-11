@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocalState } from '../hooks/useLocalState';
-import { AlertTriangle, Send, CheckCircle2, XCircle, Globe, Play } from 'lucide-react';
+import { AlertTriangle, Send, CheckCircle2, XCircle, Play } from 'lucide-react';
 
 interface QuizAnswers {
     q1: string;
@@ -164,19 +164,10 @@ export function IntroduccionModule() {
                         <div className="relative w-48 h-48 sm:w-56 sm:h-56 bg-brand-dark-grey rounded-full border-4 border-brand-navy p-2 flex flex-col items-center justify-center shadow-xl overflow-hidden group">
                             {/* Placeholder/Fallback para la imagen a subir */}
                             <img
-                                src="/assets/oms-mundo.PNG"
+                                src={`${import.meta.env.BASE_URL}assets/oms-mundo.png`}
                                 alt="Estadísticas mundiales OMS"
                                 className="w-full h-full object-cover rounded-full z-10 relative"
-                                onError={(e) => {
-                                    (e.target as HTMLImageElement).style.display = 'none';
-                                    const fallbackMsg = (e.target as HTMLImageElement).parentElement?.querySelector('.fallback-msg');
-                                    if (fallbackMsg) fallbackMsg.classList.remove('hidden');
-                                }}
                             />
-                            <div className="fallback-msg hidden absolute inset-0 flex flex-col items-center justify-center text-brand-yellow z-0 p-4 text-center">
-                                <Globe className="w-12 h-12 opacity-50 mb-2 group-hover:scale-110 transition-transform" />
-                                <span className="text-[10px] font-bold text-gray-400">Guardar imagen en:<br />public/assets/oms-mundo.png</span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -444,12 +435,9 @@ export function IntroduccionModule() {
                             {/* Imagen Descriptiva */}
                             <div className="w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl shadow-black/80 border-4 border-gray-800 bg-brand-dark-grey mb-12">
                                 <img
-                                    src="/formacion-vial-extreme/assets/accidente-incidente.png"
+                                    src={`${import.meta.env.BASE_URL}assets/accidente-incidente.png`}
                                     alt="Accidente vs Incidente: El Factor Humano"
                                     className="w-full h-auto object-cover"
-                                    onError={(e) => {
-                                        (e.target as HTMLImageElement).src = '/assets/accidente-incidente.png';
-                                    }}
                                 />
                             </div>
                         </div>

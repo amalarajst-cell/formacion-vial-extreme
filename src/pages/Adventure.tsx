@@ -9,7 +9,6 @@ import {
     Heart,
     Monitor,
     Eye,
-    Users,
     Award,
     CheckCircle2,
     ClipboardList,
@@ -236,7 +235,7 @@ export function Adventure() {
                                     <CheckCircle2 className="text-brand-yellow w-6 h-6" />
                                     <h3 className="text-xl font-bold text-white uppercase italic">Nuestra Solución</h3>
                                 </div>
-                                <p className="text-gray-300">Un trayecto formativo integral de 5 jornadas donde dejarás de ser un espectador para ser un protagonista de la prevención.</p>
+                                <p className="text-gray-300">Un trayecto formativo integral de 4 jornadas donde dejarás de ser un espectador para ser un protagonista de la prevención.</p>
                             </div>
                         </div>
 
@@ -259,7 +258,7 @@ export function Adventure() {
                 </div>
             </section>
 
-            {/* Trayecto de los 5 días */}
+            {/* Trayecto de los 4 días */}
             <section className="py-24 bg-brand-navy">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
@@ -267,7 +266,7 @@ export function Adventure() {
                             Resumen de tu <span className="text-brand-yellow">Trayecto</span>
                         </h2>
                         <p className="text-gray-400 text-lg uppercase tracking-widest font-bold">
-                            {state.profile ? `ALUMNO: ${state.profile.nombre.toUpperCase()} ${state.profile.apellido.toUpperCase()} ` : '(Los 5 días del programa)'}
+                            {state.profile ? `ALUMNO: ${state.profile.nombre.toUpperCase()} ${state.profile.apellido.toUpperCase()} ` : '(Los 4 días del programa)'}
                         </p>
                     </div>
 
@@ -693,65 +692,6 @@ export function Adventure() {
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="text-xs font-bold text-white uppercase tracking-tighter hover:text-green-500 hover:underline transition-all"
-                                                    >
-                                                        {act.title}
-                                                    </a>
-                                                ) : (
-                                                    <h4 className="text-xs font-bold text-white uppercase tracking-tighter">{act.title}</h4>
-                                                )}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                        </Card>
-
-                        {/* Día 5 */}
-                        <Card
-                            hoverEffect
-                            onClick={() => setExpandedDay(expandedDay === 5 ? null : 5)}
-                            className={cn(
-                                "group transition-all duration-300 cursor-pointer",
-                                expandedDay === 5 ? "ring-2 ring-purple-500 bg-purple-500/5" : ""
-                            )}
-                        >
-                            <div className="flex items-center justify-between mb-6">
-                                <div className="flex items-center gap-4">
-                                    <Users className="w-12 h-12 text-purple-500" />
-                                    <div className="border border-purple-500/50 bg-purple-500/10 px-3 py-1 text-[10px] font-bold text-purple-500 uppercase tracking-tighter">
-                                        Día 5
-                                    </div>
-                                </div>
-                                <ChevronDown className={cn(
-                                    "w-5 h-5 text-gray-500 transition-transform duration-300",
-                                    expandedDay === 5 ? "rotate-180 text-purple-500" : ""
-                                )} />
-                            </div>
-                            <h3 className="text-2xl font-brand-heading font-bold italic uppercase mb-2 text-white group-hover:text-purple-500 transition-colors leading-tight">El Efecto Multiplicador</h3>
-                            <p className="text-gray-400 text-sm mb-4">Debate final, cierre de jornada y preparación para replicar lo aprendido en tu escuela.</p>
-
-                            <div
-                                className="pt-4 border-t border-white/5"
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                <Link to="/multiplicador">
-                                    <Button fullWidth size="sm" variant="outline" className="justify-between group/btn border-gray-800 hover:border-purple-500 text-[10px]">
-                                        RECLAMAR LOGROS <Award className="w-3 h-3 transition-transform group-hover/btn:scale-125" />
-                                    </Button>
-                                </Link>
-                            </div>
-
-                            {expandedDay === 5 && (
-                                <div className="mb-6 space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
-                                    {SCHEDULE_ACTIVITIES[5].map((act, i) => (
-                                        <div key={i} className="flex gap-3 p-3 bg-white/5 border border-white/10 rounded-lg">
-                                            <div>
-                                                {act.link ? (
-                                                    <a
-                                                        href={act.link}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="text-xs font-bold text-white uppercase tracking-tighter hover:text-purple-500 hover:underline transition-all"
                                                     >
                                                         {act.title}
                                                     </a>

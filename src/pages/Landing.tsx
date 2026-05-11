@@ -120,7 +120,6 @@ export function Landing() {
                             <Card hoverEffect className="group">
                                 <div className="flex items-center gap-4 mb-6">
                                     <Trophy className="w-12 h-12 text-brand-yellow" />
-                                    <span className="text-xs font-bold text-white bg-brand-yellow/20 px-2 py-1 rounded border border-brand-yellow/30 uppercase tracking-widest">Día 5</span>
                                 </div>
                                 <h3 className="text-3xl font-brand-heading font-bold italic uppercase mb-4 group-hover:text-brand-yellow transition-colors">
                                     El Efecto Multiplicador
