@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { Rocket, ArrowRight } from 'lucide-react';
+import { useAuthContext } from '../../context/AuthContext';
 
 interface PreSurveyFormProps {
     onComplete: (data: any) => void;
@@ -9,13 +10,14 @@ interface PreSurveyFormProps {
 }
 
 export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
+    const { studentProfile } = useAuthContext();
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
-        nombre: '',
-        apellido: '',
-        dni: '',
+        nombre: studentProfile?.nombre || '',
+        apellido: studentProfile?.apellido || '',
+        dni: studentProfile?.dni?.toString() || '',
         email: '',
-        institucion: '',
+        institucion: studentProfile?.institucion || '',
         percepcion: 5,
         conocimientoSemanas: '',
         habilidadSiniestro: '',
@@ -46,7 +48,8 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
                                 <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Nombre</label>
                                 <input
                                     required
-                                    className="w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600"
+                                    readOnly={!!studentProfile?.nombre}
+                                    className={`w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 ${studentProfile?.nombre ? 'opacity-50 cursor-not-allowed' : ''}`}
                                     placeholder="Ej: Juan"
                                     value={formData.nombre}
                                     onChange={e => setFormData({ ...formData, nombre: e.target.value })}
@@ -56,7 +59,8 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
                                 <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Apellido</label>
                                 <input
                                     required
-                                    className="w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600"
+                                    readOnly={!!studentProfile?.apellido}
+                                    className={`w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 ${studentProfile?.apellido ? 'opacity-50 cursor-not-allowed' : ''}`}
                                     placeholder="Ej: Pérez"
                                     value={formData.apellido}
                                     onChange={e => setFormData({ ...formData, apellido: e.target.value })}
@@ -66,7 +70,8 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
                                 <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">DNI</label>
                                 <input
                                     required
-                                    className="w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600"
+                                    readOnly={!!studentProfile?.dni}
+                                    className={`w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 ${studentProfile?.dni ? 'opacity-50 cursor-not-allowed' : ''}`}
                                     placeholder="Sin puntos ni espacios"
                                     value={formData.dni}
                                     onChange={e => setFormData({ ...formData, dni: e.target.value })}
@@ -87,7 +92,8 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
                                 <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Institución Educativa</label>
                                 <input
                                     required
-                                    className="w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600"
+                                    readOnly={!!studentProfile?.institucion}
+                                    className={`w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 ${studentProfile?.institucion ? 'opacity-50 cursor-not-allowed' : ''}`}
                                     placeholder="Nombre de tu escuela"
                                     value={formData.institucion}
                                     onChange={e => setFormData({ ...formData, institucion: e.target.value })}
