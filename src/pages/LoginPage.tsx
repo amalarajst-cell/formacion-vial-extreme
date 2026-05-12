@@ -1,10 +1,18 @@
-import { useState } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useState, useEffect } from 'react';
+import { useAuthContext } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import { LogIn, Shield, User, Eye, EyeOff, AlertCircle } from 'lucide-react';
 import logoVinculacion from '../assets/logo-vinculacion.png';
 
 export function LoginPage() {
-    const { loginAdmin, loginStudent, loading, error, clearError } = useAuth();
+    const { loginAdmin, loginStudent, loading, error, clearError, sessionType } = useAuthContext();
+    const navigate = useNavigate();
+
+    // Redirect when session is successfully created
+    useEffect(() => {
+        if (sessionType === 'admin') navigate('/admin');
+        else if (sessionType === 'student') navigate('/');
+    }, [sessionType, navigate]);
 
     const [mode, setMode] = useState<'student' | 'admin'>('student');
     const [dni, setDni] = useState('');
