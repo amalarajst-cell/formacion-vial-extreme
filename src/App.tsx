@@ -49,8 +49,7 @@ function ProtectedLayout() {
   }
 
   if (!sessionType) return <Navigate to="/login" replace />;
-  if (sessionType === 'admin') return <Navigate to="/admin" replace />;
-
+  // Permitir tanto a alumnos como a admins (docentes) acceder al contenido del curso
   return <Layout />;
 }
 

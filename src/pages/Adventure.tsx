@@ -26,6 +26,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { PreSurveyForm } from '../components/survey/PreSurveyForm';
 import { FieldLog } from '../components/survey/FieldLog';
 import { useSurveyStore } from '../hooks/useSurveyStore';
+import { useAuthContext } from '../context/AuthContext';
 import { useToast } from '../components/ui/Toast';
 import { cn } from '../utils/cn';
 import { SCHEDULE_ACTIVITIES } from '../data/schedule';
@@ -34,10 +35,11 @@ import { forceScrollToTop } from '../utils/scroll';
 export function Adventure() {
     const location = useLocation();
     const { state, setPreSurvey, setProfile, setFieldData, syncData, clearState, lastSync } = useSurveyStore();
+    const { sessionType } = useAuthContext();
     const { showToast } = useToast();
     const [expandedDay, setExpandedDay] = useState<number | null>(null);
     const [view, setView] = useState<'intro' | 'survey' | 'journey' | 'fieldlog'>(
-        (location.state as any)?.openFieldLog ? 'fieldlog' : (state.profile ? 'journey' : 'intro')
+        (location.state as any)?.openFieldLog ? 'fieldlog' : (state.profile || sessionType === 'admin' ? 'journey' : 'intro')
     );
 
     // Reiniciar scroll al cambiar de vista interna con refuerzo
@@ -90,8 +92,6 @@ export function Adventure() {
 
     const handleFieldLogComplete = (data: any) => {
         setFieldData(data);
-
-
 
         // Sincronización NO bloqueante de datos de Bitácora (Día 4)
         syncData({
@@ -399,13 +399,11 @@ export function Adventure() {
                                 onClick={(e) => e.stopPropagation()}
                             >
 
-                                {true && (
                                     <Link to="/dia1" className="block animate-in slide-in-from-left duration-500">
                                         <Button fullWidth size="sm" variant="outline" className="justify-between group/btn border-brand-yellow/50 bg-brand-yellow/5 text-brand-yellow hover:bg-brand-yellow hover:text-brand-navy">
                                             BIENVENIDOS AL DÍA 1 <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
                                         </Button>
                                     </Link>
-                                )}
                             </div>
                         </Card>
 

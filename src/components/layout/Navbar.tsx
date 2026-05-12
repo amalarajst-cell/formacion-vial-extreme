@@ -2,11 +2,13 @@ import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SyncStatusIndicator } from '../SyncStatusIndicator';
 import { useSurveyStore } from '../../hooks/useSurveyStore';
-import { ChevronDown, Lock, BookOpen, AlertTriangle } from 'lucide-react';
+import { useAuthContext } from '../../context/AuthContext';
+import { ChevronDown, Lock, BookOpen, AlertTriangle, Shield, LogOut } from 'lucide-react';
 
 export function Navbar() {
     const [modulesOpen, setModulesOpen] = useState(false);
     const { prioridadesUnlocked } = useSurveyStore();
+    const { sessionType, signOut } = useAuthContext();
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     // Close dropdown when clicking outside
@@ -36,6 +38,17 @@ export function Navbar() {
                         <SyncStatusIndicator />
 
                         <div className="flex items-center space-x-1 sm:space-x-4">
+                            {/* Panel Docente (solo para admins) */}
+                            {sessionType === 'admin' && (
+                                <Link
+                                    to="/admin"
+                                    className="hidden sm:flex items-center gap-2 bg-brand-red text-white px-4 py-2 text-xs sm:text-base font-brand-heading font-bold uppercase italic tracking-wider hover:bg-red-600 transition-colors"
+                                >
+                                    <Shield className="w-4 h-4" />
+                                    Panel
+                                </Link>
+                            )}
+
                             {/* Dropdown de Módulos */}
                             <div className="relative" ref={dropdownRef}>
                                 <button
@@ -49,6 +62,21 @@ export function Navbar() {
                                 {modulesOpen && (
                                     <div className="absolute right-0 top-full mt-2 w-64 bg-brand-dark-grey border border-gray-700 shadow-xl shadow-black/50 animate-in fade-in slide-in-from-top-2 duration-200 z-[110]">
                                         <div className="p-1">
+                                            {/* Link móvil al panel docente */}
+                                            {sessionType === 'admin' && (
+                                                <Link
+                                                    to="/admin"
+                                                    onClick={() => setModulesOpen(false)}
+                                                    className="flex sm:hidden items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors group"
+                                                >
+                                                    <Shield className="w-5 h-5 text-brand-red group-hover:scale-110 transition-transform" />
+                                                    <div>
+                                                        <span className="text-white text-sm font-bold uppercase block">Panel Docente</span>
+                                                        <span className="text-gray-500 text-[10px] uppercase tracking-wider">Gestión</span>
+                                                    </div>
+                                                </Link>
+                                            )}
+
                                             <Link
                                                 to="/introduccion"
                                                 onClick={() => setModulesOpen(false)}
@@ -77,7 +105,7 @@ export function Navbar() {
 
                                             <div className="h-px bg-gray-700/50 mx-3"></div>
 
-                                            {prioridadesUnlocked ? (
+                                            {(prioridadesUnlocked || sessionType === 'admin') ? (
                                                 <Link
                                                     to="/prioridades"
                                                     onClick={() => setModulesOpen(false)}
@@ -98,6 +126,18 @@ export function Navbar() {
                                                     </div>
                                                 </div>
                                             )}
+
+                                            <div className="h-px bg-gray-700 mx-1 my-1"></div>
+                                            <button
+                                                onClick={() => {
+                                                    setModulesOpen(false);
+                                                    signOut();
+                                                }}
+                                                className="w-full flex items-center gap-3 px-4 py-3 hover:bg-red-500/10 text-brand-red transition-colors group"
+                                            >
+                                                <LogOut className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                                <span className="text-sm font-bold uppercase block">Cerrar Sesión</span>
+                                            </button>
 
                                         </div>
                                     </div>

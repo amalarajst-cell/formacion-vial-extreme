@@ -39,9 +39,7 @@ export const SCHEDULE_ACTIVITIES: Record<number, Activity[]> = {
     4: [
         { title: 'Diagnóstico de Riesgo', icon: 'cone', desc: 'Identificación de puntos críticos en esquinas.' },
         { title: 'Toma de Datos', icon: 'clipboard-list', desc: 'Uso de la bitácora para registrar infracciones.' },
-        { title: 'Auditoría Vial', icon: 'bar-chart-3', desc: 'Análisis de comportamiento de conductores.' }
-    ],
-    5: [
+        { title: 'Auditoría Vial', icon: 'bar-chart-3', desc: 'Análisis de comportamiento de conductores.' },
         { title: 'Evaluación Final', icon: 'trophy', desc: 'Cierre de conocimientos y examen integrador.' },
         { title: 'Entrega de Diplomas', icon: 'graduation-cap', desc: 'Reconocimiento como Multiplicador Vial.' }
     ]

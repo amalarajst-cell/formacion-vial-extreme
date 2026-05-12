@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { collection, addDoc, getDocs, deleteDoc, doc, updateDoc, query, orderBy, writeBatch } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 import { useAuth } from '../hooks/useAuth';
+import { Link } from 'react-router-dom';
 import type { StudentProfile } from '../hooks/useAuth';
 import * as XLSX from 'xlsx';
 import { 
@@ -184,12 +185,15 @@ export function AdminPanel() {
                         apellido = String(r['apellido'] || r['Apellido'] || r['APELLIDO'] || '').trim();
                         nombre = String(r['nombre'] || r['Nombre'] || r['NOMBRE'] || '').trim();
                     }
+
+                    const rawInstitucion = String(r['INSTITUCIÓN'] || r['Institución'] || r['institucion'] || r['ESCUELA'] || r['Escuela'] || r['escuela'] || '').trim();
+                    
                     return {
                         nombre,
                         apellido,
                         dni: cleanDNI(String(r['DNI'] || r['dni'] || '')),
                         acompanante: acompananteNombre || String(r['acompanante'] || r['Acompañante'] || '').trim(),
-                        institucion: 'Instituto Educativo Modelo',
+                        institucion: rawInstitucion || 'No especificada',
                         curso: String(r['curso'] || r['Curso'] || r['CURSO'] || '').trim(),
                     };
                 })
@@ -259,12 +263,20 @@ export function AdminPanel() {
                             <p className="text-gray-500 text-xs">{adminUser?.email}</p>
                         </div>
                     </div>
-                    <button
-                        onClick={signOut}
-                        className="flex items-center gap-2 text-xs text-gray-400 hover:text-brand-red transition-colors font-bold uppercase tracking-widest border border-white/10 px-3 py-2 rounded-lg hover:border-brand-red/50"
-                    >
-                        <LogOut className="w-3.5 h-3.5" /> Salir
-                    </button>
+                    <div className="flex items-center gap-3">
+                        <Link
+                            to="/"
+                            className="flex items-center gap-2 text-xs text-brand-yellow hover:text-white transition-colors font-bold uppercase tracking-widest border border-brand-yellow/30 px-3 py-2 rounded-lg hover:bg-brand-yellow/10"
+                        >
+                            <Eye className="w-3.5 h-3.5" /> Ver Curso
+                        </Link>
+                        <button
+                            onClick={signOut}
+                            className="flex items-center gap-2 text-xs text-gray-400 hover:text-brand-red transition-colors font-bold uppercase tracking-widest border border-white/10 px-3 py-2 rounded-lg hover:border-brand-red/50"
+                        >
+                            <LogOut className="w-3.5 h-3.5" /> Salir
+                        </button>
+                    </div>
                 </div>
             </header>
 
