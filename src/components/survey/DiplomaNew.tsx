@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { Button } from '../ui/Button';
 import { Download } from 'lucide-react';
+import logoVinculacion from '../../assets/logo-vinculacion.png';
 
 interface DiplomaProps {
     userName: string;
@@ -22,10 +23,10 @@ export function DiplomaNew({ userName, dni }: DiplomaProps) {
             <div
                 ref={diplomaRef}
                 id="diploma-to-print"
-                className="w-full aspect-[1.414/1] bg-white relative overflow-hidden shadow-2xl flex flex-col pt-12 pb-8 px-16"
+                className="w-full aspect-[1.414/1] bg-white relative overflow-hidden shadow-2xl flex flex-col pt-8 pb-6 px-12 border-[10px] border-brand-navy/5"
             >
                 {/* Top Blue Bar */}
-                <div className="h-4 bg-brand-navy w-full absolute top-0 left-0 z-20"></div>
+                <div className="h-3 bg-brand-navy w-full absolute top-0 left-0 z-20"></div>
 
                 {/* Background Pattern (Subtle Grid) */}
                 <div className="absolute inset-0 z-0 opacity-[0.05]" style={{
@@ -35,58 +36,60 @@ export function DiplomaNew({ userName, dni }: DiplomaProps) {
 
                 {/* Central Shield Watermark */}
                 <div className="absolute inset-0 flex items-center justify-center z-0 opacity-[0.03] pointer-events-none">
-                    <svg viewBox="0 0 24 24" className="w-[70%] h-[70%] fill-brand-navy" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 24 24" className="w-[60%] h-[60%] fill-brand-navy" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                     </svg>
                 </div>
 
                 {/* Content Container */}
                 <div className="relative z-10 flex flex-col items-center h-full text-center">
-                    {/* BA Logo (Top Left) */}
-                    <div className="absolute top-0 left-0">
+                    {/* Logos Header */}
+                    <div className="w-full flex justify-between items-center mb-4 px-4">
                         <img
                             src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTEwIDIwIEMxMCAxNSAxNSAxMCAyMCAxMCBMODAgMTAgQzg1IDEwIDkwIDE1IDkwIDIwIEw5MCA4MCBDOTAgODUgODUgOTAgODAgOTAgTDIwIDkwIEMxNSA5MCAxMCA4NSAxMCA4MCBaIiBmaWxsPSIjRkZEMjAwIi8+CiAgPHRleHQgeD0iNTAiIHk9IjY1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iNTAiIGZpbGw9IiMwMDAwMDAiPkJBPC90ZXh0Pgo8L3N2Zz4="
                             alt="Logo BA"
-                            className="h-16 w-auto"
+                            className="h-10 w-auto"
+                        />
+                        <img
+                            src={logoVinculacion}
+                            alt="Vinculación con el futuro"
+                            className="h-8 w-auto grayscale brightness-50 contrast-125"
                         />
                     </div>
 
                     {/* Header */}
-                    <div className="mb-10">
-                        <div className="flex flex-wrap justify-center items-baseline gap-2 text-3xl md:text-5xl font-brand-heading font-bold italic uppercase tracking-tighter">
-                            <span className="text-brand-navy">DIPLOMA DE</span>
-                            <span className="text-brand-yellow" style={{ textShadow: '1px 1px 0px rgba(0,0,0,0.1)' }}>RECONOCIMIENTO</span>
+                    <div className="mb-2">
+                        <h2 className="text-base md:text-lg font-brand-heading font-bold uppercase tracking-tight text-brand-navy">
+                            LA SECRETARIA DE TRANSPORTE <br />
+                            <span className="text-brand-red">DEL MINISTERIO DE INFRAESTRUCTURA</span>
+                        </h2>
+                    </div>
+
+                    <div className="mb-2">
+                        <div className="flex flex-wrap justify-center items-baseline gap-2 text-xl md:text-3xl font-brand-heading font-bold italic uppercase tracking-tighter">
+                            <span className="text-brand-navy">CERTIFICADO DE</span>
+                            <span className="text-brand-yellow" style={{ textShadow: '1px 1px 0px rgba(0,0,0,0.1)' }}>APROBACIÓN</span>
                         </div>
                     </div>
 
-                    <p className="text-gray-500 uppercase font-bold text-xs md:text-sm tracking-[0.2em] mb-8">
-                        LA SECRETARÍA DE TRANSPORTE OTORGA EL PRESENTE A:
-                    </p>
-
-                    {/* Recipient Name */}
-                    <div className="mb-8 w-full max-w-2xl flex flex-col items-center">
-                        <h3 className="text-4xl md:text-6xl font-brand-heading font-bold italic text-brand-navy mb-1 break-words leading-tight px-4 uppercase">
-                            {userName}
-                        </h3>
-                        {/* Yellow Underline Bar */}
-                        <div className="h-1.5 bg-brand-yellow w-full max-w-lg rounded-full mt-2"></div>
-                    </div>
-
-                    <p className="text-brand-navy font-bold text-lg mb-8 uppercase tracking-wider">
-                        DNI: {dni}
-                    </p>
-
-                    <div className="space-y-2 mb-8">
-                        <p className="text-gray-500 text-sm md:text-base font-medium">
-                            Por haber completado con éxito el trayecto formativo de
+                    {/* Body Text */}
+                    <div className="max-w-2xl mx-auto">
+                        <p className="text-sm md:text-base text-brand-navy leading-tight font-medium">
+                            Este certificado acredita que: <br />
+                            <span className="text-xl md:text-2xl font-brand-heading font-bold italic block my-1 uppercase">
+                                {userName}
+                            </span>
+                            <span className="font-bold">DNI: {dni}</span>
                         </p>
-                        <h4 className="text-2xl md:text-3xl font-brand-heading font-bold italic text-brand-navy">
-                            MULTIPLICADOR VIAL 2026
-                        </h4>
+                        
+                        <p className="mt-3 text-[10px] md:text-xs text-gray-700 leading-relaxed px-12">
+                            participó y aprobó la capacitación <span className="font-bold text-brand-navy italic">"Multiplicador Vial"</span> bajo la modalidad presencial en la sede de Avenida Coronel Roca 5252 con una duración de 20 horas dictada por la Gerencia de Educación y Convivencia Vial.
+                        </p>
                     </div>
 
                     {/* Signatures Footer - Pushed to bottom but contained */}
-                    <div className="w-full grid grid-cols-2 gap-16 mt-auto px-12">
+                    <div className="w-full grid grid-cols-2 gap-16 mt-auto mb-2 px-12">
+
                         <div className="flex flex-col items-center">
                             <div className="w-full h-px bg-brand-navy mb-2"></div>
                             <p className="text-[10px] md:text-xs font-bold text-brand-navy uppercase tracking-wider text-center">
@@ -100,6 +103,8 @@ export function DiplomaNew({ userName, dni }: DiplomaProps) {
                             </p>
                         </div>
                     </div>
+
+
                 </div>
             </div>
 

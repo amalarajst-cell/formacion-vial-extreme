@@ -96,10 +96,16 @@ export function useAuth() {
     const loginAdmin = useCallback(async (email: string, password: string) => {
         setState(s => ({ ...s, loading: true, error: null }));
         try {
+            // Limpiar cualquier sesión previa de alumno inmediatamente para evitar conflictos
+            localStorage.removeItem(STUDENT_SESSION_KEY);
             await signInWithEmailAndPassword(auth, email, password);
-            // onAuthStateChanged se encargará de actualizar el estado
-        } catch {
-            setState(s => ({ ...s, loading: false, error: 'Email o contraseña incorrectos.' }));
+            // El observador onAuthStateChanged se encargará de actualizar el estado final
+        } catch (err: any) {
+            console.error('Admin login error:', err);
+            let msg = 'Email o contraseña incorrectos.';
+            if (err.code === 'auth/network-request-failed') msg = 'Error de conexión. Revisá tu internet.';
+            if (err.code === 'auth/too-many-requests') msg = 'Demasiados intentos. Intentá más tarde.';
+            setState(s => ({ ...s, loading: false, error: msg }));
         }
     }, []);
 
