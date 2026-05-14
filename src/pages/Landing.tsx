@@ -1,44 +1,46 @@
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { ArrowRight, Trophy, Zap, Heart, Monitor, Eye, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useSurveyStore } from '../hooks/useSurveyStore';
+import { Button } from '../components/ui/Button';
+import { useAuthContext } from '../context/AuthContext';
 import logoVinculacion from '../assets/logo-vinculacion.png';
 
 export function Landing() {
-    const { state } = useSurveyStore();
+    const { state } = useAuthContext();
 
     return (
-        <div className="animate-in fade-in duration-500">
+        <div className="min-h-screen bg-brand-navy">
             {/* Hero Section */}
-            <section className="relative min-h-[60vh] flex items-center overflow-hidden">
-                {/* Background Image Placeholder - Replace with actual lively street image */}
+            <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+                {/* Background Image with precise filters */}
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10"></div>
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale brightness-[0.3] contrast-125 opacity-60"></div>
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale brightness-[0.35] contrast-125 opacity-70"></div>
 
-                <div className="relative z-20 container-extreme w-full pt-10 pb-8 md:pt-24">
+                <div className="relative z-20 container-extreme w-full pt-20 pb-20">
                     <div className="max-w-7xl">
-                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm mb-4 block">
+                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm mb-6 block">
                             2º año consecutivo junto a
                         </span>
-                        <div className="mb-6">
-                            <h1 className="text-white text-7xl md:text-[140px] font-bold leading-[0.85] tracking-tighter max-w-4xl font-brand-heading">
+                        
+                        <div className="mb-8">
+                            <h1 className="text-white text-7xl md:text-[140px] font-bold leading-[0.72] tracking-tighter max-w-5xl font-brand-heading uppercase italic">
                                 Vinculación<br />con el futuro
                             </h1>
                         </div>
-                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs mb-6 block">
+
+                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm mb-8 block">
                             POLÍTICA PÚBLICA DEL MINISTERIO DE EDUCACIÓN
                         </span>
-                        <p className="text-xl md:text-2xl text-white mb-12 max-w-3xl font-medium tracking-tight">
+
+                        <p className="text-xl md:text-3xl text-white mb-12 max-w-4xl font-medium tracking-tight opacity-90 leading-relaxed">
                             Transformando la movilidad urbana con conciencia y acción.
                         </p>
+
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link to="/adventure">
                                 <Button
                                     variant="primary"
-                                    className="bg-brand-yellow text-brand-navy border-none hover:bg-yellow-400 transition-all px-10 py-5 text-xl font-brand-heading font-extrabold italic uppercase tracking-wider flex items-center gap-3 shadow-[0_10px_20px_rgba(255,214,0,0.2)]"
+                                    className="bg-brand-yellow text-black border-none hover:bg-yellow-400 transition-all px-12 py-6 text-xl md:text-2xl font-brand-heading font-extrabold italic uppercase tracking-wider flex items-center gap-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
                                 >
-                                    COMIENZA TU AVENTURA <span className="text-2xl">→</span>
+                                    COMIENZA TU AVENTURA <span className="text-3xl font-bold">→</span>
                                 </Button>
                             </Link>
                         </div>
@@ -53,113 +55,20 @@ export function Landing() {
                     <h2 className="text-3xl md:text-5xl font-brand-heading font-bold italic uppercase tracking-tighter text-white mb-16 text-center">
                         <span className="text-brand-red">Cronograma</span> Semanal y Eventos
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <Link to="/dia1">
-                            <Card
-                                hoverEffect
-                                className="group transition-all duration-300 cursor-pointer border-brand-yellow/20 hover:border-brand-yellow/50 h-full"
-                            >
-                                <div className="flex items-center justify-between mb-6">
-                                    <div className="flex items-center gap-4">
-                                        <Zap className="w-12 h-12 text-brand-yellow" />
-                                        <span className="text-xs font-bold text-white bg-brand-yellow/20 px-2 py-1 rounded border border-brand-yellow/30 uppercase tracking-widest">Día 1</span>
-                                    </div>
-                                    <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-brand-yellow group-hover:translate-x-1 transition-all" />
-                                </div>
-                                <h3 className="text-3xl font-brand-heading font-bold italic uppercase mb-4 group-hover:text-brand-yellow transition-colors">
-                                    Seguridad Vial, el Estado y la Licencia
-                                </h3>
-                                <p className="text-gray-400">
-                                    Proceso administrativo y educativo para el otorgamiento de las licencias de conducir en CABA.
-                                </p>
-                            </Card>
-                        </Link>
-
-                        <Link to="/dia2">
-                            <Card hoverEffect className="group">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <Heart className="w-12 h-12 text-brand-yellow" />
-                                    <span className="text-xs font-bold text-white bg-brand-yellow/20 px-2 py-1 rounded border border-brand-yellow/30 uppercase tracking-widest">Día 2</span>
-                                </div>
-                                <h3 className="text-3xl font-brand-heading font-bold italic uppercase mb-4 group-hover:text-brand-yellow transition-colors">
-                                    Socorrismo y Emergencias
-                                </h3>
-                                <p className="text-gray-400">
-                                    Junto a Defensa Civil aprenderemos técnicas de asistencia inicial, primeros auxilios y RCP.
-                                </p>
-                            </Card>
-                        </Link>
-                        <Link to="/vtv">
-                            <Card hoverEffect className="group">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <Monitor className="w-12 h-12 text-brand-yellow" />
-                                    <span className="text-xs font-bold text-white bg-brand-yellow/20 px-2 py-1 rounded border border-brand-yellow/30 uppercase tracking-widest">Día 3</span>
-                                </div>
-                                <h3 className="text-3xl font-brand-heading font-bold italic uppercase mb-4 group-hover:text-brand-yellow transition-colors">
-                                    Centro de Monitoreo
-                                </h3>
-                                <p className="text-gray-400">
-                                    Conocé el Centro de Monitoreo de la Movilidad Urbana de CABA: descubrí cómo se gestiona y controla el tránsito de la ciudad en tiempo real.
-                                </p>
-                            </Card>
-                        </Link>
-                        <Link to="/auditoria">
-                            <Card hoverEffect className="group">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <Eye className="w-12 h-12 text-brand-yellow" />
-                                    <span className="text-xs font-bold text-white bg-brand-yellow/20 px-2 py-1 rounded border border-brand-yellow/30 uppercase tracking-widest">Día 4</span>
-                                </div>
-                                <h3 className="text-3xl font-brand-heading font-bold italic uppercase mb-4 group-hover:text-brand-yellow transition-colors">
-                                    Auditoría Vial
-                                </h3>
-                                <p className="text-gray-400">
-                                    Investigación en territorio: auditaremos conductas reales en la calle e infraestructura urbana.
-                                </p>
-                            </Card>
-                        </Link>
-                        <Link to="/multiplicador">
-                            <Card hoverEffect className="group">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <Trophy className="w-12 h-12 text-brand-yellow" />
-                                </div>
-                                <h3 className="text-3xl font-brand-heading font-bold italic uppercase mb-4 group-hover:text-brand-yellow transition-colors">
-                                    El Efecto Multiplicador
-                                </h3>
-                                <p className="text-gray-400">
-                                    Cierre de la capacitación: cómo transformar lo aprendido en acciones que mejoren la seguridad de todos.
-                                </p>
-                            </Card>
-                        </Link>
-
-                    </div>
-
-                    {/* Foro Section */}
-                    <div className="mt-8">
-                        <Link to="/foro">
-                            <Card hoverEffect className="group bg-brand-dark-grey border-brand-red/30 hover:border-brand-red/60 relative overflow-hidden">
-                                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                                    <MessageSquare className="w-32 h-32 text-brand-red" />
-                                </div>
-                                <div className="relative z-10 flex flex-col md:flex-row items-center gap-6">
-                                    <div className="bg-brand-red/20 p-4 rounded-full border border-brand-red/30 flex-shrink-0">
-                                        <MessageSquare className="w-12 h-12 text-brand-red" />
-                                    </div>
-                                    <div className="text-center md:text-left">
-                                        <h3 className="text-3xl font-brand-heading font-bold italic uppercase mb-2 group-hover:text-brand-red transition-colors text-white">
-                                            Foro de Consultas
-                                        </h3>
-                                        <p className="text-gray-400 max-w-2xl">
-                                            ¿Tenés dudas sobre los contenidos? Ingresá al foro, hacé tus preguntas o ayudá a otros estudiantes a resolver las suyas. ¡Construyamos conocimiento juntos!
-                                        </p>
-                                    </div>
-                                    <div className="md:ml-auto">
-                                        <div className="flex items-center gap-2 text-brand-red font-bold uppercase tracking-wider text-sm group-hover:translate-x-2 transition-transform">
-                                            Ingresar <ArrowRight className="w-5 h-5" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </Card>
-                        </Link>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {[
+                            { day: 'Día 1', title: 'Introducción', desc: 'Conceptos fundamentales de seguridad vial.', color: 'border-brand-yellow' },
+                            { day: 'Día 2', title: 'Señales', desc: 'Identificación y respeto por la señalización.', color: 'border-brand-red' },
+                            { day: 'Día 3', title: 'Prioridades', desc: 'Reglas de paso y convivencia en la vía pública.', color: 'border-white' },
+                            { day: 'Día 4', title: 'Bitácora', desc: 'Registro de experiencias y evaluación final.', color: 'border-brand-yellow' }
+                        ].map((item, idx) => (
+                            <div key={idx} className={`bg-black/40 p-8 border-t-4 ${item.color} hover:transform hover:-translate-y-2 transition-all duration-300 group`}>
+                                <span className="text-brand-yellow font-bold text-sm uppercase tracking-widest mb-2 block">{item.day}</span>
+                                <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-yellow transition-colors">{item.title}</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
