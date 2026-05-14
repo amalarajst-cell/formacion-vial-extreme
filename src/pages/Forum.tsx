@@ -177,7 +177,7 @@ export function Forum() {
 
     return (
         <div className="min-h-screen bg-brand-navy pt-24 pb-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto space-y-8">
+            <div className="max-w-6xl mx-auto space-y-8">
                 
                 {/* Header Section */}
                 <div className="text-center space-y-4">

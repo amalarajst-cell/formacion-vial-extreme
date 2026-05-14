@@ -127,11 +127,11 @@ export function IntroduccionModule() {
                 </div>
             </div>
 
-            <main className="max-w-4xl mx-auto px-4 py-8">
+            <main className="max-w-7xl mx-auto px-4 py-8 md:py-16">
                 {/* Introducción Text */}
                 <div className="bg-brand-navy p-4 sm:p-6 rounded-lg mb-8 border-t-4 border-brand-yellow">
-                    <h2 className="text-xl font-bold uppercase text-brand-yellow mb-4">¿Qué es la Seguridad Vial?</h2>
-                    <p className="text-gray-300 leading-relaxed mb-6">
+                    <h2 className="text-2xl md:text-3xl font-bold uppercase text-brand-yellow mb-6">¿Qué es la Seguridad Vial?</h2>
+                    <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
                         La seguridad vial es el conjunto de acciones y mecanismos que garantizan el buen funcionamiento de la circulación del tránsito, mediante la utilización de conocimientos (leyes, reglamento y disposiciones) y normas de conducta, bien sea como peatón, pasajero o conductor, a fin de usar correctamente la vía pública previniendo los incidentes de tránsito.
                     </p>
                     <div className="aspect-video w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl shadow-black/80 border-2 border-gray-800 bg-black">
@@ -151,12 +151,12 @@ export function IntroduccionModule() {
                 {/* Global Statistics */}
                 <div className="bg-brand-navy/80 p-4 sm:p-8 rounded-xl mb-8 border-t-4 border-brand-red shadow-lg flex flex-col md:flex-row gap-6 items-center">
                     <div className="flex-1">
-                        <h2 className="text-2xl font-bold uppercase text-brand-red mb-2">A nivel mundial</h2>
-                        <h3 className="text-lg font-medium text-white mb-4 italic">Las estadísticas por incidentes fatales nos arrojan datos alarmantes</h3>
-                        <p className="text-gray-300 leading-relaxed mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold uppercase text-brand-red mb-4">A nivel mundial</h2>
+                        <h3 className="text-xl md:text-2xl font-medium text-white mb-6 italic">Las estadísticas por incidentes fatales nos arrojan datos alarmantes</h3>
+                        <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
                             Se estima que aproximadamente <span className="text-brand-yellow font-bold">1,35 millones de personas pierden la vida</span> y que otras <span className="text-brand-yellow font-bold">50 millones resultan lesionadas</span> cada año a causa de los traumatismos por siniestros de tránsito.
                         </p>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                             Debido a que constituyen la décima causa de muerte en todo el mundo, la Organización Mundial de la Salud (OMS) categorizó a los siniestros viales como <span className="text-brand-red font-bold uppercase">"pandemia"</span> y alertó que si no se toman medidas al respecto, podrían llegar a ser la tercera causa de mortalidad mundial para el año 2020.
                         </p>
                     </div>
@@ -254,13 +254,13 @@ export function IntroduccionModule() {
 
                         {/* Final Reflection Text */}
                         <div className="mt-12 bg-brand-navy/60 p-4 sm:p-8 rounded-xl border-t-4 border-brand-yellow shadow-lg">
-                            <p className="text-gray-200 text-lg leading-relaxed mb-4">
+                            <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
                                 Chicos, los invito a pensar en lo siguiente: cuando escuchamos que en Córdoba, en un solo año mueren <span className="text-brand-yellow font-bold">381</span> personas en incidentes de tránsito, solemos verlo como una estadística lejana, aunque nos parezca un desastre. Si nos preguntaran a cuánto deberíamos bajar esa cifra, muchos pensaríamos que reducirla a la mitad, o incluso a solo 3 muertes al año, sería un avance "genial" o un escenario "ideal".
                             </p>
                             <p className="text-white text-xl font-medium italic mb-4">
                                 Pero hagamos este ejercicio: ¿qué pensarían si les mostraran fotografías de esas únicas 3 víctimas y resultaran ser sus hijos, sus sobrinos o su propia familia?
                             </p>
-                            <p className="text-gray-200 text-lg leading-relaxed">
+                            <p className="text-gray-300 text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed max-w-7xl">
                                 Cuando le ponemos el rostro de un ser querido a las estadísticas, nuestra perspectiva cambia por completo y nos damos cuenta de que ninguna pérdida es tolerable. <span className="text-brand-yellow font-bold uppercase tracking-wide text-sm sm:text-base border-b border-brand-yellow/50">Detrás de cada número hay una vida y una familia que los espera.</span>
                             </p>
                         </div>
@@ -271,14 +271,14 @@ export function IntroduccionModule() {
                                 Comprueba lo que viste
                             </h3>
 
-                            <div className="space-y-8">
+                            <div className="space-y-12 md:space-y-24">
                                 {quizData.map((q, index) => (
                                     <div key={q.id} className="space-y-4">
                                         <p className="text-lg text-white font-medium">
                                             <span className="text-brand-yellow font-bold mr-2">{index + 1}.</span>
                                             {q.question}
                                         </p>
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                                             {q.options.map((option) => {
                                                 const isSelected = quizAnswers[q.id] === option.id;
                                                 const isCorrect = option.id === q.correctAnswer;
@@ -444,7 +444,7 @@ export function IntroduccionModule() {
 
                         {/* Nueva Sección: ¿Por qué se producen los incidentes viales? y Trilogía Vial */}
                         <div className="bg-brand-navy p-4 sm:p-8 rounded-xl border-t-4 border-brand-yellow shadow-xl flex flex-col items-center w-full mt-10">
-                            <h3 className="text-2xl sm:text-3xl font-brand-heading text-brand-yellow uppercase italic tracking-tighter mb-6 w-full">
+                            <h3 className="text-4xl md:text-6xl lg:text-7xl font-brand-heading font-bold italic uppercase tracking-tighter mb-6 w-full">
                                 ¿Por qué se producen los incidentes viales?
                             </h3>
 

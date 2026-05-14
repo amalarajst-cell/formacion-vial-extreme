@@ -115,7 +115,7 @@ export function SenalesModule() {
             </div>
 
             {/* Signs Sections by Category */}
-            <div className="space-y-12 md:space-y-16">
+            <div className="max-w-7xl mx-auto px-4 py-8 space-y-8">
                 {categories.map((cat) => {
                     // Si hay un filtro y no es esta categoría, saltar
                     if (filter !== 'all' && filter !== cat) return null;
@@ -127,7 +127,7 @@ export function SenalesModule() {
                         <div key={cat} className="animate-in fade-in slide-in-from-bottom-4 duration-700">
                             {renderCategoryHeader(cat)}
 
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-8">
                                 {catSigns.map((sign) => (
                                     <Card key={sign.id} hoverEffect className="group cursor-pointer p-3 md:p-6 flex flex-col h-full">
                                         {/* Image container */}

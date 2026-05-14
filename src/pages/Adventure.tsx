@@ -116,7 +116,7 @@ export function Adventure() {
 
     const navigationButtons = (
         <nav className="sticky top-0 z-40 bg-brand-navy/95 backdrop-blur-md border-b border-white/5 py-0.5 px-4 md:px-8 shadow-2xl">
-            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
+            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 py-2">
                 <div className="flex gap-2">
                     <Link to="/">
                         <Button variant="outline" size="sm" className="border-white/10 text-gray-400 hover:text-white px-1.5 py-0 md:px-2 md:py-0.5 text-[8px] md:text-[9px]">
@@ -157,7 +157,7 @@ export function Adventure() {
                 >
                     ← VOLVER AL TRAYECTO
                 </Button>
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-6xl mx-auto">
                     <FieldLog onComplete={handleFieldLogComplete} />
                 </div>
             </div>
@@ -167,7 +167,7 @@ export function Adventure() {
     if (view === 'survey') {
         return (
             <div className="min-h-screen bg-brand-navy flex flex-col items-center justify-center p-4">
-                <div className="w-full max-w-2xl bg-brand-navy border border-gray-800 p-8 shadow-2xl mt-8">
+                <div className="w-full max-w-4xl bg-brand-navy border border-gray-800 p-8 shadow-2xl mt-8">
                     <h2 className="text-3xl font-brand-heading font-bold italic uppercase mb-8 text-brand-yellow">
                         Registro de <span className="text-white">Participante</span>
                     </h2>
@@ -183,7 +183,7 @@ export function Adventure() {
                 {navigationButtons}
 
                 <div className="flex-1 flex flex-col items-center justify-center p-4 relative z-10">
-                    <div className="text-center max-w-4xl animate-in fade-in zoom-in duration-700">
+                    <div className="text-center max-w-6xl animate-in fade-in zoom-in duration-700">
                         <div className="inline-block bg-brand-yellow text-brand-navy px-4 py-1 mb-6 font-bold skew-x-[-12deg] tracking-tighter">
                             FASE DE ENTRENAMIENTO
                         </div>
@@ -195,7 +195,7 @@ export function Adventure() {
                             Bienvenido al programa de transformación ciudadana. Prepárate para convertirte en un <span className="text-white font-bold">Multiplicador de Seguridad Vial</span> en la Ciudad.
                         </p>
 
-                        <div className="w-full max-w-2xl mx-auto bg-brand-navy/90 backdrop-blur-md border border-brand-yellow/30 p-8 shadow-2xl mt-8 text-left rounded-xl">
+                        <div className="w-full max-w-4xl mx-auto bg-brand-navy/90 backdrop-blur-md border border-brand-yellow/30 p-8 shadow-2xl mt-8 text-left rounded-xl">
                             <h2 className="text-3xl font-brand-heading font-bold italic uppercase mb-8 text-brand-yellow text-center">
                                 Registro de <span className="text-white">Participante</span>
                             </h2>
@@ -718,7 +718,7 @@ export function Adventure() {
 
             {/* Final CTA */}
             <section className="py-20 bg-brand-navy/80 border-t border-white/10 text-center">
-                <div className="max-w-4xl mx-auto px-4">
+                <div className="max-w-6xl mx-auto px-4">
                     <h2 className="text-3xl font-brand-heading font-bold italic uppercase mb-10 text-white">
                         {state.completed ? '¡Trayecto Finalizado!' : 'Tu entrenamiento comienza ahora'}
                     </h2>

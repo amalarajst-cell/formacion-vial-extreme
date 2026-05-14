@@ -25,10 +25,10 @@ export function Navbar() {
     return (
         <nav className="sticky top-0 z-[100] bg-brand-navy border-b border-gray-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16 md:h-20">
+                <div className="flex items-center justify-between h-16 md:h-24">
                     <div className="flex items-center">
                         <Link to="/" className="flex-shrink-0">
-                            <span className="font-brand-heading font-bold italic text-xs sm:text-lg md:text-2xl text-white tracking-tighter uppercase">
+                            <span className="font-brand-heading font-bold italic text-sm sm:text-xl md:text-3xl text-white tracking-tighter uppercase">
                                 MULTIPLICADORES <span className="text-brand-red">VIALES</span>
                             </span>
                         </Link>
@@ -53,10 +53,10 @@ export function Navbar() {
                             <div className="relative" ref={dropdownRef}>
                                 <button
                                     onClick={() => setModulesOpen(!modulesOpen)}
-                                    className="flex items-center gap-1.5 bg-brand-yellow text-brand-navy px-4 py-2 text-xs sm:text-base font-brand-heading font-bold uppercase italic tracking-wider whitespace-nowrap hover:bg-yellow-400 transition-colors"
+                                    className="flex items-center gap-1.5 bg-brand-yellow text-brand-navy px-4 py-3 text-xs sm:text-lg font-brand-heading font-bold uppercase italic tracking-wider whitespace-nowrap hover:bg-yellow-400 transition-colors"
                                 >
                                     Módulos
-                                    <ChevronDown className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-200 ${modulesOpen ? 'rotate-180' : ''}`} />
+                                    <ChevronDown className={`w-3 h-3 sm:w-5 sm:h-5 transition-transform duration-200 ${modulesOpen ? 'rotate-180' : ''}`} />
                                 </button>
 
                                 {modulesOpen && (

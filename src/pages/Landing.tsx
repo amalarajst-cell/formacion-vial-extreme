@@ -21,13 +21,13 @@ export function Landing() {
                         <span className="text-brand-yellow font-brand-heading font-medium uppercase tracking-[0.2em] text-[10px] md:text-xs mb-1 block opacity-90">
                             2º año consecutivo junto a
                         </span>
-                        <div className="mb-4 max-w-[70%] sm:max-w-none">
-                            <img src={logoVinculacion} alt="Vinculación con el futuro" className="w-full max-w-xs md:max-w-xl h-auto" />
+                        <div className="mb-6 max-w-[80%] sm:max-w-none">
+                            <img src={logoVinculacion} alt="Vinculación con el futuro" className="w-full max-w-sm md:max-w-2xl lg:max-w-3xl h-auto" />
                         </div>
                         <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-6 block opacity-100">
                             POLÍTICA PÚBLICA DEL MINISTERIO DE EDUCACIÓN
                         </span>
-                        <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-xl font-light">
+                        <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-2xl font-light leading-relaxed">
                             Transformando la movilidad urbana con conciencia y acción.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">

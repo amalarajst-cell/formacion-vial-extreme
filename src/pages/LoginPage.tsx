@@ -37,17 +37,17 @@ export function LoginPage() {
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-yellow/5 to-transparent pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-brand-yellow/5 to-transparent pointer-events-none" />
 
-            <div className="w-full max-w-md relative z-10">
+            <div className="w-full max-w-lg relative z-10">
                 {/* Logo */}
-                <div className="flex justify-center mb-8">
-                    <img src={logoVinculacion} alt="Vinculación con el futuro" className="h-16 w-auto" />
+                <div className="flex justify-center mb-12">
+                    <img src={logoVinculacion} alt="Vinculación con el futuro" className="h-20 md:h-24 w-auto" />
                 </div>
 
-                <div className="text-center mb-8">
-                    <h1 className="text-3xl font-brand-heading font-bold italic uppercase tracking-tighter text-white mb-2">
+                <div className="text-center mb-10">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-brand-heading font-bold italic uppercase tracking-tighter text-white mb-2">
                         Bienvenido
                     </h1>
-                    <p className="text-gray-400 text-sm">Ingresá para acceder a la plataforma</p>
+                    <p className="text-gray-400 text-lg">Ingresá para acceder a la plataforma</p>
                 </div>
 
                 {/* Mode Toggle */}
@@ -94,7 +94,7 @@ export function LoginPage() {
                                 value={dni}
                                 onChange={e => setDni(e.target.value)}
                                 placeholder="Ej: 40123456"
-                                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-lg font-bold tracking-widest placeholder-gray-600 focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition-all"
+                                className="w-full bg-white/5 border border-white/10 rounded-lg px-6 py-4 text-white text-2xl font-bold tracking-widest placeholder-gray-600 focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition-all"
                                 required
                                 minLength={7}
                             />
@@ -102,12 +102,12 @@ export function LoginPage() {
                         <button
                             type="submit"
                             disabled={loading || dni.trim().length < 7}
-                            className="w-full bg-brand-yellow text-brand-navy font-bold uppercase tracking-widest py-3 rounded-lg hover:bg-yellow-400 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                            className="w-full bg-brand-yellow text-brand-navy font-bold uppercase tracking-widest py-4 rounded-lg hover:bg-yellow-400 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-lg"
                         >
                             {loading ? (
                                 <span className="animate-pulse">Buscando...</span>
                             ) : (
-                                <><LogIn className="w-4 h-4" /> Ingresar</>
+                                <><LogIn className="w-5 h-5" /> Ingresar</>
                             )}
                         </button>
                         <p className="text-center text-xs text-gray-500 mt-2">

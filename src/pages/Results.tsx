@@ -132,7 +132,7 @@ export function Results() {
 
     return (
         <div className="min-h-screen bg-brand-navy flex items-center justify-center p-4">
-            <div className="max-w-4xl w-full animate-in zoom-in duration-700 space-y-12">
+            <div className="max-w-7xl w-full animate-in zoom-in duration-700 space-y-12">
                 <header className="text-center">
                     <Trophy className="w-24 h-24 text-brand-yellow mx-auto mb-6 animate-bounce" />
                     <h1 className="text-5xl md:text-8xl font-brand-heading font-bold italic uppercase tracking-tighter text-white mb-2">

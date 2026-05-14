@@ -252,8 +252,8 @@ export function AdminPanel() {
             )}
 
             {/* Header */}
-            <header className="bg-brand-navy/95 border-b border-white/10 px-4 py-4 sticky top-0 z-40 backdrop-blur-md">
-                <div className="max-w-5xl mx-auto flex items-center justify-between">
+            <header className="bg-brand-navy/95 border-b border-white/10 px-4 py-6 sticky top-0 z-40 backdrop-blur-md">
+                <div className="max-w-7xl mx-auto flex items-center justify-between">
                     <div className="flex items-center gap-3">
                         <div className="bg-brand-yellow/20 p-2 rounded-lg">
                             <Shield className="w-5 h-5 text-brand-yellow" />
@@ -280,7 +280,7 @@ export function AdminPanel() {
                 </div>
             </header>
 
-            <div className="max-w-5xl mx-auto px-4 py-8 space-y-6">
+            <div className="max-w-7xl mx-auto px-4 py-8 space-y-8">
                 {/* Stats */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                     <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
