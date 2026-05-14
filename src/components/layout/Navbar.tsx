@@ -33,7 +33,7 @@ export function Navbar() {
                         <Link to="/" className="flex-shrink-0">
                             <span className="font-brand-heading font-bold italic text-sm sm:text-xl md:text-3xl text-white tracking-tighter uppercase">
                                 MULTIPLICADORES <span className="text-brand-yellow font-bold">VIALES</span>
-                                <span className="ml-2 text-[10px] text-gray-700 not-italic font-normal">v3.3</span>
+                                <span className="ml-2 text-[10px] text-gray-700 not-italic font-normal">v3.4 FINAL</span>
                             </span>
                         </Link>
                     </div>
@@ -46,7 +46,7 @@ export function Navbar() {
                                 {sessionType === 'admin' && (
                                     <Link
                                         to="/admin"
-                                        className="hidden sm:flex items-center gap-2 bg-brand-yellow text-brand-navy px-6 py-2 text-sm sm:text-base font-brand-heading font-extrabold uppercase italic tracking-wider hover:bg-yellow-400 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                                        className="hidden sm:flex items-center gap-2 bg-brand-yellow text-black px-6 py-2 text-sm sm:text-base font-brand-heading font-extrabold uppercase italic tracking-wider hover:bg-yellow-400 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
                                     >
                                         <Shield className="w-4 h-4" />
                                         PANEL
@@ -57,7 +57,7 @@ export function Navbar() {
                                 <div className="relative" ref={dropdownRef}>
                                     <button
                                         onClick={() => setModulesOpen(!modulesOpen)}
-                                        className="flex items-center gap-2 bg-brand-yellow text-brand-navy px-6 py-2 text-sm sm:text-base font-brand-heading font-extrabold uppercase italic tracking-wider whitespace-nowrap hover:bg-yellow-400 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                                        className="flex items-center gap-2 bg-brand-yellow text-black px-6 py-2 text-sm sm:text-base font-brand-heading font-extrabold uppercase italic tracking-wider whitespace-nowrap hover:bg-yellow-400 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
                                     >
                                         MÓDULOS
                                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${modulesOpen ? 'rotate-180' : ''}`} />

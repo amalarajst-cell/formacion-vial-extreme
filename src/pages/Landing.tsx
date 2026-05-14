@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { useAuthContext } from '../context/AuthContext';
-import logoVinculacion from '../assets/logo-vinculacion.png';
 
 export function Landing() {
     const { state } = useAuthContext();
