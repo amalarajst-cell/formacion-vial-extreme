@@ -1,0 +1,17 @@
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+[32m✓[39m 0 modules transformed.
+[31m✗[39m Build failed in 5.11s
+[31merror during build:
+[31m[vite-plugin-pwa:build] [plugin vite-plugin-pwa:build] index.html: There was an error during the build:
+  Failed to resolve /formacion-vial-extreme/src/main.tsx?v=2.0 from C:/Users/HP07/Desktop/Antigravity y Stich/formacion-vial-extreme/index.html
+Additionally, handling the error in the 'buildEnd' hook caused the following error:
+  Failed to resolve /formacion-vial-extreme/src/main.tsx?v=2.0 from C:/Users/HP07/Desktop/Antigravity y Stich/formacion-vial-extreme/index.html[31m
+file: [36mC:/Users/HP07/Desktop/Antigravity y Stich/formacion-vial-extreme/index.html[31m
+    at getRollupError (file:///C:/Users/HP07/Desktop/Antigravity%20y%20Stich/formacion-vial-extreme/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at file:///C:/Users/HP07/Desktop/Antigravity%20y%20Stich/formacion-vial-extreme/node_modules/rollup/dist/es/shared/node-entry.js:23444:39
+    at async catchUnfinishedHookActions (file:///C:/Users/HP07/Desktop/Antigravity%20y%20Stich/formacion-vial-extreme/node_modules/rollup/dist/es/shared/node-entry.js:22902:16)
+    at async rollupInternal (file:///C:/Users/HP07/Desktop/Antigravity%20y%20Stich/formacion-vial-extreme/node_modules/rollup/dist/es/shared/node-entry.js:23427:5)
+    at async buildEnvironment (file:///C:/Users/HP07/Desktop/Antigravity%20y%20Stich/formacion-vial-extreme/node_modules/vite/dist/node/chunks/config.js:33541:12)
+    at async Object.build (file:///C:/Users/HP07/Desktop/Antigravity%20y%20Stich/formacion-vial-extreme/node_modules/vite/dist/node/chunks/config.js:33900:19)
+    at async Object.buildApp (file:///C:/Users/HP07/Desktop/Antigravity%20y%20Stich/formacion-vial-extreme/node_modules/vite/dist/node/chunks/config.js:33897:153)
+    at async CAC.<anonymous> (file:///C:/Users/HP07/Desktop/Antigravity%20y%20Stich/formacion-vial-extreme/node_modules/vite/dist/node/cli.js:629:3)[39m
