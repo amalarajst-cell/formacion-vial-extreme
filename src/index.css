@@ -37,15 +37,15 @@
 
 @media (min-width: 1536px) {
   .container-extreme {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
 @media (min-width: 2560px) {
   .container-extreme {
-    padding-left: 12rem;
-    padding-right: 12rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 
@@ -53,17 +53,7 @@ html {
   scroll-behavior: auto !important;
 }
 
-@media (min-width: 1536px) {
-  html {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 2560px) {
-  html {
-    font-size: 20px;
-  }
-}
+/* Reverting global scaling as per user feedback */
 
 @layer base {
   body {

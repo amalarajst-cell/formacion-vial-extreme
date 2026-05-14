@@ -18,18 +18,18 @@ export function Landing() {
 
                 <div className="relative z-20 container-extreme w-full pt-10 pb-8 md:pt-24">
                     <div className="max-w-7xl">
-                        <span className="text-brand-yellow font-brand-heading font-medium uppercase tracking-[0.2em] text-[10px] md:text-xs mb-1 block opacity-90">
+                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm mb-4 block">
                             2º año consecutivo junto a
                         </span>
-                        <div className="mb-8 max-w-[95%] sm:max-w-none">
-                            <img src={logoVinculacion} alt="Vinculación con el futuro" className="w-full max-w-md md:max-w-4xl lg:max-w-6xl h-auto" />
+                        <div className="mb-4">
+                            <h1 className="text-white text-6xl md:text-[140px] font-bold leading-[0.9] tracking-tighter max-w-4xl">
+                                Vinculación<br />con el futuro
+                            </h1>
                         </div>
-                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-6 block opacity-100">
+                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs mb-10 block">
                             POLÍTICA PÚBLICA DEL MINISTERIO DE EDUCACIÓN
                         </span>
-                        <p className="text-xl md:text-3xl lg:text-4xl text-gray-300 mb-8 max-w-4xl font-light leading-relaxed">
-                            Transformando la movilidad urbana con conciencia y acción.
-                        </p>
+                        {/* Removed extra text as per screenshot */}
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link to="/adventure">
                                 <Button
