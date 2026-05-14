@@ -30,6 +30,7 @@ export function Navbar() {
                         <Link to="/" className="flex-shrink-0">
                             <span className="font-brand-heading font-bold italic text-sm sm:text-xl md:text-3xl text-white tracking-tighter uppercase">
                                 MULTIPLICADORES <span className="text-brand-red">VIALES</span>
+                                <span className="ml-2 text-[10px] text-gray-600 not-italic font-normal">v2.0</span>
                             </span>
                         </Link>
                     </div>
