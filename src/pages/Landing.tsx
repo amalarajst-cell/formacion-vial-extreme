@@ -14,32 +14,33 @@ export function Landing() {
             <section className="relative min-h-[60vh] flex items-center overflow-hidden">
                 {/* Background Image Placeholder - Replace with actual lively street image */}
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10"></div>
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale contrast-125 opacity-40"></div>
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale brightness-[0.3] contrast-125 opacity-60"></div>
 
                 <div className="relative z-20 container-extreme w-full pt-10 pb-8 md:pt-24">
                     <div className="max-w-7xl">
                         <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm mb-4 block">
                             2º año consecutivo junto a
                         </span>
-                        <div className="mb-4">
-                            <h1 className="text-white text-6xl md:text-[140px] font-bold leading-[0.9] tracking-tighter max-w-4xl">
+                        <div className="mb-6">
+                            <h1 className="text-white text-7xl md:text-[140px] font-bold leading-[0.85] tracking-tighter max-w-4xl font-brand-heading">
                                 Vinculación<br />con el futuro
                             </h1>
                         </div>
-                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs mb-10 block">
+                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs mb-6 block">
                             POLÍTICA PÚBLICA DEL MINISTERIO DE EDUCACIÓN
                         </span>
-                        {/* Removed extra text as per screenshot */}
+                        <p className="text-xl md:text-2xl text-white mb-12 max-w-3xl font-medium tracking-tight">
+                            Transformando la movilidad urbana con conciencia y acción.
+                        </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link to="/adventure">
                                 <Button
-                                    size="lg"
-                                    className="text-lg py-4 px-10"
+                                    variant="primary"
+                                    className="bg-brand-yellow text-brand-navy border-none hover:bg-yellow-400 transition-all px-10 py-5 text-xl font-brand-heading font-extrabold italic uppercase tracking-wider flex items-center gap-3 shadow-[0_10px_20px_rgba(255,214,0,0.2)]"
                                 >
-                                    Comienza Tu Aventura <ArrowRight className="ml-2 w-6 h-6" />
+                                    COMIENZA TU AVENTURA <span className="text-2xl">→</span>
                                 </Button>
                             </Link>
-
                         </div>
                     </div>
                 </div>
