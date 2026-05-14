@@ -16,13 +16,13 @@ export function Landing() {
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale contrast-125 opacity-40"></div>
 
-                <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-10 pb-8 md:pt-16">
-                    <div className="max-w-3xl">
+                <div className="relative z-20 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full pt-10 pb-8 md:pt-24">
+                    <div className="max-w-5xl">
                         <span className="text-brand-yellow font-brand-heading font-medium uppercase tracking-[0.2em] text-[10px] md:text-xs mb-1 block opacity-90">
                             2º año consecutivo junto a
                         </span>
-                        <div className="mb-6 max-w-[80%] sm:max-w-none">
-                            <img src={logoVinculacion} alt="Vinculación con el futuro" className="w-full max-w-sm md:max-w-2xl lg:max-w-3xl h-auto" />
+                        <div className="mb-8 max-w-[90%] sm:max-w-none">
+                            <img src={logoVinculacion} alt="Vinculación con el futuro" className="w-full max-w-md md:max-w-3xl lg:max-w-4xl h-auto" />
                         </div>
                         <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-6 block opacity-100">
                             POLÍTICA PÚBLICA DEL MINISTERIO DE EDUCACIÓN
@@ -48,7 +48,7 @@ export function Landing() {
             {/* Features Grid */}
             {state.profile && (
             <section className="py-24 bg-brand-navy relative">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
                     <h2 className="text-3xl md:text-5xl font-brand-heading font-bold italic uppercase tracking-tighter text-white mb-16 text-center">
                         <span className="text-brand-red">Cronograma</span> Semanal y Eventos
                     </h2>

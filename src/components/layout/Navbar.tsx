@@ -24,8 +24,8 @@ export function Navbar() {
 
     return (
         <nav className="sticky top-0 z-[100] bg-brand-navy border-b border-gray-800">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16 md:h-24">
+            <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+                <div className="flex items-center justify-between h-20 md:h-28">
                     <div className="flex items-center">
                         <Link to="/" className="flex-shrink-0">
                             <span className="font-brand-heading font-bold italic text-sm sm:text-xl md:text-3xl text-white tracking-tighter uppercase">

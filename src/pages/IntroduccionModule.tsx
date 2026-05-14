@@ -114,8 +114,8 @@ export function IntroduccionModule() {
     };
     return (
         <div className="min-h-screen bg-brand-dark-grey text-white font-brand">
-            <div className="bg-brand-navy pt-8 pb-12 px-4 shadow-xl border-b-4 border-brand-yellow">
-                <div className="max-w-7xl mx-auto flex items-center justify-between">
+            <div className="bg-brand-navy pt-24 pb-12 px-4 sm:px-6 lg:px-12 shadow-xl border-b-4 border-brand-yellow">
+                <div className="max-w-[1600px] mx-auto flex items-center justify-between">
                     <div>
                         <h1 className="font-brand-heading text-4xl sm:text-5xl md:text-6xl text-white font-bold italic uppercase tracking-tighter mix-blend-screen">
                             INTRODUCCIÓN
@@ -127,14 +127,14 @@ export function IntroduccionModule() {
                 </div>
             </div>
 
-            <main className="max-w-7xl mx-auto px-4 py-8 md:py-16">
+            <main className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-8 md:py-16">
                 {/* Introducción Text */}
                 <div className="bg-brand-navy p-4 sm:p-6 rounded-lg mb-8 border-t-4 border-brand-yellow">
                     <h2 className="text-2xl md:text-3xl font-bold uppercase text-brand-yellow mb-6">¿Qué es la Seguridad Vial?</h2>
                     <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
                         La seguridad vial es el conjunto de acciones y mecanismos que garantizan el buen funcionamiento de la circulación del tránsito, mediante la utilización de conocimientos (leyes, reglamento y disposiciones) y normas de conducta, bien sea como peatón, pasajero o conductor, a fin de usar correctamente la vía pública previniendo los incidentes de tránsito.
                     </p>
-                    <div className="aspect-video w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl shadow-black/80 border-2 border-gray-800 bg-black">
+                    <div className="aspect-video w-full max-w-5xl mx-auto rounded-xl overflow-hidden shadow-2xl shadow-black/80 border-2 border-gray-800 bg-black">
                         <iframe
                             width="100%"
                             height="100%"
