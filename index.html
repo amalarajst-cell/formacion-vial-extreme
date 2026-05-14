@@ -52,7 +52,17 @@
 
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+  <script>
+    // Force unregister all service workers to clear aggressive PWA cache
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for(let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script>
+  <script type="module" src="/formacion-vial-extreme/src/main.tsx?v=2.0"></script>
 </body>
 
 </html>
