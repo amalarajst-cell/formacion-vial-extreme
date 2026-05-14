@@ -37,7 +37,7 @@ export function LoginPage() {
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-yellow/5 to-transparent pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-brand-yellow/5 to-transparent pointer-events-none" />
 
-            <div className="w-full max-w-lg relative z-10">
+            <div className="w-full max-w-2xl relative z-10">
                 {/* Logo */}
                 <div className="flex justify-center mb-12">
                     <img src={logoVinculacion} alt="Vinculación con el futuro" className="h-20 md:h-24 w-auto" />

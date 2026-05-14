@@ -7,10 +7,62 @@
   max-width: none !important;
   margin: 0 !important;
   padding: 0 !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-extreme {
+  width: 100%;
+  max-width: none !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-extreme {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-extreme {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container-extreme {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .container-extreme {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
 }
 
 html {
   scroll-behavior: auto !important;
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 20px;
+  }
 }
 
 @layer base {

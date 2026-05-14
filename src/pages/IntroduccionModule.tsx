@@ -114,8 +114,8 @@ export function IntroduccionModule() {
     };
     return (
         <div className="min-h-screen bg-brand-dark-grey text-white font-brand">
-            <div className="bg-brand-navy pt-24 pb-12 px-4 sm:px-6 lg:px-12 shadow-xl border-b-4 border-brand-yellow">
-                <div className="max-w-[1600px] mx-auto flex items-center justify-between">
+            <div className="bg-brand-navy pt-24 pb-12 shadow-xl border-b-4 border-brand-yellow">
+                <div className="container-extreme flex items-center justify-between">
                     <div>
                         <h1 className="font-brand-heading text-4xl sm:text-5xl md:text-6xl text-white font-bold italic uppercase tracking-tighter mix-blend-screen">
                             INTRODUCCIÓN
@@ -127,7 +127,7 @@ export function IntroduccionModule() {
                 </div>
             </div>
 
-            <main className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 py-8 md:py-16">
+            <main className="container-extreme py-8 md:py-16">
                 {/* Introducción Text */}
                 <div className="bg-brand-navy p-4 sm:p-6 rounded-lg mb-8 border-t-4 border-brand-yellow">
                     <h2 className="text-2xl md:text-3xl font-bold uppercase text-brand-yellow mb-6">¿Qué es la Seguridad Vial?</h2>

@@ -12,8 +12,8 @@ export function Layout() {
                 <Outlet />
             </main>
             {!isEmbedded && (
-                <footer className="bg-black py-16 border-t border-gray-900">
-                    <div className="max-w-7xl mx-auto px-4">
+                <footer className="bg-black py-20 border-t border-gray-900">
+                    <div className="container-extreme">
                         <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full">
                             {/* Logo BA */}
                             <div className="text-center md:text-left md:border-r md:border-gray-800 md:pr-12">
