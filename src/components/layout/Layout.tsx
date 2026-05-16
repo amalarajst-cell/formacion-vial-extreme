@@ -8,7 +8,7 @@ export function Layout() {
     return (
         <div className="flex flex-col min-h-screen bg-brand-navy text-white font-brand-body selection:bg-brand-red selection:text-white">
             {!isEmbedded && <Navbar />}
-            <main className="flex-grow">
+            <main className="flex-grow pt-12 md:pt-14">
                 <Outlet />
             </main>
             {!isEmbedded && (

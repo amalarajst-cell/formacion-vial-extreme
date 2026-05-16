@@ -26,9 +26,9 @@ export function Navbar() {
     if (isEmbedded) return null;
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-[100] bg-brand-navy border-b border-gray-800 shadow-2xl">
+        <nav className="fixed top-0 left-0 right-0 z-[100] bg-brand-navy shadow-2xl">
             <div className="container-extreme">
-                <div className="flex items-center justify-between h-20 md:h-24">
+                <div className="flex items-center justify-between h-12 md:h-14">
                     <div className="flex items-center">
                         <Link to="/" className="flex-shrink-0">
                             <span className="font-brand-heading font-bold italic text-sm sm:text-lg md:text-2xl text-white tracking-tighter uppercase">

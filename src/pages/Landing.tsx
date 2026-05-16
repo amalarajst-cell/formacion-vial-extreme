@@ -13,7 +13,7 @@ export function Landing() {
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale brightness-[0.35] contrast-125 opacity-70"></div>
 
-                <div className="relative z-20 container-extreme w-full pt-28 pb-10 md:pt-32 md:pb-16">
+                <div className="relative z-20 container-extreme w-full pt-8 pb-10 md:pt-10 md:pb-16">
                     <div className="max-w-7xl">
                         <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm mb-6 block">
                             2º año consecutivo junto a
