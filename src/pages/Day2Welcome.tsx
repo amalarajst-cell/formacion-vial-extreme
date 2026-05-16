@@ -10,7 +10,7 @@ export function Day2Welcome() {
     }, []);
 
     return (
-        <div className="py-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-in fade-in duration-500">
+        <div className="py-4 md:py-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-in fade-in duration-500">
             <Card className="p-8 border-brand-red/30 bg-brand-navy shadow-hard">
                 <div className="mb-8">
                     <div className="flex items-center gap-4 mb-4">

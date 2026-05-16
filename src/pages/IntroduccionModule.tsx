@@ -114,7 +114,7 @@ export function IntroduccionModule() {
     };
     return (
         <div className="min-h-screen bg-brand-dark-grey text-white font-brand">
-            <div className="bg-brand-navy pt-24 pb-12 shadow-xl border-b-4 border-brand-yellow">
+            <div className="bg-brand-navy pt-8 pb-6 md:pt-12 md:pb-8 shadow-xl border-b-4 border-brand-yellow">
                 <div className="container-extreme flex items-center justify-between">
                     <div>
                         <h1 className="font-brand-heading text-4xl sm:text-5xl md:text-6xl text-white font-bold italic uppercase tracking-tighter mix-blend-screen">
