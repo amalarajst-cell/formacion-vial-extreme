@@ -6,39 +6,39 @@ export function Landing() {
     const { studentProfile } = useAuthContext();
 
     return (
-        <div className="min-h-screen bg-brand-navy">
+        <div className="flex-grow flex flex-col bg-brand-navy">
             {/* Hero Section */}
-            <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+            <section className="relative overflow-hidden flex-grow flex flex-col justify-center py-6 md:py-12">
                 {/* Background Image with precise filters */}
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale brightness-[0.35] contrast-125 opacity-70"></div>
 
-                <div className="relative z-20 container-extreme w-full pt-8 pb-10 md:pt-10 md:pb-16">
+                <div className="relative z-20 container-extreme w-full">
                     <div className="max-w-7xl">
-                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm mb-6 block">
+                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[9px] md:text-sm mb-2 block">
                             2º año consecutivo junto a
                         </span>
-                        
-                        <div className="mb-5">
-                            <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold leading-[0.9] tracking-tighter max-w-3xl font-brand-heading uppercase italic">
+
+                        <div className="mb-2">
+                            <h1 className="text-white text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-[0.95] tracking-tighter max-w-3xl font-brand-heading uppercase italic">
                                 Vinculación<br />con el futuro
                             </h1>
                         </div>
-                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm mb-8 block">
+                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[9px] md:text-sm mb-3 block">
                             POLÍTICA PÚBLICA DEL MINISTERIO DE EDUCACIÓN
                         </span>
 
-                        <p className="text-sm md:text-base text-white mb-6 max-w-xl font-medium tracking-tight opacity-80 leading-relaxed">
+                        <p className="text-xs md:text-base text-white mb-4 max-w-xl font-medium tracking-tight opacity-80 leading-relaxed">
                             Transformando la movilidad urbana con conciencia y acción.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex flex-col sm:flex-row gap-3">
                             <Link to="/adventure">
                                 <Button
                                     variant="primary"
-                                    className="bg-brand-yellow text-black border-none hover:bg-yellow-400 transition-all px-8 py-3 text-base md:text-lg font-brand-heading font-extrabold italic uppercase tracking-wider flex items-center gap-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+                                    className="bg-brand-yellow text-black border-none hover:bg-yellow-400 transition-all px-5 py-2.5 text-sm md:text-lg font-brand-heading font-extrabold italic uppercase tracking-wider flex items-center gap-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] whitespace-nowrap"
                                 >
-                                    COMIENZA TU AVENTURA <span className="text-xl font-bold">→</span>
+                                    COMIENZA TU AVENTURA <span className="text-base font-bold">→</span>
                                 </Button>
                             </Link>
                         </div>
