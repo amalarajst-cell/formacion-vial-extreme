@@ -13,14 +13,14 @@ export function Landing() {
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale brightness-[0.35] contrast-125 opacity-70"></div>
 
-                <div className="relative z-20 container-extreme w-full pt-20 pb-20">
+                <div className="relative z-20 container-extreme w-full pt-32 pb-20 md:pt-48 md:pb-32">
                     <div className="max-w-7xl">
                         <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm mb-6 block">
                             2º año consecutivo junto a
                         </span>
                         
                         <div className="mb-8">
-                            <h1 className="text-white text-5xl md:text-[100px] font-bold leading-[0.8] tracking-tighter max-w-5xl font-brand-heading uppercase italic">
+                            <h1 className="text-white text-4xl md:text-7xl lg:text-8xl font-bold leading-[0.85] tracking-tighter max-w-4xl font-brand-heading uppercase italic">
                                 Vinculación<br />con el futuro
                             </h1>
                         </div>
