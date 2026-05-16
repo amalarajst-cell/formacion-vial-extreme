@@ -25,9 +25,7 @@ export function Landing() {
                             </h1>
                         </div>
 
-                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm mb-8 block">
-                            POLÍTICA PÚBLICA DEL MINISTERIO DE EDUCACIÓN
-                        </span>
+
 
                         <p className="text-lg md:text-2xl text-white mb-10 max-w-3xl font-medium tracking-tight opacity-90 leading-relaxed">
                             Transformando la movilidad urbana con conciencia y acción.
