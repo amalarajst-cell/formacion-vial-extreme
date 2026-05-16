@@ -8,7 +8,7 @@ import { ChevronDown, Lock, BookOpen, AlertTriangle, Shield, LogOut } from 'luci
 export function Navbar() {
     const [modulesOpen, setModulesOpen] = useState(false);
     const { prioridadesUnlocked } = useSurveyStore();
-    const { logout, sessionType } = useAuthContext();
+    const { signOut, sessionType } = useAuthContext();
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     // Close dropdown when clicking outside
@@ -28,7 +28,7 @@ export function Navbar() {
     return (
         <nav className="fixed top-0 left-0 right-0 z-[100] bg-brand-navy border-b border-gray-800 shadow-2xl">
             <div className="container-extreme">
-                <div className="flex items-center justify-between h-20 md:h-28">
+                <div className="flex items-center justify-between h-20 md:h-24">
                     <div className="flex items-center">
                         <Link to="/" className="flex-shrink-0">
                             <span className="font-brand-heading font-bold italic text-sm sm:text-xl md:text-3xl text-white tracking-tighter uppercase">
@@ -113,7 +113,7 @@ export function Navbar() {
                                                 
                                                 <button
                                                     onClick={() => {
-                                                        logout();
+                                                        signOut();
                                                         setModulesOpen(false);
                                                     }}
                                                     className="flex items-center gap-2 w-full px-4 py-3 text-sm font-medium text-red-400 hover:bg-red-500/10 transition-colors"

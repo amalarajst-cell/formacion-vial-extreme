@@ -32,68 +32,68 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
     };
 
     return (
-        <Card className="max-w-2xl mx-auto p-8 border-brand-yellow/20 shadow-hard animate-in zoom-in-95 duration-300">
-            <form onSubmit={handleSubmit} className="space-y-8">
+        <Card className="max-w-2xl mx-auto p-4 md:p-6 border-brand-yellow/20 shadow-hard animate-in zoom-in-95 duration-300">
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 {step === 1 && (
-                    <div className="space-y-6 animate-in slide-in-from-right-4 duration-500">
-                        <header className="mb-8">
-                            <h2 className="text-3xl font-brand-heading font-bold italic uppercase text-brand-yellow">
+                    <div className="space-y-4 animate-in slide-in-from-right-4 duration-500">
+                        <header className="mb-4">
+                            <h2 className="text-xl md:text-2xl font-brand-heading font-bold italic uppercase text-brand-yellow">
                                 Tus Datos <span className="text-white">Personales</span>
                             </h2>
-                            <p className="text-gray-400 text-sm uppercase tracking-widest font-bold">Paso 1 de 2</p>
+                            <p className="text-gray-400 text-xs uppercase tracking-widest font-bold">Paso 1 de 2</p>
                         </header>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="space-y-2">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+                            <div className="space-y-1">
                                 <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Nombre</label>
                                 <input
                                     required
                                     readOnly={!!studentProfile?.nombre}
-                                    className={`w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 ${studentProfile?.nombre ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                    className={`w-full bg-brand-navy border border-gray-700 rounded-lg p-2.5 md:p-3 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 text-sm ${studentProfile?.nombre ? 'opacity-50 cursor-not-allowed' : ''}`}
                                     placeholder="Ej: Juan"
                                     value={formData.nombre}
                                     onChange={e => setFormData({ ...formData, nombre: e.target.value })}
                                 />
                             </div>
-                            <div className="space-y-2">
+                            <div className="space-y-1">
                                 <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Apellido</label>
                                 <input
                                     required
                                     readOnly={!!studentProfile?.apellido}
-                                    className={`w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 ${studentProfile?.apellido ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                    className={`w-full bg-brand-navy border border-gray-700 rounded-lg p-2.5 md:p-3 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 text-sm ${studentProfile?.apellido ? 'opacity-50 cursor-not-allowed' : ''}`}
                                     placeholder="Ej: Pérez"
                                     value={formData.apellido}
                                     onChange={e => setFormData({ ...formData, apellido: e.target.value })}
                                 />
                             </div>
-                            <div className="space-y-2">
+                            <div className="space-y-1">
                                 <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">DNI</label>
                                 <input
                                     required
                                     readOnly={!!studentProfile?.dni}
-                                    className={`w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 ${studentProfile?.dni ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                    className={`w-full bg-brand-navy border border-gray-700 rounded-lg p-2.5 md:p-3 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 text-sm ${studentProfile?.dni ? 'opacity-50 cursor-not-allowed' : ''}`}
                                     placeholder="Sin puntos ni espacios"
                                     value={formData.dni}
                                     onChange={e => setFormData({ ...formData, dni: e.target.value })}
                                 />
                             </div>
-                            <div className="space-y-2 md:col-span-2">
+                            <div className="space-y-1 md:col-span-2">
                                 <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Correo Electrónico</label>
                                 <input
                                     required
                                     type="email"
-                                    className="w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600"
+                                    className="w-full bg-brand-navy border border-gray-700 rounded-lg p-2.5 md:p-3 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 text-sm"
                                     placeholder="Ej: juan@gmail.com"
                                     value={formData.email}
                                     onChange={e => setFormData({ ...formData, email: e.target.value })}
                                 />
                             </div>
-                            <div className="space-y-2 md:col-span-2">
+                            <div className="space-y-1 md:col-span-2">
                                 <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Institución Educativa</label>
                                 <input
                                     required
                                     readOnly={!!studentProfile?.institucion}
-                                    className={`w-full bg-brand-navy border border-gray-700 rounded-lg p-4 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 ${studentProfile?.institucion ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                    className={`w-full bg-brand-navy border border-gray-700 rounded-lg p-2.5 md:p-3 text-white focus:border-brand-yellow outline-none transition-all placeholder:text-gray-600 text-sm ${studentProfile?.institucion ? 'opacity-50 cursor-not-allowed' : ''}`}
                                     placeholder="Nombre de tu escuela"
                                     value={formData.institucion}
                                     onChange={e => setFormData({ ...formData, institucion: e.target.value })}
@@ -101,13 +101,13 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
                             </div>
                         </div>
 
-                        <div className="flex gap-4 pt-4">
+                        <div className="flex gap-3 pt-2">
                             {onBack && (
                                 <Button
                                     type="button"
                                     variant="outline"
                                     onClick={onBack}
-                                    className="flex-1 py-6 text-xl border-white/10"
+                                    className="flex-1 py-3 text-base border-white/10"
                                 >
                                     CANCELAR
                                 </Button>
@@ -115,50 +115,50 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
                             <Button
                                 type="button"
                                 onClick={handleNext}
-                                className="flex-[2] py-6 text-xl bg-brand-yellow text-brand-navy hover:bg-white"
+                                className="flex-[2] py-3 text-base bg-brand-yellow text-brand-navy hover:bg-white"
                                 disabled={!formData.nombre || !formData.apellido || !formData.dni || !formData.email || !formData.institucion}
                             >
-                                CONTINUAR <ArrowRight className="ml-2 w-6 h-6" />
+                                CONTINUAR <ArrowRight className="ml-1.5 w-5 h-5" />
                             </Button>
                         </div>
                     </div>
                 )}
 
                 {step === 2 && (
-                    <div className="space-y-8 animate-in slide-in-from-right-4 duration-500">
-                        <header className="mb-8">
-                            <h2 className="text-3xl font-brand-heading font-bold italic uppercase text-brand-yellow">
+                    <div className="space-y-4 md:space-y-6 animate-in slide-in-from-right-4 duration-500">
+                        <header className="mb-4">
+                            <h2 className="text-xl md:text-2xl font-brand-heading font-bold italic uppercase text-brand-yellow">
                                 Encuesta <span className="text-white">Inicial</span>
                             </h2>
-                            <p className="text-gray-400 text-sm uppercase tracking-widest font-bold">Paso 2 de 2</p>
+                            <p className="text-gray-400 text-xs uppercase tracking-widest font-bold">Paso 2 de 2</p>
                         </header>
 
-                        <div className="space-y-4">
-                            <label className="block text-lg font-bold text-white">
+                        <div className="space-y-2">
+                            <label className="block text-sm md:text-base font-bold text-white">
                                 ¿Qué tan seguro te sentís hoy circulando por la ciudad? (1 al 10)
                             </label>
-                            <div className="flex items-center gap-6">
+                            <div className="flex items-center gap-3 md:gap-6">
                                 <input
                                     type="range" min="1" max="10"
                                     className="flex-1 accent-brand-yellow"
                                     value={formData.percepcion}
                                     onChange={e => setFormData({ ...formData, percepcion: parseInt(e.target.value) })}
                                 />
-                                <span className="text-4xl font-brand-heading font-bold text-brand-yellow">{formData.percepcion}</span>
+                                <span className="text-2xl md:text-3xl font-brand-heading font-bold text-brand-yellow">{formData.percepcion}</span>
                             </div>
                         </div>
 
-                        <div className="space-y-4">
-                            <label className="block text-lg font-bold text-white">
+                        <div className="space-y-2">
+                            <label className="block text-sm md:text-base font-bold text-white">
                                 ¿Sabés qué significan las señales de tránsito transitorias (naranjas)?
                             </label>
-                            <div className="flex gap-4">
+                            <div className="flex gap-3">
                                 {['Sí', 'No'].map(opt => (
                                     <button
                                         key={opt}
                                         type="button"
                                         onClick={() => setFormData({ ...formData, conocimientoSemanas: opt })}
-                                        className={`flex-1 py-4 font-bold border rounded-lg transition-all ${formData.conocimientoSemanas === opt ? 'bg-brand-yellow text-brand-navy border-brand-yellow' : 'bg-transparent border-gray-700 text-gray-400 hover:border-white'}`}
+                                        className={`flex-1 py-2.5 md:py-3 font-bold border rounded-lg transition-all text-sm ${formData.conocimientoSemanas === opt ? 'bg-brand-yellow text-brand-navy border-brand-yellow' : 'bg-transparent border-gray-700 text-gray-400 hover:border-white'}`}
                                     >
                                         {opt}
                                     </button>
@@ -166,17 +166,17 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
                             </div>
                         </div>
 
-                        <div className="space-y-4">
-                            <label className="block text-lg font-bold text-white">
+                        <div className="space-y-2">
+                            <label className="block text-sm md:text-base font-bold text-white">
                                 ¿Sabrías qué hacer si presenciás un siniestro vial con heridos?
                             </label>
-                            <div className="grid grid-cols-1 gap-3">
+                            <div className="grid grid-cols-1 gap-2">
                                 {['Nada', 'Poco', 'Lo básico'].map(opt => (
                                     <button
                                         key={opt}
                                         type="button"
                                         onClick={() => setFormData({ ...formData, habilidadSiniestro: opt })}
-                                        className={`w-full py-4 px-6 text-left font-bold border rounded-lg transition-all ${formData.habilidadSiniestro === opt ? 'bg-brand-yellow text-brand-navy border-brand-yellow' : 'bg-transparent border-gray-700 text-gray-400 hover:border-white'}`}
+                                        className={`w-full py-2.5 px-4 text-left font-bold border rounded-lg transition-all text-sm ${formData.habilidadSiniestro === opt ? 'bg-brand-yellow text-brand-navy border-brand-yellow' : 'bg-transparent border-gray-700 text-gray-400 hover:border-white'}`}
                                     >
                                         {opt}
                                     </button>
@@ -184,17 +184,17 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
                             </div>
                         </div>
 
-                        <div className="space-y-4">
-                            <label className="block text-lg font-bold text-white">
+                        <div className="space-y-2">
+                            <label className="block text-sm md:text-base font-bold text-white">
                                 Como peatón, ¿de qué color debe estar el semáforo para poder cruzar?
                             </label>
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                                 {['rojo', 'amarillo', 'verde'].map(opt => (
                                     <button
                                         key={opt}
                                         type="button"
                                         onClick={() => setFormData({ ...formData, semaforoPeaton: opt })}
-                                        className={`w-full py-4 text-center capitalize font-bold border rounded-lg transition-all ${formData.semaforoPeaton === opt ? 'bg-brand-yellow text-brand-navy border-brand-yellow' : 'bg-transparent border-gray-700 text-gray-400 hover:border-white'}`}
+                                        className={`w-full py-2.5 text-center capitalize font-bold border rounded-lg transition-all text-sm ${formData.semaforoPeaton === opt ? 'bg-brand-yellow text-brand-navy border-brand-yellow' : 'bg-transparent border-gray-700 text-gray-400 hover:border-white'}`}
                                     >
                                         {opt}
                                     </button>
@@ -202,13 +202,13 @@ export function PreSurveyForm({ onComplete, onBack }: PreSurveyFormProps) {
                             </div>
                         </div>
 
-                        <div className="flex gap-4 pt-4">
+                        <div className="flex gap-3 pt-2">
                             <Button
                                 type="submit"
-                                className="w-full py-6 text-xl shadow-hard"
+                                className="w-full py-3 text-base shadow-hard"
                                 disabled={!formData.conocimientoSemanas || !formData.habilidadSiniestro || !formData.semaforoPeaton}
                             >
-                                INICIAR TRAYECTO <Rocket className="ml-2 w-6 h-6" />
+                                INICIAR TRAYECTO <Rocket className="ml-1.5 w-5 h-5" />
                             </Button>
                         </div>
                     </div>

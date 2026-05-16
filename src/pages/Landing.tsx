@@ -3,7 +3,7 @@ import { Button } from '../components/ui/Button';
 import { useAuthContext } from '../context/AuthContext';
 
 export function Landing() {
-    const { state } = useAuthContext();
+    const { studentProfile } = useAuthContext();
 
     return (
         <div className="min-h-screen bg-brand-navy">
@@ -20,7 +20,7 @@ export function Landing() {
                         </span>
                         
                         <div className="mb-8">
-                            <h1 className="text-white text-7xl md:text-[140px] font-bold leading-[0.72] tracking-tighter max-w-5xl font-brand-heading uppercase italic">
+                            <h1 className="text-white text-5xl md:text-[100px] font-bold leading-[0.8] tracking-tighter max-w-5xl font-brand-heading uppercase italic">
                                 Vinculación<br />con el futuro
                             </h1>
                         </div>
@@ -29,7 +29,7 @@ export function Landing() {
                             POLÍTICA PÚBLICA DEL MINISTERIO DE EDUCACIÓN
                         </span>
 
-                        <p className="text-xl md:text-3xl text-white mb-12 max-w-4xl font-medium tracking-tight opacity-90 leading-relaxed">
+                        <p className="text-lg md:text-2xl text-white mb-10 max-w-3xl font-medium tracking-tight opacity-90 leading-relaxed">
                             Transformando la movilidad urbana con conciencia y acción.
                         </p>
 
@@ -48,7 +48,7 @@ export function Landing() {
             </section>
 
             {/* Features Grid */}
-            {state.profile && (
+            {studentProfile && (
             <section className="py-24 bg-brand-navy relative">
                 <div className="container-extreme">
                     <h2 className="text-3xl md:text-5xl font-brand-heading font-bold italic uppercase tracking-tighter text-white mb-16 text-center">
