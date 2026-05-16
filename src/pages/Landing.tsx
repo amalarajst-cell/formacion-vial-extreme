@@ -24,8 +24,9 @@ export function Landing() {
                                 Vinculación<br />con el futuro
                             </h1>
                         </div>
-
-
+                        <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.2em] text-[10px] md:text-sm mb-8 block">
+                            POLÍTICA PÚBLICA DEL MINISTERIO DE EDUCACIÓN
+                        </span>
 
                         <p className="text-sm md:text-base text-white mb-6 max-w-xl font-medium tracking-tight opacity-80 leading-relaxed">
                             Transformando la movilidad urbana con conciencia y acción.
