@@ -328,7 +328,7 @@ export function QuizCategoriaA() {
                         <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-50 rounded-2xl pointer-events-none" />
                         {currentQuestion.image ? (
                             <img 
-                                src={`/simulator/images/${currentQuestion.image}`} 
+                                src={`${import.meta.env.BASE_URL}simulator/images/${currentQuestion.image}`} 
                                 alt={currentQuestion.question} 
                                 className="w-full h-full object-contain p-2 transition-all duration-500 hover:scale-105"
                             />
