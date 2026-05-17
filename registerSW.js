@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/formacion-vial-extreme/sw.js', { scope: '/formacion-vial-extreme/' })})}
