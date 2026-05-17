@@ -5,127 +5,136 @@ export interface Question {
     correctAnswer: number;
     explanation: string;
     iconType: 'helmet' | 'lights' | 'mirrors' | 'straps' | 'brakes' | 'crash' | 'passenger' | 'blindspot' | 'expired' | 'rain';
+    image?: string;
 }
 
 export const examenCategoriaAQuestions: Question[] = [
     {
         id: 1,
-        question: "El casco homologado que brinda mayor protección es del tipo:",
+        question: "Según la Ley 2148, al circular con un motovehículo detrás de este camión, ¿cuál es la distancia mínima de seguridad que debe mantener respecto de él?",
         options: [
-            "Abierto.",
-            "Integral.",
-            "Abierto o Integral. Ambos brindan idéntica protección."
+            "Un segundo.",
+            "Dos segundos.",
+            "Cinco segundos."
         ],
         correctAnswer: 1,
-        explanation: "El casco integral (full-face) ofrece la mayor protección porque cubre la mandíbula y el rostro por completo, reduciendo significativamente el riesgo de lesiones graves en la cara y cráneo en caso de impacto.",
-        iconType: "helmet"
+        explanation: "La Ley 2148 establece que al circular detrás de otro vehículo, se debe mantener una distancia de seguridad mínima equivalente a por lo menos dos segundos de separación, garantizando el espacio suficiente ante una frenada de emergencia.",
+        iconType: "crash",
+        image: "image1.jpg"
     },
     {
         id: 2,
-        question: "Los motovehículos, ¿cuándo están obligados a circular con la luz baja encendida?",
+        question: "El motovehículo de la imagen, ¿se encuentra correctamente estacionado?",
         options: [
-            "Durante las 24 hs y en todo tipo de vía.",
-            "Al circular por autopistas, semiautopistas o rutas, aunque sea de día.",
-            "Sólo durante la noche o con días de poca visibilidad, por cualquier vía."
+            "Sí, porque la vereda tiene más de tres metros y no obstruye el paso peatonal.",
+            "No. Sólo puede estacionarse sobre la vereda si existe una señalización que lo autorice.",
+            "Sí, sólo los motovehículos pueden estacionarse sobre cualquier vereda."
         ],
-        correctAnswer: 0,
-        explanation: "Por Ley en la Ciudad Autónoma de Buenos Aires, los motovehículos deben circular con la luz baja encendida las 24 horas del día, independientemente del tipo de vía, para maximizar su visibilidad frente a otros conductores.",
-        iconType: "lights"
+        correctAnswer: 1,
+        explanation: "Está estrictamente prohibido estacionar motovehículos sobre la vereda o acera, excepto en aquellos lugares donde la autoridad de tránsito lo haya autorizado de forma expresa mediante la señalización correspondiente.",
+        iconType: "mirrors",
+        image: "image22.jpg"
     },
     {
         id: 3,
-        question: "Un motovehículo, ¿puede circular sin espejos retrovisores?",
+        question: "Según la Ley N° 2148, ¿está permitido estacionar un motovehículo del modo que se visualiza en la imagen?",
         options: [
-            "Sí, pero se debe observar hacia los costados antes de hacer alguna maniobra.",
-            "Sólo si es de una cilindrada inferior a 150 CC.",
-            "No, está prohibido."
+            "No, salvo que exista señalización que lo permita.",
+            "Sí, de 07 a 21 horas durante días no hábiles.",
+            "Sí, de 21 a 07 horas durante los días hábiles."
         ],
-        correctAnswer: 2,
-        explanation: "Es obligatorio circular con ambos espejos retrovisores colocados y regulados correctamente. Conducir sin ellos está estrictamente prohibido y es pasible de multa y retención preventiva del vehículo.",
-        iconType: "mirrors"
+        correctAnswer: 0,
+        explanation: "En la Ciudad Autónoma de Buenos Aires está prohibido estacionar en aceras, pasajes, sendas peatonales o ciclovías de manera general, salvo que la señalización vial indique específicamente lo contrario.",
+        iconType: "mirrors",
+        image: "image165.jpg"
     },
     {
         id: 4,
-        question: "Para que el uso del casco de un motovehículo cumpla su función protectora...",
+        question: "Si su motovehículo no funciona, ud. puede estacionarlo durante unos días hasta que sea reparado, tal como se muestra en la imagen.",
         options: [
-            "La correa de sujeción debe estar siempre abrochada.",
-            "Debe quedar bastante holgado, ya que resulta más cómodo para el conductor.",
-            "Debe encontrarse en buenas condiciones. El modo en que se encuentra sujetado no influye en la protección que brinda."
+            "Verdadero.",
+            "Falso."
         ],
-        correctAnswer: 0,
-        explanation: "Si el casco no está abrochado con su hebilla de seguridad regulada, se saldrá despedida en una colisión o caída previa al impacto contra el suelo u otro vehículo, anulando totalmente su protección.",
-        iconType: "straps"
+        correctAnswer: 1,
+        explanation: "Es falso. Está prohibido el abandono de vehículos o dejarlos estacionados en estado de descompostura en la vía pública, ya que obstruyen el libre tránsito y representan un riesgo de seguridad vial.",
+        iconType: "mirrors",
+        image: "image52.jpg"
     },
     {
         id: 5,
-        question: "Al frenar correctamente un motovehículo…",
+        question: "En cuanto al uso reglamentario de luces, ¿este motovehículo circula correctamente?",
         options: [
-            "La rueda trasera soporta el mayor esfuerzo de frenado, ya que es la directriz.",
-            "La rueda delantera soporta el mayor esfuerzo de frenado.",
-            "Las dos ruedas soportan el mismo esfuerzo de frenado."
+            "Sí, ya que las luces sólo deben utilizarse en condiciones meteorológicas adversas.",
+            "Sí, ya que las luces sólo deben utilizarse por autopistas, semiautopistas y rutas.",
+            "No. Es obligatorio el uso de la luz baja las 24 horas del día y en todo tipo de vía."
         ],
-        correctAnswer: 1,
-        explanation: "Al aplicar los frenos, la transferencia de peso se desplaza hacia adelante. Por ello, la rueda delantera llega a soportar aproximadamente entre el 70% y el 80% de la fuerza total de frenado del motovehículo.",
-        iconType: "brakes"
+        correctAnswer: 2,
+        explanation: "Por ley, todos los motovehículos que circulan por la vía pública deben hacerlo con la luz baja encendida de forma obligatoria las 24 horas del día, con el fin de aumentar su visibilidad y prevenir siniestros.",
+        iconType: "lights",
+        image: "image191.jpg"
     },
     {
         id: 6,
-        question: "Su casco de protección ha sufrido un golpe pero no se observa ningún deterioro, ¿este golpe pudo haber afectado su eficacia?",
+        question: "¿Qué indica la seña manual que realiza el ciclista/motociclista en la imagen?",
         options: [
-            "Sí, aunque no se observen daños en su exterior.",
-            "No, porque sólo se ve afectado si se observan abolladuras en el exterior.",
-            "Sólo si se aprecian grietas en el interior."
+            "Giro a la izquierda.",
+            "Adelantamiento por la izquierda.",
+            "Detenerse o disminuir la velocidad."
         ],
         correctAnswer: 0,
-        explanation: "Los cascos de seguridad absorben impactos deformando o quebrando microestructuras de su EPS (poliestireno expandido) interno. Aunque no se note daño exterior en la calota, el material interior ya se comprimió y NO protegerá de la misma manera en un segundo golpe.",
-        iconType: "crash"
+        explanation: "El brazo izquierdo extendido horizontalmente de forma recta con la palma de la mano hacia abajo es la seña reglamentaria para indicar un giro hacia la izquierda.",
+        iconType: "straps",
+        image: "image93.jpg"
     },
     {
         id: 7,
-        question: "Mientras un motovehículo está detenido, es recomendable que el acompañante…",
+        question: "¿Qué indica la seña manual que realiza el ciclista/motociclista en la imagen?",
         options: [
-            "Mantenga los pies en los apoyapies.",
-            "Coloque los pies en el suelo para contribuir al equilibrio del vehículo.",
-            "Coloque un pie en el suelo y otro en el apoyapié."
+            "Adelantamiento por la derecha.",
+            "Giro a la derecha.",
+            "Detenerse o disminuir la velocidad."
         ],
-        correctAnswer: 0,
-        explanation: "El acompañante nunca debe apoyar los pies en el suelo durante una parada, ya que desestabiliza la moto y confunde el equilibrio del conductor. Debe conservar siempre los pies en sus estriberas o apoyapies.",
-        iconType: "passenger"
+        correctAnswer: 1,
+        explanation: "El brazo izquierdo flexionado hacia arriba formando un ángulo recto (90 grados) con la palma al frente es la seña reglamentaria para anticipar y señalizar un giro a la derecha.",
+        iconType: "straps",
+        image: "image98.jpg"
     },
     {
         id: 8,
-        question: "¿A qué se llama “Punto Ciego” al conducir?",
+        question: "¿Qué indica la seña manual que realiza el ciclista/motociclista en la imagen?",
         options: [
-            "Al área de visión del entorno, a la que el conductor no tiene acceso ya sea de manera directa o porque los espejos retrovisores no la reflejan.",
-            "Sólo al área de visión que no es cubierta por los espejos retrovisores.",
-            "Al punto imaginario ubicado en el horizonte de una ruta."
+            "Giro a la izquierda.",
+            "Adelantamiento por la izquierda.",
+            "Detenerse o disminuir la velocidad."
         ],
-        correctAnswer: 0,
-        explanation: "El punto ciego es el sector del entorno que queda fuera del campo visual del conductor, tanto por visión directa periférica como por el reflejo de los espejos, requiriendo a veces un leve giro del mentón.",
-        iconType: "blindspot"
+        correctAnswer: 2,
+        explanation: "El brazo izquierdo extendido hacia abajo de forma diagonal con la palma de la mano dirigida hacia atrás indica la intención de detenerse o disminuir la velocidad.",
+        iconType: "straps",
+        image: "image256.jpg"
     },
     {
         id: 9,
-        question: "¿Los cascos de protección para motovehículos tienen vencimiento?",
+        question: "El motovehículo que se muestra en la imagen circula correctamente, sin entorpecer la circulación.",
         options: [
-            "No, tienen vigencia mientras se encuentren en buen estado.",
-            "Sí, la fecha la especifica el fabricante.",
-            "Sí, a los 10 años."
+            "Verdadero.",
+            "Falso."
         ],
         correctAnswer: 1,
-        explanation: "Los materiales de amortiguación y las resinas exteriores del casco se degradan naturalmente por exposición al sol (UV), sudor y agentes climáticos. Su vida útil recomendada ronda los 3 a 5 años y su fecha exacta de fabricación/vencimiento es especificada por cada fabricante.",
-        iconType: "expired"
+        explanation: "Es falso. Los motovehículos tienen estrictamente prohibida la circulación por carriles exclusivos habilitados para el transporte público (colectivos/Metrobús) o vías destinadas a ciclistas.",
+        iconType: "crash",
+        image: "image234.jpg"
     },
     {
         id: 10,
-        question: "Si al conducir un motovehículo por una calzada mojada porque llovió, en el caso de frenada, esta situación provocará...",
+        question: "Un conductor principiante de motovehículo, ¿tiene obligación de llevar la siguiente documentación o distintivo?",
         options: [
-            "Una disminución del tiempo de reacción.",
-            "Un aumento de la distancia de reacción.",
-            "Un aumento de la distancia de frenado."
+            "No, ya que esa es una obligación que afecta únicamente a los conductores de automóviles.",
+            "Sí, hasta cumplirse los 6 meses.",
+            "Sí, hasta que se renueve la licencia de conducir."
         ],
-        correctAnswer: 2,
-        explanation: "El agua actúa como una película lubricante reduciendo drásticamente el coeficiente de fricción del neumático con el pavimento. Esto multiplica la distancia de frenado requerida para detener la moto con seguridad.",
-        iconType: "rain"
+        correctAnswer: 1,
+        explanation: "Sí, todos los conductores novatos y principiantes deben portar de forma obligatoria el distintivo de 'Principiante' (cartel verde) en un lugar perfectamente visible de la parte trasera del vehículo durante los primeros 6 meses.",
+        iconType: "expired",
+        image: "image42.jpg"
     }
 ];

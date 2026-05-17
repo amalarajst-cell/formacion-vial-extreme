@@ -322,11 +322,19 @@ export function QuizCategoriaA() {
                 <div className="bg-brand-dark-grey/20 backdrop-blur-sm border border-white/5 p-6 md:p-10 rounded-3xl mb-8 flex flex-col md:flex-row gap-8 items-center md:items-stretch">
                     {/* Visual Icon Area */}
                     <div className={cn(
-                        "w-48 h-48 md:w-64 md:h-64 flex-shrink-0 bg-white/5 flex items-center justify-center border-2 transition-all duration-500 rounded-2xl relative overflow-hidden",
+                        "w-full md:w-64 h-48 md:h-auto min-h-[192px] flex-shrink-0 bg-white/5 flex items-center justify-center border-2 transition-all duration-500 rounded-2xl relative overflow-hidden",
                         isAnswered && selectedOption === currentQuestion.correctAnswer ? "border-green-500 shadow-[0_0_40px_rgba(34,197,94,0.15)] bg-green-500/5" : "border-white/10"
                     )}>
-                        <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-50 rounded-2xl" />
-                        {renderQuestionIcon(currentQuestion.iconType)}
+                        <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-50 rounded-2xl pointer-events-none" />
+                        {currentQuestion.image ? (
+                            <img 
+                                src={`/simulator/images/${currentQuestion.image}`} 
+                                alt={currentQuestion.question} 
+                                className="w-full h-full object-contain p-2 transition-all duration-500 hover:scale-105"
+                            />
+                        ) : (
+                            renderQuestionIcon(currentQuestion.iconType)
+                        )}
                     </div>
 
                     {/* Question & Options Grid */}
