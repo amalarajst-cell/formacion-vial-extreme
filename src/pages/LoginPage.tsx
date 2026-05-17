@@ -44,6 +44,9 @@ export function LoginPage() {
                         2º año consecutivo junto a
                     </span>
                     <img src={logoVinculacion} alt="Vinculación con el futuro" className="h-16 md:h-20 w-auto" />
+                    <span className="text-brand-yellow font-brand-heading font-bold uppercase tracking-[0.15em] text-[9px] md:text-[11px] mt-4 block opacity-90 text-center">
+                        POLÍTICA PÚBLICA DEL MINISTERIO DE EDUCACIÓN
+                    </span>
                 </div>
 
                 <div className="text-center mb-10">
