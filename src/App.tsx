@@ -13,6 +13,7 @@ import { PrioridadesModule } from './pages/PrioridadesModule';
 import { Adventure } from './pages/Adventure';
 import { Quiz } from './pages/Quiz';
 import { QuizPrioridades } from './pages/QuizPrioridades';
+import { QuizCategoriaA } from './pages/QuizCategoriaA';
 import { Day1Welcome } from './pages/Day1Welcome';
 import { Day2Welcome } from './pages/Day2Welcome';
 import { EmergentologiaModule } from './pages/EmergentologiaModule';
@@ -73,6 +74,7 @@ function AppRoutes() {
           <Route path="adventure" element={<Adventure />} />
           <Route path="quiz" element={<Quiz />} />
           <Route path="quiz-prioridades" element={<QuizPrioridades />} />
+          <Route path="quiz-categoria-a" element={<QuizCategoriaA />} />
           <Route path="emergentologia" element={<EmergentologiaModule />} />
           <Route path="quiz-emergentologia" element={<QuizEmergentologia />} />
           <Route path="vtv" element={<SeguridadTecnicaModule />} />

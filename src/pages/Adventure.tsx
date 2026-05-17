@@ -390,6 +390,21 @@ export function Adventure() {
                                             </div>
                                             <ArrowRight className="w-3 h-3 opacity-50 group-hover/manual:translate-x-1 transition-transform" />
                                         </Button>
+
+                                        <Link to="/quiz-categoria-a" onClick={(e) => e.stopPropagation()} className="block">
+                                            <Button
+                                                fullWidth
+                                                size="sm"
+                                                variant="outline"
+                                                className="justify-between border-brand-yellow/30 text-white hover:bg-brand-yellow hover:text-brand-navy group/moto"
+                                            >
+                                                <div className="flex items-center gap-2">
+                                                    <span className="text-xs">🏍️</span>
+                                                    <span className="text-[10px] font-bold">SIMULADOR EXAMEN CATEGORÍA A</span>
+                                                </div>
+                                                <ArrowRight className="w-3 h-3 opacity-50 group-hover/moto:translate-x-1 transition-transform" />
+                                            </Button>
+                                        </Link>
                                     </div>
                                 </div>
                             )}
@@ -701,6 +716,35 @@ export function Adventure() {
                                     ))}
                                 </div>
                             )}
+                        </Card>
+
+                        {/* Simulador Examen Categoría A */}
+                        <Card hoverEffect className="group border-brand-yellow/30 bg-[#0a192f]/40 relative overflow-hidden flex flex-col justify-between">
+                            <div className="absolute top-0 right-0 w-24 h-24 bg-brand-yellow/5 rounded-full blur-xl pointer-events-none" />
+                            <div>
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-12 h-12 rounded-xl bg-brand-yellow/10 border border-brand-yellow/30 flex items-center justify-center text-brand-yellow shadow-inner">
+                                        <span className="text-2xl">🏍️</span>
+                                    </div>
+                                    <div className="border border-brand-yellow/50 bg-brand-yellow/10 px-3 py-1 text-[10px] font-bold text-brand-yellow uppercase tracking-tighter w-fit">
+                                        Especial
+                                    </div>
+                                </div>
+                                <h3 className="text-2xl font-brand-heading font-bold italic uppercase mb-2 text-white group-hover:text-brand-yellow transition-colors leading-tight">
+                                    Simulador Examen Categoría A
+                                </h3>
+                                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                                    Practicá con 10 preguntas reales del examen oficial para motovehículos en CABA. Reforzá tus hábitos seguros.
+                                </p>
+                            </div>
+                            
+                            <div className="pt-4 border-t border-white/5">
+                                <Link to="/quiz-categoria-a" className="block">
+                                    <Button fullWidth size="sm" variant="outline" className="justify-between group/btn border-brand-yellow/50 bg-brand-yellow/5 text-brand-yellow hover:bg-brand-yellow hover:text-brand-navy">
+                                        INICIAR SIMULADOR <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
+                                    </Button>
+                                </Link>
+                            </div>
                         </Card>
 
                         {/* Final Reward */}
