@@ -1,9 +1,46 @@
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { useAuthContext } from '../context/AuthContext';
+import { useSurveyStore } from '../hooks/useSurveyStore';
 
 export function Landing() {
     const { studentProfile } = useAuthContext();
+    const { state } = useSurveyStore();
+
+    // Calcular progreso dinámico real del alumno
+    const hasProfile = !!studentProfile;
+    
+    let approvedCount = 0;
+    let activeModule = 'SIN INICIAR';
+    let progressPercentage = 0;
+
+    if (hasProfile) {
+        if (state.signalsScore !== null) approvedCount++;
+        if (state.quizScore !== null) approvedCount++;
+        if (state.emergentologiaScore !== null) approvedCount++;
+        if (state.prioridadesScore !== null) approvedCount++;
+
+        // Determinar módulo activo
+        if (!state.profile) {
+            activeModule = 'REGISTRO';
+        } else if (state.signalsScore === null) {
+            activeModule = 'SEÑALES';
+        } else if (state.quizScore === null) {
+            activeModule = 'RCP Y SOCORRISMO';
+        } else if (state.emergentologiaScore === null) {
+            activeModule = 'DEFENSA CIVIL';
+        } else if (state.prioridadesScore === null) {
+            activeModule = 'PRIORIDADES';
+        } else {
+            activeModule = 'COMPLETADO';
+        }
+
+        // Calcular porcentaje:
+        // - Perfil de encuesta completado = 20%
+        // - Cada test completado = +20% (4 tests = 80%)
+        // Total = 100%
+        progressPercentage = (state.profile ? 20 : 0) + (approvedCount * 20);
+    }
 
     return (
         <div className="flex-grow flex flex-col bg-brand-navy grid-bg-overlay relative overflow-hidden">
@@ -71,14 +108,14 @@ export function Landing() {
                                 </div>
 
                                 <div className="space-y-6">
-                                    {/* Simulated Student Progress */}
+                                    {/* Real Student Progress */}
                                     <div>
                                         <div className="flex justify-between items-center mb-2">
                                             <span className="text-xs font-brand-heading text-white tracking-wider">PROGRESO DEL CURSO</span>
-                                            <span className="text-sm font-bold text-brand-yellow font-mono">85%</span>
+                                            <span className="text-sm font-bold text-brand-yellow font-mono">{progressPercentage}%</span>
                                         </div>
                                         <div className="w-full bg-white/5 h-2 rounded-none overflow-hidden p-[1px] border border-white/10">
-                                            <div className="bg-brand-yellow h-full progress-glow" style={{ width: '85%' }} />
+                                            <div className="bg-brand-yellow h-full progress-glow" style={{ width: `${progressPercentage}%` }} />
                                         </div>
                                     </div>
 
@@ -86,11 +123,11 @@ export function Landing() {
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="bg-black/30 p-3 border border-white/5">
                                             <span className="block text-[10px] text-gray-500 font-bold uppercase tracking-wider">TESTS APROBADOS</span>
-                                            <span className="text-xl font-bold font-mono text-white">3 / 4</span>
+                                            <span className="text-xl font-bold font-mono text-white">{approvedCount} / 4</span>
                                         </div>
                                         <div className="bg-black/30 p-3 border border-white/5">
                                             <span className="block text-[10px] text-gray-500 font-bold uppercase tracking-wider">MÓDULO ACTIVO</span>
-                                            <span className="text-sm font-brand-heading text-brand-yellow truncate uppercase font-bold">DEFENSA CIVIL</span>
+                                            <span className="text-sm font-brand-heading text-brand-yellow truncate uppercase font-bold">{activeModule}</span>
                                         </div>
                                     </div>
 
@@ -111,15 +148,15 @@ export function Landing() {
             <section className="py-16 md:py-24 bg-brand-navy relative z-10 border-t border-white/5">
                 <div className="container-extreme">
                     <h2 className="text-3xl md:text-5xl font-brand-heading font-bold italic uppercase tracking-tighter text-white mb-12 md:mb-16 text-center">
-                        <span className="text-brand-red text-gradient-red">Cronograma</span> Semanal y Eventos
+                        <span className="text-brand-yellow text-gradient-amber">Cronograma</span> Semanal y Eventos
                     </h2>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                         {[
-                            { day: 'Día 1', title: 'Introducción', desc: 'Conceptos fundamentales de seguridad vial.', color: 'border-brand-yellow' },
-                            { day: 'Día 2', title: 'Señales', desc: 'Identificación y respeto por la señalización.', color: 'border-brand-red' },
-                            { day: 'Día 3', title: 'Prioridades', desc: 'Reglas de paso y convivencia en la vía pública.', color: 'border-white' },
-                            { day: 'Día 4', title: 'Bitácora', desc: 'Registro de experiencias y evaluación final.', color: 'border-brand-yellow' }
+                            { day: 'Día 1', title: 'Introducción', desc: 'Proceso administrativo y educativo para el otorgamiento de licencias en CABA.', color: 'border-brand-yellow' },
+                            { day: 'Día 2', title: 'Defensa Civil', desc: 'Capacitación presencial en RCP y asistencia inicial ante emergencias médicas.', color: 'border-brand-red' },
+                            { day: 'Día 3', title: 'Centro de Monitoreo', desc: 'Descubrí cómo se gestiona y controla el tránsito en tiempo real para mejorar la seguridad vial.', color: 'border-blue-500' },
+                            { day: 'Día 4', title: 'Auditoría Vial', desc: 'Investigación en campo para registrar datos de infraestructura y conductas viales.', color: 'border-green-500' }
                         ].map((item, idx) => (
                             <div key={idx} className={`glass-panel p-6 md:p-8 border-t-4 ${item.color} group`}>
                                 <span className="text-brand-yellow font-bold text-sm uppercase tracking-widest mb-2 block">{item.day}</span>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { signs } from '../data/signs';
@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 import { Play, Download } from 'lucide-react';
 
 export function SenalesModule() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const [filter, setFilter] = useState<'all' | 'reglamentarias' | 'preventivas' | 'informativas' | 'transitorias' | 'horizontales'>('all');
 
     const categoryLabels = {

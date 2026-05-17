@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react';
 import { useLocalState } from '../hooks/useLocalState';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
@@ -8,6 +9,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, RotateCcw, Home, BadgeCheck, ClipboardList, Target } from 'lucide-react';
 
 export function VTVSimulador() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const [currentScenario, setCurrentScenario] = useLocalState('vtv_currentScenario', 0);
     const [selectedResult, setSelectedResult] = useLocalState<'normal' | 'alerta' | 'critico' | null>('vtv_selectedResult', null);
     const [showExplanation, setShowExplanation] = useLocalState('vtv_showExplanation', false);

@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocalState } from '../hooks/useLocalState';
 import { AlertTriangle, Send, CheckCircle2, XCircle, Play } from 'lucide-react';
+import { MotorcycleIcon } from '../components/ui/MotorcycleIcon';
 
 interface QuizAnswers {
     q1: string;
@@ -480,7 +481,7 @@ export function IntroduccionModule() {
                                     </div>
                                     <div className="bg-brand-navy p-6 rounded-xl border-t-4 border-brand-red flex flex-col items-center text-center shadow-md relative overflow-hidden group">
                                         <div className="absolute inset-0 bg-brand-red/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                        <span className="text-5xl mb-4 relative z-10 hover:scale-110 transition-transform">🏍️</span>
+                                        <MotorcycleIcon className="w-12 h-12 mb-4 text-brand-red relative z-10 hover:scale-110 transition-transform" />
                                         <strong className="text-brand-red text-xl uppercase tracking-wide mb-2 relative z-10">El Vehículo</strong>
                                         <span className="text-sm text-gray-400 mb-6 h-10 relative z-10">Fallas mecánicas, neumáticos lisos.</span>
                                         <div className="flex items-center gap-2 mt-auto w-full max-w-[150px] relative z-10">

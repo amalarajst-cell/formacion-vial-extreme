@@ -1,9 +1,13 @@
+import { useEffect } from 'react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 import { Trophy, Star, Users, Share2, Award, Zap, Heart, Shield } from 'lucide-react';
 
 export function EfectoMultiplicadorModule() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="py-6 md:py-12 max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 animate-in fade-in duration-500">
             {/* Hero Section */}

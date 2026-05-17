@@ -31,6 +31,7 @@ import { useToast } from '../components/ui/Toast';
 import { cn } from '../utils/cn';
 import { SCHEDULE_ACTIVITIES } from '../data/schedule';
 import { forceScrollToTop } from '../utils/scroll';
+import { MotorcycleIcon } from '../components/ui/MotorcycleIcon';
 
 export function Adventure() {
     const location = useLocation();
@@ -399,7 +400,7 @@ export function Adventure() {
                                                 className="justify-between border-brand-yellow/30 text-white hover:bg-brand-yellow hover:text-brand-navy group/moto"
                                             >
                                                 <div className="flex items-center gap-2">
-                                                    <span className="text-xs">🏍️</span>
+                                                    <MotorcycleIcon className="w-3.5 h-3.5 text-brand-yellow group-hover/moto:text-brand-navy transition-colors" />
                                                     <span className="text-[10px] font-bold">SALA DE ENTRENAMIENTO CAT. A</span>
                                                 </div>
                                                 <ArrowRight className="w-3 h-3 opacity-50 group-hover/moto:translate-x-1 transition-transform" />
@@ -724,7 +725,7 @@ export function Adventure() {
                             <div>
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className="w-12 h-12 rounded-xl bg-brand-yellow/10 border border-brand-yellow/30 flex items-center justify-center text-brand-yellow shadow-inner">
-                                        <span className="text-2xl">🏍️</span>
+                                        <MotorcycleIcon className="w-6 h-6 text-brand-yellow" />
                                     </div>
                                     <div className="border border-brand-yellow/50 bg-brand-yellow/10 px-3 py-1 text-[10px] font-bold text-brand-yellow uppercase tracking-tighter w-fit">
                                         Especial

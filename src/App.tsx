@@ -63,9 +63,13 @@ function AppRoutes() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/admin" element={<AdminRoute />} />
 
+        {/* Public Routes */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Landing />} />
+        </Route>
+
         {/* Student app — protected */}
         <Route path="/" element={<ProtectedLayout />}>
-          <Route index element={<Landing />} />
           <Route path="introduccion" element={<IntroduccionModule />} />
           <Route path="modules" element={<SenalesModule />} />
           <Route path="dia1" element={<Day1Welcome />} />

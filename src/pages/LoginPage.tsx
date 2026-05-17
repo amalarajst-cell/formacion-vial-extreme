@@ -11,7 +11,7 @@ export function LoginPage() {
     // Redirect when session is successfully created
     useEffect(() => {
         if (sessionType === 'admin') navigate('/admin');
-        else if (sessionType === 'student') navigate('/');
+        else if (sessionType === 'student') navigate('/adventure');
     }, [sessionType, navigate]);
 
     const [mode, setMode] = useState<'student' | 'admin'>('student');

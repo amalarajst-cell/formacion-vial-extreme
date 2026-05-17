@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { vtvPoints } from '../data/vtvContent';
@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 import { Monitor, ShieldCheck, Gauge, AlertTriangle, BadgeCheck } from 'lucide-react';
 
 export function SeguridadTecnicaModule() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const [selectedPoint, setSelectedPoint] = useState<string | null>(null);
 
     return (

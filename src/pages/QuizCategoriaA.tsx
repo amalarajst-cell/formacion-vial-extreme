@@ -12,7 +12,6 @@ import {
     Timer, 
     Trophy, 
     ArrowRight, 
-    Bike, 
     Award, 
     ShieldAlert,
     Eye,
@@ -23,6 +22,7 @@ import {
     Sparkles
 } from 'lucide-react';
 import { useToast } from '../components/ui/Toast';
+import { MotorcycleIcon } from '../components/ui/MotorcycleIcon';
 
 
 export function QuizCategoriaA() {
@@ -249,7 +249,7 @@ export function QuizCategoriaA() {
             default:
                 return (
                     <div className="w-16 h-16 md:w-24 md:h-24 bg-brand-yellow/10 border-2 border-brand-yellow/30 rounded-2xl flex items-center justify-center text-brand-yellow shadow-inner">
-                        <Bike className="w-8 h-8 md:w-12 md:h-12" />
+                        <MotorcycleIcon className="w-8 h-8 md:w-12 md:h-12 text-brand-yellow" />
                     </div>
                 );
         }
@@ -262,7 +262,7 @@ export function QuizCategoriaA() {
         }
         const percentage = Math.min(100, Math.round((finalScore / (indices.length * 10)) * 100));
         if (percentage >= 90) return { title: 'PILOTO DE ÉLITE 👑', desc: '¡Perfecto! Dominás por completo las leyes de tránsito y la seguridad de motovehículos en CABA.', color: 'text-brand-yellow border-brand-yellow' };
-        if (percentage >= 70) return { title: 'MOTO-EXPERTO 🏍️', desc: '¡Muy bien! Contás con un excelente criterio de seguridad y prevención vial.', color: 'text-green-400 border-green-400' };
+        if (percentage >= 70) return { title: 'MOTO-EXPERTO ⚡', desc: '¡Muy bien! Contás con un excelente criterio de seguridad y prevención vial.', color: 'text-green-400 border-green-400' };
         return { title: 'PRINCIPIANTE VIAL 🛡️', desc: 'Buen intento, pero es necesario repasar la teoría para circular seguro y pasar el examen oficial.', color: 'text-brand-red border-brand-red' };
     };
 
@@ -292,8 +292,8 @@ export function QuizCategoriaA() {
                                 BANCO OFICIAL DE PREGUNTAS CABA — MOTOVEHÍCULOS
                             </p>
                         </div>
-                        <div className="bg-brand-yellow/10 border border-brand-yellow/20 px-4 py-2 flex items-center gap-3">
-                            <span className="text-2xl">🏍️</span>
+                        <div className="bg-brand-yellow/10 border border-brand-yellow/20 px-4 py-2 flex items-center gap-3 rounded-lg">
+                            <MotorcycleIcon className="w-6 h-6 text-brand-yellow" />
                             <div>
                                 <span className="block text-[10px] text-gray-400 font-bold uppercase tracking-wider">BANCO TOTAL</span>
                                 <span className="text-lg font-mono font-bold text-brand-yellow">502 PREGUNTAS</span>
@@ -594,7 +594,7 @@ export function QuizCategoriaA() {
                 {/* Progress Indicators */}
                 <div className="flex justify-between items-center mb-4 px-1">
                     <div className="flex items-center gap-2">
-                        <Bike className="w-5 h-5 text-brand-yellow" />
+                        <MotorcycleIcon className="w-5 h-5 text-brand-yellow" />
                         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
                             Pregunta {currentQuestionIdx + 1} de {indices.length} • {currentQuestion.category}
                         </span>

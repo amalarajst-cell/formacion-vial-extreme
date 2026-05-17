@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { prioridadRules, categoryLabels } from '../data/prioridadesContent';
@@ -10,6 +10,10 @@ const categories = ['general', 'rotondas', 'emergencias', 'peatones', 'senalizac
 type Category = typeof categories[number];
 
 export function PrioridadesModule() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const [filter, setFilter] = useState<'all' | Category>('all');
 
     const categoryColors: Record<Category, { border: string; text: string; bg: string }> = {
