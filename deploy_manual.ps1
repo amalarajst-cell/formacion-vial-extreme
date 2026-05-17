@@ -42,7 +42,7 @@ Set-Location $TEMP_DIR
 
 git add --all
 git commit -m "Deploy $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
-git push origin gh-pages
+git push origin gh-pages --force
 
 if ($LASTEXITCODE -ne 0) {
     Write-Host "ERROR al hacer push. Revisa tus credenciales de GitHub." -ForegroundColor Red
