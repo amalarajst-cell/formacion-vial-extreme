@@ -17,24 +17,21 @@ import {
     ShieldAlert,
     Eye,
     Lightbulb,
-    HelpCircle
+    HelpCircle,
+    ArrowLeft,
+    BookOpen,
+    Sparkles
 } from 'lucide-react';
 import { useToast } from '../components/ui/Toast';
 
-function getRandomIndices(count: number, max: number): number[] {
-    const indices: number[] = [];
-    while (indices.length < Math.min(count, max)) {
-        const rand = Math.floor(Math.random() * max);
-        if (!indices.includes(rand)) {
-            indices.push(rand);
-        }
-    }
-    return indices;
-}
 
 export function QuizCategoriaA() {
     const navigate = useNavigate();
     const { showToast } = useToast();
+
+    // Mode Selector State
+    const [quizMode, setQuizMode] = useLocalState<'quick' | 'official' | 'hardcore' | 'all' | null>('quiz_catA_mode', null);
+    const [selectedCategoryFilter, setSelectedCategoryFilter] = useLocalState<string>('quiz_catA_categoryFilter', 'all');
 
     // Game state
     const [currentQuestionIdx, setCurrentQuestionIdx] = useLocalState('quiz_catA_currentQuestionIdx', 0);
@@ -54,41 +51,87 @@ export function QuizCategoriaA() {
     // Persistent random question indices for the current simulator practice run
     const [activeQuestionIndices, setActiveQuestionIndices] = useLocalState<number[]>('quiz_catA_activeQuestionIndices', []);
 
-    // Ensure activeQuestionIndices has 10 random questions on initialization
-    useEffect(() => {
-        if (!activeQuestionIndices || activeQuestionIndices.length === 0) {
-            const newIndices = getRandomIndices(10, examenCategoriaAQuestions.length);
-            setActiveQuestionIndices(newIndices);
-        }
-    }, [activeQuestionIndices, setActiveQuestionIndices]);
-
-    // Fallback in case state isn't loaded yet
-    const indices = activeQuestionIndices && activeQuestionIndices.length > 0
-        ? activeQuestionIndices
-        : Array.from({ length: Math.min(10, examenCategoriaAQuestions.length) }, (_, i) => i);
-
-    // Reset scroll when question changes
+    // Scroll reinforcement when question changes
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }, [currentQuestionIdx]);
-
-    const currentQuestion = examenCategoriaAQuestions[indices[currentQuestionIdx]] || examenCategoriaAQuestions[0];
+    }, [currentQuestionIdx, quizMode]);
 
     // Timer effect
     useEffect(() => {
+        // Disallowed in study mode 'all'
+        if (quizMode === 'all' || !quizMode) return;
+
         if (timeLeft > 0 && !isAnswered && !gameOver && !quizCompleted) {
             const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
             return () => clearTimeout(timer);
         } else if (timeLeft === 0 && !isAnswered && !gameOver && !quizCompleted) {
             handleTimeOut();
         }
-    }, [timeLeft, isAnswered, gameOver, quizCompleted]);
+    }, [timeLeft, isAnswered, gameOver, quizCompleted, quizMode]);
 
     // Turbo Mode activation
     useEffect(() => {
         if (streak >= 3) setIsTurbo(true);
         else setIsTurbo(false);
     }, [streak]);
+
+    // Get unique categories list from database
+    const categoriesList = [
+        { id: 'all', label: 'Todas las Categorías (502 preguntas)' },
+        { id: 'Introducción', label: 'Introducción (13 preguntas)' },
+        { id: 'Capítulo 1: Aspectos Generales y Legales', label: 'Capítulo 1: Aspectos Generales y Legales (32 preguntas)' },
+        { id: 'Capítulo 2: Normas de Conducción y Prioridades', label: 'Capítulo 2: Normas de Conducción y Prioridades (69 preguntas)' },
+        { id: 'Capítulo 3: Condiciones Adversas e Incidentes', label: 'Capítulo 3: Condiciones Adversas e Incidentes (47 preguntas)' },
+        { id: 'Anexo I: Motovehículos', label: 'Anexo I: Motovehículos (160 preguntas)' },
+        { id: 'Anexo V: Señales Viales', label: 'Anexo V: Señales Viales (181 preguntas)' }
+    ];
+
+    // Helper to start the quiz with specific mode and category filter
+    const startQuiz = (mode: 'quick' | 'official' | 'hardcore' | 'all', categoryFilter: string) => {
+        setQuizMode(mode);
+        setSelectedCategoryFilter(categoryFilter);
+
+        // Get matching indices from the global list
+        const filteredIndices: number[] = [];
+        examenCategoriaAQuestions.forEach((q, idx) => {
+            if (categoryFilter === 'all' || q.category === categoryFilter) {
+                filteredIndices.push(idx);
+            }
+        });
+
+        if (filteredIndices.length === 0) {
+            showToast('No hay preguntas en esta categoría', 'error');
+            return;
+        }
+
+        let chosenIndices: number[] = [];
+        if (mode === 'all') {
+            // Sequential study mode: include all matching questions in order
+            chosenIndices = [...filteredIndices];
+        } else {
+            // Exam practice mode: randomly choose N questions from matching set
+            let count = 10;
+            if (mode === 'official') count = 30;
+            else if (mode === 'hardcore') count = 50;
+
+            const shuffled = [...filteredIndices].sort(() => 0.5 - Math.random());
+            chosenIndices = shuffled.slice(0, Math.min(count, shuffled.length));
+        }
+
+        setActiveQuestionIndices(chosenIndices);
+        setCurrentQuestionIdx(0);
+        setSelectedOption(null);
+        setScore(0);
+        // Study mode 'all' gets infinite/very high lives, timed mode gets 3
+        setLives(mode === 'all' ? 9999 : 3);
+        setStreak(0);
+        setIsAnswered(false);
+        // Study mode gets infinite timer
+        setTimeLeft(mode === 'all' ? 9999 : 20);
+        setGameOver(false);
+        setQuizCompleted(false);
+        showToast(`Iniciando Modo: ${mode === 'all' ? 'Estudio' : 'Examen'}`, 'success');
+    };
 
     const handleTimeOut = () => {
         setIsAnswered(true);
@@ -115,6 +158,15 @@ export function QuizCategoriaA() {
     };
 
     const handleFailure = () => {
+        if (quizMode === 'all') {
+            // Mistakes in Study mode do not deduct lives or trigger game over
+            setStreak(0);
+            setShake(true);
+            setTimeout(() => setShake(false), 500);
+            showToast('Respuesta Incorrecta. ¡Repasá la explicación!', 'error');
+            return;
+        }
+
         setLives(prev => {
             const newLives = prev - 1;
             if (newLives <= 0) setGameOver(true);
@@ -131,7 +183,7 @@ export function QuizCategoriaA() {
             setCurrentQuestionIdx(currentQuestionIdx + 1);
             setSelectedOption(null);
             setIsAnswered(false);
-            setTimeLeft(20);
+            setTimeLeft(quizMode === 'all' ? 9999 : 20);
         } else {
             setQuizCompleted(true);
             showToast('¡Simulador Categoría A Completado!', 'success');
@@ -139,20 +191,22 @@ export function QuizCategoriaA() {
     };
 
     const resetQuiz = () => {
-        // Generate a new set of 10 random questions on restart
-        const newIndices = getRandomIndices(10, examenCategoriaAQuestions.length);
-        setActiveQuestionIndices(newIndices);
-
-        setCurrentQuestionIdx(0);
-        setSelectedOption(null);
-        setScore(0);
-        setLives(3);
-        setStreak(0);
-        setIsAnswered(false);
-        setTimeLeft(20);
-        setGameOver(false);
-        setQuizCompleted(false);
+        if (!quizMode) return;
+        startQuiz(quizMode, selectedCategoryFilter);
     };
+
+    const exitToSelector = () => {
+        if (confirm('¿Deseás salir al selector de modos? Tu progreso en esta simulación se perderá.')) {
+            setQuizMode(null);
+        }
+    };
+
+    // Safe indices resolution
+    const indices = activeQuestionIndices && activeQuestionIndices.length > 0
+        ? activeQuestionIndices
+        : [0];
+
+    const currentQuestion = examenCategoriaAQuestions[indices[currentQuestionIdx]] || examenCategoriaAQuestions[0];
 
     // Render large illustrative icons based on question type
     const renderQuestionIcon = (type: string) => {
@@ -203,11 +257,189 @@ export function QuizCategoriaA() {
 
     // Calculate dynamic feedback achievements/badges
     const getFinalAchievement = (finalScore: number) => {
-        if (finalScore >= 100) return { title: 'PILOTO DE ÉLITE 👑', desc: '¡Perfecto! Dominás por completo las leyes de tránsito y la seguridad de motovehículos.', color: 'text-brand-yellow border-brand-yellow' };
-        if (finalScore >= 70) return { title: 'MOTO-EXPERTO 🏍️', desc: '¡Muy bien! Contás con un excelente criterio de seguridad y prevención vial.', color: 'text-green-400 border-green-400' };
-        return { title: 'PRINCIPIANTE VIAL 🛡️', desc: 'Buen intento, pero es necesario repasar la teoría para circular seguro.', color: 'text-brand-red border-brand-red' };
+        if (quizMode === 'all') {
+            return { title: 'REPASO COMPLETADO 📚', desc: '¡Gran trabajo! Completaste todo el bloque de estudio. Incorporar estos conceptos te hará un conductor ejemplar en la calle.', color: 'text-brand-yellow border-brand-yellow' };
+        }
+        const percentage = Math.min(100, Math.round((finalScore / (indices.length * 10)) * 100));
+        if (percentage >= 90) return { title: 'PILOTO DE ÉLITE 👑', desc: '¡Perfecto! Dominás por completo las leyes de tránsito y la seguridad de motovehículos en CABA.', color: 'text-brand-yellow border-brand-yellow' };
+        if (percentage >= 70) return { title: 'MOTO-EXPERTO 🏍️', desc: '¡Muy bien! Contás con un excelente criterio de seguridad y prevención vial.', color: 'text-green-400 border-green-400' };
+        return { title: 'PRINCIPIANTE VIAL 🛡️', desc: 'Buen intento, pero es necesario repasar la teoría para circular seguro y pasar el examen oficial.', color: 'text-brand-red border-brand-red' };
     };
 
+    // SCREEN 1: MODE SELECTOR
+    if (quizMode === null) {
+        return (
+            <div className="min-h-screen bg-brand-navy grid-bg-overlay flex flex-col items-center justify-center p-4 md:p-8 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-96 h-96 ambient-glow-yellow pointer-events-none opacity-20" />
+                <div className="absolute bottom-0 left-0 w-96 h-96 ambient-glow-red pointer-events-none opacity-10" />
+
+                <div className="w-full max-w-5xl z-10 flex flex-col">
+                    {/* Header */}
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                        <div>
+                            <Button 
+                                onClick={() => navigate('/adventure')} 
+                                variant="outline" 
+                                size="sm" 
+                                className="border-white/10 text-gray-400 hover:text-white mb-2 px-3 py-1 flex items-center gap-1 text-[10px]"
+                            >
+                                <ArrowLeft className="w-3.5 h-3.5" /> VOLVER AL TRAYECTO
+                            </Button>
+                            <h1 className="text-3xl md:text-5xl font-brand-heading font-black italic uppercase text-white leading-none">
+                                Simulador <span className="text-brand-yellow">Categoría A</span>
+                            </h1>
+                            <p className="text-gray-400 text-xs md:text-sm mt-1 uppercase tracking-widest font-bold">
+                                BANCO OFICIAL DE PREGUNTAS CABA — MOTOVEHÍCULOS
+                            </p>
+                        </div>
+                        <div className="bg-brand-yellow/10 border border-brand-yellow/20 px-4 py-2 flex items-center gap-3">
+                            <span className="text-2xl">🏍️</span>
+                            <div>
+                                <span className="block text-[10px] text-gray-400 font-bold uppercase tracking-wider">BANCO TOTAL</span>
+                                <span className="text-lg font-mono font-bold text-brand-yellow">502 PREGUNTAS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Category Filter dropdown */}
+                    <Card className="p-5 border border-white/5 bg-[#0a192f]/60 backdrop-blur-md mb-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 rounded-xl">
+                        <div className="flex items-center gap-3">
+                            <Sparkles className="text-brand-yellow w-5 h-5" />
+                            <div>
+                                <h3 className="text-white text-sm font-bold uppercase">Filtrar por Capítulo o Anexo</h3>
+                                <p className="text-gray-400 text-xs">Alineá tu práctica a la sección específica del manual que estás estudiando.</p>
+                            </div>
+                        </div>
+                        <div className="w-full md:w-auto">
+                            <select 
+                                value={selectedCategoryFilter} 
+                                onChange={(e) => setSelectedCategoryFilter(e.target.value)}
+                                className="w-full md:w-80 bg-brand-navy border border-white/10 text-white text-xs font-bold uppercase tracking-wider py-2.5 px-3 rounded-lg focus:outline-none focus:border-brand-yellow transition-all"
+                            >
+                                {categoriesList.map(cat => (
+                                    <option key={cat.id} value={cat.id}>{cat.label}</option>
+                                ))}
+                            </select>
+                        </div>
+                    </Card>
+
+                    {/* Mode Cards Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* Mode 1: Quick Practice */}
+                        <div 
+                            onClick={() => startQuiz('quick', selectedCategoryFilter)}
+                            className="glass-panel p-6 border border-white/5 hover:border-brand-yellow/40 transition-all rounded-2xl flex flex-col justify-between cursor-pointer group hover:-translate-y-1"
+                        >
+                            <div>
+                                <div className="flex justify-between items-center mb-6">
+                                    <div className="w-12 h-12 rounded-xl bg-brand-yellow/10 border border-brand-yellow/30 flex items-center justify-center text-brand-yellow group-hover:scale-110 transition-transform">
+                                        <Zap className="w-6 h-6" />
+                                    </div>
+                                    <span className="text-[10px] font-black tracking-widest uppercase bg-brand-yellow/10 border border-brand-yellow/30 px-3 py-1 text-brand-yellow rounded-full">
+                                        10 PREGUNTAS
+                                    </span>
+                                </div>
+                                <h3 className="text-2xl font-brand-heading font-black italic uppercase text-white mb-2 group-hover:text-brand-yellow transition-colors">
+                                    Práctica Express
+                                </h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">
+                                    Evaluación veloz y dinámica de 10 preguntas seleccionadas al azar. Perfecto para un repaso rápido entre clases o antes del examen.
+                                </p>
+                            </div>
+                            <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-bold text-gray-500 uppercase tracking-widest group-hover:text-white transition-colors">
+                                <span>3 VIDAS • 20s POR PREGUNTA</span>
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </div>
+                        </div>
+
+                        {/* Mode 2: Official Exam */}
+                        <div 
+                            onClick={() => startQuiz('official', selectedCategoryFilter)}
+                            className="glass-panel p-6 border border-white/5 hover:border-brand-red/40 transition-all rounded-2xl flex flex-col justify-between cursor-pointer group hover:-translate-y-1"
+                        >
+                            <div>
+                                <div className="flex justify-between items-center mb-6">
+                                    <div className="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/30 flex items-center justify-center text-brand-red group-hover:scale-110 transition-transform">
+                                        <Award className="w-6 h-6" />
+                                    </div>
+                                    <span className="text-[10px] font-black tracking-widest uppercase bg-brand-red/10 border border-brand-red/30 px-3 py-1 text-brand-red rounded-full">
+                                        30 PREGUNTAS
+                                    </span>
+                                </div>
+                                <h3 className="text-2xl font-brand-heading font-black italic uppercase text-white mb-2 group-hover:text-brand-red transition-colors">
+                                    Examen Oficial CABA
+                                </h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">
+                                    Simulación estricta con 30 preguntas de todas las categorías en base al manual de tránsito de CABA. Prepárate para el verdadero desafío.
+                                </p>
+                            </div>
+                            <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-bold text-gray-500 uppercase tracking-widest group-hover:text-white transition-colors">
+                                <span>3 VIDAS • 20s POR PREGUNTA</span>
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform animate-pulse" />
+                            </div>
+                        </div>
+
+                        {/* Mode 3: Hardcore Marathon */}
+                        <div 
+                            onClick={() => startQuiz('hardcore', selectedCategoryFilter)}
+                            className="glass-panel p-6 border border-white/5 hover:border-orange-500/40 transition-all rounded-2xl flex flex-col justify-between cursor-pointer group hover:-translate-y-1"
+                        >
+                            <div>
+                                <div className="flex justify-between items-center mb-6">
+                                    <div className="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform">
+                                        <ShieldAlert className="w-6 h-6" />
+                                    </div>
+                                    <span className="text-[10px] font-black tracking-widest uppercase bg-orange-500/10 border border-orange-500/30 px-3 py-1 text-orange-500 rounded-full">
+                                        50 PREGUNTAS
+                                    </span>
+                                </div>
+                                <h3 className="text-2xl font-brand-heading font-black italic uppercase text-white mb-2 group-hover:text-orange-500 transition-colors">
+                                    Maratón Extrema
+                                </h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">
+                                    Un desafío de alto rendimiento con 50 preguntas aleatorias de alta dificultad para comprobar que realmente dominás toda la teoría vial.
+                                </p>
+                            </div>
+                            <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-bold text-gray-500 uppercase tracking-widest group-hover:text-white transition-colors">
+                                <span>3 VIDAS • 20s POR PREGUNTA</span>
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </div>
+                        </div>
+
+                        {/* Mode 4: Progressive Advanced Study Mode */}
+                        <div 
+                            onClick={() => startQuiz('all', selectedCategoryFilter)}
+                            className="glass-panel p-6 border border-brand-yellow/20 bg-brand-yellow/[0.02] hover:border-brand-yellow/50 transition-all rounded-2xl flex flex-col justify-between cursor-pointer group hover:-translate-y-1 relative"
+                        >
+                            <div className="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-brand-yellow animate-ping" />
+                            <div>
+                                <div className="flex justify-between items-center mb-6">
+                                    <div className="w-12 h-12 rounded-xl bg-brand-yellow/20 border border-brand-yellow/40 flex items-center justify-center text-brand-yellow group-hover:scale-110 transition-transform">
+                                        <BookOpen className="w-6 h-6" />
+                                    </div>
+                                    <span className="text-[10px] font-black tracking-widest uppercase bg-brand-yellow/20 border border-brand-yellow/40 px-3 py-1 text-brand-yellow rounded-full">
+                                        ESTUDIO COMPLETO
+                                    </span>
+                                </div>
+                                <h3 className="text-2xl font-brand-heading font-black italic uppercase text-white mb-2 group-hover:text-brand-yellow transition-colors flex items-center gap-2">
+                                    Modo de Estudio Avanzado <Sparkles className="w-4 h-4 text-brand-yellow" />
+                                </h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">
+                                    Estudiá e incorporá de forma ordenada las 502 preguntas del banco oficial. Sin vidas ni límites de tiempo. Tu progreso se guardará automáticamente para que continúes cuando quieras.
+                                </p>
+                            </div>
+                            <div className="mt-8 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-brand-yellow uppercase tracking-widest">
+                                <span>VIDAS INFINITAS • SIN CRONÓMETRO • EXPLICACIÓN SIEMPRE</span>
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    // SCREEN 2: GAME OVER / FAIL SCREEN
     if (gameOver) {
         return (
             <div className="min-h-screen bg-brand-navy flex flex-col items-center justify-center p-6 text-center">
@@ -223,14 +455,15 @@ export function QuizCategoriaA() {
                     <Button onClick={resetQuiz} size="lg" className="text-xl py-7 shadow-hard bg-brand-yellow text-black hover:bg-brand-yellow/90">
                         INICIAR NUEVA MISIÓN
                     </Button>
-                    <Button onClick={() => navigate('/adventure')} variant="outline" size="lg" className="text-xl py-7 border-white/20 text-gray-400 hover:text-white">
-                        VOLVER AL TRAYECTO
+                    <Button onClick={exitToSelector} variant="outline" size="lg" className="text-xl py-7 border-white/20 text-gray-400 hover:text-white">
+                        CAMBIAR DE MODO
                     </Button>
                 </div>
             </div>
         );
     }
 
+    // SCREEN 3: QUIZ COMPLETE / RESULTS SCREEN
     if (quizCompleted) {
         const achievement = getFinalAchievement(score);
         const percentage = Math.min(100, Math.round((score / (indices.length * 10)) * 100));
@@ -243,7 +476,9 @@ export function QuizCategoriaA() {
                 <div className="max-w-3xl w-full animate-in zoom-in duration-500 relative z-10">
                     <Trophy className="w-20 h-20 text-brand-yellow mx-auto mb-6 animate-bounce" />
                     <h1 className="text-5xl md:text-7xl font-brand-heading font-bold italic uppercase tracking-tighter text-white mb-2">Simulador Completado</h1>
-                    <p className="text-brand-red text-xl font-bold uppercase tracking-widest mb-8">EXAMEN CATEGORÍA A — MOTOVEHÍCULOS</p>
+                    <p className="text-brand-red text-xl font-bold uppercase tracking-widest mb-8">
+                        EXAMEN CATEGORÍA A — {quizMode === 'all' ? 'ESTUDIO COMPLETO' : 'PRÁCTICA ACTIVA'}
+                    </p>
 
                     <div className={cn(
                         "border-2 bg-white/5 backdrop-blur-sm p-6 rounded-2xl mb-8 max-w-xl mx-auto animate-in fade-in slide-in-from-top-4 duration-1000",
@@ -260,7 +495,9 @@ export function QuizCategoriaA() {
                         </Card>
 
                         <Card className="border border-white/10 bg-white/5 backdrop-blur-sm p-8 flex flex-col items-center justify-center rounded-xl">
-                            <div className="text-5xl md:text-6xl font-brand-heading font-bold text-brand-yellow mb-2">{percentage}%</div>
+                            <div className="text-5xl md:text-6xl font-brand-heading font-bold text-brand-yellow mb-2">
+                                {quizMode === 'all' ? '100%' : `${percentage}%`}
+                            </div>
                             <div className="text-gray-400 font-bold uppercase tracking-widest text-xs">Nivel de Aprobación</div>
                         </Card>
                     </div>
@@ -269,8 +506,8 @@ export function QuizCategoriaA() {
                         <Button onClick={resetQuiz} size="lg" className="flex-grow shadow-hard bg-brand-yellow text-brand-navy hover:bg-white text-xl py-6">
                             REPETIR SIMULADOR <RotateCcw className="ml-2 w-5 h-5" />
                         </Button>
-                        <Button onClick={() => navigate('/adventure')} variant="outline" size="lg" className="flex-grow text-xl py-6 text-gray-400 hover:text-white border-white/20">
-                            VOLVER AL CAMINO
+                        <Button onClick={() => setQuizMode(null)} variant="outline" size="lg" className="flex-grow text-xl py-6 text-gray-400 hover:text-white border-white/20">
+                            CAMBIAR DE MODO
                         </Button>
                     </div>
                 </div>
@@ -278,6 +515,7 @@ export function QuizCategoriaA() {
         );
     }
 
+    // SCREEN 4: ACTIVE QUESTION SIMULATOR LAYOUT
     return (
         <div className={cn(
             "min-h-screen bg-brand-navy flex flex-col items-center justify-center p-4 transition-all duration-700 relative overflow-hidden",
@@ -299,17 +537,31 @@ export function QuizCategoriaA() {
 
             <div className="w-full max-w-4xl relative z-10 flex flex-col">
                 {/* Header Stats */}
-                <div className="grid grid-cols-3 items-center mb-6 bg-brand-dark-grey/40 backdrop-blur-md border border-white/5 p-4 md:p-6 rounded-2xl shadow-2xl">
-                    <div className="flex gap-1.5 md:gap-2">
-                        {[...Array(3)].map((_, i) => (
-                            <Heart
-                                key={i}
-                                className={cn(
-                                    "w-5 h-5 md:w-6 md:h-6 transition-all duration-300",
-                                    i < lives ? "text-brand-red fill-brand-red drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]" : "text-white/10"
-                                )}
-                            />
-                        ))}
+                <div className="grid grid-cols-3 items-center mb-6 bg-brand-dark-grey/40 backdrop-blur-md border border-white/5 p-4 md:p-6 rounded-2xl shadow-2xl relative">
+                    <div className="flex flex-col gap-1.5 md:gap-2">
+                        {quizMode === 'all' ? (
+                            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow text-[9px] font-bold uppercase tracking-wider w-fit">
+                                <span className="text-sm">⚡</span> MODO ESTUDIO
+                            </div>
+                        ) : (
+                            <div className="flex gap-1">
+                                {[...Array(3)].map((_, i) => (
+                                    <Heart
+                                        key={i}
+                                        className={cn(
+                                            "w-5 h-5 md:w-6 md:h-6 transition-all duration-300",
+                                            i < lives ? "text-brand-red fill-brand-red drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]" : "text-white/10"
+                                        )}
+                                    />
+                                ))}
+                            </div>
+                        )}
+                        <button 
+                            onClick={exitToSelector}
+                            className="text-[9px] font-bold uppercase tracking-widest text-gray-500 hover:text-white transition-colors w-fit underline mt-1"
+                        >
+                            ← CAMBIAR MODO
+                        </button>
                     </div>
 
                     <div className="text-center flex flex-col items-center">
@@ -321,15 +573,21 @@ export function QuizCategoriaA() {
                     </div>
 
                     <div className="flex flex-col items-end gap-1">
-                        <div className={cn(
-                            "flex items-center gap-1.5 px-4 py-1.5 rounded-full border transition-all duration-300",
-                            timeLeft < 5 ? "bg-brand-red/10 border-brand-red/50 shadow-[0_0_15px_rgba(239,68,68,0.2)]" : "bg-white/5 border-white/10"
-                        )}>
-                            <Timer className={cn("w-4 h-4", timeLeft < 5 ? "text-brand-red animate-pulse" : "text-brand-yellow")} />
-                            <span className={cn("text-xl md:text-2xl font-mono font-black leading-none", timeLeft < 5 ? "text-brand-red" : "text-white")}>
-                                {timeLeft}s
-                            </span>
-                        </div>
+                        {quizMode === 'all' ? (
+                            <div className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-500 text-[10px] font-bold uppercase tracking-widest">
+                                ∞ ILIMITADO
+                            </div>
+                        ) : (
+                            <div className={cn(
+                                "flex items-center gap-1.5 px-4 py-1.5 rounded-full border transition-all duration-300",
+                                timeLeft < 5 ? "bg-brand-red/10 border-brand-red/50 shadow-[0_0_15px_rgba(239,68,68,0.2)]" : "bg-white/5 border-white/10"
+                            )}>
+                                <Timer className={cn("w-4 h-4", timeLeft < 5 ? "text-brand-red animate-pulse" : "text-brand-yellow")} />
+                                <span className={cn("text-xl md:text-2xl font-mono font-black leading-none", timeLeft < 5 ? "text-brand-red" : "text-white")}>
+                                    {timeLeft}s
+                                </span>
+                            </div>
+                        )}
                     </div>
                 </div>
 
@@ -338,7 +596,7 @@ export function QuizCategoriaA() {
                     <div className="flex items-center gap-2">
                         <Bike className="w-5 h-5 text-brand-yellow" />
                         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
-                            Examen Motos: Pregunta {currentQuestionIdx + 1} de {indices.length}
+                            Pregunta {currentQuestionIdx + 1} de {indices.length} • {currentQuestion.category}
                         </span>
                     </div>
                     {streak > 1 && (
@@ -422,7 +680,7 @@ export function QuizCategoriaA() {
                             <h4 className="font-bold text-xs uppercase tracking-widest mb-1 text-white">
                                 {selectedOption === currentQuestion.correctAnswer ? '¡EXCELENTE CRITERIO!' : 'REGLA DE SEGURIDAD VIAL'}
                             </h4>
-                            <p className="text-gray-300 text-xs md:text-sm leading-relaxed">
+                            <p className="text-gray-300 text-xs md:text-sm leading-relaxed font-medium">
                                 {currentQuestion.explanation}
                             </p>
                         </div>
