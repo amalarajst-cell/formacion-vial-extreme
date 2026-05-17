@@ -125,14 +125,35 @@ export function useSurveyStore() {
         });
     };
 
-    // Enviar a Google Sheets — solo JSONP (el más confiable para Apps Script)
-    // NO usamos fetch POST porque aunque CORS bloquee la respuesta,
-    // el POST sí llega al servidor, causando duplicaciones al hacer fallback.
+    // Enviar a Google Sheets con una estrategia híbrida y súper robusta para dispositivos móviles:
+    // 1. Intentamos fetch POST con 'no-cors' y 'application/x-www-form-urlencoded'.
+    //    Esto envía los datos en el cuerpo (sin límite de longitud de URL en celulares) y evita preflights de CORS.
+    // 2. Si falla físicamente la red o fetch no está disponible, hacemos un fallback transparente a JSONP.
     const sendToGoogleSheets = async (payload: any): Promise<{ result: string; error?: string }> => {
-        console.log('📡 Enviando via JSONP...');
-        const result = await sendViaJsonp(payload);
-        console.log('✅ Respuesta JSONP:', result);
-        return result;
+        console.log('📡 Enviando via fetch POST (no-cors)...');
+        try {
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `data=${encodeURIComponent(JSON.stringify(payload))}`
+            });
+
+            console.log('✅ Enviado via fetch POST con éxito (opaque response):', response);
+            return { result: 'success' };
+        } catch (error) {
+            console.warn('⚠️ Falló fetch POST, recurriendo a JSONP como fallback:', error);
+            try {
+                const result = await sendViaJsonp(payload);
+                console.log('✅ Sincronizado con éxito via JSONP (fallback):', result);
+                return result;
+            } catch (jsonpError) {
+                console.error('❌ Ambos métodos de sincronización fallaron:', jsonpError);
+                throw new Error(jsonpError instanceof Error ? jsonpError.message : 'Error de comunicación con Google Sheets');
+            }
+        }
     };
 
     // Procesar cola de sincronización en segundo plano
