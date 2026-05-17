@@ -92,7 +92,7 @@ export function DiplomaNew({ userName, dni }: DiplomaProps) {
                         <div className="flex flex-col items-center">
                             <div className="w-full h-px bg-brand-navy mb-2"></div>
                             <p className="text-[11px] md:text-sm font-black text-brand-navy uppercase tracking-wider text-center mb-0.5">
-                                Roberto Dmecq
+                                Roberto Domecq
                             </p>
                             <p className="text-[8px] md:text-[10px] font-bold text-brand-navy/80 uppercase tracking-wider text-center">
                                 Director de la Dirección General <br /> de Seguridad Vial
