@@ -45,11 +45,11 @@ export function DiplomaNew({ userName, dni }: DiplomaProps) {
                 <div className="relative z-10 flex flex-col items-center h-full text-center">
                     {/* Logos Header */}
                     <div className="w-full flex justify-between items-center mb-4 px-4">
-                        <img
-                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTEwIDIwIEMxMCAxNSAxNSAxMCAyMCAxMCBMODAgMTAgQzg1IDEwIDkwIDE1IDkwIDIwIEw5MCA4MCBDOTAgODUgODUgOTAgODAgOTAgTDIwIDkwIEMxNSA5MCAxMCA4NSAxMCA4MCBaIiBmaWxsPSIjRkZEMjAwIi8+CiAgPHRleHQgeD0iNTAiIHk9IjY1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iNTAiIGZpbGw9IiMwMDAwMDAiPkJBPC90ZXh0Pgo8L3N2Zz4="
-                            alt="Logo BA"
-                            className="h-10 w-auto"
-                        />
+                        {/* Perfect sharp vector BA Logo */}
+                        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" className="h-10 w-10">
+                            <rect width="40" height="40" fill="#FCD108" />
+                            <text x="20" y="27" textAnchor="middle" fontFamily="Arial, sans-serif" fontWeight="900" fontSize="20" fill="#000000">BA</text>
+                        </svg>
                         <img
                             src={logoVinculacion}
                             alt="Vinculación con el futuro"
@@ -61,14 +61,14 @@ export function DiplomaNew({ userName, dni }: DiplomaProps) {
                     <div className="mb-2">
                         <h2 className="text-base md:text-lg font-brand-heading font-bold uppercase tracking-tight text-brand-navy">
                             LA SECRETARIA DE TRANSPORTE <br />
-                            <span className="text-brand-red">DEL MINISTERIO DE INFRAESTRUCTURA</span>
+                            <span className="text-brand-yellow">DEL MINISTERIO DE INFRAESTRUCTURA</span>
                         </h2>
                     </div>
 
                     <div className="mb-2">
                         <div className="flex flex-wrap justify-center items-baseline gap-2 text-xl md:text-3xl font-brand-heading font-bold italic uppercase tracking-tighter">
                             <span className="text-brand-navy">CERTIFICADO DE</span>
-                            <span className="text-brand-yellow" style={{ textShadow: '1px 1px 0px rgba(0,0,0,0.1)' }}>APROBACIÓN</span>
+                            <span className="text-brand-yellow" style={{ textShadow: '1px 1px 0px rgba(0,0,0,0.1)' }}>PARTICIPACIÓN</span>
                         </div>
                     </div>
 
@@ -89,21 +89,25 @@ export function DiplomaNew({ userName, dni }: DiplomaProps) {
 
                     {/* Signatures Footer - Pushed to bottom but contained */}
                     <div className="w-full grid grid-cols-2 gap-16 mt-auto mb-2 px-12">
-
                         <div className="flex flex-col items-center">
                             <div className="w-full h-px bg-brand-navy mb-2"></div>
-                            <p className="text-[10px] md:text-xs font-bold text-brand-navy uppercase tracking-wider text-center">
+                            <p className="text-[11px] md:text-sm font-black text-brand-navy uppercase tracking-wider text-center mb-0.5">
+                                Roberto Dmecq
+                            </p>
+                            <p className="text-[8px] md:text-[10px] font-bold text-brand-navy/80 uppercase tracking-wider text-center">
                                 Director de la Dirección General <br /> de Seguridad Vial
                             </p>
                         </div>
                         <div className="flex flex-col items-center">
                             <div className="w-full h-px bg-brand-navy mb-2"></div>
-                            <p className="text-[10px] md:text-xs font-bold text-brand-navy uppercase tracking-wider text-center">
-                                Gerencia de Educación <br /> y Convivencia Vial
+                            <p className="text-[11px] md:text-sm font-black text-brand-navy uppercase tracking-wider text-center mb-0.5">
+                                Pablo La Spina
+                            </p>
+                            <p className="text-[8px] md:text-[10px] font-bold text-brand-navy/80 uppercase tracking-wider text-center">
+                                Gerente de Educación <br /> y Convivencia Vial
                             </p>
                         </div>
                     </div>
-
 
                 </div>
             </div>
