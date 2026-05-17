@@ -400,7 +400,7 @@ export function Adventure() {
                                             >
                                                 <div className="flex items-center gap-2">
                                                     <span className="text-xs">🏍️</span>
-                                                    <span className="text-[10px] font-bold">SIMULADOR EXAMEN CATEGORÍA A</span>
+                                                    <span className="text-[10px] font-bold">SALA DE ENTRENAMIENTO CAT. A</span>
                                                 </div>
                                                 <ArrowRight className="w-3 h-3 opacity-50 group-hover/moto:translate-x-1 transition-transform" />
                                             </Button>
@@ -731,17 +731,17 @@ export function Adventure() {
                                     </div>
                                 </div>
                                 <h3 className="text-2xl font-brand-heading font-bold italic uppercase mb-2 text-white group-hover:text-brand-yellow transition-colors leading-tight">
-                                    Simulador Examen Categoría A
+                                    Sala de Entrenamiento Cat. A
                                 </h3>
                                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                                    Practicá con 10 preguntas reales del examen oficial para motovehículos en CABA. Reforzá tus hábitos seguros.
+                                    Estudiá secuencialmente las 502 preguntas del banco oficial de CABA o ponete a prueba con simulacros de examen personalizables de 10, 30 o 50 preguntas.
                                 </p>
                             </div>
                             
                             <div className="pt-4 border-t border-white/5">
                                 <Link to="/quiz-categoria-a" className="block">
                                     <Button fullWidth size="sm" variant="outline" className="justify-between group/btn border-brand-yellow/50 bg-brand-yellow/5 text-brand-yellow hover:bg-brand-yellow hover:text-brand-navy">
-                                        INICIAR SIMULADOR <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
+                                        INGRESAR A LA SALA <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
                                     </Button>
                                 </Link>
                             </div>
