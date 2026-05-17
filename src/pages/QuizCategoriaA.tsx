@@ -21,6 +21,17 @@ import {
 } from 'lucide-react';
 import { useToast } from '../components/ui/Toast';
 
+function getRandomIndices(count: number, max: number): number[] {
+    const indices: number[] = [];
+    while (indices.length < Math.min(count, max)) {
+        const rand = Math.floor(Math.random() * max);
+        if (!indices.includes(rand)) {
+            indices.push(rand);
+        }
+    }
+    return indices;
+}
+
 export function QuizCategoriaA() {
     const navigate = useNavigate();
     const { showToast } = useToast();
@@ -40,12 +51,28 @@ export function QuizCategoriaA() {
     const [quizCompleted, setQuizCompleted] = useLocalState('quiz_catA_completed', false);
     const [shake, setShake] = useState(false);
 
+    // Persistent random question indices for the current simulator practice run
+    const [activeQuestionIndices, setActiveQuestionIndices] = useLocalState<number[]>('quiz_catA_activeQuestionIndices', []);
+
+    // Ensure activeQuestionIndices has 10 random questions on initialization
+    useEffect(() => {
+        if (!activeQuestionIndices || activeQuestionIndices.length === 0) {
+            const newIndices = getRandomIndices(10, examenCategoriaAQuestions.length);
+            setActiveQuestionIndices(newIndices);
+        }
+    }, [activeQuestionIndices, setActiveQuestionIndices]);
+
+    // Fallback in case state isn't loaded yet
+    const indices = activeQuestionIndices && activeQuestionIndices.length > 0
+        ? activeQuestionIndices
+        : Array.from({ length: Math.min(10, examenCategoriaAQuestions.length) }, (_, i) => i);
+
     // Reset scroll when question changes
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }, [currentQuestionIdx]);
 
-    const currentQuestion = examenCategoriaAQuestions[currentQuestionIdx];
+    const currentQuestion = examenCategoriaAQuestions[indices[currentQuestionIdx]] || examenCategoriaAQuestions[0];
 
     // Timer effect
     useEffect(() => {
@@ -100,7 +127,7 @@ export function QuizCategoriaA() {
     };
 
     const nextQuestion = () => {
-        if (currentQuestionIdx < examenCategoriaAQuestions.length - 1) {
+        if (currentQuestionIdx < indices.length - 1) {
             setCurrentQuestionIdx(currentQuestionIdx + 1);
             setSelectedOption(null);
             setIsAnswered(false);
@@ -112,6 +139,10 @@ export function QuizCategoriaA() {
     };
 
     const resetQuiz = () => {
+        // Generate a new set of 10 random questions on restart
+        const newIndices = getRandomIndices(10, examenCategoriaAQuestions.length);
+        setActiveQuestionIndices(newIndices);
+
         setCurrentQuestionIdx(0);
         setSelectedOption(null);
         setScore(0);
@@ -202,7 +233,7 @@ export function QuizCategoriaA() {
 
     if (quizCompleted) {
         const achievement = getFinalAchievement(score);
-        const percentage = Math.round((score / (examenCategoriaAQuestions.length * 10)) * 100);
+        const percentage = Math.min(100, Math.round((score / (indices.length * 10)) * 100));
 
         return (
             <div className="min-h-screen bg-brand-navy flex items-center justify-center p-6 text-center relative overflow-hidden">
@@ -307,7 +338,7 @@ export function QuizCategoriaA() {
                     <div className="flex items-center gap-2">
                         <Bike className="w-5 h-5 text-brand-yellow" />
                         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
-                            Examen Motos: Pregunta {currentQuestionIdx + 1} de {examenCategoriaAQuestions.length}
+                            Examen Motos: Pregunta {currentQuestionIdx + 1} de {indices.length}
                         </span>
                     </div>
                     {streak > 1 && (
@@ -410,7 +441,7 @@ export function QuizCategoriaA() {
                         className="text-lg md:text-xl py-6 md:py-8 bg-white text-brand-navy hover:bg-gray-200 shadow-hard group"
                     >
                         <span className="flex items-center gap-2">
-                            {currentQuestionIdx < examenCategoriaAQuestions.length - 1 ? 'SIGUIENTE PREGUNTA' : 'FINALIZAR EXAMEN'}
+                            {currentQuestionIdx < indices.length - 1 ? 'SIGUIENTE PREGUNTA' : 'FINALIZAR EXAMEN'}
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </span>
                     </Button>
@@ -421,13 +452,13 @@ export function QuizCategoriaA() {
                     <div className="flex justify-between items-center mb-2 px-1">
                         <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/30">Progreso del Examen Teórico</span>
                         <span className="text-[10px] font-mono font-bold text-brand-yellow">
-                            {Math.round(((currentQuestionIdx + 1) / examenCategoriaAQuestions.length) * 100)}%
+                            {Math.round(((currentQuestionIdx + 1) / indices.length) * 100)}%
                         </span>
                     </div>
                     <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden border border-white/5 backdrop-blur-sm">
                         <div
                             className="h-full bg-gradient-to-r from-brand-yellow via-brand-yellow to-white transition-all duration-1000 ease-out"
-                            style={{ width: `${((currentQuestionIdx + 1) / examenCategoriaAQuestions.length) * 100}%` }}
+                            style={{ width: `${((currentQuestionIdx + 1) / indices.length) * 100}%` }}
                         />
                     </div>
                 </div>
