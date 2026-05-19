@@ -5,7 +5,7 @@ import {
     onAuthStateChanged,
 } from 'firebase/auth';
 import type { User } from 'firebase/auth';
-import { collection, query, where, getDocs } from 'firebase/firestore';
+import { collection, query, where, getDocs, updateDoc, doc } from 'firebase/firestore';
 import { auth, db } from '../lib/firebase';
 
 export interface StudentProfile {
@@ -16,6 +16,7 @@ export interface StudentProfile {
     acompanante: string;
     institucion: string;
     curso?: string;
+    ultimoIngreso?: string;
 }
 
 export type SessionType = 'admin' | 'student' | null;
@@ -140,6 +141,16 @@ export function useAuth() {
                 ...data,
                 dni: String(data.dni),
             } as StudentProfile;
+
+            // Actualizar ultimo ingreso en Firebase
+            try {
+                const now = new Date().toISOString();
+                await updateDoc(doc(db, 'alumnos', docSnap.id), { ultimoIngreso: now });
+                student.ultimoIngreso = now;
+            } catch (e) {
+                console.warn('No se pudo actualizar ultimoIngreso', e);
+            }
+
             localStorage.setItem(STUDENT_SESSION_KEY, JSON.stringify(student));
             setState(s => ({ ...s, sessionType: 'student', studentProfile: student, loading: false, error: null }));
         } catch {

@@ -451,11 +451,18 @@ export function AdminPanel() {
                                         <div className="font-bold text-white text-sm">
                                             {student.apellido}, {student.nombre}
                                         </div>
-                                        <div className="text-xs text-gray-500 flex flex-wrap gap-x-3 mt-0.5">
+                                        <div className="text-xs text-gray-500 flex flex-wrap gap-x-3 mt-0.5 items-center">
                                             <span>DNI: {student.dni}</span>
                                             {student.institucion && <span>{student.institucion}</span>}
                                             {student.acompanante && <span>Acomp: {student.acompanante}</span>}
                                             {student.curso && <span>Curso: {student.curso}</span>}
+                                            {student.ultimoIngreso ? (
+                                                <span className="text-green-400 font-bold bg-green-400/10 px-2 py-0.5 rounded">
+                                                    Último Ingreso: {new Date(student.ultimoIngreso).toLocaleString('es-AR')}
+                                                </span>
+                                            ) : (
+                                                <span className="text-gray-600 italic">No ha ingresado hoy</span>
+                                            )}
                                         </div>
                                     </div>
                                     <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
