@@ -1,0 +1,7 @@
+{
+  "rules": {
+    // Deshabilitar el acceso público de lectura y escritura ya que no se utiliza Realtime Database en el cliente
+    ".read": false,
+    ".write": false
+  }
+}

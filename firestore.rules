@@ -1,0 +1,32 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Reglas para la colección de alumnos
+    match /alumnos/{alumnoId} {
+      // 1. Los administradores autenticados mediante Firebase Auth tienen control total
+      allow read, write: if request.auth != null;
+      
+      // 2. Los alumnos (sin iniciar sesión en Firebase Auth, acceden por DNI en el cliente) necesitan:
+      // - Buscar/Leer alumnos por DNI para iniciar sesión (get/list)
+      // - Actualizar su fecha de último ingreso al iniciar sesión (update)
+      allow read: if true;
+      allow update: if true;
+      
+      // No permitimos crear o borrar alumnos a usuarios no autenticados
+      allow create, delete: if false;
+    }
+    
+    // Reglas para la colección del foro (forum_threads)
+    match /forum_threads/{threadId} {
+      // Los alumnos y visitantes pueden:
+      // - Leer los hilos del foro (read)
+      // - Publicar nuevas consultas (create)
+      // - Comentar y dar "Me gusta" (update)
+      allow read, create, update: if true;
+      
+      // Solo los administradores autenticados pueden eliminar hilos
+      allow delete: if request.auth != null;
+    }
+  }
+}
